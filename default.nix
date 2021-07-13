@@ -1,8 +1,8 @@
-{ nixpkgs ? import <nixpkgs> {}, compiler ? "ghc865", coqVersion ? "coq_8_10", secp256k1git ? null}:
+{ nixpkgs ? import <nixpkgs> {}, compiler ? "ghc8104", coqVersion ? "coqPackages_8_13", secp256k1git ? null}:
 let hp = nixpkgs.haskell.packages.${compiler};
  in rec
 {
-  haskell = hp.callPackage ./Simplicity.Haskell.nix {};
+  haskell = haskellPackages.callPackage ./Simplicity.Haskell.nix {};
 
   haskellPackages = hp.override {
     overrides = self: super: {
@@ -11,18 +11,21 @@ let hp = nixpkgs.haskell.packages.${compiler};
   };
 
   coq = nixpkgs.callPackage ./Simplicity.Coq.nix {
+    inherit (nixpkgs.${coqVersion}) coq;
     inherit vst;
-    coq = nixpkgs.${coqVersion};
   };
 
-  c = nixpkgs.callPackage ./Simplicity.C.nix {
-    inherit libsha256compression;
-  };
+  c = nixpkgs.callPackage ./Simplicity.C.nix {};
 
-  libsha256compression = nixpkgs.callPackage ./libsha256compression {};
+  compcert = nixpkgs.callPackage ./compcert-opensource.nix {
+    inherit (nixpkgs.${coqVersion}) coq flocq;
+    inherit (nixpkgs.${coqVersion}.coq.ocamlPackages) ocaml menhir menhirLib findlib;
+    ccomp-platform = "x86_32-linux";
+  };
 
   vst = nixpkgs.callPackage ./vst.nix {
-    coq = nixpkgs.${coqVersion};
+    inherit (nixpkgs.${coqVersion}) coq;
+    inherit compcert;
   };
 
   # $ nix-build -A inheritance -o inheritance.Coq.eps

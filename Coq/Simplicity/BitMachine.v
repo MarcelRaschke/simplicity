@@ -1,13 +1,14 @@
 Require Import PeanoNat.
 Require Import NArith.
-Require Import Util.List.
-Require Import Util.Thrist.
+Require Import Simplicity.Util.List.
+Require Import Simplicity.Util.Thrist.
 Require Import Eqdep_dec.
 
 Set Primitive Projections.
 Set Implicit Arguments.
 
 Local Open Scope N_scope.
+Declare Scope mc_scope.
 
 Definition Cell := option bool.
 
@@ -552,7 +553,7 @@ Arguments Skip [s0 s1].
 Arguments Copy [s0 s1].
 Arguments Fwd [s0 s1].
 Arguments Bwd [s0 s1].
-Arguments Abort [s0].
+Arguments Abort {s0}.
 
 Definition newFrame n ctx : T _ _ :=
  NewFrame _ (NewFrame.op n ctx).

@@ -5,10 +5,12 @@
 #include "dag.h"
 #include "deserialize.h"
 #include "eval.h"
-#include "typeInference.h"
 #include "hashBlock.h"
+#include "rsort.h"
+#include "sha256.h"
 #include "schnorr0.h"
 #include "schnorr6.h"
+#include "typeInference.h"
 #include "primitive/elements/checkSigHashAllTx1.h"
 
 _Static_assert(CHAR_BIT == 8, "Buffers passed to fmemopen presume 8 bit chars");
@@ -34,7 +36,7 @@ static void test_decodeUptoMaxInt(void) {
   };
   const int32_t expected[] =
   { 1, 2, 3, 4, 5, 7, 8, 15, 16, 17
-  , 0xffff, 0x10000, 0x40000000, 0x7fffffff, ERR_DATA_OUT_OF_RANGE
+  , 0xffff, 0x10000, 0x40000000, 0x7fffffff, SIMPLICITY_ERR_DATA_OUT_OF_RANGE
   };
 
   FILE* file = fmemopen_rb(buf, sizeof(buf));
@@ -85,22 +87,34 @@ static void test_hashBlock(void) {
     }
 
     type* type_dag;
-    size_t sourceIx, targetIx;
-    if (!mallocTypeInference(&type_dag, &sourceIx, &targetIx, dag, (size_t)len, &census) || !type_dag ||
-        type_dag[sourceIx].bitSize != 768 || type_dag[targetIx].bitSize != 256) {
+    if (!mallocTypeInference(&type_dag, dag, (size_t)len, &census) || !type_dag ||
+        type_dag[dag[len-1].sourceType].bitSize != 768 || type_dag[dag[len-1].targetType].bitSize != 256) {
       failures++;
       printf("Unexpected failure of type inference for hashblock\n");
     } else if (!fillWitnessData(dag, type_dag, (size_t)len, witness)) {
       failures++;
       printf("Unexpected failure of fillWitnessData for hashblock\n");
     } else {
-      analyses analysis[len];
-      computeWitnessMerkleRoot(analysis, dag, type_dag, (size_t)len);
-      if (0 == memcmp(hashBlock_wmr, analysis[len-1].witnessMerkleRoot.s, sizeof(uint32_t[8]))) {
-        successes++;
-      } else {
-        failures++;
-        printf("Unexpected WMR of hashblock\n");
+      {
+        analyses analysis[len];
+        computeAnnotatedMerkleRoot(analysis, dag, type_dag, (size_t)len);
+        if (0 == memcmp(hashBlock_amr, analysis[len-1].annotatedMerkleRoot.s, sizeof(uint32_t[8]))) {
+          successes++;
+        } else {
+          failures++;
+          printf("Unexpected AMR of hashblock\n");
+        }
+      }
+      {
+        sha256_midstate imr[len];
+        bool noDups;
+        if (verifyNoDuplicateIdentityRoots(&noDups, imr, dag, type_dag, (size_t)len) && noDups
+            && 0 == memcmp(hashBlock_imr, imr[len-1].s, sizeof(uint32_t[8]))) {
+          successes++;
+        } else {
+          failures++;
+          printf("Unexpected IMR of hashblock\n");
+        }
       }
 
       _Static_assert(UWORD_BIT - 1 <= SIZE_MAX - (256+512), "UWORD_BIT is far too large.");
@@ -139,7 +153,8 @@ static void test_hashBlock(void) {
   free(witnessAlloc);
 }
 
-static void test_program(char* name, FILE* file, bool expectedResult, const uint32_t* expectedCMR, const uint32_t* expectedWMR) {
+static void test_program(char* name, FILE* file, bool expectedResult, const uint32_t* expectedCMR,
+                         const uint32_t* expectedIMR, const uint32_t* expectedAMR) {
   printf("Test %s\n", name);
   dag_node* dag;
   combinator_counters census;
@@ -172,23 +187,35 @@ static void test_program(char* name, FILE* file, bool expectedResult, const uint
       }
     }
     type* type_dag;
-    size_t sourceIx, targetIx;
-    if (!mallocTypeInference(&type_dag, &sourceIx, &targetIx, dag, (size_t)len, &census) || !type_dag ||
-        sourceIx != 0 || targetIx != 0) {
+    if (!mallocTypeInference(&type_dag, dag, (size_t)len, &census) || !type_dag ||
+        dag[len-1].sourceType != 0 || dag[len-1].targetType != 0) {
       failures++;
       printf("Unexpected failure of type inference.\n");
     } else if (!fillWitnessData(dag, type_dag, (size_t)len, witness)) {
       failures++;
       printf("Unexpected failure of fillWitnessData.\n");
     } else {
-      analyses analysis[len];
-      computeWitnessMerkleRoot(analysis, dag, type_dag, (size_t)len);
-      if (expectedWMR) {
-        if (0 == memcmp(expectedWMR, analysis[len-1].witnessMerkleRoot.s, sizeof(uint32_t[8]))) {
+      { 
+        analyses analysis[len];
+        computeAnnotatedMerkleRoot(analysis, dag, type_dag, (size_t)len);
+        if (expectedAMR) {
+          if (0 == memcmp(expectedAMR, analysis[len-1].annotatedMerkleRoot.s, sizeof(uint32_t[8]))) {
+            successes++;
+          } else {
+            failures++;
+            printf("Unexpected AMR.\n");
+          }
+        }
+      }
+      {
+        sha256_midstate imr[len];
+        bool noDups;
+        if (verifyNoDuplicateIdentityRoots(&noDups, imr, dag, type_dag, (size_t)len) && noDups
+            && 0 == memcmp(expectedIMR, imr[len-1].s, sizeof(uint32_t[8]))) {
           successes++;
         } else {
           failures++;
-          printf("Unexpected WMR.\n");
+          printf("Unexpected IMR.\n");
         }
       }
       bool evalSuccess;
@@ -222,7 +249,7 @@ static void test_occursCheck(void) {
     printf("Error parsing dag: %d\n", len);
   } else {
     type* type_dag;
-    if (mallocTypeInference(&type_dag, &(size_t){0}, &(size_t){0}, dag, (size_t)len, &census) && !type_dag) {
+    if (mallocTypeInference(&type_dag, dag, (size_t)len, &census) && !type_dag) {
       successes++;
     } else {
       printf("Unexpected occurs check success\n");
@@ -234,7 +261,7 @@ static void test_occursCheck(void) {
 }
 
 static void test_elements(void) {
-  unsigned char cmr[32], wmr[32];
+  unsigned char cmr[32], amr[32];
 
   printf("Test elements\n");
   {
@@ -269,14 +296,22 @@ static void test_elements(void) {
       };
     transaction* tx1 = elements_simplicity_mallocTransaction(&testTx1);
     sha256_fromMidstate(cmr, elementsCheckSigHashAllTx1_cmr);
-    sha256_fromMidstate(wmr, elementsCheckSigHashAllTx1_wmr);
+    sha256_fromMidstate(amr, elementsCheckSigHashAllTx1_amr);
     if (tx1) {
       successes++;
       bool execResult;
       {
         FILE* file = fmemopen_rb(elementsCheckSigHashAllTx1, sizeof_elementsCheckSigHashAllTx1);
-        if (elements_simplicity_execSimplicity(&execResult, tx1, 0, cmr, wmr, file) && execResult) {
-          successes++;
+        unsigned char imrResult[32];
+        if (elements_simplicity_execSimplicity(&execResult, imrResult, tx1, 0, cmr, amr, file) && execResult) {
+          sha256_midstate imr;
+          sha256_toMidstate(imr.s, imrResult);
+          if (0 == memcmp(imr.s, elementsCheckSigHashAllTx1_imr, sizeof(uint32_t[8]))) {
+            successes++;
+          } else {
+            failures++;
+            printf("Unexpected IMR of elementsCheckSigHashAllTx1\n");
+          }
         } else {
           failures++;
           printf("execSimplicity of elementsCheckSigHashAllTx1 on tx1 failed\n");
@@ -289,7 +324,7 @@ static void test_elements(void) {
         memcpy(brokenSig, elementsCheckSigHashAllTx1, sizeof_elementsCheckSigHashAllTx1);
         brokenSig[sizeof_elementsCheckSigHashAllTx1 - 1] ^= 0x80;
         FILE* file = fmemopen_rb(brokenSig, sizeof_elementsCheckSigHashAllTx1);
-        if (elements_simplicity_execSimplicity(&execResult, tx1, 0, NULL, NULL, file) && !execResult) {
+        if (elements_simplicity_execSimplicity(&execResult, NULL, tx1, 0, NULL, NULL, file) && !execResult) {
           successes++;
         } else {
           failures++;
@@ -340,7 +375,7 @@ static void test_elements(void) {
       bool execResult;
       {
         FILE* file = fmemopen_rb(elementsCheckSigHashAllTx1, sizeof_elementsCheckSigHashAllTx1);
-        if (elements_simplicity_execSimplicity(&execResult, tx2, 0, NULL, NULL, file) && !execResult) {
+        if (elements_simplicity_execSimplicity(&execResult, NULL, tx2, 0, NULL, NULL, file) && !execResult) {
           successes++;
         } else {
           failures++;
@@ -356,18 +391,68 @@ static void test_elements(void) {
   }
 }
 
+static sha256_midstate hashint(uint_fast32_t n) {
+  sha256_midstate result;
+  sha256_context ctx = sha256_init(result.s);
+  sha256_u32le(&ctx, n);
+  sha256_finalize(&ctx);
+
+  return result;
+}
+
+static uint_fast32_t rsort_no_duplicates(size_t i) {
+  return i;
+}
+
+static uint_fast32_t rsort_all_duplicates(size_t i) {
+  (void)i;
+  return 0;
+}
+
+static uint_fast32_t rsort_one_duplicate(size_t i) {
+  return i ? i : 1;
+}
+
+static void test_hasDuplicates(const char* name, bool expected, uint_fast32_t (*f)(size_t), size_t n) {
+  sha256_midstate hashes[n];
+
+  printf("Test %s\n", name);
+  for(size_t i = 0; i < n; ++i) {
+    hashes[i] = hashint(f(i));
+  }
+
+  bool duplicates;
+  if (!hasDuplicates(&duplicates, hashes, n)) {
+    failures++;
+    printf("Unexpected failure of hasDuplicates\n");
+  } else if (expected == duplicates) {
+    successes++;
+  } else if (expected) {
+    failures++;
+    printf("Expected duplicates but found none.\n");
+  } else {
+    failures++;
+    printf("Expected no duplicate but found some.\n");
+  }
+}
+
 int main(void) {
   test_decodeUptoMaxInt();
   test_hashBlock();
   test_occursCheck();
+
+  test_hasDuplicates("hasDuplicates no duplicates testcase", false, rsort_no_duplicates, 10000);
+  test_hasDuplicates("hasDuplicates all duplicates testcase", true, rsort_all_duplicates, 10000);
+  test_hasDuplicates("hasDuplicates one duplicate testcase", true, rsort_one_duplicate, 10000);
+
   {
     FILE* file = fmemopen_rb(schnorr0, sizeof_schnorr0);
-    test_program("schnorr0", file, true, schnorr0_cmr, schnorr0_wmr);
+    test_program("schnorr0", file, true, schnorr0_cmr, schnorr0_imr, schnorr0_amr);
     fclose(file);
   }
   {
     FILE* file = fmemopen_rb(schnorr6, sizeof_schnorr6);
-    test_program("schnorr6", file, false, schnorr6_cmr, schnorr6_wmr);
+    test_program("schnorr6", file, false, schnorr6_cmr, schnorr6_imr, schnorr6_amr);
     fclose(file);
   }
   test_elements();

@@ -4,11 +4,12 @@
 
 #include "jets.h"
 #include "../../callonce.h"
+#include "../../prefix.h"
 #include "../../tag.h"
 #include "../../unreachable.h"
 
-#define PRIMITIVE_TAG(s) "Simplicity\x1F" "Primitive\x1F" "Elements\x1F" s
-#define JET_TAG "Simplicity\x1F" "Jet"
+#define PRIMITIVE_TAG(s) SIMPLICITY_PREFIX "\x1F" "Primitive\x1F" "Elements\x1F" s
+#define JET_TAG SIMPLICITY_PREFIX "\x1F" "Jet"
 
 /* An enumeration of all the types we need to construct to specify the input and output types of all jets created by 'decodeJet'. */
 enum TypeNamesForJets {
@@ -42,7 +43,7 @@ enum TypeNamesForJets {
   sWord2TimesWord256PlusTwoPlusWord4,
   sSWord2TimesWord256PlusTwoPlusWord4,
   twoTimesWord32,
-  word64TimesTwo,
+  twoTimesWord64,
   word256TimesWord512,
   NumberOfTypeNames
 };
@@ -130,8 +131,8 @@ size_t mallocBoundVars(unification_var** bound_var, size_t* word256_ix, size_t* 
       .bound = { .kind = SUM,     .arg = { &(*bound_var)[one], &(*bound_var)[sWord2TimesWord256PlusTwoPlusWord4] } } };
   (*bound_var)[twoTimesWord32] = (unification_var){ .isBound = true,
       .bound = { .kind = PRODUCT, .arg = { &(*bound_var)[two], &(*bound_var)[word32] } } };
-  (*bound_var)[word64TimesTwo] = (unification_var){ .isBound = true,
-      .bound = { .kind = PRODUCT, .arg = { &(*bound_var)[word64], &(*bound_var)[two] } } };
+  (*bound_var)[twoTimesWord64] = (unification_var){ .isBound = true,
+      .bound = { .kind = PRODUCT, .arg = { &(*bound_var)[two], &(*bound_var)[word64] } } };
   (*bound_var)[word256TimesWord512] = (unification_var){ .isBound = true,
       .bound = { .kind = PRODUCT, .arg = { &(*bound_var)[word256], &(*bound_var)[word512] } } };
 
@@ -144,13 +145,13 @@ size_t mallocBoundVars(unification_var** bound_var, size_t* word256_ix, size_t* 
 
 /* An enumeration of the names of Elements specific jets and primitives. */
 typedef enum jetName
-{ ADDER32
-, SUBTRACTOR32
-, MULTIPLIER32
-, FULLADDER32
-, FULLSUBTRACTOR32
-, FULLMULTIPLIER32
-, SHA256_HASHBLOCK
+{ ADD_32
+, SUBTRACT_32
+, MULTIPLY_32
+, FULL_ADD_32
+, FULL_SUBTRACT_32
+, FULL_MULTIPLY_32
+, SHA_256_BLOCK
 , VERSION
 , LOCKTIME
 , INPUTISPEGIN
@@ -199,9 +200,9 @@ static int32_t either(jetName* result, jetName a, jetName b, bitstream* stream) 
 
 /* Decode an Elements specific jet name from 'stream' into 'result'.
  * All jets begin with a bit prefix of '1' which needs to have already been consumed from the 'stream'.
- * Returns 'ERR_DATA_OUT_OF_RANGE' if the stream's prefix doesn't match any valid code for a jet.
- * Returns 'ERR_BITSTRING_EOF' if not enough bits are available in the 'stream'.
- * Returns 'ERR_BITSTREAM_ERROR' if an I/O error occurs when reading from the 'stream'.
+ * Returns 'SIMPLICITY_ERR_DATA_OUT_OF_RANGE' if the stream's prefix doesn't match any valid code for a jet.
+ * Returns 'SIMPLICITY_ERR_BITSTRING_EOF' if not enough bits are available in the 'stream'.
+ * Returns 'SIMPLICITY_ERR_BITSTREAM_ERROR' if an I/O error occurs when reading from the 'stream'.
  * In the above error cases, 'result' may be modified.
  * Returns 0 if successful.
  *
@@ -249,7 +250,7 @@ static int32_t decodePrimitive(jetName* result, bitstream* stream) {
      case 0x1e: *result = NUMOUTPUTS; return 0;
      case 0x1f:
       /* FEE is not yet implemented.  Disable it. */
-      *result = FEE; return ERR_DATA_OUT_OF_RANGE;
+      *result = FEE; return SIMPLICITY_ERR_DATA_OUT_OF_RANGE;
     }
     assert(false);
     UNREACHABLE;
@@ -257,27 +258,79 @@ static int32_t decodePrimitive(jetName* result, bitstream* stream) {
     bit = getBit(stream);
     if (bit < 0) return bit;
     if (!bit) {
-      int32_t code = getNBits(2, stream);
+      /* Core jets */
+      int32_t code = decodeUptoMaxInt(stream);
       if (code < 0) return code;
 
       switch (code) {
-        case 0x0: return either(result, ADDER32, SUBTRACTOR32, stream);
-        case 0x1: *result = MULTIPLIER32; return 0;
-        case 0x2: return either(result, FULLADDER32, FULLSUBTRACTOR32, stream);
-        case 0x3: *result = FULLMULTIPLIER32; return 0;
-      }
+       case 2: /* Arith jets chapter */
+        code = decodeUptoMaxInt(stream);
+        if (code < 0) return code;
 
-      assert(false);
-      UNREACHABLE;
-    } else {
-      bit = getBit(stream);
-      if (bit < 0) return bit;
-      if (!bit) {
-        *result = SHA256_HASHBLOCK; return 0;
-      } else {
-        fprintf(stderr, "EC jets nodes not yet implemented.\n");
-        return ERR_DATA_OUT_OF_RANGE;
+        switch (code) {
+         case 2: /* FullAdd */
+          code = decodeUptoMaxInt(stream);
+          if (code < 0) return code;
+          switch (code) {
+           case 5: *result = FULL_ADD_32; return 0;
+          }
+          break;
+         case 3: /* Add */
+          code = decodeUptoMaxInt(stream);
+          if (code < 0) return code;
+          switch (code) {
+           case 5: *result = ADD_32; return 0;
+          }
+          break;
+         case 7: /* FullSubtract */
+          code = decodeUptoMaxInt(stream);
+          if (code < 0) return code;
+          switch (code) {
+           case 5: *result = FULL_SUBTRACT_32; return 0;
+          }
+          break;
+         case 8: /* Subtract */
+          code = decodeUptoMaxInt(stream);
+          if (code < 0) return code;
+          switch (code) {
+           case 5: *result = SUBTRACT_32; return 0;
+          }
+          break;
+         case 12: /* FullMultiply */
+          code = decodeUptoMaxInt(stream);
+          if (code < 0) return code;
+          switch (code) {
+           case 5: *result = FULL_MULTIPLY_32; return 0;
+          }
+          break;
+         case 13: /* Multiply */
+          code = decodeUptoMaxInt(stream);
+          if (code < 0) return code;
+          switch (code) {
+           case 5: *result = MULTIPLY_32; return 0;
+          }
+          break;
+        }
+        break;
+       case 3: /* Hash jets chapter */
+        code = decodeUptoMaxInt(stream);
+        if (code < 0) return code;
+        switch (code) {
+         case 1: /* SHA-256 section */
+          code = decodeUptoMaxInt(stream);
+          if (code < 0) return code;
+          switch (code) {
+           case 1: *result = SHA_256_BLOCK; return 0;
+          }
+          break;
+        }
+        break;
       }
+      return SIMPLICITY_ERR_DATA_OUT_OF_RANGE;
+
+    } else {
+      /* Elements specific jets go here */
+      return SIMPLICITY_ERR_DATA_OUT_OF_RANGE;
     }
   }
 }
@@ -287,45 +340,45 @@ static int32_t decodePrimitive(jetName* result, bitstream* stream) {
  */
 static once_flag static_initialized = ONCE_FLAG_INIT;
 static dag_node jet_node[] = {
- [ADDER32] =
+ [ADD_32] =
     { .tag = JET
-    , .jet = adder32
+    , .jet = add_32
     , .sourceIx = word64
     , .targetIx = twoTimesWord32
     },
- [SUBTRACTOR32] =
+ [SUBTRACT_32] =
     { .tag = JET
-    , .jet = subtractor32
+    , .jet = subtract_32
     , .sourceIx = word64
     , .targetIx = twoTimesWord32
     },
- [MULTIPLIER32] =
+ [MULTIPLY_32] =
     { .tag = JET
-    , .jet = multiplier32
+    , .jet = multiply_32
     , .sourceIx = word64
     , .targetIx = word64
     },
- [FULLADDER32] =
+ [FULL_ADD_32] =
     { .tag = JET
-    , .jet = fullAdder32
-    , .sourceIx = word64TimesTwo
+    , .jet = full_add_32
+    , .sourceIx = twoTimesWord64
     , .targetIx = twoTimesWord32
     },
- [FULLSUBTRACTOR32] =
+ [FULL_SUBTRACT_32] =
     { .tag = JET
-    , .jet = fullSubtractor32
-    , .sourceIx = word64TimesTwo
+    , .jet = full_subtract_32
+    , .sourceIx = twoTimesWord64
     , .targetIx = twoTimesWord32
     },
- [FULLMULTIPLIER32] =
+ [FULL_MULTIPLY_32] =
     { .tag = JET
-    , .jet = fullMultiplier32
+    , .jet = full_multiply_32
     , .sourceIx = word128
     , .targetIx = word64
     },
- [SHA256_HASHBLOCK] =
+ [SHA_256_BLOCK] =
     { .tag = JET
-    , .jet = sha256_hashBlock
+    , .jet = sha_256_block
     , .sourceIx = word256TimesWord512
     , .targetIx = word256
     },
@@ -549,60 +602,61 @@ static dag_node jet_node[] = {
 static void static_initialize(void) {
   {
     sha256_midstate jet_iv;
-    MK_TAG(jet_iv.s, JET_TAG);
+    MK_TAG(&jet_iv, JET_TAG);
 
 #define MK_JET(name, h0, h1, h2, h3, h4, h5, h6, h7) \
   do { \
-    jet_node[name].wmr = jet_iv; \
-    sha256_compression(jet_node[name].wmr.s, (uint32_t[16]){ [8] = h0, h1, h2, h3, h4, h5, h6, h7 }); \
+    jet_node[name].cmr = jet_iv; \
+    sha256_compression(jet_node[name].cmr.s, (uint32_t[16]){ [8] = h0, h1, h2, h3, h4, h5, h6, h7 }); \
   } while(0)
 
-    MK_JET(ADDER32,          0x8e389a7d, 0x75429a8a, 0x6f5b448e, 0xc8e84585, 0x20e276fc, 0x8e09ef5a, 0x68f3f32d, 0x9fb97935);
-    MK_JET(FULLADDER32,      0xb914e4b5, 0x9f8eded4, 0xcd036e03, 0xffa5f11a, 0xa8668ae4, 0x9863bbb4, 0x3a0d7c3a, 0x14c916f0);
-    MK_JET(SUBTRACTOR32,     0x75ebd569, 0xbfce7af8, 0x030c49c7, 0x3e104c03, 0x65de898e, 0xa8d52670, 0xbffe9f6e, 0x312ff6e6);
-    MK_JET(FULLSUBTRACTOR32, 0x7a52e83e, 0x253ae776, 0xb0b948f1, 0x5083528e, 0x1c5d58cd, 0x5e03d4f2, 0xf04a9626, 0xe0476aeb);
-    MK_JET(MULTIPLIER32,     0x405914c9, 0x524c4873, 0xce5ddb06, 0xfd30d6d5, 0xfc4ac1fa, 0xc0eef8d8, 0x2de6c622, 0x7fb2d2cd);
-    MK_JET(FULLMULTIPLIER32, 0x89a0ae09, 0x8aff5e9c, 0x40907447, 0x91ff5c8e, 0xe17a8ceb, 0x9e494224, 0xe919deb1, 0x1c5b8af4);
-    MK_JET(SHA256_HASHBLOCK, 0xeeae47e2, 0xf7876c3b, 0x9cbcd404, 0xa338b089, 0xfdeadf1b, 0x9bb382ec, 0x6e69719d, 0x31baec9a);
+    /* Jets are identified by their specification's identity Merkle roots. */
+    MK_JET(ADD_32,            0xe40466a7u, 0xecf71ce8u, 0x62fb3c15u, 0x4c1e8f84u, 0x5d7e5707u, 0x463a8945u, 0x37a32fc7u, 0x214900adu);
+    MK_JET(FULL_ADD_32,       0x4727361eu, 0xa003c1a4u, 0x83e57505u, 0xcf5b405au, 0x8227da1au, 0xddc47e2bu, 0x016c2d09u, 0xbe047fe8u);
+    MK_JET(SUBTRACT_32,       0xf76ecad1u, 0xfda50f13u, 0x5bdfe3e5u, 0x33a15009u, 0x8f406261u, 0xc76f6dbfu, 0x6725f1e3u, 0x883c2ae2u);
+    MK_JET(FULL_SUBTRACT_32,  0x6d96f68au, 0x945c22e7u, 0x62115c09u, 0x4297b194u, 0xbedc0ce5u, 0xa0c92db6u, 0x4b830a18u, 0xb44df0d0u);
+    MK_JET(MULTIPLY_32,       0x161fd03au, 0x92c621b3u, 0x289849ffu, 0x29ad8134u, 0x99d63ed9u, 0x73db0e97u, 0x51785421u, 0xf568d18fu);
+    MK_JET(FULL_MULTIPLY_32,  0xaac25361u, 0xe598e354u, 0x38b918b5u, 0x8fd2cef4u, 0xdb3c5d8cu, 0x5e63aa4fu, 0x25e9cec0u, 0xcfd9dfb1u);
+    MK_JET(SHA_256_BLOCK,     0xdfc927d3u, 0x9bf7147au, 0x8b0a7f43u, 0x79466870u, 0x824db102u, 0x090a0036u, 0x2923a377u, 0xa91af681u);
 #undef MK_JET
 
   }
-  MK_TAG(jet_node[VERSION].wmr.s, PRIMITIVE_TAG("version"));
-  MK_TAG(jet_node[LOCKTIME].wmr.s, PRIMITIVE_TAG("lockTime"));
-  MK_TAG(jet_node[INPUTISPEGIN].wmr.s, PRIMITIVE_TAG("inputIsPegin"));
-  MK_TAG(jet_node[INPUTPREVOUTPOINT].wmr.s, PRIMITIVE_TAG("inputPrevOutpoint"));
-  MK_TAG(jet_node[INPUTASSET].wmr.s, PRIMITIVE_TAG("inputAsset"));
-  MK_TAG(jet_node[INPUTAMOUNT].wmr.s, PRIMITIVE_TAG("inputAmount"));
-  MK_TAG(jet_node[INPUTSCRIPTHASH].wmr.s, PRIMITIVE_TAG("inputScriptHash"));
-  MK_TAG(jet_node[INPUTSEQUENCE].wmr.s, PRIMITIVE_TAG("inputSequence"));
-  MK_TAG(jet_node[INPUTISSUANCEBLINDING].wmr.s, PRIMITIVE_TAG("inputIssuanceBlinding"));
-  MK_TAG(jet_node[INPUTISSUANCECONTRACT].wmr.s, PRIMITIVE_TAG("inputIssuanceContract"));
-  MK_TAG(jet_node[INPUTISSUANCEENTROPY].wmr.s, PRIMITIVE_TAG("inputIssuanceEntropy"));
-  MK_TAG(jet_node[INPUTISSUANCEASSETAMT].wmr.s, PRIMITIVE_TAG("inputIssuanceAssetAmt"));
-  MK_TAG(jet_node[INPUTISSUANCETOKENAMT].wmr.s, PRIMITIVE_TAG("inputIssuanceTokenAmt"));
-  MK_TAG(jet_node[OUTPUTASSET].wmr.s, PRIMITIVE_TAG("outputAsset"));
-  MK_TAG(jet_node[OUTPUTAMOUNT].wmr.s, PRIMITIVE_TAG("outputAmount"));
-  MK_TAG(jet_node[OUTPUTNONCE].wmr.s, PRIMITIVE_TAG("outputNonce"));
-  MK_TAG(jet_node[OUTPUTSCRIPTHASH].wmr.s, PRIMITIVE_TAG("outputScriptHash"));
-  MK_TAG(jet_node[OUTPUTNULLDATUM].wmr.s, PRIMITIVE_TAG("outputNullDatum"));
-  MK_TAG(jet_node[SCRIPTCMR].wmr.s, PRIMITIVE_TAG("scriptCMR"));
-  MK_TAG(jet_node[CURRENTINDEX].wmr.s, PRIMITIVE_TAG("currentIndex"));
-  MK_TAG(jet_node[CURRENTISPEGIN].wmr.s, PRIMITIVE_TAG("currentIsPegin"));
-  MK_TAG(jet_node[CURRENTPREVOUTPOINT].wmr.s, PRIMITIVE_TAG("currentPrevOutpoint"));
-  MK_TAG(jet_node[CURRENTASSET].wmr.s, PRIMITIVE_TAG("currentAsset"));
-  MK_TAG(jet_node[CURRENTAMOUNT].wmr.s, PRIMITIVE_TAG("currentAmount"));
-  MK_TAG(jet_node[CURRENTSCRIPTHASH].wmr.s, PRIMITIVE_TAG("currentScriptHash"));
-  MK_TAG(jet_node[CURRENTSEQUENCE].wmr.s, PRIMITIVE_TAG("currentSequence"));
-  MK_TAG(jet_node[CURRENTISSUANCEBLINDING].wmr.s, PRIMITIVE_TAG("currentIssuanceBlinding"));
-  MK_TAG(jet_node[CURRENTISSUANCECONTRACT].wmr.s, PRIMITIVE_TAG("currentIssuanceContract"));
-  MK_TAG(jet_node[CURRENTISSUANCEENTROPY].wmr.s, PRIMITIVE_TAG("currentIssuanceEntropy"));
-  MK_TAG(jet_node[CURRENTISSUANCEASSETAMT].wmr.s, PRIMITIVE_TAG("currentIssuanceAssetAmt"));
-  MK_TAG(jet_node[CURRENTISSUANCETOKENAMT].wmr.s, PRIMITIVE_TAG("currentIssuanceTokenAmt"));
-  MK_TAG(jet_node[INPUTSHASH].wmr.s, PRIMITIVE_TAG("inputsHash"));
-  MK_TAG(jet_node[OUTPUTSHASH].wmr.s, PRIMITIVE_TAG("outputsHash"));
-  MK_TAG(jet_node[NUMINPUTS].wmr.s, PRIMITIVE_TAG("numInputs"));
-  MK_TAG(jet_node[NUMOUTPUTS].wmr.s, PRIMITIVE_TAG("numOutputs"));
-  MK_TAG(jet_node[FEE].wmr.s, PRIMITIVE_TAG("fee"));
+  MK_TAG(&jet_node[VERSION].cmr, PRIMITIVE_TAG("version"));
+  MK_TAG(&jet_node[LOCKTIME].cmr, PRIMITIVE_TAG("lockTime"));
+  MK_TAG(&jet_node[INPUTISPEGIN].cmr, PRIMITIVE_TAG("inputIsPegin"));
+  MK_TAG(&jet_node[INPUTPREVOUTPOINT].cmr, PRIMITIVE_TAG("inputPrevOutpoint"));
+  MK_TAG(&jet_node[INPUTASSET].cmr, PRIMITIVE_TAG("inputAsset"));
+  MK_TAG(&jet_node[INPUTAMOUNT].cmr, PRIMITIVE_TAG("inputAmount"));
+  MK_TAG(&jet_node[INPUTSCRIPTHASH].cmr, PRIMITIVE_TAG("inputScriptHash"));
+  MK_TAG(&jet_node[INPUTSEQUENCE].cmr, PRIMITIVE_TAG("inputSequence"));
+  MK_TAG(&jet_node[INPUTISSUANCEBLINDING].cmr, PRIMITIVE_TAG("inputIssuanceBlinding"));
+  MK_TAG(&jet_node[INPUTISSUANCECONTRACT].cmr, PRIMITIVE_TAG("inputIssuanceContract"));
+  MK_TAG(&jet_node[INPUTISSUANCEENTROPY].cmr, PRIMITIVE_TAG("inputIssuanceEntropy"));
+  MK_TAG(&jet_node[INPUTISSUANCEASSETAMT].cmr, PRIMITIVE_TAG("inputIssuanceAssetAmt"));
+  MK_TAG(&jet_node[INPUTISSUANCETOKENAMT].cmr, PRIMITIVE_TAG("inputIssuanceTokenAmt"));
+  MK_TAG(&jet_node[OUTPUTASSET].cmr, PRIMITIVE_TAG("outputAsset"));
+  MK_TAG(&jet_node[OUTPUTAMOUNT].cmr, PRIMITIVE_TAG("outputAmount"));
+  MK_TAG(&jet_node[OUTPUTNONCE].cmr, PRIMITIVE_TAG("outputNonce"));
+  MK_TAG(&jet_node[OUTPUTSCRIPTHASH].cmr, PRIMITIVE_TAG("outputScriptHash"));
+  MK_TAG(&jet_node[OUTPUTNULLDATUM].cmr, PRIMITIVE_TAG("outputNullDatum"));
+  MK_TAG(&jet_node[SCRIPTCMR].cmr, PRIMITIVE_TAG("scriptCMR"));
+  MK_TAG(&jet_node[CURRENTINDEX].cmr, PRIMITIVE_TAG("currentIndex"));
+  MK_TAG(&jet_node[CURRENTISPEGIN].cmr, PRIMITIVE_TAG("currentIsPegin"));
+  MK_TAG(&jet_node[CURRENTPREVOUTPOINT].cmr, PRIMITIVE_TAG("currentPrevOutpoint"));
+  MK_TAG(&jet_node[CURRENTASSET].cmr, PRIMITIVE_TAG("currentAsset"));
+  MK_TAG(&jet_node[CURRENTAMOUNT].cmr, PRIMITIVE_TAG("currentAmount"));
+  MK_TAG(&jet_node[CURRENTSCRIPTHASH].cmr, PRIMITIVE_TAG("currentScriptHash"));
+  MK_TAG(&jet_node[CURRENTSEQUENCE].cmr, PRIMITIVE_TAG("currentSequence"));
+  MK_TAG(&jet_node[CURRENTISSUANCEBLINDING].cmr, PRIMITIVE_TAG("currentIssuanceBlinding"));
+  MK_TAG(&jet_node[CURRENTISSUANCECONTRACT].cmr, PRIMITIVE_TAG("currentIssuanceContract"));
+  MK_TAG(&jet_node[CURRENTISSUANCEENTROPY].cmr, PRIMITIVE_TAG("currentIssuanceEntropy"));
+  MK_TAG(&jet_node[CURRENTISSUANCEASSETAMT].cmr, PRIMITIVE_TAG("currentIssuanceAssetAmt"));
+  MK_TAG(&jet_node[CURRENTISSUANCETOKENAMT].cmr, PRIMITIVE_TAG("currentIssuanceTokenAmt"));
+  MK_TAG(&jet_node[INPUTSHASH].cmr, PRIMITIVE_TAG("inputsHash"));
+  MK_TAG(&jet_node[OUTPUTSHASH].cmr, PRIMITIVE_TAG("outputsHash"));
+  MK_TAG(&jet_node[NUMINPUTS].cmr, PRIMITIVE_TAG("numInputs"));
+  MK_TAG(&jet_node[NUMOUTPUTS].cmr, PRIMITIVE_TAG("numOutputs"));
+  MK_TAG(&jet_node[FEE].cmr, PRIMITIVE_TAG("fee"));
 }
 
 /* Return a copy of the Simplicity node corresponding to the given Elements specific jet 'name'.
@@ -615,9 +669,9 @@ static dag_node jetNode(jetName name) {
 
 /* Decode an Elements specific jet from 'stream' into 'node'.
  * All jets begin with a bit prefix of '1' which needs to have already been consumed from the 'stream'.
- * Returns 'ERR_DATA_OUT_OF_RANGE' if the stream's prefix doesn't match any valid code for a jet.
- * Returns 'ERR_BITSTRING_EOF' if not enough bits are available in the 'stream'.
- * Returns 'ERR_BITSTREAM_ERROR' if an I/O error occurs when reading from the 'stream'.
+ * Returns 'SIMPLICITY_ERR_DATA_OUT_OF_RANGE' if the stream's prefix doesn't match any valid code for a jet.
+ * Returns 'SIMPLICITY_ERR_BITSTRING_EOF' if not enough bits are available in the 'stream'.
+ * Returns 'SIMPLICITY_ERR_BITSTREAM_ERROR' if an I/O error occurs when reading from the 'stream'.
  * In the above error cases, 'dag' may be modified.
  * Returns 0 if successful.
  *

@@ -1,4 +1,4 @@
-OBJS := bitstream.o dag.o deserialize.o eval.o frame.o jets.o sha256.o type.o typeInference.o primitive/elements.o primitive/elements/jets.o primitive/elements/primitive.o
+OBJS := bitstream.o dag.o deserialize.o eval.o frame.o jets.o rsort.o sha256.o type.o typeInference.o primitive/elements.o primitive/elements/jets.o primitive/elements/primitive.o
 TEST_OBJS := test.o hashBlock.o schnorr0.o schnorr6.o primitive/elements/checkSigHashAllTx1.o
 
 # From https://fastcompression.blogspot.com/2019/01/compiler-warnings.html
@@ -20,8 +20,6 @@ ifeq ($(strip $(SINGLE_THREADED)),)
   LDFLAGS := -pthread
 endif
 
-LDLIBS := -lsha256compression
-
 primitive/elements/jets.o: primitive/elements/jets.c
 	$(CC) -c $(CFLAGS) $(CWARN) -Wno-switch-enum -Wswitch $(CPPFLAGS) -o $@ $<
 
@@ -32,7 +30,7 @@ libElementsSimplicity.a: $(OBJS)
 	ar rcs $@ $^
 
 test: $(TEST_OBJS) libElementsSimplicity.a
-	$(CC) $^ -o $@ $(LDFLAGS) $(LDLIBS)
+	$(CC) $^ -o $@ $(LDFLAGS)
 
 install: libElementsSimplicity.a
 	mkdir -p $(out)/lib

@@ -1,11 +1,12 @@
-{ mkDerivation, base, binary, cereal, lens-family, lib, MemoTrie, mtl, QuickCheck, stdenv, SHA, split, tasty, tasty-hunit, tasty-quickcheck, unification-fd, vector }:
+{ mkDerivation, base, binary, cereal, lens-family, lib, MemoTrie, mtl, QuickCheck, stdenv, SHA, split, tasty, tasty-hunit, tasty-quickcheck, tardis, unification-fd, vector }:
 mkDerivation (rec {
   pname = "Simplicity";
   version = "0.0.0";
   src = lib.sourceFilesBySuffices
-      (lib.sourceByRegex ./. ["^LICENSE$" "^Simplicity\.cabal$" "^Setup.hs$" "^Tests.hs$" "^Haskell$" "^Haskell/.*"])
-    ["LICENSE" ".cabal" ".hs" ".hsig"];
-  libraryHaskellDepends = [ base binary cereal lens-family MemoTrie mtl SHA split unification-fd vector ];
+      (lib.sourceByRegex ./. ["^LICENSE$" "^Simplicity\.cabal$" "^Setup.hs$" "^Tests.hs$" "^Haskell$" "^Haskell/.*"
+                              "^C$" "^C/uword.h" "^C/bitstring.h" "^C/frame.*" "^C/jets.*" "^C/sha256.*"])
+    ["LICENSE" ".cabal" ".hs" ".hsig" ".h" ".c"];
+  libraryHaskellDepends = [ base binary cereal lens-family MemoTrie mtl SHA split tardis unification-fd vector ];
   testHaskellDepends = libraryHaskellDepends ++ [ QuickCheck tasty tasty-hunit tasty-quickcheck ];
   testTarget = ''--test-option="--quickcheck-replay=582534"'';
 
@@ -17,5 +18,5 @@ mkDerivation (rec {
     cp ${./Simplicity-Primitive.html} $doc/share/doc/${pname}-${version}/html/Simplicity-Primitive.html
   '';
 
-  license = stdenv.lib.licenses.mit;
+  license = lib.licenses.mit;
 })

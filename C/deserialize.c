@@ -7,8 +7,8 @@
 
 /* Fetches 'len' 'uint32_t's from 'stream' into 'result'.
  * The bits in each 'uint32_t' are set from the MSB to the LSB and the 'uint32_t's of 'result' are set from 0 up to 'len'.
- * Returns 'ERR_BITSTREAM_EOF' if not enough bits are available ('result' may be modified).
- * Returns 'ERR_BITSTREAM_ERROR' if an I/O error occurs when reading from the 'stream' ('result' may be modified).
+ * Returns 'SIMPLICITY_ERR_BITSTREAM_EOF' if not enough bits are available ('result' may be modified).
+ * Returns 'SIMPLICITY_ERR_BITSTREAM_ERROR' if an I/O error occurs when reading from the 'stream' ('result' may be modified).
  * Returns 0 if successful.
  *
  * Precondition: uint32_t result[len];
@@ -28,8 +28,8 @@ static int32_t getWord32Array(uint32_t* result, const size_t len, bitstream* str
 }
 
 /* Fetches a 256-bit hash value from 'stream' into 'result'.
- * Returns 'ERR_BITSTREAM_EOF' if not enough bits are available ('result' may be modified).
- * Returns 'ERR_BITSTREAM_ERROR' if an I/O error occurs when reading from the 'stream' ('result' may be modified).
+ * Returns 'SIMPLICITY_ERR_BITSTREAM_EOF' if not enough bits are available ('result' may be modified).
+ * Returns 'SIMPLICITY_ERR_BITSTREAM_ERROR' if an I/O error occurs when reading from the 'stream' ('result' may be modified).
  * Returns 0 if successful.
  *
  * Precondition: NULL != result
@@ -39,168 +39,16 @@ static int32_t getHash(sha256_midstate* result, bitstream* stream) {
   return getWord32Array(result->s, 8, stream);
 }
 
-/* Decode an encoded bitstring up to length 1.
- * If successful returns the length of the bitstring and 'result' contains the decoded bits.
- * The decoded bitstring is stored in the LSBs of 'result', with the LSB being the last bit decoded.
- * Any remaining bits in 'result' are reset to 0.
- * If the decoded bitstring would be too long 'ERR_DATA_OUT_OF_RANGE' is returned ('result' may be modified).
- * If more bits are needed than available in the 'stream', 'ERR_BITSTRING_EOF' is returned ('result' may be modified).
- * If an I/O error occurs when reading from the 'stream', 'ERR_BISTRING_ERROR' is returned ('result' may be modified).
- *
- * Precondition: NULL != result
- *               NULL != stream
- */
-static int32_t decodeUpto1Bit(int32_t* result, bitstream* stream) {
-  *result = getBit(stream);
-  if (*result <= 0) return *result;
-
-  *result = getBit(stream);
-  if (*result < 0) return *result;
-  if (0 != *result) return ERR_DATA_OUT_OF_RANGE;
-
-  *result = getBit(stream);
-  if (*result < 0) return *result;
-  return 1;
-}
-
-/* Decode an encoded number between 1 and 3 inclusive.
- * When successful returns the decoded result.
- * If the decoded value would be too large, 'ERR_DATA_OUT_OF_RANGE' is returned.
- * If more bits are needed than available in the 'stream', 'ERR_BITSTRING_EOF' is returned.
- * If an I/O error occurs when reading from the 'stream', 'ERR_BISTRING_ERROR' is returned.
- *
- * Precondition: NULL != stream
- */
-static int32_t decodeUpto3(bitstream* stream) {
-  int32_t result;
-  int32_t len = decodeUpto1Bit(&result, stream);
-  if (len < 0) return len;
-  result |= 1 << len;
-  return result;
-}
-
-/* Decode an encoded bitstring up to length 3.
- * If successful returns the length of the bitstring and 'result' contains the decoded bits.
- * The decoded bitstring is stored in the LSBs of 'result', with the LSB being the last bit decoded.
- * Any remaining bits in 'result' are reset to 0.
- * If the decoded bitstring would be too long 'ERR_DATA_OUT_OF_RANGE' is returned ('result' may be modified).
- * If more bits are needed than available in the 'stream', 'ERR_BITSTRING_EOF' is returned ('result' may be modified).
- * If an I/O error occurs when reading from the 'stream', 'ERR_BISTRING_ERROR' is returned ('result' may be modified).
- *
- * Precondition: NULL != result
- *               NULL != stream
- */
-static int32_t decodeUpto3Bits(int32_t* result, bitstream* stream) {
-  int32_t bit = getBit(stream);
-  if (bit < 0) return bit;
-
-  *result = 0;
-  if (0 == bit) {
-    return 0;
-  } else {
-    int32_t n = decodeUpto3(stream);
-    if (0 <= n) {
-      *result = getNBits(n, stream);
-      if (*result < 0) return *result;
-    }
-    return n;
-  }
-}
-
-/* Decode an encoded number between 1 and 15 inclusive.
- * When successful returns the decoded result.
- * If the decoded value would be too large, 'ERR_DATA_OUT_OF_RANGE' is returned.
- * If more bits are needed than available in the 'stream', 'ERR_BITSTRING_EOF' is returned.
- * If an I/O error occurs when reading from the 'stream', 'ERR_BISTRING_ERROR' is returned.
- *
- * Precondition: NULL != stream
- */
-static int32_t decodeUpto15(bitstream* stream) {
-  int32_t result;
-  int32_t len = decodeUpto3Bits(&result, stream);
-  if (len < 0) return len;
-  result |= 1 << len;
-  return result;
-}
-
-/* Decode an encoded bitstring up to length 15.
- * If successful returns the length of the bitstring and 'result' contains the decoded bits.
- * The decoded bitstring is stored in the LSBs of 'result', with the LSB being the last bit decoded.
- * Any remaining bits in 'result' are reset to 0.
- * If the decoded bitstring would be too long 'ERR_DATA_OUT_OF_RANGE' is returned ('result' may be modified).
- * If more bits are needed than available in the 'stream', 'ERR_BITSTRING_EOF' is returned ('result' may be modified).
- * If an I/O error occurs when reading from the 'stream', 'ERR_BISTRING_ERROR' is returned ('result' may be modified).
- *
- * Precondition: NULL != result
- *               NULL != stream
- */
-static int32_t decodeUpto15Bits(int32_t* result, bitstream* stream) {
-  int32_t bit = getBit(stream);
-  if (bit < 0) return bit;
-
-  *result = 0;
-  if (0 == bit) {
-    return 0;
-  } else {
-    int32_t n = decodeUpto15(stream);
-    if (0 <= n) {
-      *result = getNBits(n, stream);
-      if (*result < 0) return *result;
-    }
-    return n;
-  }
-}
-
-/* Decode an encoded number between 1 and 65535 inclusive.
- * When successful returns the decoded result.
- * If the decoded value would be too large, 'ERR_DATA_OUT_OF_RANGE' is returned.
- * If more bits are needed than available in the 'stream', 'ERR_BITSTRING_EOF' is returned.
- * If an I/O error occurs when reading from the 'stream', 'ERR_BISTRING_ERROR' is returned.
- *
- * Precondition: NULL != stream
- */
-static int32_t decodeUpto65535(bitstream* stream) {
-  int32_t result;
-  int32_t len = decodeUpto15Bits(&result, stream);
-  if (len < 0) return len;
-  result |= 1 << len;
-  return result;
-}
-
-/* Decode an encoded number between 1 and 2^31 - 1 inclusive.
- * When successful returns the decoded result.
- * If the decoded value would be too large, 'ERR_DATA_OUT_OF_RANGE' is returned.
- * If more bits are needed than available in the 'stream', 'ERR_BITSTRING_EOF' is returned.
- * If an I/O error occurs when reading from the 'stream', 'ERR_BISTRING_ERROR' is returned.
- *
- * Precondition: NULL != stream
- */
-int32_t decodeUptoMaxInt(bitstream* stream) {
-  int32_t bit = getBit(stream);
-  if (bit < 0) return bit;
-  if (0 == bit) {
-    return 1;
-  } else {
-    int32_t n = decodeUpto65535(stream);
-    if (n < 0) return n;
-    if (30 < n) return ERR_DATA_OUT_OF_RANGE;
-    {
-      int32_t result = getNBits(n, stream);
-      if (result < 0) return result;
-      return ((1 << n) | result);
-    }
-  }
-}
 
 /* Decode a single node of a Simplicity dag from 'stream' into 'dag'['i'].
- * Returns 'ERR_FAIL_CODE' if the encoding of a fail expression is encountered
+ * Returns 'SIMPLICITY_ERR_FAIL_CODE' if the encoding of a fail expression is encountered
  *   (all fail subexpressions ought to have been pruned prior to serialization).
- * Returns 'ERR_STOP_CODE' if the encoding of a stop tag is encountered.
- * Returns 'ERR_HIDDEN' if the decoded node has illegal HIDDEN children.
- * Returns 'ERR_DATA_OUT_OF_RANGE' if the node's child isn't a reference to one of the preceding nodes.
- *                                 or some encoding for a non-existent jet is encountered.
- * Returns 'ERR_BITSTRING_EOF' if not enough bits are available in the 'stream'.
- * Returns 'ERR_BITSTREAM_ERROR' if an I/O error occurs when reading from the 'stream'.
+ * Returns 'SIMPLICITY_ERR_STOP_CODE' if the encoding of a stop tag is encountered.
+ * Returns 'SIMPLICITY_ERR_HIDDEN' if the decoded node has illegal HIDDEN children.
+ * Returns 'SIMPLICITY_ERR_DATA_OUT_OF_RANGE' if the node's child isn't a reference to one of the preceding nodes.
+ *                                            or some encoding for a non-existent jet is encountered.
+ * Returns 'SIMPLICITY_ERR_BITSTRING_EOF' if not enough bits are available in the 'stream'.
+ * Returns 'SIMPLICITY_ERR_BITSTREAM_ERROR' if an I/O error occurs when reading from the 'stream'.
  * In the above error cases, 'dag' may be modified.
  * Returns 0 if successful.
  *
@@ -222,7 +70,7 @@ static int32_t decodeNode(dag_node* dag, size_t i, bitstream* stream) {
     for (int32_t j = 0; j < 2 - code; ++j) {
       int32_t ix = decodeUptoMaxInt(stream);
       if (ix < 0) return ix;
-      if (i < (uint32_t)ix) return ERR_DATA_OUT_OF_RANGE;
+      if (i < (uint32_t)ix) return SIMPLICITY_ERR_DATA_OUT_OF_RANGE;
       dag[i].child[j] = i - (uint32_t)ix;
     }
     switch (code) {
@@ -230,15 +78,10 @@ static int32_t decodeNode(dag_node* dag, size_t i, bitstream* stream) {
       switch (subcode) {
        case 0: dag[i].tag = COMP; break;
        case 1:
-        if (HIDDEN == dag[dag[i].child[0]].tag) {
-          if (HIDDEN == dag[dag[i].child[1]].tag) return ERR_HIDDEN;
-          dag[i].tag = ASSERTR; return 0;
-        }
-        if (HIDDEN == dag[dag[i].child[1]].tag) {
-          if (HIDDEN == dag[dag[i].child[0]].tag) return ERR_HIDDEN;
-          dag[i].tag = ASSERTL; return 0;
-        }
-        dag[i].tag = CASE; return 0;
+        dag[i].tag = (HIDDEN == dag[dag[i].child[0]].tag) ? ASSERTR
+                   : (HIDDEN == dag[dag[i].child[1]].tag) ? ASSERTL
+                   : CASE;
+        break;
        case 2: dag[i].tag = PAIR; break;
        case 3: dag[i].tag = DISCONNECT; break;
       }
@@ -253,43 +96,43 @@ static int32_t decodeNode(dag_node* dag, size_t i, bitstream* stream) {
       break;
      case 2:
       switch (subcode) {
-       case 0: dag[i].tag = IDEN; return 0;
-       case 1: dag[i].tag = UNIT; return 0;
-       case 2: return ERR_FAIL_CODE;
-       case 3: return ERR_STOP_CODE;
+       case 0: dag[i].tag = IDEN; break;
+       case 1: dag[i].tag = UNIT; break;
+       case 2: return SIMPLICITY_ERR_FAIL_CODE;
+       case 3: return SIMPLICITY_ERR_STOP_CODE;
       }
-      assert(0);
-      UNREACHABLE;
+      break;
      case 3:
       switch (subcode) {
        case 0:
         dag[i].tag = HIDDEN;
-        return getHash(&(dag[i].hash), stream);
+        return getHash(&(dag[i].cmr), stream);
        case 1:
         dag[i].tag = WITNESS;
-        return 0;
+        break;
       }
-      assert(0);
-      UNREACHABLE;
+      break;
     }
 
     /* Verify that there are no illegal HIDDEN children. */
     for (int32_t j = 0; j < 2 - code; ++j) {
-       if (HIDDEN == dag[dag[i].child[j]].tag) return ERR_HIDDEN;
+       if (HIDDEN == dag[dag[i].child[j]].tag && dag[i].tag != (j ? ASSERTL : ASSERTR)) return SIMPLICITY_ERR_HIDDEN;
     }
+
+    computeCommitmentMerkleRoot(dag, i);
 
     return 0;
   }
 }
 
 /* Decode a Simplicity DAG consisting of 'len' nodes from 'stream' into 'dag'.
- * Returns 'ERR_DATA_OUT_OF_RANGE' if some node's child isn't a reference to one of the preceding nodes.
- * Returns 'ERR_FAIL_CODE' if the encoding of a fail expression is encountered
+ * Returns 'SIMPLICITY_ERR_DATA_OUT_OF_RANGE' if some node's child isn't a reference to one of the preceding nodes.
+ * Returns 'SIMPLICITY_ERR_FAIL_CODE' if the encoding of a fail expression is encountered
  *   (all fail subexpressions ought to have been pruned prior to deserialization).
- * Returns 'ERR_STOP_CODE' if the encoding of a stop tag is encountered.
- * Returns 'ERR_HIDDEN' if there are illegal HIDDEN children in the DAG.
- * Returns 'ERR_BITSTRING_EOF' if not enough bits are available in the 'stream'.
- * Returns 'ERR_BITSTREAM_ERROR' if an I/O error occurs when reading from the 'stream'.
+ * Returns 'SIMPLICITY_ERR_STOP_CODE' if the encoding of a stop tag is encountered.
+ * Returns 'SIMPLICITY_ERR_HIDDEN' if there are illegal HIDDEN children in the DAG.
+ * Returns 'SIMPLICITY_ERR_BITSTRING_EOF' if not enough bits are available in the 'stream'.
+ * Returns 'SIMPLICITY_ERR_BITSTREAM_ERROR' if an I/O error occurs when reading from the 'stream'.
  * In the above error cases, 'dag' may be modified.
  * Returns 0 if successful.
  *
@@ -302,22 +145,21 @@ static int32_t decodeDag(dag_node* dag, const size_t len, combinator_counters* c
     int32_t err = decodeNode(dag, i, stream);
     if (err < 0) return err;
 
-    computeCommitmentMerkleRoot(dag, i);
     enumerator(census, dag[i].tag);
   }
   return 0;
 }
 
 /* Decode a length-prefixed Simplicity DAG from 'stream'.
- * Returns 'ERR_DATA_OUT_OF_RANGE' the length prefix's value is too large.
- * Returns 'ERR_DATA_OUT_OF_RANGE' if some node's child isn't a reference to one of the preceding nodes.
- * Returns 'ERR_FAIL_CODE' if the encoding of a fail expression is encountered
+ * Returns 'SIMPLICITY_ERR_DATA_OUT_OF_RANGE' the length prefix's value is too large.
+ * Returns 'SIMPLICITY_ERR_DATA_OUT_OF_RANGE' if some node's child isn't a reference to one of the preceding nodes.
+ * Returns 'SIMPLICITY_ERR_FAIL_CODE' if the encoding of a fail expression is encountered
  *  (all fail subexpressions ought to have been pruned prior to deserialization).
- * Returns 'ERR_STOP_CODE' if the encoding of a stop tag is encountered.
- * Returns 'ERR_HIDDEN' if there are illegal HIDDEN children in the DAG.
- * Returns 'ERR_BITSTRING_EOF' if not enough bits are available in the 'stream'.
- * Returns 'ERR_BITSTREAM_ERROR' if an I/O error occurs when reading from the 'stream'.
- * Returns 'ERR_MALLOC' if malloc fails.
+ * Returns 'SIMPLICITY_ERR_STOP_CODE' if the encoding of a stop tag is encountered.
+ * Returns 'SIMPLICITY_ERR_HIDDEN' if there are illegal HIDDEN children in the DAG.
+ * Returns 'SIMPLICITY_ERR_BITSTRING_EOF' if not enough bits are available in the 'stream'.
+ * Returns 'SIMPLICITY_ERR_BITSTREAM_ERROR' if an I/O error occurs when reading from the 'stream'.
+ * Returns 'SIMPLICITY_ERR_MALLOC' if malloc fails.
  * In the above error cases, '*dag' is set to NULL.
  * If successful, returns a positive value equal to the length of an allocated array of (*dag).
  *
@@ -335,12 +177,17 @@ int32_t decodeMallocDag(dag_node** dag, combinator_counters* census, bitstream* 
   int32_t dagLen = decodeUptoMaxInt(stream);
   if (dagLen <= 0) return dagLen;
   /* :TODO: a consensus parameter limiting the maximum length of a DAG needs to be enforced here */
-  if (PTRDIFF_MAX / sizeof(dag_node) < (size_t)dagLen) return ERR_DATA_OUT_OF_RANGE;
+  if (PTRDIFF_MAX / sizeof(dag_node) < (size_t)dagLen) return SIMPLICITY_ERR_DATA_OUT_OF_RANGE;
   *dag = malloc((size_t)dagLen * sizeof(dag_node));
-  if (!*dag) return ERR_MALLOC;
+  if (!*dag) return SIMPLICITY_ERR_MALLOC;
 
   if (census) *census = (combinator_counters){0};
   int32_t err = decodeDag(*dag, (size_t)dagLen, census, stream);
+
+  if (0 <= err && !verifyCanonicalOrder(*dag, (size_t)(dagLen))) {
+    err = SIMPLICITY_ERR_DATA_OUT_OF_ORDER;
+  }
+
   if (err < 0) {
     free(*dag);
     *dag = NULL;
@@ -352,10 +199,10 @@ int32_t decodeMallocDag(dag_node** dag, combinator_counters* census, bitstream* 
 
 /* Decode a string of up to 2^31 - 1 bits from 'stream'.
  * This is the format in which the data for 'WITNESS' nodes are encoded.
- * Returns 'ERR_DATA_OUT_OF_RANGE' if the encoded string of bits exceeds this decoder's limits.
- * Returns 'ERR_BITSTRING_EOF' if not enough bits are available in the 'stream'.
- * Returns 'ERR_BITSTREAM_ERROR' if an I/O error occurs when reading from the 'stream'.
- * Returns 'ERR_MALLOC' if malloc fails.
+ * Returns 'SIMPLICITY_ERR_DATA_OUT_OF_RANGE' if the encoded string of bits exceeds this decoder's limits.
+ * Returns 'SIMPLICITY_ERR_BITSTRING_EOF' if not enough bits are available in the 'stream'.
+ * Returns 'SIMPLICITY_ERR_BITSTREAM_ERROR' if an I/O error occurs when reading from the 'stream'.
+ * Returns 'SIMPLICITY_ERR_MALLOC' if malloc fails.
  * If successful, '*witness' is set to the decoded bitstring,
  *                '*allocation' points to memory allocated for this bitstring,
  *                and 0 is returned.
@@ -379,7 +226,7 @@ int32_t decodeMallocWitnessData(void** allocation, bitstring* witness, bitstream
   if (0 < witnessLen) witnessLen = decodeUptoMaxInt(stream);
   if (witnessLen < 0) return witnessLen;
   /* :TODO: A consensus parameter limiting the maximum length of the witness data blob needs to be enforced here */
-  if (PTRDIFF_MAX - 1 <= (size_t)witnessLen / CHAR_BIT) return ERR_DATA_OUT_OF_RANGE;
+  if (PTRDIFF_MAX - 1 <= (size_t)witnessLen / CHAR_BIT) return SIMPLICITY_ERR_DATA_OUT_OF_RANGE;
 
   return getMallocBitstring(allocation, witness, (size_t)witnessLen, stream);
 }

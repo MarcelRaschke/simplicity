@@ -5,8 +5,11 @@ module Simplicity.JetType
   , NoJets(..)
   ) where
 
+import Control.Arrow (runKleisli)
+import Control.Monad.Trans.Reader (runReaderT)
 import Data.Void (Void, vacuous)
 
+import Simplicity.Primitive
 import Simplicity.Serialization
 import Simplicity.Tensor
 import Simplicity.Term
@@ -16,8 +19,10 @@ import Simplicity.Term
 --
 -- Each 'JetType' has an associated 'MatcherInfo' type that interprets Simplicity with jet expressions to
 -- summerise a set of data needed to determine what jet, if any, a particular expression is.
--- Typically the 'MatcherInfo' consists of a 'Simplicity.MerkleRoot.WitnessRoot' value.
+-- Typically the 'MatcherInfo' consists of a 'Simplicity.MerkleRoot.IdentityRoot' value.
 -- The 'matcher' function uses this interpretation to decide which known jet, a given Simplicity expression is, if any.
+--
+-- The 'implemenation' must match the 'specification' and is designed to be directly implemented using jets.
 --
 -- 'putJetBit' and 'getJetBit' provide canonical serialization and deserialization methods for the 'JetType'
 -- (see "Simplicity.Serialization").
@@ -36,6 +41,12 @@ import Simplicity.Term
 --     'Simplicity.Semantics.sem' ('specification' j) === 'Simplicity.Semantics.sem' e
 -- @
 --
+-- The jetted 'implementation' is required to match the specification.
+--
+-- @
+--     'implementation' j === 'Simplicity.Semantics.sem' ('specification' j)
+-- @
+--
 -- We also require that serialized values can be deserialized:
 --
 -- @
@@ -50,6 +61,8 @@ import Simplicity.Term
 class (Assert (MatcherInfo jt), Primitive (MatcherInfo jt)) => JetType jt where
   type MatcherInfo jt :: * -> * -> *
   specification :: (TyC a, TyC b, Assert term, Primitive term) => jt a b -> term a b
+  implementation :: (TyC a, TyC b) => jt a b -> PrimEnv -> a -> Maybe b
+  implementation jt = flip $ runReaderT . runKleisli (specification jt)
   matcher :: (TyC a, TyC b) => MatcherInfo jt a b -> Maybe (jt a b)
   getJetBit :: Monad m => m Void -> m Bool -> m (SomeArrow jt)
   putJetBit :: (TyC a, TyC b) => jt a b -> DList Bool

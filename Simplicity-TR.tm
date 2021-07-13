@@ -185,476 +185,1345 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-45>>
 
+    <with|par-left|2tab|3.3.6.1<space|2spc>Tagged Hashes
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-46>>
+
     <with|par-left|1tab|3.3.7<space|2spc>Elliptic Curve Operations on
     secp256k1 <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-46>>
+    <no-break><pageref|auto-47>>
 
     <with|par-left|2tab|3.3.7.1<space|2spc>libsecp256k1
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-47>>
+    <no-break><pageref|auto-48>>
 
     <with|par-left|2tab|3.3.7.2<space|2spc>libsecp256k1 in Simplicity
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-48>>
+    <no-break><pageref|auto-49>>
 
     <with|par-left|2tab|3.3.7.3<space|2spc>Schnorr Signature Validation
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-49>>
+    <no-break><pageref|auto-50>>
 
     3.4<space|2spc>Completeness Theorem <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-50>
+    <no-break><pageref|auto-51>
 
     3.5<space|2spc>Operational Semantics <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-51>
+    <no-break><pageref|auto-52>
 
     <with|par-left|1tab|3.5.1<space|2spc>Representing Values as Cell Arrays
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-52>>
+    <no-break><pageref|auto-53>>
 
     <with|par-left|1tab|3.5.2<space|2spc>Bit Machine
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-53>>
+    <no-break><pageref|auto-54>>
 
     <with|par-left|2tab|3.5.2.1<space|2spc>Frame Instructions
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-55>>
+    <no-break><pageref|auto-56>>
 
     <with|par-left|2tab|3.5.2.2<space|2spc>Active Write Frame Instructions
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-56>>
+    <no-break><pageref|auto-57>>
 
     <with|par-left|2tab|3.5.2.3<space|2spc>Active Read Frame Instructions
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-57>>
+    <no-break><pageref|auto-58>>
 
     <with|par-left|2tab|3.5.2.4<space|2spc>Abort Instruction
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-58>>
+    <no-break><pageref|auto-59>>
 
     <with|par-left|2tab|3.5.2.5<space|2spc>Bit Machine Programs
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-59>>
+    <no-break><pageref|auto-60>>
 
     <with|par-left|2tab|3.5.2.6<space|2spc>Crashing the Bit Machine
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-60>>
+    <no-break><pageref|auto-61>>
 
     <with|par-left|1tab|3.5.3<space|2spc>Executing Simplicity
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-61>>
+    <no-break><pageref|auto-62>>
 
     <with|par-left|2tab|3.5.3.1<space|2spc>Tail Composition Optimisation
     (TCO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-62>>
+    <no-break><pageref|auto-63>>
 
     3.6<space|2spc>Static Analysis <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-63>
+    <no-break><pageref|auto-64>
 
     <with|par-left|1tab|3.6.1<space|2spc>Space Resources
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-64>>
+    <no-break><pageref|auto-65>>
 
     <with|par-left|2tab|3.6.1.1<space|2spc>Maximum Cell Count Bound
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-65>>
+    <no-break><pageref|auto-66>>
 
     <with|par-left|2tab|3.6.1.2<space|2spc>Maximum Frame Count Bound
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-66>>
+    <no-break><pageref|auto-67>>
 
     <with|par-left|1tab|3.6.2<space|2spc>Time Resources
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-67>>
+    <no-break><pageref|auto-68>>
 
     3.7<space|2spc>Commitment Merkle Root
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-68>
+    <no-break><pageref|auto-69>
+
+    3.8<space|2spc>Type Merkle Root <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-70>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|4<space|2spc>Simplicity
     Extensions> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-69><vspace|0.5fn>
+    <no-break><pageref|auto-71><vspace|0.5fn>
 
     4.1<space|2spc>Monadic Semantics <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-70>
+    <no-break><pageref|auto-72>
 
     4.2<space|2spc>Witness <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-71>
+    <no-break><pageref|auto-73>
 
     <with|par-left|1tab|4.2.1<space|2spc>Elided Computation
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-72>>
-
-    <with|par-left|1tab|4.2.2<space|2spc>Witness Merkle Root
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-73>>
-
-    <with|par-left|1tab|4.2.3<space|2spc>Type Inference with Witness
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-74>>
+
+    <with|par-left|1tab|4.2.2<space|2spc>Type Inference with Witness
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-75>>
 
     4.3<space|2spc>Assertions and Failure
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-75>
+    <no-break><pageref|auto-76>
 
     <with|par-left|1tab|4.3.1<space|2spc>Denotational Semantics
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-76>>
+    <no-break><pageref|auto-77>>
 
     <with|par-left|1tab|4.3.2<space|2spc>Merkle Roots
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-77>>
+    <no-break><pageref|auto-78>>
 
     <with|par-left|2tab|4.3.2.1<space|2spc>Pruning Unused
     <with|font-family|ss|case> Branches <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-78>>
+    <no-break><pageref|auto-79>>
 
     <with|par-left|2tab|4.3.2.2<space|2spc>Salted Expressions
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-79>>
+    <no-break><pageref|auto-80>>
 
     4.4<space|2spc>Blockchain Primitives <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-80>
+    <no-break><pageref|auto-81>
 
     <with|par-left|1tab|4.4.1<space|2spc>Bitcoin Transactions
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-81>>
+    <no-break><pageref|auto-82>>
 
     <with|par-left|2tab|4.4.1.1<space|2spc>Denotational Semantics
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-82>>
+    <no-break><pageref|auto-83>>
 
     <with|par-left|2tab|4.4.1.2<space|2spc>Merkle Roots
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-83>>
+    <no-break><pageref|auto-84>>
 
     4.5<space|2spc>Simplicity Programs <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-84>
+    <no-break><pageref|auto-85>
 
     <with|par-left|1tab|4.5.1<space|2spc>Example:
     <rigid|<with|mode|text|<with|font-family|ss|font-shape|right|checkSigHashAll>>>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-85>>
+    <no-break><pageref|auto-86>>
 
     4.6<space|2spc>Schnorr Signature Aggregation
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-86>
+    <no-break><pageref|auto-87>
 
     4.7<space|2spc>Malleability <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-87>
+    <no-break><pageref|auto-88>
 
     <with|par-left|1tab|4.7.1<space|2spc>Transaction Weight
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-88>>
+    <no-break><pageref|auto-89>>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|5<space|2spc>Jets>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-89><vspace|0.5fn>
+    <no-break><pageref|auto-90><vspace|0.5fn>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|6<space|2spc>Delegation>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-90><vspace|0.5fn>
+    <no-break><pageref|auto-91><vspace|0.5fn>
 
-    6.1<space|2spc>Unbounded Loops <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-91>
+    6.1<space|2spc>Implementing <with|font-family|ss|disconnect> on the Bit
+    Machine <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-92>
 
-    <with|par-left|1tab|6.1.1<space|2spc>Adding a <with|font-family|ss|loop>
+    <with|par-left|1tab|6.1.1<space|2spc>Static Analysis of
+    <with|font-family|ss|disconnect> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-93>>
+
+    <with|par-left|2tab|6.1.1.1<space|2spc>Space Resources
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-94>>
+
+    6.2<space|2spc>Unbounded Loops <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-95>
+
+    <with|par-left|1tab|6.2.1<space|2spc>Adding a <with|font-family|ss|loop>
     primitive to Simplicity? <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-92>>
-
-    <vspace*|1fn><with|font-series|bold|math-font-series|bold|7<space|2spc>Type
-    Inference and Serialization> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-93><vspace|0.5fn>
-
-    7.1<space|2spc>Explicit Simplicity DAGs
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-94>
-
-    <with|par-left|1tab|7.1.1<space|2spc>Type Inference
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-95>>
-
-    <with|par-left|1tab|7.1.2<space|2spc>Reconstructing Simplicity
-    Expressions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-96>>
 
-    <with|par-left|2tab|7.1.2.1<space|2spc>syncase
+    6.3<space|2spc>Universal Signature Hash Modes
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-97>>
+    <no-break><pageref|auto-97>
 
-    <with|par-left|2tab|7.1.2.2<space|2spc>inflate
+    <with|par-left|1tab|6.3.1<space|2spc>Side-Effects and Delegation
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-98>>
 
-    7.2<space|2spc>Serialization <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-99>
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|7<space|2spc>Type
+    Inference and Serialization> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-99><vspace|0.5fn>
 
-    <with|par-left|1tab|7.2.1<space|2spc>Serialization of Bit Strings and
-    Positive Numbers <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-100>>
+    7.1<space|2spc>Explicit Simplicity DAGs
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-100>
 
-    <with|par-left|1tab|7.2.2<space|2spc>Serialization of Simplicity
+    <with|par-left|1tab|7.1.1<space|2spc>Type Inference
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-101>>
 
-    <vspace*|1fn><with|font-series|bold|math-font-series|bold|8<space|2spc>Coq
-    Library Guide> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-102><vspace|0.5fn>
+    <with|par-left|1tab|7.1.2<space|2spc>Reconstructing Simplicity
+    Expressions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-102>>
 
-    8.1<space|2spc>Simplicity Types <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-103>
+    <with|par-left|2tab|7.1.2.1<space|2spc>syncase
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-103>>
 
-    8.2<space|2spc>Simplicity Terms <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-104>
+    <with|par-left|2tab|7.1.2.2<space|2spc>inflate
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-104>>
 
-    <with|par-left|1tab|8.2.1<space|2spc>The ``Initial'' Representation of
-    Terms <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-105>>
+    7.2<space|2spc>Serialization <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-105>
 
-    <with|par-left|1tab|8.2.2<space|2spc>The ``Final'' Representation of
-    Terms <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|7.2.1<space|2spc>Serialization of Bit Strings and
+    Positive Numbers <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-106>>
 
-    <with|par-left|2tab|8.2.2.1<space|2spc>Simplicity Algebras
+    <with|par-left|1tab|7.2.2<space|2spc>Serialization of Simplicity
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-107>>
 
-    <with|par-left|2tab|8.2.2.2<space|2spc>The ``Final'' Representation
+    <with|par-left|1tab|7.2.3<space|2spc>Identity Merkle Root
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-108>>
 
-    <with|par-left|2tab|8.2.2.3<space|2spc>Constructing ``Final'' Terms
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-109>>
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|8<space|2spc>Coq
+    Library Guide> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-109><vspace|0.5fn>
 
-    <with|par-left|1tab|8.2.3<space|2spc>Why two representations of Terms?
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-110>>
+    8.1<space|2spc>Simplicity Types <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-110>
 
-    8.3<space|2spc>Example Simplicity Expressions
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    8.2<space|2spc>Simplicity Terms <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-111>
 
-    <with|par-left|1tab|8.3.1<space|2spc>Bits
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|8.2.1<space|2spc>The ``Initial'' Representation of
+    Terms <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-112>>
 
-    <with|par-left|1tab|8.3.2<space|2spc>Arithmetic
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|8.2.2<space|2spc>The ``Final'' Representation of
+    Terms <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-113>>
 
-    <with|par-left|1tab|8.3.3<space|2spc>SHA256
+    <with|par-left|2tab|8.2.2.1<space|2spc>Simplicity Algebras
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-114>>
 
-    8.4<space|2spc>The Hierarchy of Simplicity Language Extensions
+    <with|par-left|2tab|8.2.2.2<space|2spc>The ``Final'' Representation
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-115>
+    <no-break><pageref|auto-115>>
 
-    <with|par-left|1tab|8.4.1<space|2spc>Witness
+    <with|par-left|2tab|8.2.2.3<space|2spc>Constructing ``Final'' Terms
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-116>>
+
+    <with|par-left|1tab|8.2.3<space|2spc>Why two representations of Terms?
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-117>>
 
-    <with|par-left|1tab|8.4.2<space|2spc>Assertion
+    8.3<space|2spc>Example Simplicity Expressions
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-118>>
+    <no-break><pageref|auto-118>
 
-    <with|par-left|1tab|8.4.3<space|2spc>Delegation
+    <with|par-left|1tab|8.3.1<space|2spc>Bits
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-119>>
 
-    <with|par-left|1tab|8.4.4<space|2spc>Primitives
+    <with|par-left|1tab|8.3.2<space|2spc>Arithmetic
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-120>>
 
-    <with|par-left|2tab|8.4.4.1<space|2spc>Bitcoin
+    <with|par-left|1tab|8.3.3<space|2spc>SHA256
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-121>>
 
-    <with|par-left|1tab|8.4.5<space|2spc>Jets
+    8.4<space|2spc>The Hierarchy of Simplicity Language Extensions
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-122>>
+    <no-break><pageref|auto-122>
 
-    <with|par-left|1tab|8.4.6<space|2spc>Full Simplicity
+    <with|par-left|1tab|8.4.1<space|2spc>Witness
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-123>>
+    <no-break><pageref|auto-124>>
 
-    8.5<space|2spc>Merkle Roots <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-124>
+    <with|par-left|1tab|8.4.2<space|2spc>Assertion
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-125>>
 
-    8.6<space|2spc>The Bit Machine <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-125>
-
-    <with|par-left|1tab|8.6.1<space|2spc>Bit Machine Code
+    <with|par-left|1tab|8.4.3<space|2spc>Delegation
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-126>>
 
-    <with|par-left|2tab|8.6.1.1<space|2spc>Bit Machine Programs
+    <with|par-left|1tab|8.4.4<space|2spc>Primitives
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-127>>
 
-    <with|par-left|1tab|8.6.2<space|2spc>Translating Simplicity to the Bit
-    Machine <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|2tab|8.4.4.1<space|2spc>Bitcoin
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-128>>
 
-    <with|par-left|1tab|8.6.3<space|2spc>Static Analysis
+    <with|par-left|1tab|8.4.5<space|2spc>Jets
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-129>>
 
-    <vspace*|1fn><with|font-series|bold|math-font-series|bold|9<space|2spc>Haskell
-    Library Guide> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-130><vspace|0.5fn>
+    <with|par-left|1tab|8.4.6<space|2spc>Full Simplicity
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-130>>
 
-    9.1<space|2spc><with|font-family|tt|language|verbatim|Simplicity-Core>
-    library <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    8.5<space|2spc>Merkle Roots <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-131>
 
-    <with|par-left|1tab|9.1.1<space|2spc>Simplicity Types
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-132>>
+    8.6<space|2spc>The Bit Machine <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-132>
 
-    <with|par-left|1tab|9.1.2<space|2spc>Simplicity Terms
+    <with|par-left|1tab|8.6.1<space|2spc>Bit Machine Code
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-133>>
 
-    <with|par-left|1tab|9.1.3<space|2spc>Merkle Roots
+    <with|par-left|2tab|8.6.1.1<space|2spc>Bit Machine Programs
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-134>>
 
-    <with|par-left|1tab|9.1.4<space|2spc>Tensors
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|8.6.2<space|2spc>Translating Simplicity to the Bit
+    Machine <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-135>>
 
-    <with|par-left|1tab|9.1.5<space|2spc>Example Simplicity Expressions
+    <with|par-left|1tab|8.6.3<space|2spc>Static Analysis
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-136>>
 
-    <with|par-left|2tab|9.1.5.1<space|2spc>Bits
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-137>>
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|9<space|2spc>Haskell
+    Library Guide> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-137><vspace|0.5fn>
 
-    <with|par-left|2tab|9.1.5.2<space|2spc>Multi-bit Words
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-138>>
+    9.1<space|2spc><with|font-family|tt|language|verbatim|Simplicity-Core>
+    library <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-138>
 
-    <with|par-left|2tab|9.1.5.3<space|2spc>Generic
+    <with|par-left|1tab|9.1.1<space|2spc>Simplicity Types
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-139>>
 
-    <with|par-left|2tab|9.1.5.4<space|2spc>Loop
+    <with|par-left|1tab|9.1.2<space|2spc>Simplicity Terms
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-140>>
 
-    <with|par-left|1tab|9.1.6<space|2spc>Libraries of Simplicity Expressions
+    <with|par-left|1tab|9.1.3<space|2spc>Merkle Roots
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-141>>
 
-    <with|par-left|2tab|9.1.6.1<space|2spc>SHA-256
+    <with|par-left|1tab|9.1.4<space|2spc>Tensors
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-142>>
 
-    <with|par-left|2tab|9.1.6.2<space|2spc>LibSecp256k1
+    <with|par-left|1tab|9.1.5<space|2spc>Example Simplicity Expressions
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-143>>
 
-    <with|par-left|1tab|9.1.7<space|2spc>The Bit Machine
+    <with|par-left|2tab|9.1.5.1<space|2spc>Generic
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-144>>
 
-    <with|par-left|2tab|9.1.7.1<space|2spc>Translating Simplicity to the Bit
-    Machine <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|2tab|9.1.5.2<space|2spc>Bits
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-145>>
 
-    <with|par-left|2tab|9.1.7.2<space|2spc>Static Analysis
+    <with|par-left|2tab|9.1.5.3<space|2spc>Multi-bit Words
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-146>>
 
-    9.2<space|2spc><with|font-family|tt|language|verbatim|Simplicity-Indef>
-    library <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-147>
+    <with|par-left|2tab|9.1.5.4<space|2spc>Arithmetic
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-147>>
 
-    <with|par-left|1tab|9.2.1<space|2spc>Primitive Signature
+    <with|par-left|2tab|9.1.5.5<space|2spc>Loop
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-148>>
 
-    <with|par-left|1tab|9.2.2<space|2spc>Primitive Terms
+    <with|par-left|1tab|9.1.6<space|2spc>Libraries of Simplicity Expressions
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-149>>
 
-    <with|par-left|1tab|9.2.3<space|2spc>Denotational Semantics of Full
-    Simplicity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|2tab|9.1.6.1<space|2spc>SHA-256
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-150>>
 
-    <with|par-left|1tab|9.2.4<space|2spc>Known Discounted Jets
+    <with|par-left|2tab|9.1.6.2<space|2spc>LibSecp256k1
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-151>>
 
-    <with|par-left|1tab|9.2.5<space|2spc>Type Inference
+    <with|par-left|2tab|9.1.6.3<space|2spc>CheckSigHash
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-152>>
 
-    <with|par-left|1tab|9.2.6<space|2spc>Serialization
+    <with|par-left|1tab|9.1.7<space|2spc>The Bit Machine
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-153>>
 
-    <with|par-left|2tab|9.2.6.1<space|2spc>Free Monadic Deserializaiton
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|2tab|9.1.7.1<space|2spc>Translating Simplicity to the Bit
+    Machine <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-154>>
 
-    <with|par-left|2tab|9.2.6.2<space|2spc>Serialization of Simplicity DAGs
+    <with|par-left|2tab|9.1.7.2<space|2spc>Static Analysis
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-155>>
 
-    9.3<space|2spc><with|font-family|tt|language|verbatim|Simplicity-Bitcoin>
-    Libary <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-156>
-
-    9.4<space|2spc><with|font-family|tt|language|verbatim|Simplicity> Library
+    <with|par-left|2tab|9.1.7.3<space|2spc>Fast Evaluation with FFI
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-156>>
+
+    9.2<space|2spc><with|font-family|tt|language|verbatim|Simplicity-Indef>
+    library <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-157>
 
-    <with|par-left|1tab|9.4.1<space|2spc>CheckSigHashAll
+    <with|par-left|1tab|9.2.1<space|2spc>Primitive Signature
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-158>>
 
-    9.5<space|2spc>Simplicity <with|font-family|tt|language|verbatim|testsuite>
+    <with|par-left|1tab|9.2.2<space|2spc>Primitive Terms
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-159>
+    <no-break><pageref|auto-159>>
 
-    <vspace*|1fn><with|font-series|bold|math-font-series|bold|10<space|2spc>C
-    Library Guide> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-160><vspace|0.5fn>
+    <with|par-left|1tab|9.2.3<space|2spc><with|font-family|tt|language|verbatim|JetType>
+    class <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-160>>
 
-    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Appendix
-    A<space|2spc>Elements Application> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-161><vspace|0.5fn>
+    <with|par-left|1tab|9.2.4<space|2spc>Denotational Semantics of Full
+    Simplicity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-161>>
 
-    A.1<space|2spc>Denotational Semantics
+    <with|par-left|1tab|9.2.5<space|2spc>Type Inference
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-162>
+    <no-break><pageref|auto-162>>
 
-    <with|par-left|1tab|A.1.1<space|2spc>Null Data
+    <with|par-left|1tab|9.2.6<space|2spc>Serialization
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-163>>
 
-    <with|par-left|1tab|A.1.2<space|2spc>Merkle Roots
+    <with|par-left|2tab|9.2.6.1<space|2spc>Free Monadic Deserializaiton
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-164>>
 
-    <with|par-left|1tab|A.1.3<space|2spc>Serialization
+    <with|par-left|2tab|9.2.6.2<space|2spc>Serialization of Simplicity DAGs
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-165>>
 
-    A.2<space|2spc>Jets <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-166>
+    <with|par-left|1tab|9.2.7<space|2spc>Jet Substitution
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-166>>
+
+    9.3<space|2spc><with|font-family|tt|language|verbatim|Simplicity-Bitcoin>
+    Libary <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-167>
+
+    9.4<space|2spc><with|font-family|tt|language|verbatim|Simplicity> Library
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-168>
+
+    <with|par-left|1tab|9.4.1<space|2spc>CheckSigHashAll
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-169>>
+
+    <with|par-left|1tab|9.4.2<space|2spc>Known Discounted Jets
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-170>>
+
+    9.5<space|2spc>Simplicity <with|font-family|tt|language|verbatim|testsuite>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-171>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|10<space|2spc>C
+    Library Guide> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-172><vspace|0.5fn>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Appendix
-    B<space|2spc>Alternative Serialization of Simplicity DAGs>
+    A<space|2spc>Elements Application> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-173><vspace|0.5fn>
+
+    A.1<space|2spc>Denotational Semantics
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-167><vspace|0.5fn>
+    <no-break><pageref|auto-174>
+
+    <with|par-left|1tab|A.1.1<space|2spc>Null Data
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-175>>
+
+    <with|par-left|1tab|A.1.2<space|2spc>Merkle Roots
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-176>>
+
+    <with|par-left|1tab|A.1.3<space|2spc>Serialization
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-177>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Appendix
+    B<space|2spc>Catelogue of Jets> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-178><vspace|0.5fn>
+
+    B.1<space|2spc><with|font-family|tt|language|verbatim|110...: >Core Jets
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-179>
+
+    <with|par-left|1tab|B.1.1<space|2spc><with|font-family|tt|language|verbatim|1100...:
+    >Jets for multi-bit logic <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-180>>
+
+    <with|par-left|2tab|B.1.1.1<space|2spc><with|font-family|ss|low>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-181>>
+
+    <with|par-left|2tab|B.1.1.2<space|2spc><with|font-family|ss|high>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-182>>
+
+    <with|par-left|2tab|B.1.1.3<space|2spc><with|font-family|ss|complement>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-183>>
+
+    <with|par-left|2tab|B.1.1.4<space|2spc><with|font-family|ss|and>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-184>>
+
+    <with|par-left|2tab|B.1.1.5<space|2spc><with|font-family|ss|or>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-185>>
+
+    <with|par-left|2tab|B.1.1.6<space|2spc><with|font-family|ss|xor>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-186>>
+
+    <with|par-left|2tab|B.1.1.7<space|2spc><with|font-family|ss|maj>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-187>>
+
+    <with|par-left|2tab|B.1.1.8<space|2spc><with|font-family|ss|xor3>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-188>>
+
+    <with|par-left|2tab|B.1.1.9<space|2spc><with|font-family|ss|ch>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-189>>
+
+    <with|par-left|2tab|B.1.1.10<space|2spc><with|font-family|ss|some>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-190>>
+
+    <with|par-left|2tab|B.1.1.11<space|2spc><with|font-family|ss|all>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-191>>
+
+    <with|par-left|2tab|B.1.1.12<space|2spc><with|font-family|ss|eq>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-192>>
+
+    <with|par-left|2tab|B.1.1.13<space|2spc><with|font-family|ss|full-left-shift>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-193>>
+
+    <with|par-left|2tab|B.1.1.14<space|2spc><with|font-family|ss|full-right-shift>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-194>>
+
+    <with|par-left|2tab|B.1.1.15<space|2spc><with|font-family|ss|leftmost>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-195>>
+
+    <with|par-left|2tab|B.1.1.16<space|2spc><with|font-family|ss|rightmost>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-196>>
+
+    <with|par-left|2tab|B.1.1.17<space|2spc><with|font-family|ss|left-pad-low>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-197>>
+
+    <with|par-left|2tab|B.1.1.18<space|2spc><with|font-family|ss|left-pad-high>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-198>>
+
+    <with|par-left|2tab|B.1.1.19<space|2spc><with|font-family|ss|left-extend>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-199>>
+
+    <with|par-left|2tab|B.1.1.20<space|2spc><with|font-family|ss|right-pad-low>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-200>>
+
+    <with|par-left|2tab|B.1.1.21<space|2spc><with|font-family|ss|right-pad-high>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-201>>
+
+    <with|par-left|2tab|B.1.1.22<space|2spc><with|font-family|ss|right-extend>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-202>>
+
+    <with|par-left|2tab|B.1.1.23<space|2spc><with|font-family|ss|right-shift-with>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-203>>
+
+    <with|par-left|2tab|B.1.1.24<space|2spc><with|font-family|ss|right-shift>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-204>>
+
+    <with|par-left|2tab|B.1.1.25<space|2spc><with|font-family|ss|right-rotate>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-205>>
+
+    <with|par-left|2tab|B.1.1.26<space|2spc><with|font-family|ss|transpose>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-206>>
+
+    <with|par-left|2tab|B.1.1.27<space|2spc><with|font-family|ss|find-first-high>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-207>>
+
+    <with|par-left|2tab|B.1.1.28<space|2spc><with|font-family|ss|find-last-high>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-208>>
+
+    <with|par-left|2tab|B.1.1.29<space|2spc><with|font-family|ss|bit>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-209>>
+
+    <with|par-left|1tab|B.1.2<space|2spc><with|font-family|tt|language|verbatim|110100...:
+    >Jets for arithmetic <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-210>>
+
+    <with|par-left|2tab|B.1.2.1<space|2spc><with|font-family|ss|one>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-211>>
+
+    <with|par-left|2tab|B.1.2.2<space|2spc><with|font-family|ss|full-add>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-212>>
+
+    <with|par-left|2tab|B.1.2.3<space|2spc><with|font-family|ss|add>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-213>>
+
+    <with|par-left|2tab|B.1.2.4<space|2spc><with|font-family|ss|full-increment>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-214>>
+
+    <with|par-left|2tab|B.1.2.5<space|2spc><with|font-family|ss|increment>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-215>>
+
+    <with|par-left|2tab|B.1.2.6<space|2spc><with|font-family|ss|popcount>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-216>>
+
+    <with|par-left|2tab|B.1.2.7<space|2spc><with|font-family|ss|full-subtract>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-217>>
+
+    <with|par-left|2tab|B.1.2.8<space|2spc><with|font-family|ss|subtract>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-218>>
+
+    <with|par-left|2tab|B.1.2.9<space|2spc><with|font-family|ss|negate>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-219>>
+
+    <with|par-left|2tab|B.1.2.10<space|2spc><with|font-family|ss|full-decrement>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-220>>
+
+    <with|par-left|2tab|B.1.2.11<space|2spc><with|font-family|ss|decrement>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-221>>
+
+    <with|par-left|2tab|B.1.2.12<space|2spc><with|font-family|ss|full-multiply>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-222>>
+
+    <with|par-left|2tab|B.1.2.13<space|2spc><with|font-family|ss|multiply>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-223>>
+
+    <with|par-left|2tab|B.1.2.14<space|2spc><with|font-family|tt|language|verbatim|><with|font-family|ss|is-zero>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-224>>
+
+    <with|par-left|2tab|B.1.2.15<space|2spc><with|font-family|tt|language|verbatim|><with|font-family|ss|is-one>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-225>>
+
+    <with|par-left|2tab|B.1.2.16<space|2spc><with|font-family|ss|le>
+    (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-226>>
+
+    <with|par-left|2tab|B.1.2.17<space|2spc><with|font-family|ss|lt>
+    (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-227>>
+
+    <with|par-left|2tab|B.1.2.18<space|2spc><with|font-family|ss|min>
+    (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-228>>
+
+    <with|par-left|2tab|B.1.2.19<space|2spc><with|font-family|ss|max>
+    (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-229>>
+
+    <with|par-left|2tab|B.1.2.20<space|2spc><with|font-family|ss|median>
+    (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-230>>
+
+    <with|par-left|2tab|B.1.2.21<space|2spc><with|font-family|ss|div2n1n>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-231>>
+
+    <with|par-left|2tab|B.1.2.22<space|2spc><with|font-family|ss|div-mod>
+    (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-232>>
+
+    <with|par-left|2tab|B.1.2.23<space|2spc><with|font-family|ss|divide>
+    (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-233>>
+
+    <with|par-left|2tab|B.1.2.24<space|2spc><with|font-family|ss|modulo>
+    (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-234>>
+
+    <with|par-left|2tab|B.1.2.25<space|2spc><with|font-family|ss|divides>
+    (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-235>>
+
+    <with|par-left|2tab|B.1.2.26<space|2spc><with|font-family|ss|eea>
+    (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-236>>
+
+    <with|par-left|2tab|B.1.2.27<space|2spc><with|font-family|ss|bezout>
+    (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-237>>
+
+    <with|par-left|2tab|B.1.2.28<space|2spc><with|font-family|ss|gcd>
+    (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-238>>
+
+    <with|par-left|2tab|B.1.2.29<space|2spc><with|font-family|ss|cofactors>
+    (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-239>>
+
+    <with|par-left|2tab|B.1.2.30<space|2spc><with|font-family|ss|lcm>
+    (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-240>>
+
+    <with|par-left|2tab|B.1.2.31<space|2spc><with|font-family|ss|jacobi>
+    (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-241>>
+
+    <with|par-left|2tab|B.1.2.32<space|2spc><with|font-family|ss|absolute-value>
+    (signed input/unsigned output) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-242>>
+
+    <with|par-left|2tab|B.1.2.33<space|2spc><with|font-family|tt|language|verbatim|><with|font-family|ss|sign>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-243>>
+
+    <with|par-left|2tab|B.1.2.34<space|2spc><with|font-family|ss|signed-le>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-244>>
+
+    <with|par-left|2tab|B.1.2.35<space|2spc><with|font-family|ss|signed-lt>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-245>>
+
+    <with|par-left|2tab|B.1.2.36<space|2spc><with|font-family|ss|signed-min>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-246>>
+
+    <with|par-left|2tab|B.1.2.37<space|2spc><with|font-family|ss|signed-max>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-247>>
+
+    <with|par-left|2tab|B.1.2.38<space|2spc><with|font-family|ss|signed-median>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-248>>
+
+    <with|par-left|2tab|B.1.2.39<space|2spc><with|font-family|ss|signed-right-shift>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-249>>
+
+    <with|par-left|2tab|B.1.2.40<space|2spc><with|font-family|ss|signed-divmod>
+    (unsigned denominator) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-250>>
+
+    <with|par-left|2tab|B.1.2.41<space|2spc><with|font-family|ss|signed-div>
+    (unsigned denominator) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-251>>
+
+    <with|par-left|2tab|B.1.2.42<space|2spc><with|font-family|ss|signed-signed-divmod>
+    (signed denominator) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-252>>
+
+    <with|par-left|2tab|B.1.2.43<space|2spc><with|font-family|ss|signed-signed-div>
+    (signed denominator) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-253>>
+
+    <with|par-left|1tab|B.1.3<space|2spc><with|font-family|tt|language|verbatim|110101...:
+    >Jets for hash functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-254>>
+
+    <with|par-left|2tab|B.1.3.1<space|2spc><with|font-family|tt|language|verbatim|1101010...:
+    >Jets for SHA-2 <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-255>>
+
+    <with|par-left|4tab|<with|font-family|ss|sha-256-block>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-256><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|sha-256-iv>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-257><vspace|0.15fn>>
+
+    <with|par-left|2tab|B.1.3.2<space|2spc><with|font-family|tt|language|verbatim|110101100...:
+    >Jets for SHA-3 <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-258>>
+
+    <with|par-left|4tab|<with|font-family|ss|sha3-zero>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-259><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|sha3-absorb>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-260><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|sha3-xor>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-261><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|sha3-permute>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-262><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|sha3-squeeze-256>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-263><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|sha3-squeeze-512>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-264><vspace|0.15fn>>
+
+    <with|par-left|2tab|B.1.3.3<space|2spc><with|font-family|tt|language|verbatim|110101101...:
+    >Jets for RIPEMD <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-265>>
+
+    <with|par-left|2tab|B.1.3.4<space|2spc><with|font-family|tt|language|verbatim|110101110000...:
+    >Jets for SHA-1 (RESERVED) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-266>>
+
+    <with|par-left|1tab|B.1.4<space|2spc><with|font-family|tt|language|verbatim|110110000...:
+    >Jets for elliptic curve functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-267>>
+
+    <with|par-left|2tab|B.1.4.1<space|2spc><with|font-family|tt|language|verbatim|1101100000...:
+    >Jets for secp256k1 <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-268>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-point-verify>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-269><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-decompress>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-270><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-linear-verify>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-271><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-linear-combination>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-272><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-scale>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-273><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-generate>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-274><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-gej-infinity>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-275><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-gej-normalize>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-276><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-gej-negate>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-277><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-ge-negate>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-278><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-gej-double>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-279><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-gej-add>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-280><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-gej-ge-add-ex>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-281><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-gej-ge-add>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-282><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-gej-is-infinity>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-283><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-gej-equiv>
+    <with|color|red|Does not exist in libsecp256k1>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-284><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-gej-ge-equiv>
+    <with|color|red|Does not exist in libsecp256k1>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-285><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-gej-x-equiv>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-286><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-gej-y-is-odd>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-287><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-gej-is-on-curve>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-288><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-ge-is-on-curve>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-289><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-scalar-normalize>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-290><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-scalar-negate>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-291><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-scalar-add>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-292><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-scalar-square>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-293><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-scalar-multiply>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-294><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-scalar-multiply-lambda>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-295><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-scalar-invert>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-296><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-scalar-is-zero>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-297><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-ge-scale-lambda>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-298><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-gej-scale-lambda>
+    <with|color|red|Consider removing> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-299><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-scalar-split-lambda>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-300><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-short-scalar>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-301><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-fe-normalize>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-302><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-fe-negate>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-303><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-fe-add>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-304><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-fe-square>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-305><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-fe-multiply>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-306><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-fe-multiply-beta>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-307><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-fe-invert>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-308><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-fe-square-root>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-309><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-fe-is-zero>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-310><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-fe-is-odd>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-311><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-fe-is-quad>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-312><vspace|0.15fn>>
+
+    <with|par-left|1tab|B.1.5<space|2spc><with|font-family|tt|language|verbatim|110110001...:
+    >Jets for digital signatures <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-313>>
+
+    <with|par-left|2tab|B.1.5.1<space|2spc><with|font-family|tt|language|verbatim|1101100010...:
+    >Jets for secp256k1 based digital signatures
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-314>>
+
+    <with|par-left|4tab|<with|font-family|ss|bip0340-schnorr-verify>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-315><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|bip0340-challenge-iv>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-316><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|bip0340-challenge-midstate>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-317><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-signature-unpack>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-318><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-pubkey-unpack>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-319><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-pubkey-unpack-neg>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-320><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|secp256k1-ecdsa>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-321><vspace|0.15fn>>
+
+    <with|par-left|1tab|B.1.6<space|2spc><with|font-family|tt|language|verbatim|110110010...:
+    >Jets for Simplicity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-322>>
+
+    <with|par-left|2tab|B.1.6.1<space|2spc><with|font-family|tt|language|verbatim|11011000100...:
+    >Jets for tagged hash IVs <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-323>>
+
+    <with|par-left|4tab|<with|font-family|ss|iden-commitment-tag>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-324><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|comp-commitment-tag>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-325><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|unit-commitment-tag>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-326><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|injl-commitment-tag>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-327><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|injr-commitment-tag>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-328><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|case-commitment-tag>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-329><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|pair-commitment-tag>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-330><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|take-commitment-tag>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-331><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|drop-commitment-tag>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-332><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|witness-commitment-tag>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-333><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|disconnect-commitment-tag>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-334><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|fail-commitment-tag>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-335><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|signtaure-tag>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-336><vspace|0.15fn>>
+
+    <with|par-left|4tab|<with|font-family|ss|sighash-tag>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-337><vspace|0.15fn>>
+
+    <with|par-left|1tab|B.1.7<space|2spc><with|font-family|tt|language|verbatim|110110011...:
+    >Jets for Bitcoin (without primitives)
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-338>>
+
+    <with|par-left|2tab|B.1.7.1<space|2spc><with|font-family|ss|parse-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-339>>
+
+    <with|par-left|2tab|B.1.7.2<space|2spc><with|font-family|ss|parse-sequence>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-340>>
+
+    <with|par-left|1tab|B.1.8<space|2spc><with|font-family|tt|language|verbatim|1101101000...:
+    >Jets for Elements (without primitives)
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-341>>
+
+    <with|par-left|2tab|B.1.8.1<space|2spc><with|font-family|ss|generate-entropy>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-342>>
+
+    <with|par-left|2tab|B.1.8.2<space|2spc><with|font-family|ss|calculate-asset>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-343>>
+
+    <with|par-left|2tab|B.1.8.3<space|2spc><with|font-family|ss|calculate-token>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-344>>
+
+    B.2<space|2spc><with|font-family|tt|language|verbatim|111...: >Bitcoin
+    Jets <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-345>
+
+    <with|par-left|1tab|B.2.1<space|2spc>Transaction
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-346>>
+
+    <with|par-left|1tab|B.2.2<space|2spc>Signature Hash Modes
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-347>>
+
+    <with|par-left|1tab|B.2.3<space|2spc>Time Locks
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-348>>
+
+    <with|par-left|2tab|B.2.3.1<space|2spc><with|font-family|ss|total-height-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-349>>
+
+    <with|par-left|2tab|B.2.3.2<space|2spc><with|font-family|ss|total-time-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-350>>
+
+    <with|par-left|2tab|B.2.3.3<space|2spc><with|font-family|ss|total-distance-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-351>>
+
+    <with|par-left|2tab|B.2.3.4<space|2spc><with|font-family|ss|total-duration-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-352>>
+
+    <with|par-left|2tab|B.2.3.5<space|2spc><with|font-family|ss|is-final>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-353>>
+
+    <with|par-left|2tab|B.2.3.6<space|2spc><with|font-family|ss|current-height-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-354>>
+
+    <with|par-left|2tab|B.2.3.7<space|2spc><with|font-family|ss|current-time-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-355>>
+
+    <with|par-left|2tab|B.2.3.8<space|2spc><with|font-family|ss|current-distance-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-356>>
+
+    <with|par-left|2tab|B.2.3.9<space|2spc><with|font-family|ss|current-duration-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-357>>
+
+    <with|par-left|2tab|B.2.3.10<space|2spc><with|font-family|ss|current-is-Final>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-358>>
+
+    <with|par-left|2tab|B.2.3.11<space|2spc><with|font-family|ss|input-height-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-359>>
+
+    <with|par-left|2tab|B.2.3.12<space|2spc><with|font-family|ss|input-time-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-360>>
+
+    <with|par-left|2tab|B.2.3.13<space|2spc><with|font-family|ss|input-distance-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-361>>
+
+    <with|par-left|2tab|B.2.3.14<space|2spc><with|font-family|ss|input-duration-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-362>>
+
+    <with|par-left|2tab|B.2.3.15<space|2spc><with|font-family|ss|input-is-final>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-363>>
+
+    B.3<space|2spc><with|font-family|tt|language|verbatim|111...: >Elements
+    Jets <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-364>
+
+    <with|par-left|1tab|B.3.1<space|2spc>Transaction
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-365>>
+
+    <with|par-left|1tab|B.3.2<space|2spc>Time Locks
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-366>>
+
+    <with|par-left|2tab|B.3.2.1<space|2spc><with|font-family|ss|total-height-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-367>>
+
+    <with|par-left|2tab|B.3.2.2<space|2spc><with|font-family|ss|total-time-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-368>>
+
+    <with|par-left|2tab|B.3.2.3<space|2spc><with|font-family|ss|total-distance-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-369>>
+
+    <with|par-left|2tab|B.3.2.4<space|2spc><with|font-family|ss|total-duration-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-370>>
+
+    <with|par-left|2tab|B.3.2.5<space|2spc><with|font-family|ss|is-final>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-371>>
+
+    <with|par-left|2tab|B.3.2.6<space|2spc><with|font-family|ss|current-height-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-372>>
+
+    <with|par-left|2tab|B.3.2.7<space|2spc><with|font-family|ss|current-time-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-373>>
+
+    <with|par-left|2tab|B.3.2.8<space|2spc><with|font-family|ss|current-distance-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-374>>
+
+    <with|par-left|2tab|B.3.2.9<space|2spc><with|font-family|ss|current-duration-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-375>>
+
+    <with|par-left|2tab|B.3.2.10<space|2spc><with|font-family|ss|current-is-Final>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-376>>
+
+    <with|par-left|2tab|B.3.2.11<space|2spc><with|font-family|ss|input-height-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-377>>
+
+    <with|par-left|2tab|B.3.2.12<space|2spc><with|font-family|ss|input-time-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-378>>
+
+    <with|par-left|2tab|B.3.2.13<space|2spc><with|font-family|ss|input-distance-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-379>>
+
+    <with|par-left|2tab|B.3.2.14<space|2spc><with|font-family|ss|input-duration-lock>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-380>>
+
+    <with|par-left|2tab|B.3.2.15<space|2spc><with|font-family|ss|input-is-final>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-381>>
+
+    <with|par-left|1tab|B.3.3<space|2spc>Issuance
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-382>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Appendix
+    C<space|2spc>Alternative Serialization of Simplicity DAGs>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-383><vspace|0.5fn>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Bibliography>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-168><vspace|0.5fn>
+    <no-break><pageref|auto-384><vspace|0.5fn>
   </table-of-contents>
 
   <chapter|Introduction>
@@ -1960,108 +2829,105 @@
   Using techniques familiar from digital logic, we can build an adders and
   full adders from our Boolean operations defined in
   Section<nbsp><reference|ss:bitOps>. We begin with definitions of the single
-  bit adder and full adder.
+  bit full adder.
+
+  \;
 
   <\render-code>
-    <math|<math-ss|adder><rsub|1>\<of\><2>\<times\><2>\<vdash\><2><rsup|2>>
+    <math|<math-ss|full-add><rsub|1>\<of\><2>\<times\><around*|(|<2>\<times\><2>|)>\<vdash\><2><rsup|2>>
 
-    <tabular|<tformat|<table|<row|<cell|<subtable|<tformat|<cwith|1|-1|2|2|cell-halign|r>|<table|<row|<cell|<math|<math-ss|adder><rsub|1>>>|<cell|:=>|<cell|<math|<math-ss|cond>
-    <around*|(|<math-ss|iden> \<vartriangle\> <math-ss|not> <math-ss|iden>|)>
-    <around*|(|<math-ss|false> \<vartriangle\> <math-ss|iden>|)>>>>>>>>>>>>
+    <tabular|<tformat|<table|<row|<cell|<subtable|<tformat|<cwith|1|-1|2|2|cell-halign|r>|<table|<row|<cell|<math|<math-ss|full-add><rsub|1>>>|<cell|:=>|<cell|<math|<math-ss|maj><rsub|1>
+    \<vartriangle\> <math|<math-ss|xor3><rsub|1>>>>>>>>>>>>>
   </render-code>
+
+  where
 
   <\render-code>
-    <math|<math-ss|full-adder><rsub|1>\<of\><around*|(|<2>\<times\><2>|)>\<times\><2>\<vdash\><2><rsup|2>>
+    <math|<math-ss|maj><rsub|1>\<of\><2>\<times\><around*|(|<2>\<times\><2>|)>\<vdash\><2>>
 
-    <tabular|<tformat|<table|<row|<cell|<subtable|<tformat|<cwith|1|-1|2|2|cell-halign|r>|<table|<row|<cell|<math|<math-ss|full-adder><rsub|1>>>|<cell|:=>|<cell|<math|<math-ss|take>
-    <math-ss|adder><rsub|1> \<vartriangle\>
-    <math-ss|IH>>>>|<row|<cell|>|<cell|;>|<cell|<math|<math-ss|OOH>
-    \<vartriangle\> <around*|(|<math-ss|OIH> \<vartriangle\>
-    <math-ss|IH>;<math-ss|adder><rsub|1>|)>>>>|<row|<cell|>|<cell|;>|<cell|<math|<math-ss|<math|<math-ss|cond>
-    <math-ss|true> <math-ss|OH> \<vartriangle\> <math-ss|IIH>>>>>>>>>>>>>>
+    <tabular|<tformat|<table|<row|<cell|<subtable|<tformat|<cwith|1|-1|2|2|cell-halign|r>|<table|<row|<cell|<math|<math-ss|maj><rsub|1>>>|<cell|:=>|<cell|<math|<math-ss|cond>
+    <around*|(|<math-ss|cond> <math-ss|true> <math-ss|iden>|)>
+    <around*|(|<math-ss|cond> <math-ss|iden> <math-ss|false>|)>>>>>>>>>>>>
   </render-code>
 
-  These adders meet the following specifications.
+  and
+
+  <\render-code>
+    <math|<math-ss|xor3><rsub|1>\<of\><2>\<times\><around*|(|<2>\<times\><2>|)>\<vdash\><2>>
+
+    <tabular|<tformat|<table|<row|<cell|<subtable|<tformat|<cwith|1|-1|2|2|cell-halign|r>|<table|<row|<cell|<math|<math-ss|xor3><rsub|1>>>|<cell|:=>|<cell|<math|<math-ss|cond>
+    <around*|(|<math-ss|cond> <math-ss|iden> <around*|(|<math-ss|not>
+    <math-ss|iden>|)>|)> <around*|(|<math-ss|cond> <around*|(|<math-ss|not>
+    <math-ss|iden>|)> <math-ss|iden>|)>>>>>>>>>>>>
+  </render-code>
+
+  The full adder meets the following specification.
 
   <\eqnarray*>
-    <tformat|<table|<row|<cell|<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|adder><rsub|1>|\<rrbracket\>><around*|\<langle\>|a,b|\<rangle\>>|\<rceil\>><rsub|2>>|<cell|=>|<cell|<around*|\<lceil\>|a|\<rceil\>><rsub|1>+<around*|\<lceil\>|b|\<rceil\>><rsub|1>>>|<row|<cell|<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|full-adder><rsub|1>|\<rrbracket\>><around*|\<langle\>|<around*|\<langle\>|a,b|\<rangle\>>,c|\<rangle\>>|\<rceil\>><rsub|2>>|<cell|=>|<cell|<around*|\<lceil\>|a|\<rceil\>><rsub|1>+<around*|\<lceil\>|b|\<rceil\>><rsub|1>+<around*|\<lceil\>|c|\<rceil\>><rsub|1>>>>>
+    <tformat|<table|<row|<cell|<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|full-add><rsub|1>|\<rrbracket\>><around*|\<langle\>|c,<around*|\<langle\>|a,b|\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|2>>|<cell|=>|<cell|<around*|\<lceil\>|a|\<rceil\>><rsub|1>+<around*|\<lceil\>|b|\<rceil\>><rsub|1>+<around*|\<lceil\>|c|\<rceil\>><rsub|1>>>>>
   </eqnarray*>
 
   It is easy to exhaustively check the above equations because there are only
-  a small finite number of possible inputs to consider (four inputs for
-  <math|<math-ss|adder><rsub|1>> and eight inputs for
-  <math|<math-ss|full-adder><rsub|1>>). We will illustrate this for a single
-  case for <math|<math-ss|adder><rsub|1>> where
-  <math|a=<math-tt|1><rsub|<2>>> and <math|b=<math-tt|0><rsub|<2>>>.
+  eight inputs to consider. We will illustrate this for a single case where
+  <math|a=<math-tt|1><rsub|<2>>>, <math|b=<math-tt|0><rsub|<2>>>, and
+  <math|c=<math-tt|1><rsub|<2>>>.
 
   <\eqnarray*>
-    <tformat|<table|<row|<cell|<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|adder><rsub|1>|\<rrbracket\>><around*|\<langle\>|<math-tt|1><rsub|<2>>,<math-tt|0><rsub|<2>>|\<rangle\>>|\<rceil\>><rsub|2>>|<cell|=>|<cell|<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|cond>
-    <around*|(|<math-ss|iden> \<vartriangle\> <math-ss|not> <math-ss|iden>|)>
-    <around*|(|<math-ss|false> \<vartriangle\>
-    <math-ss|iden>|)>|\<rrbracket\>><around*|\<langle\>|<math-tt|1><rsub|<2>>,<math-tt|0><rsub|<2>>|\<rangle\>>|\<rceil\>><rsub|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|iden>
-    \<vartriangle\> <math-ss|not> <math-ss|iden>|\<rrbracket\>><around*|(|<math-tt|0><rsub|<2>>|)>|\<rceil\>><rsub|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|<around*|\<langle\>|<around*|\<llbracket\>|<math-ss|iden>|\<rrbracket\>><around*|(|<math-tt|0><rsub|<2>>|)>,<around*|\<llbracket\>|<math-ss|not>
-    <math-ss|iden>|\<rrbracket\>><around*|(|<math-tt|0><rsub|<2>>|)>|\<rangle\>>|\<rceil\>><rsub|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|<around*|\<langle\>|<math-tt|0><rsub|<2>>,<around*|\<llbracket\>|<around*|(|<math-ss|pair>
-    <math-ss|iden> <math-ss|unit>|)>;<around*|(|<math-ss|cond>
-    <math-ss|false> <math-ss|true>|)>|\<rrbracket\>><around*|(|<math-tt|0><rsub|<2>>|)>|\<rangle\>>|\<rceil\>><rsub|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|<around*|\<langle\>|<math-tt|0><rsub|<2>>,<around*|\<llbracket\>|<around*|(|<math-ss|cond>
-    <math-ss|false> <math-ss|true>|)>|\<rrbracket\>>\<circ\><around*|\<llbracket\>|<around*|(|<math-ss|pair>
-    <math-ss|iden> <math-ss|unit>|)>|\<rrbracket\>><around*|(|<math-tt|0><rsub|<2>>|)>|\<rangle\>>|\<rceil\>><rsub|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|<around*|\<langle\>|<math-tt|0><rsub|<2>>,<around*|\<llbracket\>|<around*|(|<math-ss|cond>
-    <math-ss|false> <math-ss|true>|)>|\<rrbracket\>><around*|\<langle\>|<around*|\<llbracket\>|<math-ss|iden>|\<rrbracket\>><around*|(|<math-tt|0><rsub|<2>>|)>,<around*|\<llbracket\>|<math-ss|unit>|\<rrbracket\>><around*|(|<math-tt|0><rsub|<2>>|)>|\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|<around*|\<langle\>|<math-tt|0><rsub|<2>>,<around*|\<llbracket\>|<around*|(|<math-ss|cond>
-    <math-ss|false> <math-ss|true>|)>|\<rrbracket\>><around*|\<langle\>|<math-tt|0><rsub|<2>>,<around*|\<langle\>||\<rangle\>>|\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|<around*|\<langle\>|<math-tt|0><rsub|<2>>,<around*|\<llbracket\>|<math-ss|true>|\<rrbracket\>><around*|\<langle\>||\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|<around*|\<langle\>|<math-tt|0><rsub|<2>>,1<rsub|<2>>|\<rangle\>>|\<rceil\>><rsub|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|<math-tt|0><rsub|<2>>|\<rceil\>><rsub|1>\<cdot\>2<rsup|1>+<around*|\<lceil\>|<math-tt|1><rsub|<2>>|\<rceil\>><rsub|1>>>|<row|<cell|>|<cell|=>|<cell|0\<cdot\>2+1>>|<row|<cell|>|<cell|=>|<cell|1>>|<row|<cell|>|<cell|=>|<cell|1+0>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|<math-tt|1><rsub|<2>>|\<rceil\>><rsub|1>+<around*|\<lceil\>|<math-tt|0><rsub|<2>>|\<rceil\>><rsub|1>>>>>
+    <tformat|<table|<row|<cell|<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|full-add><rsub|1>|\<rrbracket\>><around*|\<langle\>|<math-tt|1><rsub|<2>>,<around*|\<langle\>|<math-tt|1><rsub|<2>>,<math-tt|0><rsub|<2>>|\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|2>>|<cell|=>|<cell|<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|maj><rsub|1>
+    \<vartriangle\> <math|<math-ss|xor3><rsub|1>>|\<rrbracket\>><around*|\<langle\>|<math-tt|1><rsub|<2>>,<around*|\<langle\>|<math-tt|1><rsub|<2>>,<math-tt|0><rsub|<2>>|\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|<around*|\<langle\>|<around*|\<llbracket\>|<math-ss|<math|<math-ss|maj><rsub|1>>>|\<rrbracket\>><around*|\<langle\>|<math-tt|1><rsub|<2>>,<around*|\<langle\>|<math-tt|1><rsub|<2>>,<math-tt|0><rsub|<2>>|\<rangle\>>|\<rangle\>>,<around*|\<llbracket\>|<math|<math-ss|xor3><rsub|1>>|\<rrbracket\>><math|<around*|\<langle\>|<math-tt|1><rsub|<2>>,<around*|\<langle\>|<math-tt|1><rsub|<2>>,<math-tt|0><rsub|<2>>|\<rangle\>>|\<rangle\>>>|\<rangle\>>|\<rceil\>><rsub|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|<around*|\<langle\>|<around*|\<llbracket\>|<math|<math-ss|cond>
+    <around*|(|<math-ss|cond> <math-ss|true> <math-ss|iden>|)>
+    <around*|(|<math-ss|cond> <math-ss|iden>
+    <math-ss|false>|)>>|\<rrbracket\>><around*|\<langle\>|<math-tt|1><rsub|<2>>,<around*|\<langle\>|<math-tt|1><rsub|<2>>,<math-tt|0><rsub|<2>>|\<rangle\>>|\<rangle\>>,<around*|\<llbracket\>|<math|<math-ss|xor3><rsub|1>>|\<rrbracket\>><math|<around*|\<langle\>|<math-tt|1><rsub|<2>>,<around*|\<langle\>|<math-tt|1><rsub|<2>>,<math-tt|0><rsub|<2>>|\<rangle\>>|\<rangle\>>>|\<rangle\>>|\<rceil\>><rsub|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|<around*|\<langle\>|<around*|\<llbracket\>|<math|<math|<math-ss|cond>
+    <math-ss|true> <math-ss|iden>>>|\<rrbracket\>><around*|\<langle\>|<math-tt|1><rsub|<2>>,<math-tt|0><rsub|<2>>|\<rangle\>>,<around*|\<llbracket\>|<math|<math-ss|xor3><rsub|1>>|\<rrbracket\>><math|<around*|\<langle\>|<math-tt|1><rsub|<2>>,<around*|\<langle\>|<math-tt|1><rsub|<2>>,<math-tt|0><rsub|<2>>|\<rangle\>>|\<rangle\>>>|\<rangle\>>|\<rceil\>><rsub|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|<around*|\<langle\>|<around*|\<llbracket\>|<math|<math|<math-ss|true>>>|\<rrbracket\>><around*|(|<math-tt|0><rsub|<2>>|)>,<around*|\<llbracket\>|<math|<math-ss|xor3><rsub|1>>|\<rrbracket\>><math|<around*|\<langle\>|<math-tt|1><rsub|<2>>,<around*|\<langle\>|<math-tt|1><rsub|<2>>,<math-tt|0><rsub|<2>>|\<rangle\>>|\<rangle\>>>|\<rangle\>>|\<rceil\>><rsub|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|<around*|\<langle\>|<math-tt|1><rsub|<2>>,<around*|\<llbracket\>|<math|<math-ss|xor3><rsub|1>>|\<rrbracket\>><math|<around*|\<langle\>|<math-tt|1><rsub|<2>>,<around*|\<langle\>|<math-tt|1><rsub|<2>>,<math-tt|0><rsub|<2>>|\<rangle\>>|\<rangle\>>>|\<rangle\>>|\<rceil\>><rsub|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|<around*|\<langle\>|<math-tt|1><rsub|<2>>,<around*|\<llbracket\>|<math|<math|<math-ss|cond>
+    <around*|(|<math-ss|cond> <math-ss|iden> <around*|(|<math-ss|not>
+    <math-ss|iden>|)>|)> <around*|(|<math-ss|cond> <around*|(|<math-ss|not>
+    <math-ss|iden>|)> <math-ss|iden>|)>>>|\<rrbracket\>><math|<around*|\<langle\>|<math-tt|1><rsub|<2>>,<around*|\<langle\>|<math-tt|1><rsub|<2>>,<math-tt|0><rsub|<2>>|\<rangle\>>|\<rangle\>>>|\<rangle\>>|\<rceil\>><rsub|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|<around*|\<langle\>|<math-tt|1><rsub|<2>>,<around*|\<llbracket\>|<math|<math|<math-ss|cond>
+    <math-ss|iden> <around*|(|<math-ss|not>
+    <math-ss|iden>|)>>>|\<rrbracket\>><math|<around*|\<langle\>|<math-tt|1><rsub|<2>>,<math-tt|0><rsub|<2>>|\<rangle\>>>|\<rangle\>>|\<rceil\>><rsub|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|<around*|\<langle\>|<math-tt|1><rsub|<2>>,<around*|\<llbracket\>|<math|<math|<math-ss|iden>>>|\<rrbracket\>><math|<around*|(|<math-tt|0><rsub|<2>>|)>>|\<rangle\>>|\<rceil\>><rsub|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|<around*|\<langle\>|<math-tt|1><rsub|<2>>,<math|<math-tt|0><rsub|<2>>>|\<rangle\>>|\<rceil\>><rsub|2>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|<math-tt|1><rsub|<2>>|\<rceil\>><rsub|1>\<cdot\>2<rsup|1>+<around*|\<lceil\>|<math-tt|0><rsub|<2>>|\<rceil\>><rsub|1>>>|<row|<cell|>|<cell|=>|<cell|1\<cdot\>2+0>>|<row|<cell|>|<cell|=>|<cell|2>>|<row|<cell|>|<cell|=>|<cell|1+0+1>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|<math-tt|1><rsub|<2>>|\<rceil\>><rsub|1>+<around*|\<lceil\>|<math-tt|0><rsub|<2>>|\<rceil\>><rsub|1>+<around*|\<lceil\>|<math-tt|1><rsub|<2>>|\<rceil\>><rsub|1>>>>>
   </eqnarray*>
 
   The calculations for the other cases are similar.
 
-  Next, we recursively build adders and full adders for any word size.
+  Next, we recursively build full adders for any word size.
 
   <\render-code>
-    <math|<math-ss|full-adder><rsub|2*n>\<of\><around*|(|<2><rsup|2*n>\<times\><2><rsup|2*n>|)>\<times\><2>\<vdash\><2>\<times\><2><rsup|2*n>>
+    <math|<math-ss|full-add><rsub|2*n>\<of\><2>\<times\><around*|(|<2><rsup|2*n>\<times\><2><rsup|2*n>|)>\<vdash\><2>\<times\><2><rsup|2*n>>
 
-    <tabular|<tformat|<table|<row|<cell|<subtable|<tformat|<cwith|1|-1|2|2|cell-halign|r>|<table|<row|<cell|<math|<math-ss|full-adder><rsub|2*n>>>|<cell|:=>|<cell|<math|<math-ss|take>
+    <tabular|<tformat|<table|<row|<cell|<subtable|<tformat|<cwith|1|-1|2|2|cell-halign|r>|<table|<row|<cell|<math|<math-ss|full-add><rsub|2*n>>>|<cell|:=>|<cell|<math|<math-ss|drop>
     <around*|(|<math-ss|OOH> \<vartriangle\> <math-ss|IOH>|)> \<vartriangle\>
-    <around*|(|<math-ss|take> <around*|(|<math-ss|OIH> \<vartriangle\>
-    <math-ss|IIH>|)> \<vartriangle\> <math-ss|IH>;<math-ss|full-adder><rsub|n>|)>>>>|<row|<cell|>|<cell|;>|<cell|<math|<math-ss|IIH>
-    \<vartriangle\> <around*|(|<math-ss|OH> \<vartriangle\>
-    <math-ss|IOH>;<math-ss|full-adder><rsub|n>|)>>>>|<row|<cell|>|<cell|;>|<cell|<math|<math-ss|IOH>
+    <around*|(|<math-ss|OH>\<vartriangle\> <math-ss|drop>
+    <around*|(|<math-ss|OIH> \<vartriangle\> <math-ss|IIH>|)>
+    ;<math-ss|full-add><rsub|n>|)>>>>|<row|<cell|>|<cell|;>|<cell|<math|<math-ss|IIH>
+    \<vartriangle\> <around*|(|<math-ss|IOH>\<vartriangle\> <math-ss|OH>
+    ;<math-ss|full-add><rsub|n>|)>>>>|<row|<cell|>|<cell|;>|<cell|<math|<math-ss|IOH>
     \<vartriangle\> <around*|(|<math-ss|IIH> \<vartriangle\>
     <math-ss|OH>|)>>>>>>>>>>>>
   </render-code>
 
-  <\render-code>
-    <math|<math-ss|adder><rsub|2*n>\<of\><2><rsup|2*n>\<times\><2><rsup|2*n>\<vdash\><2>\<times\><2><rsup|2*n>>
-
-    <tabular|<tformat|<table|<row|<cell|<subtable|<tformat|<cwith|1|-1|2|2|cell-halign|r>|<table|<row|<cell|<math|<math-ss|adder><rsub|2*n>>>|<cell|:=>|<cell|<math|<around*|(|<math-ss|OOH>
-    \<vartriangle\> <math-ss|IOH>|)> \<vartriangle\> <around*|(|<math-ss|OIH>
-    \<vartriangle\> <math-ss|IIH>;<math-ss|adder><rsub|n>|)>>>>|<row|<cell|>|<cell|;>|<cell|<math|<math-ss|IIH>
-    \<vartriangle\> <around*|(|<math-ss|OH> \<vartriangle\>
-    <math-ss|IOH>;<math-ss|full-adder><rsub|n>|)>>>>|<row|<cell|>|<cell|;>|<cell|<math|<math-ss|IOH>
-    \<vartriangle\> <around*|(|<math-ss|IIH> \<vartriangle\>
-    <math-ss|OH>|)>>>>>>>>>>>>
-  </render-code>
-
-  We generalize the specification of the single bit adders and full adders to
-  the multi-bit adders and full adders.
+  We generalize the specification of the single bit full adder to the
+  multi-bit full adders.
 
   <\eqnarray*>
-    <tformat|<table|<row|<cell|<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|adder><rsub|n>|\<rrbracket\>><around*|\<langle\>|a,b|\<rangle\>>|\<rceil\>><rsub|1,n>>|<cell|=>|<cell|<around*|\<lceil\>|a|\<rceil\>><rsub|n>+<around*|\<lceil\>|b|\<rceil\>><rsub|n>>>|<row|<cell|<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|full-adder><rsub|n>|\<rrbracket\>><around*|\<langle\>|<around*|\<langle\>|a,b|\<rangle\>>,c|\<rangle\>>|\<rceil\>><rsub|1,n>>|<cell|=>|<cell|<around*|\<lceil\>|a|\<rceil\>><rsub|n>+<around*|\<lceil\>|b|\<rceil\>><rsub|n>+<around*|\<lceil\>|c|\<rceil\>><rsub|1>>>>>
+    <tformat|<table|<row|<cell|<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|full-add><rsub|n>|\<rrbracket\>><around*|\<langle\>|c,<around*|\<langle\>|a,b|\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|1,n>>|<cell|=>|<cell|<around*|\<lceil\>|a|\<rceil\>><rsub|n>+<around*|\<lceil\>|b|\<rceil\>><rsub|n>+<around*|\<lceil\>|c|\<rceil\>><rsub|1>>>>>
   </eqnarray*>
 
   <\theorem>
     For all <math|n> which is a power of 2, and for all <math|a:<2><rsup|n>>,
     <math|b:<2><rsup|n>>, and <math|c:<2>>, we have that
-    <math|<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|full-adder><rsub|n>|\<rrbracket\>><around*|\<langle\>|<around*|\<langle\>|a,b|\<rangle\>>,c|\<rangle\>>|\<rceil\>><rsub|1,n>=<around*|\<lceil\>|a|\<rceil\>><rsub|n>+<around*|\<lceil\>|b|\<rceil\>><rsub|n>+<around*|\<lceil\>|c|\<rceil\>><rsub|1>>.
+    <math|<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|full-add><rsub|n>|\<rrbracket\>><around*|\<langle\>|c,<around*|\<langle\>|a,b|\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|1,n>=<around*|\<lceil\>|a|\<rceil\>><rsub|n>+<around*|\<lceil\>|b|\<rceil\>><rsub|n>+<around*|\<lceil\>|c|\<rceil\>><rsub|1>>.
   </theorem>
 
   <\proof>
-    We prove <math|<math-ss|full-adder><rsub|n>> meets its specification by
+    We prove <math|<math-ss|full-add><rsub|n>> meets its specification by
     induction on <math|n>. As mentioned before, the
-    <math|<math-ss|full-adder><rsub|1>> case is easily checked by verifying
-    all eight possible inputs. Next, we prove that
-    <math|<math-ss|full-adder><rsub|2*n>> meets its specification under the
-    assumption that <math|<math-ss|full-adder><rsub|n>> does. Specifically we
+    <math|<math-ss|full-add><rsub|1>> case is easily checked by verifying all
+    eight possible inputs. Next, we prove that
+    <math|<math-ss|full-add><rsub|2*n>> meets its specification under the
+    assumption that <math|<math-ss|full-add><rsub|n>> does. Specifically we
     need to show that
 
     <\equation>
-      <around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|full-adder><rsub|2*n>|\<rrbracket\>><around*|\<langle\>|<around*|\<langle\>|<around*|\<langle\>|a<rsub|1>,a<rsub|2>|\<rangle\>>,<around*|\<langle\>|b<rsub|1>,b<rsub|2>|\<rangle\>>|\<rangle\>>,c|\<rangle\>>|\<rceil\>><rsub|1,2*n>=<around*|\<lceil\>|<around*|\<langle\>|a<rsub|1>,a<rsub|2>|\<rangle\>>|\<rceil\>><rsub|2*n>+<around*|\<lceil\>|<around*|\<langle\>|b<rsub|1>,b<rsub|2>|\<rangle\>>|\<rceil\>><rsub|2*n>+<around*|\<lceil\>|c|\<rceil\>><rsub|1><label|full-adder-spec>
+      <around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|full-add><rsub|2*n>|\<rrbracket\>><around*|\<langle\>|c,<around*|\<langle\>|<around*|\<langle\>|a<rsub|1>,a<rsub|2>|\<rangle\>>,<around*|\<langle\>|b<rsub|1>,b<rsub|2>|\<rangle\>>|\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|1,2*n>=<around*|\<lceil\>|<around*|\<langle\>|a<rsub|1>,a<rsub|2>|\<rangle\>>|\<rceil\>><rsub|2*n>+<around*|\<lceil\>|<around*|\<langle\>|b<rsub|1>,b<rsub|2>|\<rangle\>>|\<rceil\>><rsub|2*n>+<around*|\<lceil\>|c|\<rceil\>><rsub|1><label|full-adder-spec>
     </equation>
 
     Let us first consider the right hand side of equation
@@ -2075,17 +2941,17 @@
     By our inductive hypothesis, we have that
 
     <\equation*>
-      <around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|full-adder><rsub|n>|\<rrbracket\>><around*|\<langle\>|<around*|\<langle\>|a<rsub|2>,b<rsub|2>|\<rangle\>>,c|\<rangle\>>|\<rceil\>><rsub|1,n>=<around*|\<lceil\>|a<rsub|2>|\<rceil\>><rsub|n>+<around*|\<lceil\>|b<rsub|2>|\<rceil\>><rsub|n>+<around*|\<lceil\>|c|\<rceil\>><rsub|1>
+      <around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|full-add><rsub|n>|\<rrbracket\>><around*|\<langle\>|c,<around*|\<langle\>|a<rsub|2>,b<rsub|2>|\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|1,n>=<around*|\<lceil\>|a<rsub|2>|\<rceil\>><rsub|n>+<around*|\<lceil\>|b<rsub|2>|\<rceil\>><rsub|n>+<around*|\<lceil\>|c|\<rceil\>><rsub|1>
     </equation*>
 
     so we know that
 
     <\equation*>
-      <around*|\<lceil\>|<around*|\<langle\>|a<rsub|1>,a<rsub|2>|\<rangle\>>|\<rceil\>><rsub|2*n>+<around*|\<lceil\>|<around*|\<langle\>|b<rsub|1>,b<rsub|2>|\<rangle\>>|\<rceil\>><rsub|2*n>+<around*|\<lceil\>|c|\<rceil\>><rsub|1>=<around*|(|<around*|\<lceil\>|a<rsub|1>|\<rceil\>><rsub|n>+<around*|\<lceil\>|b<rsub|1>|\<rceil\>><rsub|n>|)>\<cdot\>2<rsup|n>+<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|full-adder><rsub|n>|\<rrbracket\>><around*|\<langle\>|<around*|\<langle\>|a<rsub|2>,b<rsub|2>|\<rangle\>>,c|\<rangle\>>|\<rceil\>><rsub|1,n>
+      <around*|\<lceil\>|<around*|\<langle\>|a<rsub|1>,a<rsub|2>|\<rangle\>>|\<rceil\>><rsub|2*n>+<around*|\<lceil\>|<around*|\<langle\>|b<rsub|1>,b<rsub|2>|\<rangle\>>|\<rceil\>><rsub|2*n>+<around*|\<lceil\>|c|\<rceil\>><rsub|1>=<around*|(|<around*|\<lceil\>|a<rsub|1>|\<rceil\>><rsub|n>+<around*|\<lceil\>|b<rsub|1>|\<rceil\>><rsub|n>|)>\<cdot\>2<rsup|n>+<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|full-add><rsub|n>|\<rrbracket\>><around*|\<langle\>|c,<around*|\<langle\>|a<rsub|2>,b<rsub|2>|\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|1,n>
     </equation*>
 
     Let us define <math|c<rsub|0>> and <math|r<rsub|0>> such that
-    <math|<around*|\<langle\>|c<rsub|0>,r<rsub|0>|\<rangle\>>\<assign\><around*|\<llbracket\>|<math-ss|full-adder><rsub|n>|\<rrbracket\>><around*|\<langle\>|<around*|\<langle\>|a<rsub|2>,b<rsub|2>|\<rangle\>>,c|\<rangle\>>>.
+    <math|<around*|\<langle\>|c<rsub|0>,r<rsub|0>|\<rangle\>>\<assign\><around*|\<llbracket\>|<math-ss|full-add><rsub|n>|\<rrbracket\>><around*|\<langle\>|c,<around*|\<langle\>|a<rsub|2>,b<rsub|2>|\<rangle\>>|\<rangle\>>>.
     Thus we have that
 
     <\eqnarray*>
@@ -2095,17 +2961,17 @@
     Again, by our inductive hypothesis, we have that
 
     <\equation*>
-      <around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|full-adder><rsub|n>|\<rrbracket\>><around*|\<langle\>|<around*|\<langle\>|a<rsub|1>,b<rsub|1>|\<rangle\>>,c<rsub|0>|\<rangle\>>|\<rceil\>><rsub|1,n>=<around*|\<lceil\>|a<rsub|1>|\<rceil\>><rsub|n>+<around*|\<lceil\>|b<rsub|1>|\<rceil\>><rsub|n>+<around*|\<lceil\>|c<rsub|0>|\<rceil\>><rsub|1>
+      <around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|full-add><rsub|n>|\<rrbracket\>><around*|\<langle\>|c<rsub|0>,<around*|\<langle\>|a<rsub|1>,b<rsub|1>|\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|1,n>=<around*|\<lceil\>|a<rsub|1>|\<rceil\>><rsub|n>+<around*|\<lceil\>|b<rsub|1>|\<rceil\>><rsub|n>+<around*|\<lceil\>|c<rsub|0>|\<rceil\>><rsub|1>
     </equation*>
 
     therefore we have that
 
     <\equation*>
-      <around*|\<lceil\>|<around*|\<langle\>|a<rsub|1>,a<rsub|2>|\<rangle\>>|\<rceil\>><rsub|2*n>+<around*|\<lceil\>|<around*|\<langle\>|b<rsub|1>,b<rsub|2>|\<rangle\>>|\<rceil\>><rsub|2*n>+<around*|\<lceil\>|c|\<rceil\>><rsub|1>=<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|full-adder><rsub|n>|\<rrbracket\>><around*|\<langle\>|<around*|\<langle\>|a<rsub|1>,b<rsub|1>|\<rangle\>>,c<rsub|0>|\<rangle\>>|\<rceil\>><rsub|1,n>\<cdot\>2<rsup|n>+<around*|\<lceil\>|r<rsub|2>|\<rceil\>><rsub|n>
+      <around*|\<lceil\>|<around*|\<langle\>|a<rsub|1>,a<rsub|2>|\<rangle\>>|\<rceil\>><rsub|2*n>+<around*|\<lceil\>|<around*|\<langle\>|b<rsub|1>,b<rsub|2>|\<rangle\>>|\<rceil\>><rsub|2*n>+<around*|\<lceil\>|c|\<rceil\>><rsub|1>=<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|full-add><rsub|n>|\<rrbracket\>><around*|\<langle\>|c<rsub|0>,<around*|\<langle\>|a<rsub|1>,b<rsub|1>|\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|1,n>\<cdot\>2<rsup|n>+<around*|\<lceil\>|r<rsub|2>|\<rceil\>><rsub|n>
     </equation*>
 
     Let us define <math|c<rsub|1>> and <math|r<rsub|1>> such that
-    <math|<around*|\<langle\>|c<rsub|1>,r<rsub|1>|\<rangle\>>\<assign\><around*|\<llbracket\>|<math-ss|full-adder><rsub|n>|\<rrbracket\>><around*|\<langle\>|<around*|\<langle\>|a<rsub|1>,b<rsub|1>|\<rangle\>>,c<rsub|0>|\<rangle\>>>.
+    <math|<around*|\<langle\>|c<rsub|1>,r<rsub|1>|\<rangle\>>\<assign\><around*|\<llbracket\>|<math-ss|full-add><rsub|n>|\<rrbracket\>><around*|\<langle\>|<around*|\<langle\>|a<rsub|1>,b<rsub|1>|\<rangle\>>,c<rsub|0>|\<rangle\>>>.
     Thus we have that
 
     <\eqnarray*>
@@ -2117,25 +2983,25 @@
     <math|<math-ss|full-adder><rsub|2*n>> we have that
 
     <\eqnarray*>
-      <tformat|<cwith|1|-1|2|2|cell-halign|r>|<table|<row|<cell|<around*|\<llbracket\>|<math-ss|full-adder><rsub|2*n>|\<rrbracket\>><around*|\<langle\>|<around*|\<langle\>|<around*|\<langle\>|a<rsub|1>,a<rsub|2>|\<rangle\>>,<around*|\<langle\>|b<rsub|1>,b<rsub|2>|\<rangle\>>|\<rangle\>>,c|\<rangle\>>>|<cell|=>|<cell|<around*|\<llbracket\>|<math-ss|IOH>
+      <tformat|<cwith|1|-1|2|2|cell-halign|r>|<table|<row|<cell|<around*|\<llbracket\>|<math-ss|full-add><rsub|2*n>|\<rrbracket\>><around*|\<langle\>|c,<around*|\<langle\>|<around*|\<langle\>|a<rsub|1>,a<rsub|2>|\<rangle\>>,<around*|\<langle\>|b<rsub|1>,b<rsub|2>|\<rangle\>>|\<rangle\>>|\<rangle\>>>|<cell|=>|<cell|<around*|\<llbracket\>|<math-ss|IOH>
       \<vartriangle\> <around*|(|<math-ss|IIH> \<vartriangle\>
       <math-ss|OH>|)>|\<rrbracket\>>>>|<row|<cell|>|<cell|\<circ\>>|<cell|<around*|\<llbracket\>|<math-ss|IIH>
-      \<vartriangle\> <around*|(|<math-ss|OH> \<vartriangle\>
-      <math-ss|IOH>;<math-ss|full-adder><rsub|n>|)>|\<rrbracket\>>>>|<row|<cell|>|<cell|\<circ\>>|<cell|<around*|\<llbracket\>|<math-ss|take>
+      \<vartriangle\> <around*|(|<math-ss|IOH> \<vartriangle\>
+      <math-ss|OH>;<math-ss|full-add><rsub|n>|)>|\<rrbracket\>>>>|<row|<cell|>|<cell|\<circ\>>|<cell|<around*|\<llbracket\>|<math-ss|drop>
       <around*|(|<math-ss|OOH> \<vartriangle\> <math-ss|IOH>|)>
-      \<vartriangle\> <around*|(|<math-ss|take> <around*|(|<math-ss|OIH>
-      \<vartriangle\> <math-ss|IIH>|)> \<vartriangle\>
-      <math-ss|IH>;<math-ss|full-adder><rsub|n>|)>|\<rrbracket\>>>>|<row|<cell|>|<cell|>|<cell|<around*|\<langle\>|<around*|\<langle\>|<around*|\<langle\>|a<rsub|1>,a<rsub|2>|\<rangle\>>,<around*|\<langle\>|b<rsub|1>,b<rsub|2>|\<rangle\>>|\<rangle\>>,c|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<llbracket\>|<math-ss|IOH>
+      \<vartriangle\> <around*|(|<math-ss|OH> \<vartriangle\> <math-ss|drop>
+      <around*|(|<math-ss|OIH> \<vartriangle\>
+      <math-ss|IIH>|)>;<math-ss|full-add><rsub|n>|)>|\<rrbracket\>>>>|<row|<cell|>|<cell|>|<cell|<around*|\<langle\>|c,<around*|\<langle\>|<around*|\<langle\>|a<rsub|1>,a<rsub|2>|\<rangle\>>,<around*|\<langle\>|b<rsub|1>,b<rsub|2>|\<rangle\>>|\<rangle\>>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<llbracket\>|<math-ss|IOH>
       \<vartriangle\> <around*|(|<math-ss|IIH> \<vartriangle\>
       <math-ss|OH>|)>|\<rrbracket\>>>>|<row|<cell|>|<cell|\<circ\>>|<cell|<around*|\<llbracket\>|<math-ss|IIH>
-      \<vartriangle\> <around*|(|<math-ss|OH> \<vartriangle\>
-      <math-ss|IOH>;<math-ss|full-adder><rsub|n>|)>|\<rrbracket\>>>>|<row|<cell|>|<cell|>|<cell|<around*|\<langle\>|<around*|\<langle\>|a<rsub|1>,b<rsub|1>|\<rangle\>>,<around*|\<llbracket\>|<math-ss|full-adder><rsub|n>|\<rrbracket\>><around*|\<langle\>|<around*|\<langle\>|a<rsub|2>,b<rsub|2>|\<rangle\>>,c|\<rangle\>>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<llbracket\>|<math-ss|IOH>
+      \<vartriangle\> <around*|(|<math-ss|IOH> \<vartriangle\>
+      <math-ss|OH>;<math-ss|full-add><rsub|n>|)>|\<rrbracket\>>>>|<row|<cell|>|<cell|>|<cell|<around*|\<langle\>|<around*|\<langle\>|a<rsub|1>,b<rsub|1>|\<rangle\>>,<around*|\<llbracket\>|<math-ss|full-add><rsub|n>|\<rrbracket\>><around*|\<langle\>|c,<around*|\<langle\>|a<rsub|2>,b<rsub|2>|\<rangle\>>|\<rangle\>>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<llbracket\>|<math-ss|IOH>
       \<vartriangle\> <around*|(|<math-ss|IIH> \<vartriangle\>
       <math-ss|OH>|)>|\<rrbracket\>>>>|<row|<cell|>|<cell|\<circ\>>|<cell|<around*|\<llbracket\>|<math-ss|IIH>
-      \<vartriangle\> <around*|(|<math-ss|OH> \<vartriangle\>
-      <math-ss|IOH>;<math-ss|full-adder><rsub|n>|)>|\<rrbracket\>>>>|<row|<cell|>|<cell|>|<cell|<around*|\<langle\>|<around*|\<langle\>|a<rsub|1>,b<rsub|1>|\<rangle\>>,<around*|\<langle\>|c<rsub|0>,r<rsub|0>|\<rangle\>>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<llbracket\>|<math-ss|IOH>
+      \<vartriangle\> <around*|(|<math-ss|IOH> \<vartriangle\>
+      <math-ss|OH>;<math-ss|full-add><rsub|n>|)>|\<rrbracket\>>>>|<row|<cell|>|<cell|>|<cell|<around*|\<langle\>|<around*|\<langle\>|a<rsub|1>,b<rsub|1>|\<rangle\>>,<around*|\<langle\>|c<rsub|0>,r<rsub|0>|\<rangle\>>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<llbracket\>|<math-ss|IOH>
       \<vartriangle\> <around*|(|<math-ss|IIH> \<vartriangle\>
-      <math-ss|OH>|)>|\<rrbracket\>>>>|<row|<cell|>|<cell|>|<cell|<around*|\<langle\>|r<rsub|0>,<around*|\<llbracket\>|<math-ss|full-adder><rsub|n>|\<rrbracket\>><around*|\<langle\>|<around*|\<langle\>|a<rsub|1>,b<rsub|1>|\<rangle\>>,c<rsub|0>|\<rangle\>>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<llbracket\>|<math-ss|IOH>
+      <math-ss|OH>|)>|\<rrbracket\>>>>|<row|<cell|>|<cell|>|<cell|<around*|\<langle\>|r<rsub|0>,<around*|\<llbracket\>|<math-ss|full-adder><rsub|n>|\<rrbracket\>><around*|\<langle\>|c<rsub|0>,<around*|\<langle\>|a<rsub|1>,b<rsub|1>|\<rangle\>>|\<rangle\>>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<llbracket\>|<math-ss|IOH>
       \<vartriangle\> <around*|(|<math-ss|IIH> \<vartriangle\>
       <math-ss|OH>|)>|\<rrbracket\>>>>|<row|<cell|>|<cell|>|<cell|<around*|\<langle\>|r<rsub|0>,<around*|\<langle\>|c<rsub|1>,r<rsub|1>|\<rangle\>>|\<rangle\>>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<langle\>|c<rsub|1>,<around*|\<langle\>|r<rsub|1>,r<rsub|0>|\<rangle\>>|\<rangle\>>>>>>
     </eqnarray*>
@@ -2143,7 +3009,7 @@
     Therefore we have that
 
     <\eqnarray*>
-      <tformat|<cwith|1|-1|2|2|cell-halign|r>|<table|<row|<cell|<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|full-adder><rsub|2*n>|\<rrbracket\>><around*|\<langle\>|<around*|\<langle\>|<around*|\<langle\>|a<rsub|1>,a<rsub|2>|\<rangle\>>,<around*|\<langle\>|b<rsub|1>,b<rsub|2>|\<rangle\>>|\<rangle\>>,c|\<rangle\>>|\<rceil\>><rsub|1,2*n>>|<cell|=>|<cell|<around*|\<lceil\>|<around*|\<langle\>|c<rsub|1>,<around*|\<langle\>|r<rsub|1>,r<rsub|0>|\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|1,2*n>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|c<rsub|1>|\<rceil\>><rsub|1>\<cdot\>2<rsup|2*n>+<around*|\<lceil\>|<around*|\<langle\>|r<rsub|1>,r<rsub|0>|\<rangle\>>|\<rceil\>><rsub|2*n>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|c<rsub|1>|\<rceil\>><rsub|1>\<cdot\>2<rsup|2*n>+<around*|\<lceil\>|r<rsub|1>|\<rceil\>><rsub|n>\<cdot\>2<rsup|n>+<around*|\<lceil\>|r<rsub|0>|\<rceil\>><rsub|n><eq-number><label|full-adder-LHS>>>>>
+      <tformat|<cwith|1|-1|2|2|cell-halign|r>|<table|<row|<cell|<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|full-add><rsub|2*n>|\<rrbracket\>><around*|\<langle\>|c,<around*|\<langle\>|<around*|\<langle\>|a<rsub|1>,a<rsub|2>|\<rangle\>>,<around*|\<langle\>|b<rsub|1>,b<rsub|2>|\<rangle\>>|\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|1,2*n>>|<cell|=>|<cell|<around*|\<lceil\>|<around*|\<langle\>|c<rsub|1>,<around*|\<langle\>|r<rsub|1>,r<rsub|0>|\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|1,2*n>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|c<rsub|1>|\<rceil\>><rsub|1>\<cdot\>2<rsup|2*n>+<around*|\<lceil\>|<around*|\<langle\>|r<rsub|1>,r<rsub|0>|\<rangle\>>|\<rceil\>><rsub|2*n>>>|<row|<cell|>|<cell|=>|<cell|<around*|\<lceil\>|c<rsub|1>|\<rceil\>><rsub|1>\<cdot\>2<rsup|2*n>+<around*|\<lceil\>|r<rsub|1>|\<rceil\>><rsub|n>\<cdot\>2<rsup|n>+<around*|\<lceil\>|r<rsub|0>|\<rceil\>><rsub|n><eq-number><label|full-adder-LHS>>>>>
     </eqnarray*>
 
     Together equations <reference|full-adder-RHS> and
@@ -2151,77 +3017,49 @@
     side of equation <reference|full-adder-spec> are equal, as required.
   </proof>
 
-  The proof that <math|<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|adder><rsub|n>|\<rrbracket\>><around*|\<langle\>|a,b|\<rangle\>>|\<rceil\>><rsub|1,n>=<around*|\<lceil\>|a|\<rceil\>><rsub|n>+<around*|\<lceil\>|b|\<rceil\>><rsub|n>>
-  is done in a similar manner. Computer verified versions of theses proofs
-  can be found in the Coq library (see Section<nbsp><reference|ss:coqArith>).
+  Computer verified versions of theses proofs can be found in the Coq library
+  (see Section<nbsp><reference|ss:coqArith>).
 
-  With a full adder we can recursively build multipliers and full multiplier.
+  With a full adder we can recursively build full multipliers.
 
   <\render-code>
-    <math|<math-ss|full-multiplier><rsub|1>\<of\><around*|(|<2>\<times\><2>|)>\<times\><around*|(|<2>\<times\><2>|)>\<vdash\><2><rsup|2>>
+    <math|<math-ss|full-multiply><rsub|1>\<of\><around*|(|<2>\<times\><2>|)>\<times\><around*|(|<2>\<times\><2>|)>\<vdash\><2><rsup|2>>
 
-    <tabular|<tformat|<table|<row|<cell|<subtable|<tformat|<cwith|1|-1|2|2|cell-halign|r>|<table|<row|<cell|<math|<math-ss|full-multiplier><rsub|1>>>|<cell|:=>|<cell|<math|<math-ss|IH>
-    \<vartriangle\> <math-ss|take> <around*|(|<math-ss|cond> <math-ss|iden>
-    <math-ss|false>|)>;<math-ss|full-adder><rsub|1>>>>>>>>>>>>
+    <tabular|<tformat|<table|<row|<cell|<subtable|<tformat|<cwith|1|-1|2|2|cell-halign|r>|<table|<row|<cell|<math|<math-ss|full-multiply><rsub|1>>>|<cell|:=>|<cell|<math|<math-ss|take>
+    <around*|(|<math-ss|cond> <math-ss|iden> <math-ss|false>|)>
+    \<vartriangle\> <math-ss|IH>;<math-ss|full-add><rsub|1>>>>>>>>>>>>
   </render-code>
 
   <\render-code>
-    <math|<math-ss|full-multiplier><rsub|2*n>\<of\><around*|(|<2><rsup|2*n>\<times\><2><rsup|2*n>|)>\<times\><around*|(|<2><rsup|2*n>\<times\><2><rsup|2*n>|)>\<vdash\><2><rsup|4*n>>
+    <math|<math-ss|full-multiply><rsub|2*n>\<of\><around*|(|<2><rsup|2*n>\<times\><2><rsup|2*n>|)>\<times\><around*|(|<2><rsup|2*n>\<times\><2><rsup|2*n>|)>\<vdash\><2><rsup|4*n>>
 
-    <tabular|<tformat|<table|<row|<cell|<subtable|<tformat|<cwith|1|-1|2|2|cell-halign|r>|<table|<row|<cell|<math|<math-ss|full-multiplier><rsub|2*n>>>|<cell|:=>|<cell|<math|<math-ss|take>
+    <tabular|<tformat|<table|<row|<cell|<subtable|<tformat|<cwith|1|-1|2|2|cell-halign|r>|<table|<row|<cell|<math|<math-ss|full-multiply><rsub|2*n>>>|<cell|:=>|<cell|<math|<math-ss|take>
     <around*|(|<math-ss|OOH> \<vartriangle\> <around*|(|<math-ss|IOH>
     \<vartriangle\> <math-ss|OIH>|)>|)>>>>|<row|<cell|>|<cell|<math|\<vartriangle\>>>|<cell|(<math|<around*|(|<math-ss|take>
     <around*|(|<math-ss|OOH> \<vartriangle\> <math-ss|IIH>|)> \<vartriangle\>
     <math-ss|drop> <around*|(|<math-ss|OOH> \<vartriangle\>
-    <math-ss|IOH>|)>;<math-ss|full-multiplier><rsub|n>|)>>>>|<row|<cell|>|<cell|<math|\<vartriangle\>>>|<cell|<math|<around*|(|<math-ss|take>
+    <math-ss|IOH>|)>;<math-ss|full-multiply><rsub|n>|)>>>>|<row|<cell|>|<cell|<math|\<vartriangle\>>>|<cell|<math|<around*|(|<math-ss|take>
     <around*|(|<math-ss|OIH> \<vartriangle\> <math-ss|IIH>|)> \<vartriangle\>
     <math-ss|drop> <around*|(|<math-ss|OIH> \<vartriangle\>
-    <math-ss|IOH>|)>;<math-ss|full-multiplier><rsub|n>|)>>)>>|<row|<cell|>|<cell|;>|<cell|<math|<math-ss|take>
+    <math-ss|IOH>|)>;<math-ss|full-multiply><rsub|n>|)>>)>>|<row|<cell|>|<cell|;>|<cell|<math|<math-ss|take>
     <around*|(|<math-ss|OH> \<vartriangle\>
     <math-ss|IOH>|)>>>>|<row|<cell|>|<cell|<math|\<vartriangle\>>>|<cell|<math|<around*|(|<math-ss|drop>
     <around*|(|<math-ss|OOH> \<vartriangle\> <math-ss|IIH>|)> \<vartriangle\>
     <around*|(|<math-ss|OIH> \<vartriangle\> <math-ss|drop>
     <around*|(|<math-ss|OIH> \<vartriangle\>
-    <math-ss|IOH>|)>;<math-ss|full-multiplier><rsub|n>|)>|)>>>>|<row|<cell|>|<cell|;>|<cell|<math|<around*|(|<math-ss|OH>
+    <math-ss|IOH>|)>;<math-ss|full-multiply><rsub|n>|)>|)>>>>|<row|<cell|>|<cell|;>|<cell|<math|<around*|(|<math-ss|OH>
     \<vartriangle\> <math-ss|drop> <around*|(|<math-ss|IOH> \<vartriangle\>
-    <math-ss|OOH>|)>;<math-ss|full-multiplier><rsub|n>|)> \<vartriangle\>
+    <math-ss|OOH>|)>;<math-ss|full-multiply><rsub|n>|)> \<vartriangle\>
     <math-ss|drop> <around*|(|<math-ss|IIH> \<vartriangle\>
     <math-ss|OIH>|)>>>>>>>>>>>>
   </render-code>
 
-  <\render-code>
-    <math|<math-ss|multiplier><rsub|1>\<of\><2>\<times\><2>\<vdash\><2><rsup|2>>
+  \;
 
-    <tabular|<tformat|<table|<row|<cell|<subtable|<tformat|<cwith|1|-1|2|2|cell-halign|r>|<table|<row|<cell|<math|<math-ss|multiplier><rsub|1>>>|<cell|:=>|<cell|<math|<math-ss|false>
-    \<vartriangle\> <math-ss|cond> <math-ss|iden> <math-ss|false>>>>>>>>>>>>
-  </render-code>
-
-  <\render-code>
-    <math|<math-ss|multiplier><rsub|2*n>\<of\><2><rsup|2*n>\<times\><2><rsup|2*n>\<vdash\><2><rsup|4*n>>
-
-    <tabular|<tformat|<table|<row|<cell|<subtable|<tformat|<cwith|1|-1|2|2|cell-halign|r>|<cwith|3|5|2|2|cell-halign|r>|<table|<row|<cell|<math|<math-ss|multiplier><rsub|2*n>>>|<cell|:=>|<cell|<math|<around*|(|<math-ss|OOH>
-    \<vartriangle\> <around*|(|<math-ss|IOH> \<vartriangle\>
-    <math-ss|OIH>|)>|)>>>>|<row|<cell|>|<cell|<math|\<vartriangle\>>>|<cell|<math|<around*|(|<math-ss|><around*|(|<math-ss|OOH>
-    \<vartriangle\> <math-ss|IIH>|)>;<math-ss|multiplier><rsub|n>|)>
-    \<vartriangle\> <around*|(|<around*|(|<math-ss|OIH> \<vartriangle\>
-    <math-ss|IIH>|)>;<math-ss|multiplier><rsub|n>|)>>>>|<row|<cell|>|<cell|;>|<cell|<math|<math-ss|take>
-    <around*|(|<math-ss|OH> \<vartriangle\>
-    <math-ss|IOH>|)>>>>|<row|<cell|>|<cell|<math|\<vartriangle\>>>|<cell|<math|<around*|(|<math-ss|drop>
-    <around*|(|<math-ss|OOH> \<vartriangle\> <math-ss|IIH>|)> \<vartriangle\>
-    <around*|(|<math-ss|OIH> \<vartriangle\> <math-ss|drop>
-    <around*|(|<math-ss|OIH> \<vartriangle\>
-    <math-ss|IOH>|)>;<math-ss|full-multiplier><rsub|n>|)>|)>>>>|<row|<cell|>|<cell|;>|<cell|<math|<around*|(|<math-ss|OH>
-    \<vartriangle\> <math-ss|drop> <around*|(|<math-ss|IOH> \<vartriangle\>
-    <math-ss|OOH>|)>;<math-ss|full-multiplier><rsub|n>|)> \<vartriangle\>
-    <math-ss|drop> <around*|(|<math-ss|IIH> \<vartriangle\>
-    <math-ss|OIH>|)>>>>>>>>>>>>
-  </render-code>
-
-  We can prove that the multipliers and full multipliers meet the following
-  specifications.
+  We can prove that the full multipliers meet the following specifications.
 
   <\eqnarray*>
-    <tformat|<table|<row|<cell|<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|full-multiplier><rsub|n>|\<rrbracket\>><around*|\<langle\>|<around*|\<langle\>|a,b|\<rangle\>>,<around*|\<langle\>|c,d|\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|2*n>>|<cell|=>|<cell|<around*|\<lceil\>|a|\<rceil\>><rsub|n>\<cdot\><around*|\<lceil\>|b|\<rceil\>><rsub|n>+<around*|\<lceil\>|c|\<rceil\>><rsub|n>+<around*|\<lceil\>|d|\<rceil\>><rsub|n>>>|<row|<cell|<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|multiplier><rsub|n>|\<rrbracket\>><around*|\<langle\>|a,b|\<rangle\>>|\<rceil\>><rsub|2*n>>|<cell|=>|<cell|<around*|\<lceil\>|a|\<rceil\>><rsub|n>\<cdot\><around*|\<lceil\>|b|\<rceil\>><rsub|n>>>>>
+    <tformat|<table|<row|<cell|<around*|\<lceil\>|<around*|\<llbracket\>|<math-ss|full-multiply><rsub|n>|\<rrbracket\>><around*|\<langle\>|<around*|\<langle\>|a,b|\<rangle\>>,<around*|\<langle\>|c,d|\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|2*n>>|<cell|=>|<cell|<around*|\<lceil\>|a|\<rceil\>><rsub|n>\<cdot\><around*|\<lceil\>|b|\<rceil\>><rsub|n>+<around*|\<lceil\>|c|\<rceil\>><rsub|n>+<around*|\<lceil\>|d|\<rceil\>><rsub|n>>>>>
   </eqnarray*>
 
   \;
@@ -2245,10 +3083,10 @@
   function <math|SHA256<rsub|Pad>\<of\><2><rsup|\<ast\>>\<rightarrow\><around*|(|<2><rsup|512>|)><rsup|+>>,
   which appends padding and length data to produce a (non-empty) sequence of
   blocks of 512 bits, and the Merkle--Damgård construction
-  <math|SHA256<rsub|MD>\<of\><2><rsup|256>\<rightarrow\><around*|(|<2><rsup|512>|)><rsup|\<ast\>>\<rightarrow\><2><rsup|256>>.
+  <math|SHA256<rsub|MD>\<of\><2><rsup|256>\<times\><around*|(|<2><rsup|512>|)><rsup|\<ast\>>\<rightarrow\><2><rsup|256>>.
 
   <\equation*>
-    SHA256<rsub|<2>>=SHA256<rsub|MD><around*|(|SHA256<rsub|IV>|)>\<circ\>\<eta\><rsup|S>\<circ\>SHA256<rsub|Pad>
+    SHA256<rsub|<2>><around*|(|l|)>=SHA256<rsub|MD><around*|\<langle\>|SHA256<rsub|IV>,\<eta\><rsup|S><around*|(|SHA256<rsub|Pad><around*|(|l|)>|)>|\<rangle\>>
   </equation*>
 
   where <math|SHA256<rsub|IV>\<of\><2><rsup|256>> is the SHA-256 initial
@@ -2259,7 +3097,7 @@
   compression function <math|SHA256<rsub|Block>\<of\><2><rsup|256>\<times\><2><rsup|512>\<rightarrow\><2><rsup|256>>.
 
   <\eqnarray*>
-    <tformat|<table|<row|<cell|SHA256<rsub|MD><around*|(|h|)><around*|(|\<epsilon\>|)>>|<cell|\<assign\>>|<cell|h>>|<row|<cell|SHA256<rsub|MD><around*|(|h|)><around*|\<langle\>|b\<blacktriangleleft\>l|\<rangle\>>>|<cell|\<assign\>>|<cell|SHA256<rsub|MD><around*|(|SHA256<rsub|Block><around*|\<langle\>|h,b|\<rangle\>>|)><around*|(|l|)>>>>>
+    <tformat|<table|<row|<cell|SHA256<rsub|MD><around*|\<langle\>|h,\<epsilon\>|\<rangle\>>>|<cell|\<assign\>>|<cell|h>>|<row|<cell|SHA256<rsub|MD><around*|\<langle\>|h,b\<blacktriangleleft\>l|\<rangle\>>>|<cell|\<assign\>>|<cell|SHA256<rsub|MD><around*|\<langle\>|SHA256<rsub|Block><around*|\<langle\>|h,b|\<rangle\>>,l|\<rangle\>>>>>>
   </eqnarray*>
 
   The block compression function <math|SHA256<rsub|Block>\<of\><2><rsup|256>\<times\><2><rsup|512>\<rightarrow\><2><rsup|256>>
@@ -2297,6 +3135,34 @@
 
   Since the <math|SHA256<rsub|<2><rsup|8>>> variant is so commonly used, we
   will write it unadorned as simply <math|SHA256>.
+
+  <subsubsection|Tagged Hashes>
+
+  BIP-340, BIP-341 used a ``tagged-hash'' format to help avoid message
+  collisions between different message variants. We adopt the same format
+  here to avoid message collisions within a Simplicity application and we
+  hope to avoid message collision across various applications.
+
+  The tagged hash format begins every message with one block prefix which
+  indicate the variant, or type of digest data being hashed. This first block
+  consists of the SHA-256 digest of a string repeated twice. \ Given a byte
+  string <math|t\<of\><around*|(|<2><rsup|8>|)><rsup|\<ast\>>>, we can
+  defined the tagged hash of bit strings,
+  <math|SHA256<rsup|t><rsub|<2>>\<of\><2><rsup|\<ast\>>\<rightarrow\><2><rsup|256>>,
+  and byte strings, \ <math|SHA256<rsup|t><rsub|<2><rsup|8>>\<of\><around*|(|<2><rsup|8>|)><rsup|\<ast\>>\<rightarrow\><2><rsup|256>>.
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|SHA256<rsup|t><rsub|<2>><around*|(|x|)>>|<cell|\<assign\>>|<cell|SHA256<rsub|<2>><around*|(|\<mu\><rsup|\<ast\>><around*|(|<around*|(|\<iota\><rsup|<2><rsup|8>><rsub|<2><rsup|\<ast\>>>|)><rsup|\<ast\>><around*|(|p\<cdummy\>p|)>|)>\<cdummy\>x|)>>>|<row|<cell|SHA256<rsup|t><rsub|<2><rsup|8>><around*|(|x|)>>|<cell|\<assign\>>|<cell|SHA256<rsub|<2><rsup|8>><around*|(|p\<cdummy\>p\<cdummy\>x|)>>>|<row|<cell|>|<cell|where>|<cell|p\<assign\>BE<rsub|256><around*|(|SHA256<rsub|<2><rsup|8>><around*|(|t|)>|)>>>>>
+  </eqnarray*>
+
+  \ We can compute the SHA-256 midstate after compressing this first block
+  containing the prefix tag.
+
+  <\equation*>
+    SHA256<rsup|t><rsub|IV>\<assign\>SHA256<rsub|Block><around*|\<langle\>|SHA256<rsub|IV>,\<Delta\><around*|(|SHA256<rsub|<2><rsup|8>><around*|(|t|)>|)>|\<rangle\>>
+  </equation*>
+
+  \;
 
   <subsection|Elliptic Curve Operations on secp256k1>
 
@@ -2343,29 +3209,12 @@
 
   The libsecp256k1 library<nbsp><cite|libsecp256k1> is a C implementation of
   optimized functions on this elliptic curve. This library has two variants
-  for the representation for field elements, of which the <verbatim|10x26>
-  representation is the most portable. This representation consists of an
-  array of 10 32-bit unsigned integer values. Such an array, <verbatim|a>,
-  represents the value
-
-  <\equation*>
-    <big|sum><rsub|i=0><rsup|9><text|<verbatim|a[<math|i>]>>\<cdot\>2<rsup|26*i>
-    <around*|(|mod p|)><text|.>
-  </equation*>
-
-  Different arrays may represent the same value. The various field arithmetic
-  operations, including modular inverse and square roots, are implemented
-  efficiently, subject to various specific preconditions on their inputs that
-  need to be satisfied to prevent overflows of the internal 32-bit unsigned
-  integer values.
-
-  The libsecp256k1 library also has two variants for the representation of
-  elliptic curve point values. The affine coordinate representation consists
-  of a pair of field elements, and a flag to indicate the value
-  <math|\<cal-O\>> (in which case the coordinate values are ignored). The
-  Jacobian coordinate representation consists of a triple of field elements,
-  and a flag to indicate the value <math|\<cal-O\>> (in which case the
-  coordinates are ignored).
+  for the representation of elliptic curve point values. The affine
+  coordinate representation consists of a pair of field elements, and a flag
+  to indicate the value <math|\<cal-O\>> (in which case the coordinate values
+  are ignored). The Jacobian coordinate representation consists of a triple
+  of field elements, and a flag to indicate the value <math|\<cal-O\>> (in
+  which case the coordinates are ignored).
 
   A point in Jacobian coordinates, <math|<around*|\<langle\>|x,y,z|\<rangle\>>>
   is defined to be on the elliptic curve when
@@ -2490,14 +3339,13 @@
   In Simplicity, we represent a field element by the type
 
   <\equation*>
-    FE\<assign\><2><rsup|32>\<times\><around*|(|<2><rsup|32>\<times\><around*|(|<2><rsup|32>\<times\><around*|(|<2><rsup|32>\<times\><around*|(|<2><rsup|32>\<times\><around*|(|<2><rsup|32>\<times\><around*|(|<2><rsup|32>\<times\><around*|(|<2><rsup|32>\<times\><around*|(|<2><rsup|32>\<times\><2><rsup|32>|)>|)>|)>|)>|)>|)>|)>|)>
+    FE\<assign\><2><rsup|256>
   </equation*>
 
-  and a value <math|<around*|\<langle\>|a<rsub|0>,<around*|\<langle\>|a<rsub|1>,<around*|\<langle\>|a<rsub|2>,<around*|\<langle\>|a<rsub|3>,<around*|\<langle\>|a<rsub|4>,<around*|\<langle\>|a<rsub|5>,<around*|\<langle\>|a<rsub|6>,<around*|\<langle\>|a<rsub|7>,<around*|\<langle\>|a<rsub|8>,a<rsub|9>|\<rangle\>>|\<rangle\>>|\<rangle\>>|\<rangle\>>|\<rangle\>>|\<rangle\>>|\<rangle\>>|\<rangle\>>|\<rangle\>>\<of\>FE>
-  represents the field element
+  and a value <math|a\<of\>FE> represents the field element
 
   <\equation*>
-    <around*|\<lceil\>|<around*|\<langle\>|a<rsub|0>,<around*|\<langle\>|a<rsub|1>,<around*|\<langle\>|a<rsub|2>,<around*|\<langle\>|a<rsub|3>,<around*|\<langle\>|a<rsub|4>,<around*|\<langle\>|a<rsub|5>,<around*|\<langle\>|a<rsub|6>,<around*|\<langle\>|a<rsub|7>,<around*|\<langle\>|a<rsub|8>,a<rsub|9>|\<rangle\>>|\<rangle\>>|\<rangle\>>|\<rangle\>>|\<rangle\>>|\<rangle\>>|\<rangle\>>|\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|FE>\<assign\><big|sum><rsup|9><rsub|i=0><around*|\<lceil\>|a<rsub|i>|\<rceil\>><rsub|32>\<cdot\>2<rsup|26*i>
+    <around*|\<lceil\>|a|\<rceil\>><rsub|FE>\<assign\><around*|\<lceil\>|a|\<rceil\>><rsub|256>
     <around*|(|mod p|)><text|.>
   </equation*>
 
@@ -2536,12 +3384,10 @@
     <around*|(|mod p|)><text|.>>>>>
   </eqnarray*>
 
-  The translation between the libsecp256k1's <verbatim|10x32> field
-  representation and Simplicity's <math|FE> type is straightforward. The
-  translation between libsecp256k1's affine coordinate representation of
-  elliptic curve points and Simplicity's <math|GE> is also straightforward
-  except that Simplicity's <math|GE> type has no flag and cannot represent
-  the <math|\<cal-O\>> point. The translation between libsecp256k1's Jacobian
+  The translation between libsecp256k1's affine coordinate representation of
+  elliptic curve points and Simplicity's <math|GE> is straightforward except
+  that Simplicity's <math|GE> type has no flag and cannot represent the
+  <math|\<cal-O\>> point. The translation between libsecp256k1's Jacobian
   coordinate representation of elliptic curve points and Simplicity's
   <math|GEJ> type is mostly straight forward, however the <math|GEJ> type
   represents the <math|\<cal-O\>> point using a z-coordinate representing 0,
@@ -2551,13 +3397,11 @@
   libsecp256k1 can be used as jets for these Simplicity expressions. As such,
   the Simplicity expressions are designed to mimic the exact behaviour of a
   specific version of libsecp256k1's elliptic curve functions. For inputs of
-  particular representations of field elements, or points, the Simplicity
+  particular representations of point in Jacobian coordinates, the Simplicity
   expression returns the exact same representative for its result as
-  libsecp256k1. If a precondition of a libsecp256k1 function is violated, the
-  the Simplicity code also overflows and returns the corresponding value that
-  libsecp256k1 returns. If an off-curve point is passed to a libsecp256k1
-  function, the Simplicity code again computes the same result that the
-  libsecp256k1 function does.
+  libsecp256k1. If an off-curve point is passed to a libsecp256k1 function,
+  the Simplicity code again computes the same result that the libsecp256k1
+  function does.
 
   The only subtle point with using libsecp256k1 for jets lies in the
   different representation of <math|\<cal-O\>>. The inputs and outputs of
@@ -2568,33 +3412,31 @@
   <subsubsection|Schnorr Signature Validation>
 
   With elliptic curve operations defined, we are able to implement Schnorr
-  signature validation in accordance with the BIP-Schnorr
-  specification<nbsp><cite|bip-schnorr>. We define Simplicity types for the
-  formats of compressed public keys, <math|PubKey>; messages, <math|Msg>; and
+  signature validation in accordance with the BIP-0340
+  specification<nbsp><cite|bip-0340>. We define Simplicity types for the
+  formats of x-only public keys, <math|PubKey>; messages, <math|Msg>; and
   Schnorr signatures, <math|Sig>, below.
 
   <\eqnarray*>
-    <tformat|<table|<row|<cell|PubKey>|<cell|\<assign\>>|<cell|<2>\<times\><2><rsup|256>>>|<row|<cell|Msg>|<cell|\<assign\>>|<cell|<2><rsup|256>>>|<row|<cell|Sig>|<cell|\<assign\>>|<cell|<2><rsup|512>>>>>
+    <tformat|<table|<row|<cell|PubKey>|<cell|\<assign\>>|<cell|<2><rsup|256>>>|<row|<cell|Msg>|<cell|\<assign\>>|<cell|<2><rsup|256>>>|<row|<cell|Sig>|<cell|\<assign\>>|<cell|<2><rsup|512>>>>>
   </eqnarray*>
 
-  The <math|PubKey> type is a pair <math|<around*|\<langle\>|b,<around*|\<lfloor\>|x|\<rfloor\>><rsub|256>|\<rangle\>>>
-  where <math|b> is the least significant bit of a (non-<math|\<cal-O\>>)
-  elliptic curve point's y-coordinate, and where <math|x> the point's
-  x-coordinate. A <math|Msg> value <math|m> represents the byte-string
-  <math|BE<rsub|256><around*|(|m|)>> for a Schnorr signature's message, and a
-  <math|Sig> value <math|a> represents the byte-string
+  The <math|PubKey> type is an x-coordinate of a point whoes y-coordinate's
+  least significant bit is even. A <math|Msg> value <math|m> represents the
+  byte-string <math|BE<rsub|256><around*|(|m|)>> for a Schnorr signature's
+  message, and a <math|Sig> value <math|a> represents the byte-string
   <math|BE<rsub|512><around*|(|a|)>> for a Schnorr signature.
 
   We have implemented a core Simplicity expression to check a Schnorr
   signature for a public key on a given message:
 
   <\equation*>
-    <math-ss|schnorrVerify>\<of\><around*|(|PubKey\<times\>Msg|)>\<times\>Sig\<vdash\><2>
+    <math-ss|bip0340-check>\<of\><around*|(|PubKey\<times\>Msg|)>\<times\>Sig\<vdash\><2>
   </equation*>
 
-  The semantics are such that <math|<around*|\<llbracket\>|<math-ss|schnorrVerify>|\<rrbracket\>><around*|\<langle\>|<around*|\<langle\>|p,m|\<rangle\>>,s|\<rangle\>>=<math-tt|1><rsub|<2>>>
+  The semantics are such that <math|<around*|\<llbracket\>|<math-ss|bip0340-check>|\<rrbracket\>><around*|\<langle\>|<around*|\<langle\>|p,m|\<rangle\>>,s|\<rangle\>>=<math-tt|1><rsub|<2>>>
   only when the values that the inputs represents satisfy the verification
-  conditions of the BIP-Schnorr specification.
+  conditions of the BIP-0340 specification.
 
   <section|Completeness Theorem>
 
@@ -3312,55 +4154,61 @@
 
   <section|Commitment Merkle Root><label|ss:cmr>
 
-  In modern Bitcoin, users who use P2SH (pay to script hash) do not commit
-  funds directly to Bitcoin Script, rather they commit to a hash of their
-  Bitcoin Script. Only when they wish to redeem their funds do they reveal
-  their Bitcoin Script for execution. Bitcoin's consensus protocol enforces
-  that the Bitcoin Script presented during redemption has a hash that matches
-  the committed hash.
+  <assign|SimplicityPrefix|53696d706c69636974792d4472616674>In modern
+  Bitcoin, users who use P2SH (pay to script hash) do not commit funds
+  directly to Bitcoin Script, rather they commit to a hash of their Bitcoin
+  Script. Only when they wish to redeem their funds do they reveal their
+  Bitcoin Script for execution. Bitcoin's consensus protocol enforces that
+  the Bitcoin Script presented during redemption has a hash that matches the
+  committed hash.
 
-  <assign|cmr|<macro|x|<math|#<rsup|c><around*|(|<arg|x>|)>>>>Simplicity is
-  designed to work in the same way. However, instead of a linear hash of a
-  serialized Simplicity program (Section<nbsp><reference|Serialization>) we
-  follow the tree structure of a Simplicity expression and compute a
-  commitment Merkle root of its syntax tree. Below we define the commitment
-  Merkle root of a Simplicity expression <math|t\<of\>A\<vdash\>B> as
-  <math|<cmr|t>\<of\><2><rsup|256>>.
+  <assign|cmr|<macro|x|<math|#<rsup|c><around*|(|<arg|x>|)>>>><assign|imr0|<macro|x|<math|#<rsup|i><around*|(|<arg|x>|)>>>><assign|mr|<macro|x|y|<math|#<rsup|><rsup|<arg|x>><around*|(|<arg|y>|)>>>>Simplicity
+  is designed to work in the same way. However, instead of a linear hash of a
+  serialized Simplicity program (Section<nbsp><reference|ss:Serialization>)
+  we follow the tree structure of a Simplicity expression and compute a
+  commitment Merkle root of its syntax tree. Below we define both the
+  commitment Merkle root of a Simplicity expression <math|t\<of\>A\<vdash\>B>
+  as <math|<cmr|t>\<of\><2><rsup|256>> as well as a value
+  <math|<imr0|t>\<of\><2><rsup|256>> that will later be used to define a
+  varianted for identity Merkle Roots (Section<nbsp><reference|ss:IMR>).
+  \ Below <math|\<alpha\>\<in\><around*|{|c,i|}>> and hence for core
+  Simplicity expression <math|t>, <math|<cmr|t>=<imr0|t>>, but they will no
+  longer be equal when we consider some extensions to core Simplicity.
 
   <\eqnarray*>
-    <tformat|<cwith|1|-1|2|2|cell-halign|r>|<table|<row|<cell|<cmr|<math-ss|iden><rsub|A>>>|<cell|\<assign\>>|<cell|tag<rsup|c><rsub|<math-ss|iden>>>>|<row|<cell|<cmr|<math-ss|comp><rsub|A,B,C>
-    s t>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|tag<rsup|c><rsub|<math-ss|comp>>\<comma\>
-    <around*|\<langle\>|<cmr|s>,<cmr|t>|\<rangle\>>|\<rangle\>>>>|<row|<cell|<cmr|<math-ss|unit><rsub|A>>>|<cell|\<assign\>>|<cell|tag<rsup|c><rsub|<math-ss|unit>>>>|<row|<cell|<cmr|<math-ss|injl><rsub|A,B,C>
-    t>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|tag<rsup|c><rsub|<math-ss|injl>>\<comma\>
-    <around*|\<langle\>|<around*|\<lfloor\>|0|\<rfloor\>><rsub|256>,<cmr|t>|\<rangle\>>|\<rangle\>>>>|<row|<cell|<cmr|<math-ss|injr><rsub|A,B,C>
-    t>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|tag<rsup|c><rsub|<math-ss|injr>>\<comma\>
-    <around*|\<langle\>|<around*|\<lfloor\>|0|\<rfloor\>><rsub|256>,<cmr|t>|\<rangle\>>|\<rangle\>>>>|<row|<cell|<cmr|<math-ss|case><rsub|A,B,C,D>
-    s t>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|tag<rsup|c><rsub|<math-ss|case>>\<comma\>
-    <around*|\<langle\>|<cmr|s>,<cmr|t>|\<rangle\>>|\<rangle\>>>>|<row|<cell|<cmr|<math-ss|pair><rsub|A,B,C>
-    s t>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|tag<rsup|c><rsub|<math-ss|pair>>\<comma\>
-    <around*|\<langle\>|<cmr|s>,<cmr|t>|\<rangle\>>|\<rangle\>>>>|<row|<cell|<cmr|<math-ss|take><rsub|A,B,C>
-    t>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|tag<rsup|c><rsub|<math-ss|take>>\<comma\>
-    <around*|\<langle\>|<around*|\<lfloor\>|0|\<rfloor\>><rsub|256>,<cmr|t>|\<rangle\>>|\<rangle\>>>>|<row|<cell|<cmr|<math-ss|drop><rsub|A,B,C>
-    t>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|tag<rsup|c><rsub|<math-ss|drop>>\<comma\>
-    <around*|\<langle\>|<around*|\<lfloor\>|0|\<rfloor\>><rsub|256>,<cmr|t>|\<rangle\>>|\<rangle\>>>>>>
+    <tformat|<cwith|1|-1|2|2|cell-halign|r>|<table|<row|<cell|<mr|\<alpha\>|<math-ss|iden><rsub|A>>>|<cell|\<assign\>>|<cell|SHA256<rsup|tag<rsup|c><rsub|<math-ss|iden>>><rsub|IV>>>|<row|<cell|<mr|\<alpha\>|<math-ss|comp><rsub|A,B,C>
+    s t>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|SHA256<rsup|<math|tag<rsup|c><rsub|<math-ss|comp>>>><rsub|IV>\<comma\>
+    <around*|\<langle\>|<mr|\<alpha\>|s>,<mr|\<alpha\>|t>|\<rangle\>>|\<rangle\>>>>|<row|<cell|<mr|\<alpha\>|<math-ss|unit><rsub|A>>>|<cell|\<assign\>>|<cell|SHA256<rsup|tag<rsup|c><rsub|<math-ss|unit>>><rsub|IV>>>|<row|<cell|<mr|\<alpha\>|<math-ss|injl><rsub|A,B,C>
+    t>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|SHA256<rsup|tag<rsup|c><rsub|<math-ss|injl>>><rsub|IV>\<comma\>
+    <around*|\<langle\>|<around*|\<lfloor\>|0|\<rfloor\>><rsub|256>,<mr|\<alpha\>|t>|\<rangle\>>|\<rangle\>>>>|<row|<cell|<mr|\<alpha\>|<math-ss|injr><rsub|A,B,C>
+    t>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|SHA256<rsup|tag<rsup|c><rsub|<math-ss|injr>>><rsub|IV>\<comma\>
+    <around*|\<langle\>|<around*|\<lfloor\>|0|\<rfloor\>><rsub|256>,<mr|\<alpha\>|t>|\<rangle\>>|\<rangle\>>>>|<row|<cell|<mr|\<alpha\>|<math-ss|case><rsub|A,B,C,D>
+    s t>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|SHA256<rsup|tag<rsup|c><rsub|<math-ss|case>>><rsub|IV>\<comma\>
+    <around*|\<langle\>|<mr|\<alpha\>|s>,<mr|\<alpha\>|t>|\<rangle\>>|\<rangle\>>>>|<row|<cell|<mr|\<alpha\>|<math-ss|pair><rsub|A,B,C>
+    s t>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|SHA256<rsup|tag<rsup|c><rsub|<math-ss|pair>>><rsub|IV>\<comma\>
+    <around*|\<langle\>|<mr|\<alpha\>|s>,<mr|\<alpha\>|t>|\<rangle\>>|\<rangle\>>>>|<row|<cell|<mr|\<alpha\>|<math-ss|take><rsub|A,B,C>
+    t>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|SHA256<rsup|tag<rsup|c><rsub|<math-ss|take>>><rsub|IV>\<comma\>
+    <around*|\<langle\>|<around*|\<lfloor\>|0|\<rfloor\>><rsub|256>,<mr|\<alpha\>|t>|\<rangle\>>|\<rangle\>>>>|<row|<cell|<mr|\<alpha\>|<math-ss|drop><rsub|A,B,C>
+    t>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|SHA256<rsup|tag<rsup|c><rsub|<math-ss|drop>>><rsub|IV>\<comma\>
+    <around*|\<langle\>|<around*|\<lfloor\>|0|\<rfloor\>><rsub|256>,<mr|\<alpha\>|t>|\<rangle\>>|\<rangle\>>>>>>
   </eqnarray*>
 
   Here we are directly using SHA-256's compression function,
-  <math|SHA256*Block<around*|\<langle\>|i,b|\<rangle\>>>, which takes two
-  arguments. The first argument, <math|i>, is a 256-bit initial value. The
-  second value, <math|b>, is a 512-bit block of data. Above we divide a block
-  into two 256-bit values, <math|<around*|\<langle\>|b<rsub|0>,b<rsub|1>|\<rangle\>>>,
-  and recursively pass Merkle roots into the compression function.
+  <math|SHA256*<rsub|Block><around*|\<langle\>|i,b|\<rangle\>>>, which takes
+  two arguments. The first argument, <math|i>, is a 256-bit tagged initial
+  value. The second value, <math|b>, is a 512-bit block of data. Above we
+  divide a block into two 256-bit values,
+  <math|<around*|\<langle\>|b<rsub|0>,b<rsub|1>|\<rangle\>>>, and recursively
+  pass Merkle roots into the compression function.
 
   Like static analysis, the time needed to computing the commitment Merkle
   root is linear in the size of the DAG representing the term because the
   intermediate results on sub-expressions can be shared.
 
-  We define unique initial values <math|tag<rsup|c><rsub|x>> for every
-  combinator by taking the SHA-256 hash of unique byte strings:
+  We define unique tags <math|tag<rsup|c><rsub|x>> for every combinator.
 
   <\eqnarray*>
-    <tformat|<table|<row|<cell|tag<rsup|c><rsub|<math-ss|iden>>>|<cell|\<assign\>>|<cell|SHA256<math-tt|[53696d706c69636974791f436f6d6d69746d656e741f6964656e]>>>|<row|<cell|tag<rsup|c><rsub|<math-ss|comp>>>|<cell|\<assign\>>|<cell|SHA256<math-tt|[53696d706c69636974791f436f6d6d69746d656e741f636f6d70]>>>|<row|<cell|tag<rsup|c><rsub|<math-ss|unit>>>|<cell|\<assign\>>|<cell|SHA256<math-tt|[53696d706c69636974791f436f6d6d69746d656e741f756e6974]>>>|<row|<cell|tag<rsup|c><rsub|<math-ss|injl>>>|<cell|\<assign\>>|SHA256<math-tt|[53696d706c69636974791f436f6d6d69746d656e741f696e6a6c]>>|<row|<cell|tag<rsup|c><rsub|<math-ss|injr>>>|<cell|\<assign\>>|SHA256<math-tt|[53696d706c69636974791f436f6d6d69746d656e741f696e6a72]>>|<row|<cell|tag<rsup|c><rsub|<math-ss|case>>>|<cell|\<assign\>>|SHA256<math-tt|[53696d706c69636974791f436f6d6d69746d656e741f63617365]>>|<row|<cell|tag<rsup|c><rsub|<math-ss|pair>>>|<cell|\<assign\>>|SHA256<math-tt|[53696d706c69636974791f436f6d6d69746d656e741f70616972]>>|<row|<cell|tag<rsup|c><rsub|<math-ss|take>>>|<cell|\<assign\>>|SHA256<math-tt|[53696d706c69636974791f436f6d6d69746d656e741f74616b65]>>|<row|<cell|tag<rsup|c><rsub|<math-ss|drop>>>|<cell|\<assign\>>|SHA256<math-tt|[53696d706c69636974791f436f6d6d69746d656e741f64726f70]>>>>
+    <tformat|<table|<row|<cell|tag<rsup|c><rsub|<math-ss|iden>>>|<cell|\<assign\>>|<cell|<math-tt|[<SimplicityPrefix>1f436f6d6d69746d656e741f6964656e]><rsub|2<rsup|8>>>>|<row|<cell|tag<rsup|c><rsub|<math-ss|comp>>>|<cell|\<assign\>>|<cell|<math-tt|[<SimplicityPrefix>1f436f6d6d69746d656e741f636f6d70]><rsub|2<rsup|8>>>>|<row|<cell|tag<rsup|c><rsub|<math-ss|unit>>>|<cell|\<assign\>>|<cell|<math-tt|[<SimplicityPrefix>1f436f6d6d69746d656e741f756e6974]><rsub|2<rsup|8>>>>|<row|<cell|tag<rsup|c><rsub|<math-ss|injl>>>|<cell|\<assign\>>|<math-tt|[<SimplicityPrefix>1f436f6d6d69746d656e741f696e6a6c]><rsub|2<rsup|8>>>|<row|<cell|tag<rsup|c><rsub|<math-ss|injr>>>|<cell|\<assign\>>|<math-tt|[<SimplicityPrefix>1f436f6d6d69746d656e741f696e6a72]><rsub|2<rsup|8>>>|<row|<cell|tag<rsup|c><rsub|<math-ss|case>>>|<cell|\<assign\>>|<math-tt|[<SimplicityPrefix>1f436f6d6d69746d656e741f63617365]><rsub|2<rsup|8>>>|<row|<cell|tag<rsup|c><rsub|<math-ss|pair>>>|<cell|\<assign\>>|<math-tt|[<SimplicityPrefix>1f436f6d6d69746d656e741f70616972]><rsub|2<rsup|8>>>|<row|<cell|tag<rsup|c><rsub|<math-ss|take>>>|<cell|\<assign\>>|<math-tt|[<SimplicityPrefix>1f436f6d6d69746d656e741f74616b65]><rsub|2<rsup|8>>>|<row|<cell|tag<rsup|c><rsub|<math-ss|drop>>>|<cell|\<assign\>>|<math-tt|[<SimplicityPrefix>1f436f6d6d69746d656e741f64726f70]><rsub|2<rsup|8>>>>>
   </eqnarray*>
 
   Notice that the type annotations for expressions are not included in the
@@ -3368,6 +4216,24 @@
   type annotations (see Section<nbsp><with|color|red|<reference|ss:typeInference>>).
   Later, we will make use of this flexibility when pruning unused branches
   from <samp|case> expressions (see Section<nbsp><reference|ss:pruning>).
+
+  <section|Type Merkle Root>
+
+  <assign|tmr|<macro|x|<math|#<rsup|ty><around*|(|<arg|x>|)>>>>We also define
+  a Merkle root that follows the tree sturcture of types in the same way that
+  we defined the commitment Merkle Root.
+
+  <\eqnarray*>
+    <tformat|<cwith|1|-1|2|2|cell-halign|r>|<table|<row|<cell|<tmr|<1>>>|<cell|\<assign\>>|<cell|SHA256<rsup|tag<rsup|ty><rsub|<math-ss|one>>><rsub|IV>>>|<row|<cell|<tmr|A+B>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|SHA256<rsup|<math|tag<rsup|ty><rsub|<math-ss|sum>>>><rsub|IV>\<comma\>
+    <around*|\<langle\>|<tmr|A>,<tmr|B>|\<rangle\>>|\<rangle\>>>>|<row|<cell|<tmr|A\<times\>B>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|SHA256<rsup|<math|tag<rsup|ty><rsub|<math-ss|prod>>>><rsub|IV>\<comma\>
+    <around*|\<langle\>|<tmr|A>,<tmr|B>|\<rangle\>>|\<rangle\>>>>>>
+  </eqnarray*>
+
+  We define unique tags <math|tag<rsup|ty><rsub|x>> for every sort of type.
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|tag<rsup|ty><rsub|<math-ss|one>>>|<cell|\<assign\>>|<cell|<math-tt|[<SimplicityPrefix>1f547970651f756e6974]><rsub|2<rsup|8>>>>|<row|<cell|tag<rsup|ty><rsub|<math-ss|sum>>>|<cell|\<assign\>>|<cell|<math-tt|[<SimplicityPrefix>1f547970651f73756d]><rsub|2<rsup|8>>>>|<row|<cell|tag<rsup|ty><rsub|<math-ss|prod>>>|<cell|\<assign\>>|<cell|<math-tt|[<SimplicityPrefix>1f547970651f70726f64]><rsub|2<rsup|8>>>>>>
+  </eqnarray*>
 
   <chapter|Simplicity Extensions>
 
@@ -3465,20 +4331,21 @@
 
   <\eqnarray*>
     <tformat|<cwith|1|-1|2|2|cell-halign|r>|<cwith|1|1|2|2|cell-halign|r>|<table|<row|<cell|<cmr|<math-ss|witness><rsub|A,B>
-    b>>|<cell|\<assign\>>|<cell|tag<rsup|c><rsub|<math-ss|witness>>>>>>
+    b>>|<cell|\<assign\>>|<cell|SHA256<rsup|tag<rsup|c><rsub|<math-ss|witness>>><rsub|IV>>>>>
   </eqnarray*>
 
-  where <math|tag<rsup|c><rsub|<math-ss|witness>>> value is derived as the
-  SHA-256 hash of a unique value.
+  where <math|tag<rsup|c><rsub|<math-ss|witness>>> value is a unique value.
 
   <\eqnarray*>
-    <tformat|<table|<row|<cell|tag<rsup|c><rsub|<math-ss|witness>>>|<cell|\<assign\>>|<cell|SHA256<math-tt|[53696d706c69636974791f436f6d6d69746d656e741f7769746e657373]>>>>>
+    <tformat|<table|<row|<cell|tag<rsup|c><rsub|<math-ss|witness>>>|<cell|\<assign\>>|<cell|<math-tt|[<SimplicityPrefix>1f436f6d6d69746d656e741f7769746e657373]><rsub|<2><rsup|8>>>>>>
   </eqnarray*>
 
   Notice that a <math|<samp|witness> b> expression does not commit to its
   parameter in the commitment root. This means that at redemption time a
   <samp|witness> expression's parameter, called a <dfn|witness value>, could
-  be set to any value.
+  be set to any value. This differs from the identity root
+  (Section<nbsp><reference|ss:IMR>) which will include a commitment to its
+  parameter.
 
   Witness values play the same role as Bitcoin Script's input stack in its
   <verbatim|sigScript> or Segwit's <verbatim|witness>. They act as inputs to
@@ -3487,8 +4354,6 @@
   data appear right where it is needed.
 
   <subsection|Elided Computation>
-
-  <subsection|Witness Merkle Root>
 
   <subsection|Type Inference with Witness>
 
@@ -3583,25 +4448,24 @@
 
   <subsection|Merkle Roots><label|ss:AssertMerkleRoot>
 
-  We extend the definition of commitment Merkle root to support the new
-  assertion and <samp|fail> expressions
+  We extend the definition of commitment Merkle root and identity Merkle root
+  to support the new assertion and <samp|fail> expressions
 
   \;
 
   <\eqnarray*>
-    <tformat|<cwith|1|-1|2|2|cell-halign|r>|<cwith|1|1|2|2|cell-halign|r>|<table|<row|<cell|<cmr|<math-ss|assertl><rsub|A,B,C,D>
-    s h>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|tag<rsup|c><rsub|<math-ss|case>>\<comma\>
-    <around*|\<langle\>|<cmr|s>,h|\<rangle\>>|\<rangle\>>>>|<row|<cell|<cmr|<math-ss|assertr><rsub|A,B,C,D>
-    h t>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|tag<rsup|c><rsub|<math-ss|case>>\<comma\>
-    <around*|\<langle\>|h,<cmr|t>|\<rangle\>>|\<rangle\>>>>|<row|<cell|<cmr|<math-ss|fail><rsub|A,B>
-    h>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|tag<rsup|c><rsub|<math-ss|fail>>,h|\<rangle\>>>>>>
+    <tformat|<cwith|1|-1|2|2|cell-halign|r>|<cwith|1|1|2|2|cell-halign|r>|<table|<row|<cell|<mr|\<alpha\>|<math-ss|assertl><rsub|A,B,C,D>
+    s h>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|SHA256<rsup|tag<rsup|c><rsub|<math-ss|case>>><rsub|IV>\<comma\>
+    <around*|\<langle\>|<mr|\<alpha\>|s>,h|\<rangle\>>|\<rangle\>>>>|<row|<cell|<mr|\<alpha\>|<math-ss|assertr><rsub|A,B,C,D>
+    h t>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|SHA256<rsup|tag<rsup|c><rsub|<math-ss|case>>><rsub|IV>\<comma\>
+    <around*|\<langle\>|h,<mr|\<alpha\>|t>|\<rangle\>>|\<rangle\>>>>|<row|<cell|<mr|\<alpha\>|<math-ss|fail><rsub|A,B>
+    h>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|SHA256<rsup|tag<rsup|c><rsub|<math-ss|fail>>><rsub|IV>,h|\<rangle\>>>>>>
   </eqnarray*>
 
-  where <math|tag<rsup|c><rsub|<math-ss|fail>>> value is derived as the
-  SHA-256 hash of a unique value.
+  where <math|tag<rsup|c><rsub|<math-ss|fail>>> value is a unique value.
 
   <\eqnarray*>
-    <tformat|<table|<row|<cell|tag<rsup|c><rsub|<math-ss|fail>>>|<cell|\<assign\>>|<cell|SHA256<math-tt|[53696d706c69636974791f436f6d6d69746d656e741f6661696c]>>>>>
+    <tformat|<table|<row|<cell|tag<rsup|c><rsub|<math-ss|fail>>>|<cell|\<assign\>>|<cell|<math-tt|[<SimplicityPrefix>1f436f6d6d69746d656e741f6661696c]><rsub|<2><rsup|8>>>>>>
   </eqnarray*>
 
   It is important to notice that we are reusing
@@ -3961,17 +4825,18 @@
 
   <subsubsection|Merkle Roots><label|ss:BTMerkleRoots>
 
-  We extend the definition of the commitment Merkle root to support the new
-  expressions by hashing new unique byte strings.
+  We extend the definition of the commitment Merkle root and identity Merkle
+  root to support the new expressions by using the initial value of with tags
+  of new unique byte strings.
 
   <\eqnarray*>
-    <tformat|<table|<row|<cell|<cmr|<math-ss|version>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|BCprefix\<cdummy\><math-tt|[76657273696f6e]>|)>>>|<row|<cell|<cmr|<math-ss|lockTime>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|BCprefix\<cdummy\><math-tt|[6c6f636b54696d65]>|)>>>|<row|<cell|<cmr|<math-ss|<math|inputsHash>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|BCprefix\<cdummy\><math-tt|[696e7075747348617368]>|)>>>|<row|<cell|<cmr|<math-ss|<math|outputsHash>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|BCprefix\<cdummy\><math-tt|[6f75747075747348617368]>|)>>>|<row|<cell|<cmr|<math-ss|<math|numInputs>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|BCprefix\<cdummy\><math-tt|[6e756d496e70757473]>|)>>>|<row|<cell|<cmr|<math-ss|<math|totalInputValue>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|BCprefix\<cdummy\><math-tt|[746f74616c496e70757456616c7565]>|)>>>|<row|<cell|<cmr|<math-ss|<math|currentPrevOutpoint>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|BCprefix\<cdummy\><math-tt|[63757272656e74507265764f7574706f696e74]>|)>>>|<row|<cell|<cmr|<math-ss|<math|currentValue>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|BCprefix\<cdummy\><math-tt|[63757272656e7456616c7565]>|)>>>|<row|<cell|<cmr|<math-ss|<math|currentSequence>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|BCprefix\<cdummy\><math-tt|[63757272656e7453657175656e6365]>|)>>>|<row|<cell|<cmr|<math-ss|<math|currentIndex>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|BCprefix\<cdummy\><math-tt|[63757272656e74496e646578]>|)>>>|<row|<cell|<cmr|<math-ss|<math|inputPrevOutpoint>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|BCprefix\<cdummy\><math-tt|[696e707574507265764f7574706f696e74]>|)>>>|<row|<cell|<cmr|<math-ss|<math|inputValue>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|BCprefix\<cdummy\><math-tt|[696e70757456616c7565]>|)>>>|<row|<cell|<cmr|<math-ss|<math|inputSequence>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|BCprefix\<cdummy\><math-tt|[696e70757453657175656e6365]>|)>>>|<row|<cell|<cmr|<math-ss|<math|numOutput>s>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|BCprefix\<cdummy\><math-tt|[6e756d784f757470757473]>|)>>>|<row|<cell|<cmr|<math-ss|<math|totalOutputValue>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|BCprefix\<cdummy\><math-tt|[746f74616c4f757470757456616c7565]>|)>>>|<row|<cell|<cmr|<math-ss|<math|outputValue>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|BCprefix\<cdummy\><math-tt|[6f757470757456616c7565]>|)>>>|<row|<cell|<cmr|<math-ss|outputScriptHash>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|BCprefix\<cdummy\><math-tt|[6f757470757453637269707448617368]>|)>>>|<row|<cell|<cmr|<math-ss|<math|scriptCMR>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|BCprefix\<cdummy\><math-tt|[736372697074434d52]>|)>>>>>
+    <tformat|<table|<row|<cell|<mr|\<alpha\>|<math-ss|version>>>|<cell|\<assign\>>|<cell|SHA256<rsup|BCprefix\<cdummy\><math-tt|[76657273696f6e]>><rsub|IV>>>|<row|<cell|<mr|\<alpha\>|<math-ss|lockTime>>>|<cell|\<assign\>>|<cell|SHA256<rsup|BCprefix\<cdummy\><math-tt|[6c6f636b54696d65]>><rsub|IV>>>|<row|<cell|<mr|\<alpha\>|<math-ss|<math|inputsHash>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|BCprefix\<cdummy\><math-tt|[696e7075747348617368]>><rsub|IV>>>|<row|<cell|<mr|\<alpha\>|<math-ss|<math|outputsHash>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|BCprefix\<cdummy\><math-tt|[6f75747075747348617368]>><rsub|IV>>>|<row|<cell|<mr|\<alpha\>|<math-ss|<math|numInputs>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|BCprefix\<cdummy\><math-tt|[6e756d496e70757473]>><rsub|IV>>>|<row|<cell|<mr|\<alpha\>|<math-ss|<math|totalInputValue>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|BCprefix\<cdummy\><math-tt|[746f74616c496e70757456616c7565]>><rsub|IV>>>|<row|<cell|<mr|\<alpha\>|<math-ss|<math|currentPrevOutpoint>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|BCprefix\<cdummy\><math-tt|[63757272656e74507265764f7574706f696e74]>><rsub|IV>>>|<row|<cell|<mr|\<alpha\>|<math-ss|<math|currentValue>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|BCprefix\<cdummy\><math-tt|[63757272656e7456616c7565]>><rsub|IV>>>|<row|<cell|<mr|\<alpha\>|<math-ss|<math|currentSequence>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|BCprefix\<cdummy\><math-tt|[63757272656e7453657175656e6365]>><rsub|IV>>>|<row|<cell|<mr|\<alpha\>|<math-ss|<math|currentIndex>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|BCprefix\<cdummy\><math-tt|[63757272656e74496e646578]>><rsub|IV>>>|<row|<cell|<mr|\<alpha\>|<math-ss|<math|inputPrevOutpoint>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|BCprefix\<cdummy\><math-tt|[696e707574507265764f7574706f696e74]>><rsub|IV>>>|<row|<cell|<mr|\<alpha\>|<math-ss|<math|inputValue>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|BCprefix\<cdummy\><math-tt|[696e70757456616c7565]>><rsub|IV>>>|<row|<cell|<mr|\<alpha\>|<math-ss|<math|inputSequence>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|BCprefix\<cdummy\><math-tt|[696e70757453657175656e6365]>><rsub|IV>>>|<row|<cell|<mr|\<alpha\>|<math-ss|<math|numOutput>s>>>|<cell|\<assign\>>|<cell|SHA256<rsup|BCprefix\<cdummy\><math-tt|[6e756d784f757470757473]>><rsub|IV>>>|<row|<cell|<mr|\<alpha\>|<math-ss|<math|totalOutputValue>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|BCprefix\<cdummy\><math-tt|[746f74616c4f757470757456616c7565]>><rsub|IV>>>|<row|<cell|<mr|\<alpha\>|<math-ss|<math|outputValue>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|BCprefix\<cdummy\><math-tt|[6f757470757456616c7565]>><rsub|IV>>>|<row|<cell|<mr|\<alpha\>|<math-ss|outputScriptHash>>>|<cell|\<assign\>>|<cell|SHA256<rsup|BCprefix\<cdummy\><math-tt|[6f757470757453637269707448617368]>><rsub|IV>>>|<row|<cell|<mr|\<alpha\>|<math-ss|<math|scriptCMR>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|BCprefix\<cdummy\><math-tt|[736372697074434d52]>><rsub|IV>>>>>
   </eqnarray*>
 
   where
 
   <\equation*>
-    BCprefix\<assign\><math-tt|[53696d706c69636974791f5072696d69746976651f426974636f696e1f]>
+    BCprefix\<assign\><math-tt|[<SimplicityPrefix>1f5072696d69746976651f426974636f696e1f]>
   </equation*>
 
   <section|Simplicity Programs>
@@ -4005,17 +4870,17 @@
   Using Simplicity with witnesses, assertions and Bitcoin, we are able to
   build an expression that use Schnorr signatures to authorize spending of
   funds. Using the assertion extension we are able to define a variant of
-  <math|<math-ss|schnorrVerify>> called <math|<math-ss|schnorrAssert>>:
+  <math|<math-ss|bip0340-check>> called <math|<math-ss|bip0340-verify>>:
 
   <\equation*>
-    <math-ss|schnorrAssert>\<assign\> <math-ss|assert>
-    <math-ss|schnorrVerify>\<of\><around*|(|PubKey\<times\>Msg|)>\<times\>Sig\<vdash\><1>
+    <math-ss|bip0340-verify>\<assign\> <math-ss|assert>
+    <math-ss|bip0340-check>\<of\><around*|(|PubKey\<times\>Msg|)>\<times\>Sig\<vdash\><1>
   </equation*>
 
   such that
 
   <\eqnarray*>
-    <tformat|<table|<row|<cell|<around*|\<llbracket\>|<math-ss|schnorrAssert>|\<rrbracket\>><rsup|<maybe>><around*|\<langle\>|<around*|\<langle\>|p,m|\<rangle\>>,s|\<rangle\>>=\<eta\><rsup|<maybe>><around*|\<langle\>||\<rangle\>>>|<cell|\<Leftrightarrow\>>|<cell|<around*|\<llbracket\>|<math-ss|schnorrVerify>|\<rrbracket\>><around*|\<langle\>|<around*|\<langle\>|p,m|\<rangle\>>,s|\<rangle\>>=<math-tt|1><rsub|<2>><text|.>>>>>
+    <tformat|<table|<row|<cell|<around*|\<llbracket\>|<math-ss|bip0340-verify>|\<rrbracket\>><rsup|<maybe>><around*|\<langle\>|<around*|\<langle\>|p,m|\<rangle\>>,s|\<rangle\>>=\<eta\><rsup|<maybe>><around*|\<langle\>||\<rangle\>>>|<cell|\<Leftrightarrow\>>|<cell|<around*|\<llbracket\>|<math-ss|bip0340-check>|\<rrbracket\>><around*|\<langle\>|<around*|\<langle\>|p,m|\<rangle\>>,s|\<rangle\>>=<math-tt|1><rsub|<2>><text|.>>>>>
   </eqnarray*>
 
   Next, we use the Bitcoin transaction extension to build a
@@ -4026,7 +4891,7 @@
   <\render-code>
     <math|<math-ss|hashAll>\<of\><1>\<vdash\><2><rsup|256>>
 
-    <math|<tabular|<tformat|<table|<row|<cell|<subtable|<tformat|<cwith|1|-1|2|2|cell-halign|r>|<cwith|5|5|2|2|cell-halign|r>|<cwith|6|6|2|2|cell-halign|r>|<table|<row|<cell|<math|<math-ss|hashAll>>>|<cell|:=>|<cell|(<math|<math-ss|scribe><around*|(|SHA256<math-tt|[53696d706c69636974791f53696748617368]>|)>>>>|<row|<cell|>|<cell|<math|\<vartriangle\>>>|<cell|<around*|(|<math|<math-ss|<math|inputsHash>>
+    <math|<tabular|<tformat|<table|<row|<cell|<subtable|<tformat|<cwith|1|-1|2|2|cell-halign|r>|<cwith|5|5|2|2|cell-halign|r>|<cwith|6|6|2|2|cell-halign|r>|<table|<row|<cell|<math|<math-ss|hashAll>>>|<cell|:=>|<cell|(<math|<math-ss|scribe><around*|(|SHA256<rsub|IV><rsup|<math-tt|[<SimplicityPrefix>1f53696748617368]>>|)>>>>|<row|<cell|>|<cell|<math|\<vartriangle\>>>|<cell|<around*|(|<math|<math-ss|<math|inputsHash>>
     \<vartriangle\> <math-ss|<math|outputsHash>>>|)>>>|<row|<cell|>|<cell|;>|<cell|<math-ss|sha256-block>)>>|<row|<cell|>|<cell|<math|\<vartriangle\>>>|<cell|<math|<around*|(|<around*|(|<around*|(|<samp|currentValue>
     \<vartriangle\> <around*|(|<samp|currentIndex> \<vartriangle\>
     <math-ss|lockTime>|)>|)> |\<nobracket\>>|\<nobracket\>>>>>|<row|<cell|>|<cell|<math|\<vartriangle\>>>|<cell|<math|<around*|\<nobracket\>|
@@ -4051,7 +4916,7 @@
   <\render-code>
     <math|<math-ss|sigHashAll>\<of\><1>\<vdash\><2><rsup|256>>
 
-    <math|<tabular|<tformat|<table|<row|<cell|<subtable|<tformat|<cwith|1|-1|2|2|cell-halign|r>|<cwith|4|4|2|2|cell-halign|r>|<table|<row|<cell|<math-ss|sigHashAll>>|<cell|:=>|<cell|<math-ss|scribe><around*|(|SHA256<math-tt|[53696d706c69636974791f5369676e6174757265]>|)>>>|<row|<cell|>|<cell|<math|\<vartriangle\>>>|<cell|<around*|(|<samp|scribe><around*|(|<math|<cmr|<math-ss|hashAll>>>|)><math|\<vartriangle\>><samp|hashAll>|)>>>|<row|<cell|>|<cell|;>|<cell|<math-ss|sha256-block>)<math|\<vartriangle\>><math-ss|scribe><around*|(|<around*|\<lfloor\>|2<rsup|511>+1024|\<rfloor\>><rsub|512>|)>>>|<row|<cell|>|<cell|;>|<cell|<math-ss|sha256-block>>>>>>>>>>>>
+    <math|<tabular|<tformat|<table|<row|<cell|<subtable|<tformat|<cwith|1|-1|2|2|cell-halign|r>|<cwith|4|4|2|2|cell-halign|r>|<table|<row|<cell|<math-ss|sigHashAll>>|<cell|:=>|<cell|<math-ss|scribe><around*|(|SHA256<rsub|IV><rsup|<math-tt|[<SimplicityPrefix>1f5369676e6174757265]>>|)>>|<cell|>>|<row|<cell|>|<cell|<math|\<vartriangle\>>>|<cell|<around*|(|<samp|scribe><around*|(|<math|<cmr|<math-ss|hashAll>>>|)><math|\<vartriangle\>><samp|hashAll>|)>>|<cell|>>|<row|<cell|>|<cell|;>|<cell|<math-ss|sha256-block>)<math|\<vartriangle\>><math-ss|scribe><around*|(|<around*|\<lfloor\>|2<rsup|511>+1024|\<rfloor\>><rsub|512>|)>>|<cell|>>|<row|<cell|>|<cell|;>|<cell|<math-ss|sha256-block>>|<cell|>>>>>>>>>>>
   </render-code>
 
   The pair of the commitment Merkle root and the digest itself is 512 bits.
@@ -4067,7 +4932,7 @@
     <math|<math-ss|checkSigHashAll><around*|\<langle\>|p,s|\<rangle\>>\<of\><1>\<vdash\><1>>
 
     <math|<tabular|<tformat|<table|<row|<cell|<subtable|<tformat|<cwith|1|-1|2|2|cell-halign|r>|<table|<row|<cell|<math-ss|checkSigHashAll><around*|\<langle\>|p,s|\<rangle\>>>|<cell|:=>|<cell|<around*|(|<math-ss|scribe><rsub|PubKey><around*|(|p|)><math-ss|<math|<math|>\<vartriangle\>><math|<math-ss|sigHashAll>>>|)>
-    \<vartriangle\> <math-ss|witness><rsub|Sig><around*|(|s|)>>>|<row|<cell|>|<cell|;>|<cell|<math-ss|schnorrAssert>>>>>>>>>>>>
+    \<vartriangle\> <math-ss|witness><rsub|Sig><around*|(|s|)>>>|<row|<cell|>|<cell|;>|<cell|<math-ss|bip0340-verify>>>>>>>>>>>>
   </render-code>
 
   The <math-ss|witness> combinator ensures that the program's commitment
@@ -4136,24 +5001,27 @@
 
   <\eqnarray*>
     <tformat|<cwith|1|-1|2|2|cell-halign|r>|<cwith|1|1|2|2|cell-halign|r>|<table|<row|<cell|<cmr|<math-ss|disconnect><rsub|A,B,C,D>
-    s t>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|tag<rsup|c><rsub|<math-ss|disconnect>>\<comma\>
+    s t>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|SHA256<rsup|tag<rsup|c><rsub|<math-ss|disconnect>>><rsub|IV>\<comma\>
     <around*|\<langle\>|<around*|\<lfloor\>|0|\<rfloor\>><rsub|256>,<cmr|s>|\<rangle\>>|\<rangle\>>>>>>
   </eqnarray*>
 
-  where the <math|tag<rsup|c><rsub|<math-ss|disconnect>>> value is derived as
-  the SHA-256 hash of a unique value.
+  where the <math|tag<rsup|c><rsub|<math-ss|disconnect>>> value is a unique
+  value.
 
-  <\eqnarray*>
-    <tformat|<table|<row|<cell|tag<rsup|c><rsub|<math-ss|disconnect>>>|<cell|\<assign\>>|<cell|SHA256<math-tt|[53696d706c69636974791f436f6d6d69746d656e741f646973636f6e6e656374]>>>>>
-  </eqnarray*>
+  <\small>
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|tag<rsup|c><rsub|<math-ss|disconnect>>>|<cell|\<assign\>>|<cell|<math-tt|[<SimplicityPrefix>1f436f6d6d69746d656e741f646973636f6e6e656374]><rsub|<2><rsup|8>>>>>>
+    </eqnarray*>
+  </small>
 
   The commitment Merkle root only commits to the first argument, <math|s>, of
   a <math|<samp|disconnect> s t> expression. During redemption the second
-  argument, <math|t>, can be freely set to any Simplicity expression. In
-  order to place restrictions on what <math|t> is allowed, the commitment
-  Merkle root of <math|t> is passed to <math|s> as an input. This way
-  <math|s> is allowed to dynamically decide if <math|t> is an acceptable
-  expression to be used here.
+  argument, <math|t>, can be freely set to any Simplicity expression. This
+  differs from the identity root (Section<nbsp><reference|ss:IMR>) which will
+  include a commitment to both arguments. In order to place restrictions on
+  what <math|t> is allowed, the commitment Merkle root of <math|t> is passed
+  to <math|s> as an input. This way <math|s> is allowed to dynamically decide
+  if <math|t> is an acceptable expression to be used here.
 
   The primary purpose of <samp|disconnect> is for delegation. In this
   scenario, <math|s>, validates that the commitment Merkle root
@@ -4324,9 +5192,9 @@
   \;
 
   <\eqnarray*>
-    <tformat|<cwith|1|-1|2|2|cell-halign|r>|<cwith|1|3|2|2|cell-halign|r>|<cwith|2|6|2|2|cell-halign|r>|<cwith|2|2|2|2|cell-halign|r>|<cwith|2|2|2|2|cell-halign|r>|<cwith|1|5|2|2|cell-halign|r>|<cwith|1|3|2|2|cell-halign|r>|<cwith|2|5|2|2|cell-halign|r>|<cwith|2|2|2|2|cell-halign|r>|<cwith|2|2|2|2|cell-halign|r>|<cwith|2|3|2|2|cell-halign|r>|<cwith|2|3|2|2|cell-halign|r>|<cwith|2|3|2|2|cell-halign|c>|<cwith|2|2|2|2|cell-halign|r>|<cwith|3|3|2|2|cell-halign|r>|<cwith|1|1|2|2|cell-halign|c>|<cwith|4|4|2|2|cell-halign|r>|<cwith|4|4|2|2|cell-halign|r>|<cwith|4|4|2|2|cell-halign|c>|<cwith|4|4|2|2|cell-halign|r>|<cwith|5|5|2|2|cell-halign|r>|<cwith|5|5|2|2|cell-halign|r>|<cwith|5|5|2|2|cell-halign|c>|<cwith|5|5|2|2|cell-halign|r>|<table|<row|<cell|extraCellsBound<rsup|TCO><rsub|dyn><around*|(|<math-ss|disconnect><rsub|A,B,C,D>
-    s t|)>>|<cell|=>|<cell|r<rsub|a>+max<around*|(|0,
-    r<rsub|b>+max<around*|(|extraCellsBound<rsup|TCO><rsub|dyn><around*|(|s|)><around*|(|r<rsub|a>|)>,<next-line><htab|5mm>extraCellsBound<rsup|TCO><rsub|dyn><around*|(|t|)><around*|(|r<rsub|b>|)>-r<rsub|a>|)>-r|)>>>|<row|<cell|>|<cell|where>|<cell|<around*|\<langle\>|n<rsub|s>,m<rsub|s>|\<rangle\>>\<assign\>extraCellsBound<rsup|TCO><rsub|static><around*|(|s|)>>>|<row|<cell|>|<cell|and>|<cell|<around*|\<langle\>|n<rsub|t>,m<rsub|t>|\<rangle\>>\<assign\>extraCellsBound<rsup|TCO><rsub|static><around*|(|t|)>>>|<row|<cell|>|<cell|and>|<cell|r<rsub|a>\<assign\>256+bitSize<around*|(|A|)>>>|<row|<cell|>|<cell|and>|<cell|r<rsub|b>\<assign\>bitSize<around*|(|B|)>+bitSize<around*|(|C|)>>>>>
+    <tformat|<cwith|1|-1|2|2|cell-halign|r>|<cwith|1|2|2|2|cell-halign|r>|<cwith|2|4|2|2|cell-halign|r>|<cwith|1|3|2|2|cell-halign|r>|<cwith|1|2|2|2|cell-halign|r>|<cwith|2|3|2|2|cell-halign|r>|<cwith|1|1|2|2|cell-halign|c>|<cwith|2|2|2|2|cell-halign|r>|<cwith|2|2|2|2|cell-halign|r>|<cwith|2|2|2|2|cell-halign|c>|<cwith|2|2|2|2|cell-halign|r>|<cwith|3|3|2|2|cell-halign|r>|<cwith|3|3|2|2|cell-halign|r>|<cwith|3|3|2|2|cell-halign|c>|<cwith|3|3|2|2|cell-halign|r>|<table|<row|<cell|extraCellsBound<rsup|TCO><rsub|dyn><around*|(|<math-ss|disconnect><rsub|A,B,C,D>
+    s t|)><around*|(|r|)>>|<cell|=>|<cell|max<around*|(|r<rsub|a>,
+    max<around*|(|extraCellsBound<rsup|TCO><rsub|dyn><around*|(|s|)><around*|(|r<rsub|a>|)>+r<rsub|a>,<next-line><htab|5mm>extraCellsBound<rsup|TCO><rsub|dyn><around*|(|t|)><around*|(|r<rsub|b>|)>|)>+r<rsub|b>-r|)>>>|<row|<cell|>|<cell|where>|<cell|r<rsub|a>\<assign\>256+bitSize<around*|(|A|)>>>|<row|<cell|>|<cell|and>|<cell|r<rsub|b>\<assign\>bitSize<around*|(|B|)>+bitSize<around*|(|C|)>>>>>
   </eqnarray*>
 
   \;
@@ -4589,17 +5457,17 @@
     <math|<cmr|<math-ss|loopBody> t k>=loopBodyCMR<around*|(|t|)>> where
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|loopBodyCMR<around*|(|t|)>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|tag<rsup|c><rsub|<math-ss|comp>>\<comma\>
+      <tformat|<table|<row|<cell|loopBodyCMR<around*|(|t|)>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|SHA256<rsup|tag<rsup|c><rsub|<math-ss|comp>>><rsub|IV>\<comma\>
       <around*|\<langle\>|<cmr|<math-ss|take> t \<vartriangle\>
-      <math-ss|IH>>,SHA256<rsub|Block><around*|\<langle\>|tag<rsup|c><rsub|<math-ss|case>>\<comma\>
+      <math-ss|IH>>,<next-line>SHA256<rsub|Block><around*|\<langle\>|SHA256<rsup|tag<rsup|c><rsub|<math-ss|case>>><rsub|IV>\<comma\>
       <around*|\<langle\>|loopTail,<cmr|<math-ss|OH>>|\<rangle\>>|\<rangle\>>|\<rangle\>>|\<rangle\>>>>>>
     </eqnarray*>
 
     and
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|loopTail>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|tag<rsup|c><rsub|<math-ss|comp>>\<comma\>
-      <around*|\<langle\>|SHA256<rsub|Block><around*|\<langle\>|tag<rsup|c><rsub|<math-ss|disconnect>>\<comma\>
+      <tformat|<table|<row|<cell|loopTail>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|SHA256<rsup|tag<rsup|c><rsub|<math-ss|comp>>><rsub|IV>\<comma\>
+      <around*|\<langle\>|<next-line>SHA256<rsub|Block><around*|\<langle\>|<math|SHA256<rsup|tag<rsup|c><rsub|<math-ss|disconnect>>><rsub|IV>>\<comma\>
       <around*|\<langle\>|<around*|\<lfloor\>|0|\<rfloor\>><rsub|256>,<cmr|<math-ss|assert>
       <around*|(|<math-ss|IIH> \<vartriangle\> <math-ss|OH>
       ;<math-ss|eq><rsub|<2><rsup|256>>|)> \<vartriangle\>
@@ -4631,7 +5499,7 @@
     <math|<cmr|<math-ss|loop> t k>=loopCMR<around*|(|t|)>> where
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|loopCMR<around*|(|t|)>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|tag<rsup|c><rsub|<math-ss|comp>>\<comma\>
+      <tformat|<table|<row|<cell|loopCMR<around*|(|t|)>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|SHA256<rsup|tag<rsup|c><rsub|<math-ss|comp>>><rsub|IV>\<comma\>
       <around*|\<langle\>|<cmr|<math-ss|iden> \<vartriangle\>
       scribe<around*|(|loopBodyCMR<around*|(|t|)>|)>>,loopBodyCMR<around*|(|t|)>|\<rangle\>>|\<rangle\>><text|.>>>>>
     </eqnarray*>
@@ -4758,7 +5626,7 @@
     <math|<math-ss|sigHash> t\<of\><1>\<vdash\><2><rsup|256>>
 
     <math|<tabular|<tformat|<table|<row|<cell|<subtable|<tformat|<cwith|1|-1|2|2|cell-halign|r>|<cwith|1|4|2|2|cell-halign|r>|<cwith|4|4|2|2|cell-halign|r>|<table|<row|<cell|<math-ss|sigHash>
-    t>|<cell|:=>|<cell|<math-ss|scribe><around*|(|SHA256<math-tt|[53696d706c69636974791f5369676e6174757265]>|)>>>|<row|<cell|>|<cell|<math|\<vartriangle\>>>|<cell|<samp|disconnect>
+    t>|<cell|:=>|<cell|<math-ss|scribe><around*|(|SHA256<rsub|IV><rsup|<math-tt|[<SimplicityPrefix>1f5369676e6174757265]>>|)>>>|<row|<cell|>|<cell|<math|\<vartriangle\>>>|<cell|<samp|disconnect>
     <math-ss|iden> t>>|<row|<cell|>|<cell|;>|<cell|<math-ss|sha256-block>)<math|\<vartriangle\>><math-ss|scribe><around*|(|<around*|\<lfloor\>|2<rsup|511>+1024|\<rfloor\>><rsub|512>|)>>>|<row|<cell|>|<cell|;>|<cell|<math-ss|sha256-block>>>>>>>>>>>>
   </render-code>
 
@@ -4771,7 +5639,7 @@
 
     <math|<tabular|<tformat|<table|<row|<cell|<subtable|<tformat|<cwith|1|-1|2|2|cell-halign|r>|<table|<row|<cell|<math|<around*|(|<math-ss|checkSigHash>
     t|)>><around*|\<langle\>|p,s|\<rangle\>>>|<cell|:=>|<cell|<around*|(|<math-ss|scribe><rsub|PubKey><around*|(|p|)><math|<math|>\<vartriangle\>><math-ss|sigHash>
-    t|)> \<vartriangle\> <math-ss|witness><rsub|Sig><around*|(|s|)>>>|<row|<cell|>|<cell|;>|<cell|<math-ss|schnorrAssert>>>>>>>>>>>>
+    t|)> \<vartriangle\> <math-ss|witness><rsub|Sig><around*|(|s|)>>>|<row|<cell|>|<cell|;>|<cell|<math-ss|bip0340-verify>>>>>>>>>>>>
   </render-code>
 
   The <math|<math-ss|sigHash> t> expression is similar to the definition of
@@ -4811,8 +5679,8 @@
   for creating a digest can be used instead. \ Because <math|<cmr|t>> is
   covered by the digital signature proveded to <math|<samp|checkSigHash> t>,
   the signature fixes the digest expression and it cannot be altered by a
-  third party while still satisfying the <math|<math-ss|schnorrAssert>>, with
-  the exception of any <samp|witness> values or <samp|disconnect>ed
+  third party while still satisfying the <math|<math-ss|bip0340-verify>>,
+  with the exception of any <samp|witness> values or <samp|disconnect>ed
   expressions within <math|t>. This allows users not only to simulate any of
   Script's signature hash flags, but to create and use any novel signtature
   hash mode that they desire.
@@ -5200,9 +6068,8 @@
   substitution. If you flatten out the representation of the substitution,
   for example by printing out all the types, the result can be exponential in
   the size of the input DAG. Fortunately, all of the computation required for
-  Simplicity's consensus operations, from computing witness Merkle roots to
-  evaluation of Simplicity expressions using the Bit Machine, can operate
-  without flattening the representation of the inferred types.
+  Simplicity's consensus operations, can operate without flattening the
+  representation of the inferred types.
 
   Also notice that our set of constraints imply we are doing monomorphic type
   inference, meaning that any shared subexpressions are assigned the same
@@ -5496,6 +6363,90 @@
   <math|witnessData> code itself, however we chose to put the block of all
   the witness values into a prefix-coded list so that one doesn't need to
   perform type inference to figure out where the the witness data ends.
+
+  <subsection|Identity Merkle Root><label|ss:IMR>
+
+  The DAG encoding for Simplicity expressions allows for sharing of
+  subexpressions, however nothing in the previous section mandates sharing of
+  subexpressions. \ Without manditory sharing would have a malleability
+  vector where a third party could unshare every subexprssion, vastly
+  inflating the weight of a transaction. \ To enforce manditory sharing we
+  will introduce the notion of an identity Merkle root and require that every
+  sub-DAG have a unique such identity.
+
+  The identity Merkle root of a Simplicity expression <math|t> is defined by
+  <math|<imr0|t>>. \ This value is the same as <cmr|t> except in the presence
+  of <samp|witness> and <samp|disconnect> combinators which are defined as
+  follows:
+
+  <\eqnarray*>
+    <tformat|<cwith|1|-1|2|2|cell-halign|r>|<cwith|1|1|2|2|cell-halign|r>|<table|<row|<cell|<imr0|<math-ss|witness><rsub|A,B>
+    b>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|SHA256<rsup|tag<rsup|i><rsub|<math-ss|witness>>><rsub|IV>\<comma\>
+    <around*|\<langle\>|SHA256<rsub|<2>><around*|(|deflate<rsub|B><around*|(|b|)>|)>,<tmr|B>|\<rangle\>>|\<rangle\>>>>|<row|<cell|<imr0|<math-ss|disconnect><rsub|A,B,C,D>
+    s t>>|<cell|\<assign\>>|<cell|SHA256<rsub|Block><around*|\<langle\>|SHA256<rsup|tag<rsup|i><rsub|<math-ss|disconnect>>><rsub|IV>\<comma\>
+    <around*|\<langle\>|<imr0|s>,<imr0|t>|\<rangle\>>|\<rangle\>>>>>>
+  </eqnarray*>
+
+  The unique tags used are
+
+  <\small>
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|tag<rsup|i><rsub|<math-ss|witness>>>|<cell|\<assign\>>|<cell|<math-tt|[<SimplicityPrefix>1f4964656e746974791f7769746e657373]><rsub|2<rsup|8>>>>|<row|<cell|tag<rsup|i><rsub|<math-ss|disconnect>>>|<cell|\<assign\>>|<cell|<math-tt|[<SimplicityPrefix>1f4964656e746974791f646973636f6e6e656374]><rsub|<2><rsup|8>>>>>>
+    </eqnarray*>
+  </small>
+
+  and <math|deflate<rsub|A>\<of\>A\<rightarrow\><2><rsup|\<ast\>>> is the
+  inverse of <math|inflate>:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|deflate<rsub|<1>><around*|(|<around*|\<langle\>||\<rangle\>>|)>>|<cell|\<assign\>>|<cell|\<epsilon\><rsub|<2>>>>|<row|<cell|deflate<rsub|A+B><around*|(|<injl-long|A|B|<around*|(|a|)>>|)>>|<cell|\<assign\>>|<cell|0<rsub|<2>>\<blacktriangleleft\>deflate<rsub|A><around*|(|a|)>>>|<row|<cell|deflate<rsub|A+B><around*|(|<injr-long|A|B|<around*|(|b|)>>|)>>|<cell|\<assign\>>|<cell|1<rsub|<2>>\<blacktriangleleft\>deflate<rsub|B><around*|(|b|)>>>|<row|<cell|deflate<rsub|A\<times\>B><around*|(|<around*|\<langle\>|a,b|\<rangle\>>|)>>|<cell|\<assign\>>|<cell|deflate<rsub|A><around*|(|a|)>\<cdummy\>deflate<rsub|B><around*|(|b|)>>>>>
+  </eqnarray*>
+
+  <\lemma>
+    For all <math|a\<of\>A>, <math|inflate<around*|(|A,deflate<rsub|A><around*|(|a|)>|)>=a>.
+  </lemma>
+
+  One of our anti-malleability requirements is that non-hidden nodes in a DAG
+  synethesis are terms with unique identity Merkle root, input, output type
+  triples. \ We also require that hidden nodes are unique.
+
+  <\definition>
+    We say a well-formed Simplicity DAG <math|l\<of\>DAG>, that has a
+    substitution <math|\<varsigma\>> yielding the most general unifier for
+    <math|con<around*|(|l|)>>, has maximized sharing when
+
+    <\enumerate-numeric>
+      <item>for all <math|k<rsub|1>> and <math|k<rsub|2>> such that
+
+      <\enumerate-alpha>
+        <item><math|k<rsub|1>, k<rsub|2>\<less\><around*|\||l|\|>> and
+
+        <item><math|l<around*|[|k<rsub|1>|]>\<neq\>\<eta\><rsup|<maybe>><around*|(|<math-ss|`hidden'>
+        h<rsub|1>|)> > and <math|l<around*|[|k<rsub|2>|]>\<neq\>\<eta\><rsup|<maybe>><around*|(|<math-ss|`hidden'>
+        h<rsub|2>|)> >for any <math|h<rsub|1>> and <math|h<rsub|2>>, and
+
+        <item><math|\<varsigma\><rsub|<1>><around*|(|\<alpha\><rsub|k<rsub|1>>|)>=\<varsigma\><rsub|<1>><around*|(|\<alpha\><rsub|k<rsub|2>>|)>>
+        and <math|\<varsigma\><rsub|<1>><around*|(|\<beta\><rsub|k<rsub|1>>|)>=\<varsigma\><rsub|<1>><around*|(|\<beta\><rsub|k<rsub|2>>|)>>,
+        and
+
+        <item><math|<imr0|syn<around*|(|l,k<rsub|1>,l<around*|[|k<rsub|1>|]>|)>>=<imr0|syn<around*|(|l,k<rsub|2>,l<around*|[|k<rsub|2>|]>|)>>>
+      </enumerate-alpha>
+
+      then <math|k<rsub|1>=k<rsub|2>>, and
+
+      <item>for all <math|k<rsub|1>> and <math|k<rsub|2>> such that
+
+      <\enumerate-alpha>
+        <item><math|k<rsub|1>, k<rsub|2>\<less\><around*|\||l|\|>> and
+
+        <item><math|l<around*|[|k<rsub|1>|]>=\<eta\><rsup|<maybe>><around*|(|<math-ss|`hidden'>
+        h<rsub|>|)> > and <math|l<around*|[|k<rsub|2>|]>=\<eta\><rsup|<maybe>><around*|(|<math-ss|`hidden'>
+        h|)> >for some <math|h>
+      </enumerate-alpha>
+
+      then <math|k<rsub|1>=k<rsub|2>>.
+    </enumerate-numeric>
+  </definition>
 
   <chapter|Coq Library Guide>
 
@@ -6009,7 +6960,7 @@
   <section|Merkle Roots><label|SS:Coq:MerkleRoots>
 
   The <verbatim|Simplicity/MerkleRoot.v> file defines a Merkle root of types,
-  and the commitment Merkle root and witness Merkle roots for part of the
+  and the commitment Merkle root and annotated Merkle roots for part of the
   Simplicity language. The Merkle root of types is specified by
   <code|<code*|typeRootAlg>> and defined by <verbatim|typeRoot>. The in the
   <verbatim|CommitmentRoot A B> family the parameters are phantom parameters,
@@ -6375,10 +7326,11 @@
   parameter is restricted to either be a single <verbatim|Bit> word type or a
   product that doubles the size of a another word type via the
   <verbatim|Vector> GADT. The <verbatim|wordSize> returns the number of bits
-  a word has. The <verbatim|fromWord> and <verbatim|toWord> functions convert
-  values of Simplicity words types to and from Haskell <verbatim|Integer>s
-  (modulo the size of the word). The file also provides specializations of
-  these various functions for popular word sizes between 1 and 512 bits.
+  a word has, or more generally the number of elements a vector has. The
+  <verbatim|fromWord> and <verbatim|toWord> functions convert values of
+  Simplicity words types to and from Haskell <verbatim|Integer>s (modulo the
+  size of the word). The file also provides specializations of these various
+  functions for word sizes between 1 and 512 bits.
 
   <subsection|Simplicity Terms>
 
@@ -6434,16 +7386,22 @@
 
   The <verbatim|Core/Simplicity/MerkleRoot.hs> module reexports functionality
   defined in <verbatim|Core/Simplicity/MerkleRoot/Impl.hs>, which provides
-  instances of Simplicity terms that compute the commitment and witness
-  Merkle roots. The <verbatim|commitmentRoot> and <verbatim|witnessRoot>
-  return these Merkle root values. The <verbatim|Simplicity/MerkleRoot.hs>
-  module also provides a memoized computation of the Merkle roots for
-  Simplicity types.
+  instances of Simplicity terms that compute the commitment, identity and
+  annotated Merkle roots. The <verbatim|commitmentRoot>,
+  <verbatim|identityRoot>, and <verbatim|annotatedRoot> return these Merkle
+  root values. The <verbatim|Simplicity/MerkleRoot.hs> module also provides a
+  memoized computation of the Merkle roots for Simplicity types.
 
   The SHA-256 implementation is provided through an abstract interface found
   in <verbatim|Core/Simplicity/Digest.hs>, which in turn references an
   implementation of a 256-bit word type defined in
   <verbatim|Core/Simplicity/Word.hs>.
+
+  The <verbatim|identityRoot> computation differs from <math|<imr0|t>> in
+  that it additionally hashes in the input and output types of an expression
+  <math|t>. This is done so that ensuring the uniqueness of the
+  <math|<imr0|t>> and the input and outputs type triples can be effectively
+  done by just comparing the single <verbatim|identityRoot> hash value.
 
   <subsection|Tensors>
 
@@ -6460,6 +7418,16 @@
   developments of Simplicity expressions in Haskell that are independent of
   any particular blockchain application.
 
+  <subsubsection|Generic>
+
+  The <verbatim|Core/Simplicity/Programs/Generic.hs> file provides some
+  Simplicity expressions that can apply to any Simplicity type.
+
+  The <verbatim|scribe> function produces a Simplicity expression denoting a
+  constant function for any value for any Simplicity type. The <verbatim|eq>
+  Simplicity expression compares any two values of the same Simplicity type
+  and decides if they are equal or not.
+
   <subsubsection|Bits>
 
   The <verbatim|Core/Simplicity/Programs/Bit.hs> file has Simplicity
@@ -6473,34 +7441,40 @@
   <subsubsection|Multi-bit Words>
 
   The <verbatim|Core/Simplicity/Programs/Word.hs> file provides support for
-  multi-bit word expressions that operate on Simplicity's word types. It
-  provides the standard implementations of the <verbatim|zero>,
-  <verbatim|adder>, <verbatim|fullAdder>, <verbatim|subtractor>,
-  <verbatim|fullSubtractor>, <verbatim|multiplier>, and
-  <verbatim|fullMultiplier> Simplicity expressions. Notice that the
-  implementation of these functions is careful to use explicit sharing of
-  Simplicity sub-expressions through the <verbatim|where> clauses.
+  vector an multi-bit word expressions that operate on Simplicity's vector
+  and word types. It provides the implementations of logical bit-vector,
+  padding, truncating, shifting and rotating Simplicity expressions.
 
-  The <verbatim|shift> and <verbatim|rotate> functions create Simplicity
-  expressions that do right shifts and rotates of multi-bit words by any
-  constant amount. Left (unsigned) shifts and rotates can be made by passing
-  a negative value for the shift/rotate amount.
+  The <verbatim|full_shift> function provides a generic shift operation that
+  allows shifting in and shifting out an arbitary word size of bits. The
+  <verbatim|shift_const_by> function can perform either left or right shifts,
+  filling in new elements or bits with a provided value. The
+  <verbatim|rotate_const> function can perform either left or right rotates
+  by a constant amount.
 
-  The <verbatim|bitwise> combinator takes a Simplicity expression for a
+  The <verbatim|bitwise_bin> combinator takes a Simplicity expression for a
   binary bit operation and lifts it to a Simplicity expression for a binary
   operation on arbitrary sized words that performs the bit operation
-  bit-wise. There is also a variant, called <verbatim|bitwiseTri> the does
+  bit-wise. There is also a variant, called <verbatim|bitwise_tri> the does
   the same thing for trinary bit operations.
 
-  <subsubsection|Generic>
+  <subsubsection|Arithmetic>
 
-  The <verbatim|Core/Simplicity/Programs/Generic.hs> file provides some
-  Simplicity expressions that can apply to any Simplicity type.
+  The <verbatim|Core/Simplicity/Programs/Arith.hs> file provides support for
+  arithmetic and number based expressions that operate on Simplicity's word
+  types interpreted as unsigned integers. It provides implementations of the
+  <verbatim|zero>, <verbatim|one>, <verbatim|add>, <verbatim|subtract>,
+  <verbatim|multiply>, <verbatim|divide>, and <verbatim|modulo> Simplicity
+  expressions. It also provides implementations of <verbatim|lt>,
+  <verbatim|le>, <verbatim|min>, <verbatim|max>, and <verbatim|median>.
 
-  The <verbatim|scribe> function produces a Simplicity expression denoting a
-  constant function for any value for any Simplicity type. The <verbatim|eq>
-  Simplicity expression compares any two values of the same Simplicity type
-  and decides if they are equal or not.
+  The <verbatim|eea> expression implements the extended euclidian algorithm,
+  which in turn defines <verbatim|bezout>, <verbatim|cofactors>, and
+  <verbatim|gcd> expressions.
+
+  The <verbatim|absolute_value> and <verbatim|sign> expression operate on an
+  intepretation of Simplicity words as signed integers (with
+  <verbatim|absolute_value> returning an unsigned value).
 
   <subsubsection|Loop><label|ss:haskellLoop>
 
@@ -6569,13 +7543,12 @@
   library of Simplicity expressions that mimic the functional behaviour of
   the the libsecp256k1 elliptic curve library<nbsp><cite|libsecp256k1>. This
   includes Simplicity types for, and operations on secp256k1's underlying
-  finite field with the <verbatim|10x26> limb representation, elliptic curve
-  point operations in affine and Jacobian coordinates, and linear
-  combinations of points.
+  finite field, elliptic curve point operations in affine and Jacobian
+  coordinates, and linear combinations of points.
 
-  This module also include the <verbatim|schnorrVerify> and
-  <verbatim|schnorrAssert> expressions that implement Schnorr signatures as
-  specified in BIP-Schnorr<nbsp><cite|bip-schnorr>.
+  This module also include the <verbatim|bip0340_check> and
+  <verbatim|bip0340_verify> expressions that implement Schnorr signatures as
+  specified in BIP-0340<nbsp><cite|bip-0340>.
 
   The <verbatim|mkLib> function builds the library from the its dependency,
   the SHA-256 library. The <verbatim|lib> value illustrates how to build the
@@ -6687,6 +7660,20 @@
   Machine on various inputs. In this file you can see an example of how
   <verbatim|executeUsing (instrumentMachine . translate) program> is used.
 
+  <subsubsection|Fast Evaluation with FFI>
+
+  While Simplicity with assertions expressions can be evaluated directly with
+  the <verbatim|Kleisli> instance, evaluation of sophisticated expressions,
+  such as Schnorr signature verification, can be extremely time and memory
+  consuming. To address this the <verbatim|Core/Simplicity/FFI/Frame.hs> and
+  <verbatim|Core/Simplicity/FFI/Jets.hs> files create bindings via
+  <verbatim|cbits/frame.c> and <verbatim|cbits/jets.c> to the C
+  implementation of jets for Simplicity with assertion expressions. The
+  <verbatim|Core/Simplicity/CoreJets.hs> modules provides a
+  <verbatim|fastCoreEval> that replaces evaluation of subexpressions of
+  Simplicity with assertion expressions that match these jets with optimized
+  implementations.
+
   <section|<verbatim|Simplicity-Indef> library>
 
   To keep the Haskell library of Simplicity modular over different blockchain
@@ -6748,6 +7735,26 @@
   Simplicity language with delegation. The semantics of full Simplicity is
   discussed in Section<nbsp><reference|ss:DenotationalSemanticsOfFullSimplicity>.
 
+  <subsection|<verbatim|JetType> class>
+
+  While the <verbatim|Jet> class allows any expression to be a jet, in
+  reality there we will have a specific set of known jets that we have
+  accelerated implements of. The <verbatim|Indef/Simplicity/JetType.hs>
+  defines the <verbatim|JetType> class whose instances are types which
+  represent sets of known discounted jets. The <verbatim|specification>
+  method define the specification of discounted jets and the
+  <verbatim|matcher> method decides if a given Simplicity expression is known
+  to be substitutable by a some discounted jet. The <verbatim|implementation>
+  gives an optional optimized implementation of the jet, which otherwise
+  defaults to that of the <verbatim|specification>. There are also
+  <verbatim|putJetBit> and <verbatim|getJetBit> used for Serialization (see
+  Section<nbsp><reference|ss:Haskell-Serialization>)
+
+  Because the set of discounted jets in use could vary over time, the
+  <verbatim|JetType> class allows for different types to represent different
+  sets of discounted jets. You can have a different <verbatim|JetType>
+  instance for each version of the set of discounted jets.
+
   <subsection|Denotational Semantics of Full
   Simplicity><label|ss:DenotationalSemanticsOfFullSimplicity>
 
@@ -6772,23 +7779,9 @@
   Simplicity with delegation by returning a concrete function from
   <verbatim|PrimEnv> and <verbatim|a> to <verbatim|Maybe b>.
 
-  <subsection|<verbatim|JetType> class>
-
-  While the <verbatim|Jet> class allows any expression to be a jet, in
-  reality there we will have a specific set of known jets that we have
-  accelerated implements of. The <verbatim|Indef/Simplicity/JetType.hs>
-  defines the <verbatim|JetType> class whose instances are types which
-  represent sets of known discounted jets. \ The <verbatim|specification>
-  method define the specification of discounted jets and the
-  <verbatim|matcher> method decides if a given Simplicity expression is known
-  to be substitutable by a some discounted jet. There are also
-  <verbatim|putJetBit> and <verbatim|getJetBit> used for Serialization (see
-  Section<nbsp><reference|ss:Haskell-Serialization>)
-
-  Because the set of discounted jets in use could vary over time, the
-  <verbatim|JetType> class allows for different types to represent different
-  sets of discounted jets. \ You can have a different <verbatim|JetType>
-  instance for each version of the set of discounted jets.
+  The <verbatim|Indef/Simplicity/Semantics.hs> module also provides a
+  <verbatim|fastEval> function that uses a <verbatim|JetType>'s optimized
+  <verbatim|implementation> to evalute subexpressions with known jets.
 
   <subsection|Type Inference>
 
@@ -7038,6 +8031,26 @@
   alternative <verbatim|ByteString> encoding described in
   Appendix<nbsp><reference|app:AltSerialization>.
 
+  <subsection|Jet Substitution>
+
+  The <verbatim|Indef/Simplicity/Dag.hs> provides also provides a
+  <verbatim|jetSubst> function uses the same substitution mechanism in found
+  in Section <math|<reference|ss:Haskell-DAG>> to return a new Simplicity
+  expression that replaces found jets with explicit jets. This substitution
+  can change the commitment root of the overall expression and of
+  subexpressions. Because the commitment root is used in the semantics of
+  <verbatim|disconnect>, it is even possible for this substitution to change
+  the result of evaluation of expressions.
+
+  In order to support partial evaluation, the <verbatim|jetSubt> function
+  returns a <verbatim|WrappedSimplicity> expression. This result can be
+  unwrapped by the <verbatim|unwrap> function. The use of
+  <verbatim|WrappedSimplicity> lets us share much of the work of substitution
+  in case we want to evaluate the resulting expression with multiple
+  different interpretations. Without <verbatim|WrappedSimplicity> we would
+  end up needing to redo the entire subtitution for each different
+  intepretation of the resulting expression.
+
   <section|<verbatim|Simplicity-Bitcoin> Libary><label|ss:BitcoinPrimitives>
 
   To instantiate the <verbatim|Simplicity-Indef> library, we need to provide
@@ -7126,6 +8139,9 @@
     <item>Jets for hash functions, including the SHA-256 compression
     function.
   </itemize>
+
+  These modules also reexport specialized instances of <verbatim|jetSubst>
+  and <verbatim|fastEval> for their specific <verbatim|JetType>s.
 
   <section|Simplicity <verbatim|testsuite>>
 
@@ -7505,18 +8521,16 @@
   We extend the definition of the commitment Merkle root to support the new
   expressions by hashing new unique byte strings.
 
-  <\small>
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|<cmr|<math-ss|version>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[76657273696f6e]>|)>>>|<row|<cell|<cmr|<math-ss|lockTime>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[6c6f636b54696d65]>|)>>>|<row|<cell|<cmr|<math-ss|<math|inputsHash>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[696e7075747348617368]>|)>>>|<row|<cell|<cmr|<math-ss|<math|outputsHash>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[6f75747075747348617368]>|)>>>|<row|<cell|<cmr|<math-ss|<math|numInputs>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[6e756d496e70757473]>|)>>>|<row|<cell|<cmr|<math-ss|<math|inputIsPegin>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[696e7075744973506567696e]>|)>>>|<row|<cell|<cmr|<math-ss|<math|inputPrevOutpoint>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[696e707574507265764f7574706f696e74]>|)>>>|<row|<cell|<cmr|<math-ss|<math|inputAsset>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[696e7075744173736574]>|)>>>|<row|<cell|<cmr|<math-ss|<math|inputAmount>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[696e707574416d6f756e74]>|)>>>|<row|<cell|<cmr|<math-ss|<math|inputScriptHash>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[696e70757453637269707448617368]>|)>>>|<row|<cell|<cmr|<math-ss|<math|inputSequence>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[696e70757453657175656e6365]>|)>>>|<row|<cell|<cmr|<math-ss|<math|inputIssuanceBlinding>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[696e70757449737375616e6365426c696e64696e67]>|)>>>|<row|<cell|<cmr|<math-ss|<math|inputIssuanceContract>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[696e70757449737375616e6365436f6e7472616374]>|)>>>|<row|<cell|<cmr|<math-ss|<math|inputIssuanceEntropy>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[696e70757449737375616e6365456e74726f7079]>|)>>>|<row|<cell|<cmr|<math-ss|<math|inputIssuanceAssetAmt>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[696e70757449737375616e63654173736574416d74]>|)>>>|<row|<cell|<cmr|<math-ss|<math|inputIssuanceTokenAmt>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[696e70757449737375616e6365546f6b656e416d74]>|)>>>|<row|<cell|<cmr|<math-ss|<math|currentIndex>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[63757272656e74496e646578]>|)>>>|<row|<cell|<cmr|<math-ss|<math|currentIsPegin>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[63757272656e744973506567696e]>|)>>>|<row|<cell|<cmr|<math-ss|<math|currentPrevOutpoint>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[63757272656e74507265764f7574706f696e74]>|)>>>|<row|<cell|<cmr|<math-ss|<math|currentAsset>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[63757272656e744173736574]>|)>>>|<row|<cell|<cmr|<math-ss|<math|currentAmount>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[63757272656e74416d6f756e74]>|)>>>|<row|<cell|<cmr|<math-ss|<math|currentScriptHash>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[63757272656e7453637269707448617368]>|)>>>|<row|<cell|<cmr|<math-ss|<math|currentSequence>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[63757272656e7453657175656e6365]>|)>>>|<row|<cell|<cmr|<math-ss|<math|currentIssuanceBlinding>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[63757272656e7449737375616e6365426c696e64696e67]>|)>>>|<row|<cell|<cmr|<math-ss|<math|currentIssuanceContract>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[63757272656e7449737375616e6365436f6e7472616374]>|)>>>|<row|<cell|<cmr|<math-ss|<math|currentIssuanceEntropy>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[63757272656e7449737375616e6365456e74726f7079]>|)>>>|<row|<cell|<cmr|<math-ss|<math|currentIssuanceAssetAmt>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[63757272656e7449737375616e63654173736574416d74]>|)>>>|<row|<cell|<cmr|<math-ss|<math|currentIssuanceTokenAmt>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[63757272656e7449737375616e6365546f6b656e416d74]>|)>>>|<row|<cell|<cmr|<math-ss|<math|numOutput>s>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[6e756d784f757470757473]>|)>>>|<row|<cell|<cmr|<math-ss|<math|outputAsset>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[6f75747075744173736574]>|)>>>|<row|<cell|<cmr|<math-ss|<math|outputAmount>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[6f7574707574416d6f756e74]>|)>>>|<row|<cell|<cmr|<math-ss|<math|outputNonce>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[6f75747075744e6f6e6365]>|)>>>|<row|<cell|<cmr|<math-ss|outputScriptHash>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[6f757470757453637269707448617368]>|)>>>|<row|<cell|<cmr|<math-ss|outputNullDatum>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[6f75747075744e756c6c446174756d]>|)>>>|<row|<cell|<cmr|<math-ss|fee>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[666565]>|)>>>|<row|<cell|<cmr|<math-ss|<math|scriptCMR>>>>|<cell|\<assign\>>|<cell|SHA256<around*|(|ELprefix\<cdummy\><math-tt|[736372697074434d52]>|)>>>>>
-    </eqnarray*>
-  </small>
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|<cmr|<math-ss|version>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[76657273696f6e]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|lockTime>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[6c6f636b54696d65]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|inputsHash>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[696e7075747348617368]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|outputsHash>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[6f75747075747348617368]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|numInputs>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[6e756d496e70757473]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|inputIsPegin>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[696e7075744973506567696e]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|inputPrevOutpoint>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[696e707574507265764f7574706f696e74]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|inputAsset>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[696e7075744173736574]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|inputAmount>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[696e707574416d6f756e74]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|inputScriptHash>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|ELprefix\<cdummy\><math-tt|[696e70757453637269707448617368]>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|inputSequence>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[696e70757453657175656e6365]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|inputIssuanceBlinding>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[696e70757449737375616e6365426c696e64696e67]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|inputIssuanceContract>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[696e70757449737375616e6365436f6e7472616374]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|inputIssuanceEntropy>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[696e70757449737375616e6365456e74726f7079]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|inputIssuanceAssetAmt>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[696e70757449737375616e63654173736574416d74]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|inputIssuanceTokenAmt>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[696e70757449737375616e6365546f6b656e416d74]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|currentIndex>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[63757272656e74496e646578]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|currentIsPegin>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[63757272656e744973506567696e]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|currentPrevOutpoint>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[63757272656e74507265764f7574706f696e74]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|currentAsset>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[63757272656e744173736574]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|currentAmount>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[63757272656e74416d6f756e74]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|currentScriptHash>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[63757272656e7453637269707448617368]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|currentSequence>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[63757272656e7453657175656e6365]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|currentIssuanceBlinding>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[63757272656e7449737375616e6365426c696e64696e67]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|currentIssuanceContract>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[63757272656e7449737375616e6365436f6e7472616374]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|currentIssuanceEntropy>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[63757272656e7449737375616e6365456e74726f7079]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|currentIssuanceAssetAmt>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[63757272656e7449737375616e63654173736574416d74]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|currentIssuanceTokenAmt>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[63757272656e7449737375616e6365546f6b656e416d74]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|numOutput>s>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[6e756d784f757470757473]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|outputAsset>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[6f75747075744173736574]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|outputAmount>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[6f7574707574416d6f756e74]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|outputNonce>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[6f75747075744e6f6e6365]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|outputScriptHash>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[6f757470757453637269707448617368]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|outputNullDatum>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[6f75747075744e756c6c446174756d]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|fee>>>|<cell|\<assign\>>|<cell|SHA256<rsup|<math|ELprefix\<cdummy\><math-tt|[666565]>>><rsub|IV>>>|<row|<cell|<cmr|<math-ss|<math|scriptCMR>>>>|<cell|\<assign\>>|<cell|SHA256<rsup|ELprefix\<cdummy\><math-tt|[736372697074434d52]>><rsub|IV>>>>>
+  </eqnarray*>
 
   \;
 
   where
 
   <\equation*>
-    ELprefix\<assign\><math-tt|[53696d706c69636974791f5072696d69746976651f456c656d6e74731f]>
+    ELprefix\<assign\><math-tt|[<SimplicityPrefix>1f5072696d69746976651f456c656d6e74731f]>
   </equation*>
 
   <subsection|Serialization>
@@ -7528,31 +8542,2725 @@
     <tformat|<table|<row|<cell|<rep|<text|<samp|`version'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|10000000|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`lockTime'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|10000001|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`inputIsPegin'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1000001|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`inputPrevOutpoint'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1000010|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`inputAsset'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1000011|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`inputAmount'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|10001000|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`inputScriptHash'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|10001001|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`inputSequence'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1000101|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`inputIssuanceBlinding'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1000110|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`inputIssuanceContract'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1000111|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`inputIssuanceEntropy'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|10010000|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`inputIssuanceAssetAmt'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|10010001|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`inputIssuanceTokenAmt'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1001001|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`outputAsset'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1001010|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`outputAmount'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1001011|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`outputNonce'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|10011000|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`outputScriptHash'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|10011001|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`outputNullDatum'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1001101|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`scriptCMR'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1001110|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`currentIsPegin'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1010000|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`currentPrevOutpoint'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1010001|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`currentAsset'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1010010|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`currentAmount'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1010011|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`currentScriptHash'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1010100|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`currentSequence'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1010101|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`currentIssuanceBlinding'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1010110|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`currentIssuanceContract'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1010111|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`currentIssuanceEntropy'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1011000|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`currentIssuanceAssetAmt'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1011001|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`currentIssuanceTokenAmt'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1011010|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`inputsHash'>>|>>|<cell|=>|<cell|<rsub|><verbatim|<around*|[|1011011|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`outputsHash'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1011100|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`numInputs'>>|>>|<cell|=>|<verbatim|<around*|[|1011101|]>><rsub|<2>>>|<row|<cell|<rep|<text|<samp|`numOutputs'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1011110|]>><rsub|<2>>>>|<row|<cell|<rep|<text|<samp|`fee'>>|>>|<cell|=>|<cell|<verbatim|<around*|[|1011111|]>><rsub|<2>>>>>>
   </eqnarray*>
 
-  <section|Jets>
+  <appendix|Catelogue of Jets>
 
-  <with|color|red|UNDER DEVELOPMENT>
+  <assign|paragraph-title|<macro|name|<sectional-normal-bold|<the-paragraph><hspace|0.75em><arg|name>>>><with|color|red|UNDER
+  DEVELOPMENT AND SUBJECT TO CHANGE>
+
+  \;
+
+  We develop a recommended set of jets and provide an interm encoding. \ An
+  encoding ought to be based on how frequenly jets are used, however we do
+  not currently have good estimates of that. \ As an interm measure we
+  develop a heirarchical encoding of jets by category.
+
+  The properties for jets listed below may not fully define the jet's
+  semantics. All jets will be formally specified by a Simplicity program that
+  implements their complete semantics. \ Those formal specificaitons will be
+  found in the Coq library. Implementations MUST implement the COMPLETE
+  specifications as defined in the Coq library.
+
+  <section|<verbatim|110...: >Core Jets>
 
   \;
 
-  <math|<samp|inputIssuance>\<of\><2><rsup|32>\<vdash\><maybe><around*|(|<maybe><around*|(|<2>|)>|)>>
+  The following jets are specified in core Simplicity or Simplicity with
+  assertions, and therefore are applicable to any Simplicity application.
 
-  <math|<samp|inputIssuanceAsset>\<of\><2><rsup|32>\<vdash\><maybe><around*|(|<maybe><around*|(|ExplicitAsset|)>|)>>
+  <subsection|<verbatim|1100...: >Jets for multi-bit logic>
 
-  <math|<samp|currentIssuance>\<of\><value|1>\<vdash\><maybe><around*|(|<2>|)>><with|color|red|Either
-  an issuance or reissuance or neither>
+  It is recomended that jets be supported for multi-bit words up to
+  <math|<2><rsup|256>> in size.
 
-  <math|<samp|currentIssuanceAsset>\<of\><value|1>\<vdash\><maybe><around*|(|ExplicitAsset|)>>
+  <with|color|red|TODO: define <math|bit<rsub|n,m> :
+  <2><rsup|n>\<rightarrow\><2>>>
 
-  <math|<samp|outputIsFee>\<of\><2><rsup|32>\<vdash\><maybe><around*|(|<2>|)>>
+  <subsubsection|<samp|low>>
 
   \;
+
+  <math|<rep|<text|<samp|'low'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>>
+
+  <math|<text|<samp|low>><rsub|2<rsup|n>>\<of\><1>\<vdash\><2><rsup|2<rsup|n>>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|<around*|\<llbracket\>|<text|<samp|low>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>||\<rangle\>>|)>|\<rceil\>><rsub|1>=0>
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|low>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>||\<rangle\>>|\<rceil\>><rsub|2<rsup|n>>=0>
+
+  \;
+
+  Aliases:
+
+  <math|<math|<text|<samp|zero>>><rsub|2<rsup|n>> \<assign\>
+  <text|<samp|low>><rsub|2<rsup|n>>\<of\><1>\<vdash\><2><rsup|2<rsup|n>>>
+
+  <subsubsection|<samp|high>>
+
+  \;
+
+  <math|<rep|<text|<samp|'high'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>>
+
+  <math|<text|<samp|high>><rsub|2<rsup|n>>\<of\><1>\<vdash\><2><rsup|2<rsup|n>>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|<around*|\<llbracket\>|<text|<samp|high>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>||\<rangle\>>|)>|\<rceil\>><rsub|1>=1>
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|high>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>||\<rangle\>>|\<rceil\>><rsub|2<rsup|n>>=2<rsup|n>-1>
+
+  \;
+
+  Aliases:
+
+  <math|<math|<text|<samp|one>><rsub|1>> \<assign\>
+  <text|<samp|high>><rsub|1>\<of\><1>\<vdash\><2>>
+
+  <subsubsection|<samp|complement>>
+
+  \;
+
+  <math|<rep|<text|<samp|'complement'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>>
+
+  <math|<text|<samp|complement>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>> for <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|<around*|\<llbracket\>|<text|<samp|complement>><rsub|2<rsup|n>>|\<rrbracket\>><around*|(|x|)>|)>|\<rceil\>><rsub|1>=1-<around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|x|)>|\<rceil\>><rsub|1>>
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|complement>><rsub|2<rsup|n>>|\<rrbracket\>><around*|(|x|)>|\<rceil\>><rsub|2<rsup|n>>=2<rsup|n>-1-<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>>
+
+  <subsubsection|<samp|and>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'and'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>
+  </math>
+
+  <math|<text|<samp|and>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|<around*|\<llbracket\>|<text|<samp|and>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|)>|\<rceil\>><rsub|1>=\<chi\><around*|(|<around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|x|)>|\<rceil\>><rsub|1>=1\<wedge\><around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|y|)>|\<rceil\>><rsub|1>=1|)>>
+
+  <subsubsection|<samp|or>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'or'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>
+  </math>
+
+  <math|<text|<samp|or>><rsub|2<rsup|n>> :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|<around*|\<llbracket\>|<text|<samp|or>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|)>|\<rceil\>><rsub|1>=\<chi\><around*|(|<around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|x|)>|\<rceil\>><rsub|1>=1\<vee\><around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|y|)>|\<rceil\>><rsub|1>=1|)>>
+
+  <subsubsection|<samp|xor>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'xor'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>
+  </math>
+
+  <math|<text|<samp|xor>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|<around*|\<llbracket\>|<text|<samp|xor>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|)>|\<rceil\>><rsub|1>\<equiv\><around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|x|)>|\<rceil\>><rsub|1>+<around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|y|)>|\<rceil\>><rsub|1><around*|(|mod
+  2|)>>
+
+  <subsubsection|<samp|maj>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'maj'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>
+  </math>
+
+  <math|<text|<samp|maj>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<times\><around*|(|<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>|)>\<vdash\><2><rsup|2<rsup|n>>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|<around*|\<llbracket\>|<text|<samp|maj>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,<around*|\<langle\>|y,z|\<rangle\>>|\<rangle\>>|)>|\<rceil\>><rsub|1>=\<chi\><around*|(|2\<leq\><around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|x|)>|\<rceil\>><rsub|1>+<around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|y|)>|\<rceil\>><rsub|1>+<around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|z|)>|\<rceil\>><rsub|1>|)>>
+
+  <subsubsection|<samp|xor3>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'xor3'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>
+  </math>
+
+  <math|<text|<samp|xor3>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<times\><around*|(|<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>|)>\<vdash\><2><rsup|2<rsup|n>>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|<around*|\<llbracket\>|<text|<samp|xor3>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,<around*|\<langle\>|y,z|\<rangle\>>|\<rangle\>>|)>|\<rceil\>><rsub|1>\<equiv\><around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|x|)>|\<rceil\>><rsub|1>+<around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|y|)>|\<rceil\>><rsub|1>+<around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|z|)>|\<rceil\>><rsub|1><around*|(|mod
+  2|)>>
+
+  <subsubsection|<samp|ch>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'ch'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>
+  </math>
+
+  <math|<text|<samp|ch>><rsub|2<rsup|n>> :<2><rsup|2<rsup|n>>\<times\><around*|(|<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>|)>\<vdash\><2><rsup|2<rsup|n>>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|<around*|\<llbracket\>|<text|<samp|ch>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,<around*|\<langle\>|y,z|\<rangle\>>|\<rangle\>>|)>|\<rceil\>><rsub|1>=<around*|(|1-<around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|x|)>|\<rceil\>><rsub|1>|)>\<cdot\><around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|y|)>|\<rceil\>><rsub|1>+<around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|x|)>|\<rceil\>><rsub|1>\<cdot\><around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|z|)>|\<rceil\>><rsub|1>>
+
+  <subsubsection|<samp|some>>
+
+  (CAUTION: Not defined when <math|n=0>.)
+
+  <math|<rep|<text|<samp|'some'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>>
+
+  <math|<text|<samp|some>><rsub|2<rsup|n>> :<2><rsup|2<rsup|n>>\<vdash\><2>>
+  for <math|1\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|some>><rsub|2<rsup|n>>|\<rrbracket\>><around*|(|x|)>|\<rceil\>><rsub|1>=\<chi\><around*|(|<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>\<neq\>0|)>>
+
+  \;
+
+  Aliases:
+
+  <math|<math|<text|<samp|some>><rsub|1>> \<assign\> <text|<samp|iden>>
+  \<of\> <2>\<vdash\><2>>
+
+  <subsubsection|<samp|all>>
+
+  (CAUTION: Not defined when <math|n=0>.)
+
+  <math|<rep|<text|<samp|'all'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>>
+
+  <math|<text|<samp|all>><rsub|2<rsup|n>> :<2><rsup|2<rsup|n>>\<vdash\><2>>
+  for <math|1\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|all>><rsub|2<rsup|n>>|\<rrbracket\>><around*|(|x|)>|\<rceil\>><rsub|1>=\<chi\><around*|(|<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>=2<rsup|n>-1|)>>
+
+  \;
+
+  Aliases:
+
+  <math|<math|<text|<samp|all>><rsub|1>> \<assign\> <text|<samp|iden>> \<of\>
+  <2>\<vdash\><2>>
+
+  <subsubsection|<samp|eq>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'eq'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>
+  </math>
+
+  <math|<text|<samp|eq>><rsub|2<rsup|n>> :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<llbracket\>|<text|<samp|eq>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>=\<chi\><around*|(|x=y|)>>
+
+  <subsubsection|<samp|full-left-shift>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'full-left-shift'>><rsub|2<rsup|n>,2<rsup|m>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|m+1|>\<cdummy\><rep|n-m|>
+  </math>
+
+  <math|<text|<samp|full-left-shift>><rsub|2<rsup|n>,2<rsup|m>>
+  :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|m>>\<vdash\><2><rsup|2<rsup|m>>\<times\><2><rsup|2<rsup|n>>>
+  for <math|0\<leq\>m\<less\>n>
+
+  \;
+
+  Properties:
+
+  <math|bit<rsub|2<rsup|m>,i><around*|(|\<pi\><rsub|1><around*|(|<around*|\<llbracket\>|<text|<samp|full-left-shift>><rsub|2<rsup|n>,2<rsup|m>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|)>|)>=bit<rsub|2<rsup|n>,i><around*|(|x|)>>
+  for <math|0\<leq\>i\<less\>2<rsup|m>>
+
+  <math|bit<rsub|2<rsup|n>,i><around*|(|\<pi\><rsub|2><around*|(|<around*|\<llbracket\>|<text|<samp|full-left-shift>><rsub|2<rsup|n>,2<rsup|m>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|)>|)>=bit<rsub|2<rsup|n>,2<rsup|m>+i><around*|(|x|)>>
+  for <math|0\<leq\>i\<less\>2<rsup|n>-2<rsup|m>>
+
+  <math|bit<rsub|2<rsup|n>,2<rsup|n>-2<rsup|m>+i><around*|(|\<pi\><rsub|2><around*|(|<around*|\<llbracket\>|<text|<samp|full-left-shift>><rsub|2<rsup|n>,2<rsup|m>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|)>|)>=bit<rsub|2<rsup|m>,i><around*|(|y|)>>
+  for <math|0\<leq\>i\<less\>2<rsup|m>>
+
+  \;
+
+  Aliases:
+
+  <math|<text|<samp|full-left-shift>><rsub|2<rsup|n>,2<rsup|n>> \<assign\>
+  <text|<samp|iden>> :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>>
+
+  <math|<text|<samp|full-left-shift>><rsub|2<rsup|n>,2<rsup|m>>
+  \<assign\><text|<samp|full-right-shift>><rsub|2<rsup|m>,2<rsup|n>>:<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|m>>\<vdash\><2><rsup|2<rsup|m>>\<times\><2><rsup|2<rsup|n>>>
+  when <math|0\<leq\>n\<less\>m>
+
+  <math|<text|<samp|full-right-shift>><rsub|2<rsup|n>,2<rsup|m>>
+  \<assign\><text|<samp|full-left-shift>><rsub|2<rsup|m>,2<rsup|n>>
+  :<2><rsup|2<rsup|m>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|m>>>
+  when <math|0\<leq\>n\<less\>m>
+
+  <subsubsection|<samp|full-right-shift>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'full-right-shift'>><rsub|2<rsup|n>,2<rsup|m>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|m+1|>\<cdummy\><rep|n-m|>
+  </math>
+
+  <math|<text|<samp|full-right-shift>><rsub|2<rsup|n>,2<rsup|m>>
+  :<2><rsup|2<rsup|m>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|m>>>
+  for <math|0\<leq\>m\<less\>n>
+
+  \;
+
+  Properties:
+
+  <math|bit<rsub|2<rsup|n>,i><around*|(|\<pi\><rsub|1><around*|(|<around*|\<llbracket\>|<text|<samp|full-right-shift>><rsub|2<rsup|n>,2<rsup|m>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|)>|)>=bit<rsub|k><around*|(|x|)>>
+  for <math|0\<leq\>i\<less\>2<rsup|m>>
+
+  <math|bit<rsub|2<rsup|n>,2<rsup|m>+i><around*|(|\<pi\><rsub|1><around*|(|<around*|\<llbracket\>|<text|<samp|full-right-shift>><rsub|2<rsup|n>,2<rsup|m>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|)>|)>=bit<rsub|2<rsup|n>,i><around*|(|y|)>>
+  for <math|0\<leq\>i\<less\>2<rsup|n>-2<rsup|m>>
+
+  <math|bit<rsub|2<rsup|m>,i><around*|(|\<pi\><rsub|2><around*|(|<around*|\<llbracket\>|<text|<samp|full-right-shift>><rsub|2<rsup|n>,2<rsup|m>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|)>|)>=bit<rsub|2<rsup|n>,2<rsup|n>-2<rsup|m>+i><around*|(|y|)>>
+  for <math|0\<leq\>i\<less\>2<rsup|m>>
+
+  \;
+
+  Aliases:
+
+  <math|<text|<samp|full-right-shift>><rsub|2<rsup|n>,2<rsup|n>> \<assign\>
+  <text|<samp|iden>> :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>>
+
+  <math|<text|<samp|full-right-shift>><rsub|2<rsup|n>,2<rsup|m>>
+  \<assign\><text|<samp|full-left-shift>><rsub|2<rsup|m>,2<rsup|n>>
+  :<2><rsup|2<rsup|m>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|m>>>
+  when <math|0\<leq\>n\<less\>m>
+
+  <math|<text|<samp|full-left-shift>><rsub|2<rsup|n>,2<rsup|m>>
+  \<assign\><text|<samp|full-right-shift>><rsub|2<rsup|m>,2<rsup|n>>:<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|m>>\<vdash\><2><rsup|2<rsup|m>>\<times\><2><rsup|2<rsup|n>>>
+  when <math|0\<leq\>n\<less\>m>
+
+  <subsubsection|<samp|leftmost>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'leftmost'>><rsub|2<rsup|n>,2<rsup|m>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdot\><rep|m+1|>\<cdummy\><rep|n-m|>
+  </math>
+
+  <math|<text|<samp|leftmost>><rsub|2<rsup|n>,2<rsup|m>>
+  :<2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|m>>> for
+  <math|0\<leq\>m\<less\>n>
+
+  \;
+
+  Properties:
+
+  <math|bit<rsub|2<rsup|m>,i><around*|(|<around*|\<llbracket\>|<text|<samp|leftmost>><rsub|2<rsup|n>,2<rsup|m>>|\<rrbracket\>><around*|(|x|)>|)>=bit<rsub|2<rsup|n>,i><around*|(|x|)>>
+
+  \;
+
+  Aliases:
+
+  <math|<text|<samp|leftmost>><rsub|2<rsup|n>,2<rsup|n>> \<assign\>
+  <text|<samp|iden>> :<2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>>
+
+  <subsubsection|<samp|rightmost>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'rightmost'>><rsub|2<rsup|n>,2<rsup|m>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdot\><rep|m+1|>\<cdummy\><rep|n-m|>
+  </math>
+
+  <math|<text|<samp|rightmost>><rsub|2<rsup|n>,2<rsup|m>>
+  :<2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|m>>> for
+  <math|0\<leq\>m\<less\>n>
+
+  \;
+
+  Properties:
+
+  <math|bit<rsub|2<rsup|m>,i><around*|(|<around*|\<llbracket\>|<text|<samp|rightmost>><rsub|2<rsup|n>,2<rsup|m>>|\<rrbracket\>><around*|(|x|)>|)>=bit<rsub|2<rsup|n>,2<rsup|n>-2<rsup|m>+i><around*|(|x|)>>
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|rightmost>><rsub|2<rsup|n>,2<rsup|m>>|\<rrbracket\>><around*|(|x|)>|\<rceil\>><rsub|2<rsup|m>>=<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>
+  <around*|(|mod 2<rsup|m>|)>>
+
+  \;
+
+  Aliases:
+
+  <math|<text|<samp|rightmost>><rsub|2<rsup|n>,2<rsup|n>> \<assign\>
+  <text|<samp|iden>> :<2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>>
+
+  <subsubsection|<samp|left-pad-low>>
+
+  (Note: derived from <samp|full-left-shift>.)
+
+  <\math>
+    <rep|<text|<samp|'left-pad-low'>><rsub|2<rsup|n>,2<rsup|m>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>\<cdummy\><rep|m-n|>
+  </math>
+
+  <math|<text|<samp|left-pad-low>><rsub|2<rsup|n>,2<rsup|m>>
+  :<2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|m>>> for
+  <math|0\<leq\>n\<less\>m>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|bit<rsub|2<rsup|m>,i><around*|(|<around*|\<llbracket\>|<text|<samp|left-pad-low>><rsub|2<rsup|n>,2<rsup|m>>|\<rrbracket\>><around*|(|x|)>|)>|\<rceil\>><rsub|1>=0>
+  when <math|i\<less\>2<rsup|m>-2<rsup|n>>
+
+  <math|bit<rsub|2<rsup|m>,2<rsup|m>-2<rsup|n>+i><around*|(|<around*|\<llbracket\>|<text|<samp|left-pad-low>><rsub|2<rsup|n>,2<rsup|m>>|\<rrbracket\>><around*|(|x|)>|)>=bit<rsub|2<rsup|n>,i><around*|(|x|)>>
+  when <math|i\<less\>2<rsup|n>>
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|left-pad-low>><rsub|2<rsup|n>,2<rsup|m>>|\<rrbracket\>><around*|(|x|)>|\<rceil\>><rsub|2<rsup|m>>=<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>>
+
+  <subsubsection|<samp|left-pad-high>>
+
+  (Note: derived from <samp|full-left-shift>.)
+
+  <\math>
+    <rep|<text|<samp|'left-pad-high'>><rsub|2<rsup|n>,2<rsup|m>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>\<cdummy\><rep|m-n|>
+  </math>
+
+  <math|<text|<samp|left-pad-high>><rsub|2<rsup|n>,2<rsup|m>>
+  :<2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|m>>> for
+  <math|0\<leq\>n\<less\>m>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|bit<rsub|2<rsup|m>,i><around*|(|<around*|\<llbracket\>|<text|<samp|left-pad-high>><rsub|2<rsup|n>,2<rsup|m>>|\<rrbracket\>><around*|(|x|)>|)>|\<rceil\>><rsub|1>=1>
+  when <math|i\<less\>2<rsup|m>-2<rsup|n>>
+
+  <math|bit<rsub|2<rsup|m>,2<rsup|m>-2<rsup|n>+i><around*|(|<around*|\<llbracket\>|<text|<samp|left-pad-high>><rsub|2<rsup|n>,2<rsup|m>>|\<rrbracket\>><around*|(|x|)>|)>=bit<rsub|2<rsup|n>,i><around*|(|x|)>>
+  when <math|i\<less\>2<rsup|n>>
+
+  <subsubsection|<samp|left-extend>>
+
+  (Note: derived from <samp|leftmost>, <samp|left-pad-low> and
+  <samp|left-pad-high>.)
+
+  <\math>
+    <rep|<text|<samp|'left-extend'>><rsub|2<rsup|n>,2<rsup|m>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>\<cdummy\><rep|m-n|>
+  </math>
+
+  <math|<text|<samp|left-extend>><rsub|2<rsup|n>,2<rsup|m>>
+  :<2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|m>>> for
+  <math|0\<leq\>n\<less\>m>
+
+  \;
+
+  Properties:
+
+  <math|bit<rsub|2<rsup|m>,i><around*|(|<around*|\<llbracket\>|<text|<samp|left-extend>><rsub|2<rsup|n>,2<rsup|m>>|\<rrbracket\>><around*|(|x|)>|)>=bit<rsub|2<rsup|n>,0><around*|(|x|)>>
+  when <math|i\<less\>2<rsup|n>-2<rsup|>>
+
+  <math|bit<rsub|2<rsup|m>,2<rsup|m>-2<rsup|n>+i><around*|(|<around*|\<llbracket\>|<text|<samp|left-extend>><rsub|2<rsup|n>,2<rsup|m>>|\<rrbracket\>><around*|(|x|)>|)>=bit<rsub|2<rsup|n>,i><around*|(|x|)>>
+  when <math|i\<less\>2<rsup|n>>
+
+  \;
+
+  Aliases:
+
+  <math|<text|<samp|right-extend>><rsub|1,2<rsup|m>>\<assign\><text|<samp|left-extend>><rsub|1,2<rsup|m>>
+  :<2><rsup|>\<vdash\><2><rsup|2<rsup|m>>> for <math|0\<leq\>n\<less\>m>
+
+  <subsubsection|<samp|right-pad-low>>
+
+  (Note: derived from <samp|full-right-shift>.)
+
+  <\math>
+    <rep|<text|<samp|'right-pad-low'>><rsub|2<rsup|n>,2<rsup|m>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>\<cdummy\><rep|m-n|>
+  </math>
+
+  <math|<text|<samp|right-pad-low>><rsub|2<rsup|n>,2<rsup|m>>
+  :<2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|m>>> for
+  <math|0\<leq\>n\<less\>m>
+
+  \;
+
+  Properties:
+
+  <math|bit<rsub|2<rsup|m>,i><around*|(|<around*|\<llbracket\>|<text|<samp|right-pad-low>><rsub|2<rsup|n>,2<rsup|m>>|\<rrbracket\>><around*|(|x|)>|)>=bit<rsub|2<rsup|n>,i><around*|(|x|)>>
+  when <math|i\<less\>2<rsup|n>>
+
+  <math|<around*|\<lceil\>|bit<rsub|2<rsup|m>,i><around*|(|<around*|\<llbracket\>|<text|<samp|right-pad-low>><rsub|2<rsup|n>,2<rsup|m>>|\<rrbracket\>><around*|(|x|)>|)>|\<rceil\>><rsub|1>=0>
+  when <math|2<rsup|n>\<leq\>i\<less\>2<rsup|m>>
+
+  <subsubsection|<samp|right-pad-high>>
+
+  (Note: derived from <samp|full-right-shift>.)
+
+  <\math>
+    <rep|<text|<samp|'right-pad-high'>><rsub|2<rsup|n>,2<rsup|m>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>\<cdummy\><rep|m-n|>
+  </math>
+
+  <math|<text|<samp|right-pad-high>><rsub|2<rsup|n>,2<rsup|m>>
+  :<2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|m>>> for
+  <math|0\<leq\>n\<less\>m>
+
+  \;
+
+  Properties:
+
+  <math|bit<rsub|2<rsup|m>,i><around*|(|<around*|\<llbracket\>|<text|<samp|right-pad-high>><rsub|2<rsup|n>,2<rsup|m>>|\<rrbracket\>><around*|(|x|)>|)>=bit<rsub|2<rsup|n>,i><around*|(|x|)>>
+  when <math|i\<less\>2<rsup|n>>
+
+  <math|<around*|\<lceil\>|bit<rsub|2<rsup|m>,i><around*|(|<around*|\<llbracket\>|<text|<samp|right-pad-high>><rsub|2<rsup|n>,2<rsup|m>>|\<rrbracket\>><around*|(|x|)>|)>|\<rceil\>><rsub|1>=1>
+  when <math|2<rsup|n>\<leq\>i\<less\>2<rsup|m>>
+
+  <subsubsection|<samp|right-extend>>
+
+  (Note: derived from <samp|rightmost>, <samp|right-pad-low>, and
+  <samp|right-pad-high>.)
+
+  (CAUTION: Not defined when <math|n=0>.)
+
+  <\math>
+    <rep|<text|<samp|'right-extend'>><rsub|2<rsup|n>,2<rsup|m>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>\<cdummy\><rep|m-n|>
+  </math>
+
+  <math|<text|<samp|right-extend>><rsub|2<rsup|n>,2<rsup|m>>
+  :<2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|m>>> for
+  <math|1\<leq\>n\<less\>m>\ 
+
+  \;
+
+  Properties:
+
+  <math|bit<rsub|2<rsup|m>,i><around*|(|<around*|\<llbracket\>|<text|<samp|right-extend>><rsub|2<rsup|n>,2<rsup|m>>|\<rrbracket\>><around*|(|x|)>|)>=bit<rsub|2<rsup|n>,i><around*|(|x|)>>
+  when <math|i\<less\>2<rsup|n>>
+
+  <math|<around*|\<lceil\>|bit<rsub|2<rsup|m>,i><around*|(|<around*|\<llbracket\>|<text|<samp|right-extend>><rsub|2<rsup|n>,2<rsup|m>>|\<rrbracket\>><around*|(|x|)>|)>|\<rceil\>><rsub|1>=bit<rsub|2<rsup|n>,2<rsup|n>-1><around*|(|x|)>>
+  when <math|2<rsup|n>\<leq\>i\<less\>2<rsup|m>>
+
+  \;
+
+  Aliases:
+
+  <math|<text|<samp|right-extend>><rsub|1,2<rsup|m>>\<assign\><text|<samp|left-extend>><rsub|1,2<rsup|m>>
+  :<2><rsup|>\<vdash\><2><rsup|2<rsup|m>>> for <math|0\<leq\>n\<less\>m>
+
+  <subsubsection|<samp|right-shift-with>>
+
+  Right shift by a signed amount. Negative values are a left shift. \ Bits
+  are filled with the provided value.
+
+  <\math>
+    <rep|<text|<samp|'right-shift-with'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>
+  </math>
+
+  <math|<text|<samp|right-shift-with>><rsub|2<rsup|n>>
+  :<2>\<times\><around*|(|<2><rsup|2<rsup|<around*|\<lceil\>|lg<around*|(|n+1|)>|\<rceil\>>>>\<times\><2><rsup|2<rsup|n>>|)>\<vdash\><2><rsup|2<rsup|n>>>
+  for <math|0\<leq\>n>
+
+  <subsubsection|<samp|right-shift>>
+
+  Right shift by a signed amount. Negative values are a left shift.
+
+  <\math>
+    <rep|<text|<samp|'right-shift'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>
+  </math>
+
+  <math|<text|<samp|right-shift>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|<around*|\<lceil\>|lg<around*|(|n+1|)>|\<rceil\>>>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>>
+  for <math|0\<leq\>n>
+
+  <subsubsection|<samp|right-rotate>>
+
+  Right rotate by an amount.
+
+  <\math>
+    <rep|<text|<samp|'right-rotate'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>
+  </math>
+
+  <math|<text|<samp|right-rotate>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|<around*|\<lceil\>|lg<around*|(|n|)>|\<rceil\>>>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>>
+  for <math|1\<leq\>n>
+
+  \;
+
+  Aliases:
+
+  <math|<math|<text|<samp|right-rotate>><rsub|1>> \<assign\>
+  <text|<samp|drop>> \<of\> <1>\<times\><2>\<vdash\><2>>
+
+  <subsubsection|<samp|transpose>>
+
+  (CAUTION: Not defined when <math|n=0> or <math|m=0>.)
+
+  (Note: Support only recommened up to <math|2<rsup|n>\<cdot\>2<rsup|m>\<leq\>256>.)
+
+  <\math>
+    <rep|<text|<samp|'transpose'>><rsub|2<rsup|n>,2<rsup|m>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>\<cdummy\><rep|m|>
+  </math>
+
+  <math|<text|<samp|transpose>><rsub|2<rsup|n>,2<rsup|m>>
+  :<2><rsup|2<rsup|n>\<cdummy\>2<rsup|m>>\<vdash\><2><rsup|2<rsup|m>\<cdummy\>2<rsup|n>>>
+  for <math|1\<leq\>n> and <math|1\<leq\>m>
+
+  \;
+
+  Aliases:
+
+  <math|<text|<samp|transpose>><rsub|1,2<rsup|n>> \<assign\>
+  <text|<samp|iden>> :<2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>>
+
+  <math|<text|<samp|transpose>><rsub|2<rsup|n>,1> \<assign\>
+  <text|<samp|iden>> :<2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>>
+
+  <subsubsection|<samp|find-first-high>>
+
+  (CAUTION: Not defined when <math|n=0>.)
+
+  <\math>
+    <rep|<text|<samp|'find-first-high'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>
+  </math>
+
+  <math|<text|<samp|find-first-high>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|<around*|\<lceil\>|lg<around*|(|n+1|)>|\<rceil\>>>>>
+  for <math|1\<leq\>n>
+
+  <subsubsection|<samp|find-last-high>>
+
+  (CAUTION: Not defined when <math|n=0>.)
+
+  <\math>
+    <rep|<text|<samp|'find-last-high'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>
+  </math>
+
+  <math|<text|<samp|find-last-high>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|<around*|\<lceil\>|lg<around*|(|n+1|)>|\<rceil\>>>>>
+  for <math|1\<leq\>n>
+
+  <subsubsection|<samp|bit>>
+
+  (CAUTION: Not defined when <math|n\<leq\>1>.)
+
+  <\math>
+    <rep|<text|<samp|'bit'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n-1|>
+  </math>
+
+  <math|<text|<samp|bit>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|<around*|\<lceil\>|lg<around*|(|n|)>|\<rceil\>>>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2>>
+  for <math|2\<leq\>n>
+
+  \;
+
+  Aliases:
+
+  <math|<math|<text|<samp|bit>><rsub|1>> \<assign\> <text|<samp|drop>> \<of\>
+  <1>\<times\><2>\<vdash\><2>>
+
+  <math|<math|<text|<samp|bit>><rsub|2>> \<assign\> <text|<samp|ch>><rsub|1>
+  \<of\> <2>\<times\><2><rsup|2>\<vdash\><2>>
+
+  <subsection|<verbatim|110100...: >Jets for arithmetic>
+
+  <subsubsection|<samp|one>>
+
+  (CAUTION: Not defined when <math|n=0>. See Aliases.)
+
+  <math|<rep|<text|<samp|'one'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>>
+
+  <math|<text|<samp|one>><rsub|2<rsup|n>>\<of\><1>\<vdash\><2><rsup|2<rsup|n>>>
+  for <math|1\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|<around*|\<llbracket\>|<text|<samp|one>><rsub|2<rsup|n>>|\<rrbracket\>><around*|(|x|)>|)>|\<rceil\>><rsub|1>=0>
+  when <math|0\<leq\>i\<less\>2<rsup|n>-1>
+
+  <math|<around*|\<lceil\>|bit<rsub|2<rsup|n>,2<rsup|n>-1><around*|(|<around*|\<llbracket\>|<text|<samp|one>><rsub|2<rsup|n>>|\<rrbracket\>><around*|(|x|)>|)>|\<rceil\>><rsub|1>=1>
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|one>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>||\<rangle\>>|\<rceil\>><rsub|2<rsup|n>>=1>
+
+  \;
+
+  Aliases:
+
+  <math|<math|<text|<samp|one>><rsub|1>> \<assign\>
+  <text|<samp|high>><rsub|1>\<of\><1>\<vdash\><2>>
+
+  <subsubsection|<samp|full-add>>
+
+  (Note: <math|<text|<samp|'full-add'>><rsub|1>> is composed from
+  <samp|`maj`> and <samp|`tri-xor`>.)
+
+  <math|<rep|<text|<samp|'full-add'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>>
+
+  <math|<text|<samp|full-add>><rsub|2<rsup|n>>
+  :<2>\<times\><around*|(|<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>|)>\<vdash\><2>\<times\><2><rsup|2<rsup|n>>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|full-add>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|c,<around*|\<langle\>|x,y|\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|1,2<rsup|n>>=<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>+<around*|\<lceil\>|y|\<rceil\>><rsub|2<rsup|n>>+<around*|\<lceil\>|c<rsub|1>|\<rceil\>><rsub|1>>
+
+  <subsubsection|<samp|add>>
+
+  \;
+
+  <math|<rep|<text|<samp|'add'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>>
+
+  <math|<text|<samp|add>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2>\<times\><2><rsup|2<rsup|n>>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|add>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|\<rceil\>><rsub|1,2<rsup|n>>=<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>+<around*|\<lceil\>|y|\<rceil\>><rsub|2<rsup|n>>>
+
+  \;
+
+  Aliases:
+
+  <math|<math|<text|<samp|popcount>><rsub|2>> \<assign\>
+  <text|<samp|add>><rsub|1> :<2><rsup|2>\<vdash\><2><rsup|2>>
+
+  <subsubsection|<samp|full-increment>>
+
+  (CAUTION: Not defined when <math|n=0>. See Aliases.)
+
+  <math|<rep|<text|<samp|'full-increment'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>>
+
+  <math|<text|<samp|full-increment>><rsub|2<rsup|n>>
+  :<2>\<times\><2><rsup|2<rsup|n>>\<vdash\><2>\<times\><2><rsup|2<rsup|n>>>
+  for <math|1\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|full-increment>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|c,x|\<rangle\>>|\<rceil\>><rsub|1,2<rsup|n>>=<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>+<around*|\<lceil\>|c<rsub|1>|\<rceil\>><rsub|1>>
+
+  <subsubsection|<samp|increment>>
+
+  \;
+
+  <math|<rep|<text|<samp|'increment'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>>
+
+  <math|<text|<samp|increment>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<vdash\><2>\<times\><2><rsup|2<rsup|n>>> for
+  <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|increment>><rsub|2<rsup|n>>|\<rrbracket\>><around*|(|x|)>|\<rceil\>><rsub|1,2<rsup|n>>=<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>+1>
+
+  <subsubsection|<samp|popcount>>
+
+  (CAUTION: Not defined when <math|n\<leq\>1>.)
+
+  <\math>
+    <rep|<text|<samp|'popcount'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n-1|>
+  </math>
+
+  <math|<text|<samp|popcount>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|<around*|\<lceil\>|lg<around*|(|n+1|)>|\<rceil\>>>>>
+  for <math|1\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|popcount>><rsub|2<rsup|n>>|\<rrbracket\>><around*|(|x|)>|\<rceil\>><rsub|2<rsup|<around*|\<lceil\>|lg<around*|(|n+1|)>|\<rceil\>>>>=<big|sum><rsub|i=0><rsup|2<rsup|n>-1><around*|\<lceil\>|bit<rsub|2<rsup|n>,i><around*|(|x|)>|\<rceil\>><rsub|1>>
+
+  \;
+
+  Aliases:
+
+  <math|<text|<samp|popcount>><rsub|1> \<assign\> <text|<samp|iden>>
+  :<2>\<vdash\><2>>
+
+  <math|<math|<text|<samp|popcount>><rsub|2>> \<assign\>
+  <text|<samp|add>><rsub|1> :<2><rsup|2>\<vdash\><2><rsup|2>>
+
+  <subsubsection|<samp|full-subtract>>
+
+  (Note: composition of <samp|full-add> with <samp|complement> applied to 1st
+  and 3rd arguments).
+
+  <math|<rep|<text|<samp|'full-subtract'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>>
+
+  <math|<text|<samp|full-subtract>><rsub|2<rsup|n>>
+  :<2>\<times\><around*|(|<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>|)>\<vdash\><2>\<times\><2><rsup|2<rsup|n>>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|full-subtract>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|c,<around*|\<langle\>|x,y|\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|1,2<rsup|n>>\<equiv\><around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>-<around*|\<lceil\>|y|\<rceil\>><rsub|2<rsup|n>>-<around*|\<lceil\>|c<rsub|1>|\<rceil\>><rsub|1><around*|(|mod
+  2<rsup|2<rsup|n>+1>|)>>
+
+  <subsubsection|<samp|subtract>>
+
+  \;
+
+  <math|<rep|<text|<samp|'subtract'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>>
+
+  <math|<text|<samp|subtract>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2>\<times\><2><rsup|2<rsup|n>>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|full-subtract>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|\<rceil\>><rsub|1,2<rsup|n>>\<equiv\><around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>-<around*|\<lceil\>|y|\<rceil\>><rsub|2<rsup|n>><around*|(|mod
+  2<rsup|2<rsup|n>+1>|)>>
+
+  <subsubsection|<samp|negate>>
+
+  (CAUTION: Not defined when <math|n=0>.)
+
+  <math|<rep|<text|<samp|'negate'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>>
+
+  <math|<text|<samp|negate>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>> for <math|1\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|negate>><rsub|2<rsup|n>>|\<rrbracket\>><around*|(|x|)>|\<rceil\>><rsub|2<rsup|n>>\<equiv\>-<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>
+  <around*|(|mod 2<rsup|2<rsup|n>>|)>>
+
+  <subsubsection|<samp|full-decrement>>
+
+  \;
+
+  <math|<rep|<text|<samp|'full-decrement'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>>
+
+  <math|<text|<samp|full-decrement>><rsub|2<rsup|n>>
+  :<2>\<times\><2><rsup|2<rsup|n>>\<vdash\><2>\<times\><2><rsup|2<rsup|n>>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|full-decrement>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|c,x|\<rangle\>>|\<rceil\>><rsub|1,2<rsup|n>>\<equiv\><around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>-<around*|\<lceil\>|c<rsub|1>|\<rceil\>><rsub|1><around*|(|mod
+  2<rsup|2<rsup|n>+1>|)>>
+
+  <subsubsection|<samp|decrement>>
+
+  \;
+
+  <math|<rep|<text|<samp|'decrement'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>>
+
+  <math|<text|<samp|decrement>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<vdash\><2>\<times\><2><rsup|2<rsup|n>>> for
+  <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|decrement>><rsub|2<rsup|n>>|\<rrbracket\>><around*|(|x|)>|\<rceil\>><rsub|1,2<rsup|n>>\<equiv\><around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>-1<around*|(|mod
+  2<rsup|2<rsup|n>+1>|)>>
+
+  <subsubsection|<samp|full-multiply>>
+
+  (Note: <math|<text|<samp|'full-multiply'>><rsub|1>> is composed from
+  <math|<text|<samp|'full-add'>><rsub|1>> and <samp|`and`>.)
+
+  <math|<rep|<text|<samp|'full-multiply'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>>
+
+  <math|<text|<samp|full-multiply>><rsub|2<rsup|n>>
+  :<around*|(|<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>|)>\<times\><around*|(|<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>|)>\<vdash\><2><rsup|2<rsup|n+1>>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|full-multiplier>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|<around*|\<langle\>|c<rsub|1>,c<rsub|2>|\<rangle\>>,<around*|\<langle\>|x,y|\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|2<rsup|n+1>>=<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>\<cdot\><around*|\<lceil\>|y|\<rceil\>><rsub|2<rsup|n>>+<around*|\<lceil\>|c<rsub|1>|\<rceil\>><rsub|2<rsup|n>>+<around*|\<lceil\>|c<rsub|2>|\<rceil\>><rsub|2<rsup|n>>>
+
+  <subsubsection|<samp|multiply>>
+
+  \;
+
+  <math|<rep|<text|<samp|'multiply'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>>
+
+  <math|<text|<samp|multiply>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n+1>>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|multiply>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|\<rceil\>><rsub|2<rsup|n+1>>=<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>\<cdot\><around*|\<lceil\>|y|\<rceil\>><rsub|2<rsup|n>>>
+
+  <subsubsection|<verbatim|><samp|is-zero>>
+
+  (CAUTION: Not defined when <math|n=0>. See Aliases.)
+
+  (Note: <samp|complement> of <samp|some>).
+
+  <math|<rep|<text|<samp|'is-zero'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|is-zero>><rsub|2<rsup|n>>|\<rrbracket\>><around*|(|x|)>|\<rceil\>><rsub|1>=\<chi\><around*|(|<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>=0|)>>
+
+  <subsubsection|<verbatim|><samp|is-one>>
+
+  (CAUTION: Not defined when <math|n=0>. See Aliases.)
+
+  <math|<rep|<text|<samp|'is-one'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|is-one>><rsub|2<rsup|n>>|\<rrbracket\>><around*|(|x|)>|\<rceil\>><rsub|1>=\<chi\><around*|(|<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>=1|)>>
+
+  <subsubsection|<samp|le> (unsigned)>
+
+  (Note: borrow bit from <samp|subtractor>)
+
+  <math|<rep|<text|<samp|'le'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>>
+
+  <math|<text|<samp|le>><rsub|2<rsup|n>> :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|le>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|\<rceil\>><rsub|1>=\<chi\><around*|(|<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>\<leq\><around*|\<lceil\>|y|\<rceil\>><rsub|2<rsup|n>>|)>>
+
+  <subsubsection|<samp|lt> (unsigned)>
+
+  \;
+
+  <math|<rep|<text|<samp|'lt'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>>
+
+  <math|<text|<samp|lt>><rsub|2<rsup|n>> :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|lt>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|\<rceil\>><rsub|1>=\<chi\><around*|(|<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>\<less\><around*|\<lceil\>|y|\<rceil\>><rsub|2<rsup|n>>|)>>
+
+  <subsubsection|<samp|min> (unsigned)>
+
+  \;
+
+  <math|<rep|<text|<samp|'min'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>>
+
+  <math|<text|<samp|min>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>>
+  for <math|1\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|z\<leq\><around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|'min'>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|\<rceil\>><rsub|2<rsup|n>>>
+  if and only if <math|z\<leq\><around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>>
+  and <math|z\<leq\><around*|\<lceil\>|y|\<rceil\>><rsub|2<rsup|n>>>
+
+  \;
+
+  Aliases:
+
+  <math|<text|<samp|min>><rsub|1> \<assign\> <text|<samp|and>><rsub|1>
+  :<2>\<times\><2>\<vdash\><2>>
+
+  <subsubsection|<samp|max> (unsigned)>
+
+  \;
+
+  <math|<rep|<text|<samp|'max'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>>
+
+  <math|<text|<samp|max>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>>
+  for <math|1\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|max>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|\<rceil\>><rsub|2<rsup|n>>\<leq\>z>
+  if and only if <math|<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>\<leq\>z>
+  and <math|<around*|\<lceil\>|y|\<rceil\>><rsub|2<rsup|n>>\<leq\>z>
+
+  \;
+
+  Aliases:
+
+  <math|<text|<samp|max>><rsub|1> \<assign\> <text|<samp|or>><rsub|1>
+  :<2>\<times\><2>\<vdash\><2>>
+
+  <subsubsection|<samp|median> (unsigned)>
+
+  \;
+
+  <math|<rep|<text|<samp|'median'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>>
+
+  <math|<text|<samp|median>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<times\><around*|(|<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>|)>\<vdash\><2><rsup|2<rsup|n>>>
+  for <math|1\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|min>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x<rsub|i>,x<rsub|j>|\<rangle\>>|\<rceil\>><rsub|2<rsup|n>>\<leq\><around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|median>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x<rsub|1>,<around*|\<langle\>|x<rsub|2>,x<rsub|3>|\<rangle\>>|\<rangle\>>|\<rceil\>><rsub|2<rsup|n>>\<leq\><around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|max>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x<rsub|i>,x<rsub|j>|\<rangle\>>|\<rceil\>><rsub|2<rsup|n>>>
+  for all <math|1\<leq\>i\<less\>j\<leq\>3>.
+
+  \;
+
+  Aliases:
+
+  <math|<text|<samp|median>><rsub|1> \<assign\> <text|<samp|maj>><rsub|1>
+  :<2>\<times\><around*|(|<2>\<times\><2>|)>\<vdash\><2>>
+
+  \;
+
+  <subsubsection|<samp|div2n1n>>
+
+  (Note: helper function for <samp|divmod>. See <hlink|Fast recursive
+  division|http://cr.yp.to/bib/1998/burnikel.ps> by Bunikel and Ziegler
+  (1998).)
+
+  <math|<rep|<text|<samp|'div2n1n'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>>
+
+  <math|<text|<samp|div2n1n>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n+1>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  When <math|2<rsup|n-1>\<leq\><around*|\<lceil\>|y|\<rceil\>><rsub|2<rsup|n>>
+  >and<math|<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n+1>>\<less\>2<rsup|n>\<cdot\><around*|\<lceil\>|y|\<rceil\>><rsub|2<rsup|n>>>,
+
+  <\enumerate-alpha>
+    <item><math|<around*|\<lceil\>|y|\<rceil\>><rsub|2<rsup|n>>\<cdot\><around*|\<lceil\>|\<pi\><rsub|1><around*|(|<around*|\<llbracket\>|<text|<samp|div2n1n>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|)>|\<rceil\>><rsub|2<rsup|n>>=<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n+1>>-<around*|\<lceil\>|\<pi\><rsub|2><around*|(|<around*|\<llbracket\>|<text|<samp|div2n1n>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|)>|\<rceil\>><rsub|2<rsup|n>>>,
+    and
+
+    <item><math|<around*|\<lceil\>|\<pi\><rsub|2><around*|(|<around*|\<llbracket\>|<text|<samp|div2n1n>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|)>|\<rceil\>><rsub|2<rsup|n>>\<less\><around*|\<lceil\>|y|\<rceil\>><rsub|2<rsup|n>>>.
+  </enumerate-alpha>
+
+  \;
+
+  When <math|2<rsup|n-1>\<gtr\><around*|\<lceil\>|y|\<rceil\>><rsub|2<rsup|n>>
+  >or<math|<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n+1>>\<geqslant\>2<rsup|n>\<cdot\><around*|\<lceil\>|y|\<rceil\>><rsub|2<rsup|n>>>,
+  then <math|bit<rsub|2<rsup|2n>,i><around*|(|<around*|\<llbracket\>|<text|<samp|div2n1n>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|)>=1>.
+
+  \;
+
+  <subsubsection|<samp|div-mod> (unsigned)>
+
+  \;
+
+  <math|<rep|<text|<samp|'div-mod'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>>
+
+  <math|<text|<samp|div-mod>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|y|\<rceil\>><rsub|2<rsup|n>>\<cdot\><around*|\<lceil\>|\<pi\><rsub|1><around*|(|<around*|\<llbracket\>|<text|<samp|div-mod>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|)>|\<rceil\>><rsub|2<rsup|n>>=<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>-<around*|\<lceil\>|\<pi\><rsub|2><around*|(|<around*|\<llbracket\>|<text|<samp|div-mod>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|)>|\<rceil\>><rsub|2<rsup|n>>>
+
+  \;
+
+  For all <math|r\<in\>\<bbb-N\>> such that
+  <math|<around*|\<lceil\>|y|\<rceil\>><rsub|2<rsup|n>>\|<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>-r>
+  we have<math|<around*|\<lceil\>|\<pi\><rsub|2><around*|(|<around*|\<llbracket\>|<text|<samp|div-mod>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|)>|\<rceil\>><rsub|2<rsup|n>>\<leq\>r>.
+
+  <subsubsection|<samp|divide> (unsigned)>
+
+  \;
+
+  <math|<rep|<text|<samp|'divide'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>>
+
+  <math|<text|<samp|divide>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>>
+  for <math|0\<leq\>n>
+
+  <subsubsection|<samp|modulo> (unsigned)>
+
+  \;
+
+  <math|<rep|<text|<samp|'modulo'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>>
+
+  <math|<text|<samp|modulo>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>>
+  for <math|0\<leq\>n>
+
+  <subsubsection|<samp|divides> (unsigned)>
+
+  \;
+
+  <math|<rep|<text|<samp|'divides'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>>
+
+  <math|<text|<samp|divides>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2>> for
+  <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<lceil\>|<around*|\<llbracket\>|<text|<samp|divides>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>|\<rceil\>><rsub|1>=\<chi\><around*|(|<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>\|<around*|\<lceil\>|y|\<rceil\>><rsub|2<rsup|n>>|)>>
+
+  <subsubsection|<samp|eea> (unsigned)>
+
+  \;
+
+  <math|<rep|<text|<samp|'eea'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>>
+
+  <math|<text|<samp|eea>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><around*|(|<around*|(|<around*|(|<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>|)>+<around*|(|<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>|)>|)>\<times\><around*|(|<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>|)>|)>\<times\><2><rsup|2<rsup|n>>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  Properties:
+
+  Let <math|<around*|\<langle\>|<around*|\<langle\>|b,<around*|\<langle\>|c<rsub|y>,c<rsub|x>|\<rangle\>>|\<rangle\>>,d|\<rangle\>>\<assign\><around*|\<llbracket\>|<text|<samp|eea>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|x,y|\<rangle\>>>
+
+  \;
+
+  <math|<around*|\<lceil\>|c<rsub|x>|\<rceil\>><rsub|2<rsup|n>>*<around*|\<lceil\>|d|\<rceil\>><rsub|2<rsup|n>>=<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>>
+
+  <math|<around*|\<lceil\>|c<rsub|y>|\<rceil\>><rsub|2<rsup|n>>*<around*|\<lceil\>|d|\<rceil\>><rsub|2<rsup|n>>=<around*|\<lceil\>|y|\<rceil\>><rsub|2<rsup|n>>>
+
+  \;
+
+  If <math|<injl|<around*|\<langle\>|s,t|\<rangle\>>>=b> then
+  <math|<around*|\<lceil\>|s|\<rceil\>><rsub|2<rsup|n>>*<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>-<around*|\<lceil\>|t|\<rceil\>><rsub|2<rsup|n>>*<around*|\<lceil\>|y|\<rceil\>><rsub|2<rsup|n>>=<around*|\<lceil\>|d|\<rceil\>><rsub|2<rsup|n>>>
+  and either <math|<around*|\<lceil\>|s|\<rceil\>><rsub|2<rsup|n>>*\<less\><frac|<around*|\<lceil\>|c<rsub|y>|\<rceil\>><rsub|2<rsup|n>>|2>>
+  or <math|<around*|\<lceil\>|t|\<rceil\>><rsub|2<rsup|n>>*\<less\><frac|<around*|\<lceil\>|c<rsub|x>|\<rceil\>><rsub|2<rsup|n>>|2>>.
+
+  If <math|<injr|<around*|\<langle\>|s,t|\<rangle\>>>=b> then
+  <math|<around*|\<lceil\>|s|\<rceil\>><rsub|2<rsup|n>>*<around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|n>>-<around*|\<lceil\>|t|\<rceil\>><rsub|2<rsup|n>>*<around*|\<lceil\>|y|\<rceil\>><rsub|2<rsup|n>>=-<around*|\<lceil\>|d|\<rceil\>><rsub|2<rsup|n>>>
+  and either <math|<around*|\<lceil\>|s|\<rceil\>><rsub|2<rsup|n>>*\<less\><frac|<around*|\<lceil\>|c<rsub|y>|\<rceil\>><rsub|2<rsup|n>>|2>>
+  or <math|<around*|\<lceil\>|t|\<rceil\>><rsub|2<rsup|n>>*\<less\><frac|<around*|\<lceil\>|c<rsub|x>|\<rceil\>><rsub|2<rsup|n>>|2>.>
+
+  \;
+
+  <math|<around*|\<llbracket\>|<text|<samp|eea>><rsub|2<rsup|n>>|\<rrbracket\>><around*|\<langle\>|<around*|\<lfloor\>|x|\<rfloor\>>,<around*|\<lfloor\>|x|\<rfloor\>>|\<rangle\>>=<around*|\<langle\>|<around*|\<langle\>|<injl|<around*|\<langle\>|<around*|\<lfloor\>|1|\<rfloor\>>,<around*|\<lfloor\>|0|\<rfloor\>>|\<rangle\>>>,<around*|\<langle\>|<around*|\<lfloor\>|1|\<rfloor\>>,<around*|\<lfloor\>|1|\<rfloor\>>|\<rangle\>>|\<rangle\>>,<around*|\<lfloor\>|x|\<rfloor\>>|\<rangle\>>>.
+
+  <subsubsection|<samp|bezout> (unsigned)>
+
+  (CAUTION: Not defined when <math|n\<leq\>1>.)
+
+  <math|<rep|<text|<samp|'bezout'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>>
+
+  <math|<text|<samp|bezout>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><around*|(|<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>|)>+<around*|(|<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>|)>>
+  for <math|1\<leq\>n>
+
+  <subsubsection|<samp|gcd> (unsigned)>
+
+  (CAUTION: Not defined when <math|n\<leq\>1>.)
+
+  <math|<rep|<text|<samp|'gcd'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>>
+
+  <math|<text|<samp|gcd>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>>
+  for <math|1\<leq\>n>
+
+  <subsubsection|<samp|cofactors> (unsigned)>
+
+  (CAUTION: Not defined when <math|n\<leq\>1>.)
+
+  <math|<rep|<text|<samp|'cofactors'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>>
+
+  <math|<text|<samp|cofactors>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>>
+  for <math|1\<leq\>n>
+
+  <subsubsection|<samp|lcm> (unsigned)>
+
+  \;
+
+  <math|<rep|<text|<samp|'lcm'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>>
+
+  <math|<text|<samp|lcm>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n+1>>>
+  for <math|0\<leq\>n>
+
+  <subsubsection|<samp|jacobi> (unsigned)>
+
+  \;
+
+  <math|<rep|<text|<samp|'jacobi'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>>
+
+  <math|<text|<samp|jacobi>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2><rsup|2>> for
+  <math|0\<leq\>n>
+
+  <subsubsection|<samp|absolute-value> (signed input/unsigned output)>
+
+  \;
+
+  <math|<rep|<text|<samp|'absolute-value'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>>
+
+  <math|<text|<samp|absolute-value>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<vdash\><2><rsup|2<rsup|n>>> for <math|0\<leq\>n>
+
+  <subsubsection|<verbatim|><samp|sign>>
+
+  (CAUTION: Not defined when <math|n=0>. See Aliases.)
+
+  <\math>
+    <rep|<text|<samp|'sign'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n|>
+  </math>
+
+  <math|<text|<samp|sign>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<vdash\><2><rsup|2>> for <math|1\<leq\>n>
+
+  \;
+
+  Properties:
+
+  <math|<around*|\<llbracket\>|<text|<samp|sign>><rsub|2<rsup|n>>|\<rrbracket\>><around*|(|x|)>=<around*|\<langle\>|<around*|\<llbracket\>|<text|<samp|leftmost>><rsub|2<rsup|n>>|\<rrbracket\>><around*|(|x|)>,<around*|\<llbracket\>|<text|<samp|some>><rsub|2<rsup|n>>|\<rrbracket\>><around*|(|x|)>|\<rangle\>>>
+
+  <subsubsection|<samp|signed-le>>
+
+  \;
+
+  <math|<rep|<text|<samp|'signed-le'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>>
+
+  <math|<text|<samp|signed-le>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2>> for
+  <math|0\<leq\>n>
+
+  <subsubsection|<samp|signed-lt>>
+
+  \;
+
+  <math|<rep|<text|<samp|'signed-lt'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|n+1|>>
+
+  <math|<text|<samp|signed-lt>><rsub|2<rsup|n>>
+  :<2><rsup|2<rsup|n>>\<times\><2><rsup|2<rsup|n>>\<vdash\><2>> for
+  <math|0\<leq\>n>
+
+  <subsubsection|<samp|signed-min>>
+
+  <subsubsection|<samp|signed-max>>
+
+  <subsubsection|<samp|signed-median>>
+
+  <subsubsection|<samp|signed-right-shift>>
+
+  Right shift by a signed amount with sign extension. Negative values are a
+  left shift.
+
+  <subsubsection|<samp|signed-divmod> (unsigned denominator)>
+
+  <subsubsection|<samp|signed-div> (unsigned denominator)>
+
+  <subsubsection|<samp|signed-signed-divmod> (signed denominator)>
+
+  <subsubsection|<samp|signed-signed-div> (signed denominator)>
+
+  \;
+
+  <subsection|<verbatim|110101...: >Jets for hash functions>
+
+  <subsubsection|<verbatim|1101010...: >Jets for SHA-2>
+
+  <paragraph|<samp|sha-256-block>>
+
+  \;
+
+  <math|<rep|<text|<samp|'sha-256-block'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>>
+
+  <math|<text|<samp|sha-256-block>> :<2><rsup|256>\<times\><2><rsup|512>\<vdash\><2><rsup|256>>
+
+  \;
+
+  <paragraph|<samp|sha-256-iv>>
+
+  \;
+
+  <math|<rep|<text|<samp|'sha-256-iv'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>>
+
+  <\math>
+    <text|<samp|sha-256-iv>> :<1>\<vdash\><2><rsup|256>
+  </math>
+
+  <subsubsection|<verbatim|110101100...: >Jets for SHA-3>
+
+  In this section we define <math|X<rsup|5>\<assign\>X\<times\>X<rsup|4>> and
+  <math|X<rsup|1600>\<assign\><around*|(|<around*|(|X<rsup|64>|)><rsup|5>|)><rsup|5>>.
+
+  \;
+
+  <paragraph|<samp|sha3-zero>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'sha3-zero'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|sha3-zero>> :<1>\<vdash\><2><rsup|1600>>
+
+  \;
+
+  <paragraph|<samp|sha3-absorb>>
+
+  (Note: we should proably byte-stwap the input before xoring it into place
+
+  <\math>
+    <rep|<text|<samp|'sha3-absorb'>><rsub|n,m>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>\<cdummy\><rep|n|>\<cdummy\><rep|m|>
+  </math>
+
+  <math|<text|<samp|sha3-absorb>><rsub|n,m>:<2><rsup|64>\<times\><2><rsup|1600>\<vdash\><2><rsup|1600>>
+  for <math|1\<leq\>n,m\<leq\>5>
+
+  \;
+
+  <paragraph|<samp|sha3-xor>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'sha3-xor'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|sha3-xor>> :<2><rsup|1600>\<times\><2><rsup|1600>\<vdash\><2><rsup|1600>>
+
+  \;
+
+  <paragraph|<samp|sha3-permute>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'sha3-permute'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|sha3-permute>>:<2><rsup|1600>\<vdash\><2><rsup|1600>>
+
+  \;
+
+  <paragraph|<samp|sha3-squeeze-256>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'sha3-squeeze-256'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|sha3-squeeze-256>>:<2><rsup|1600>\<vdash\><2><rsup|256>>
+
+  \;
+
+  <paragraph|<samp|sha3-squeeze-512>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'sha3-squeeze-512'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|sha3-squeeze-512>>:<2><rsup|1600>\<vdash\><2><rsup|512>>
+
+  <subsubsection|<verbatim|110101101...: >Jets for RIPEMD>
+
+  <subsubsection|<verbatim|110101110000...: >Jets for SHA-1 (RESERVED)>
+
+  <subsection|<verbatim|110110000...: >Jets for elliptic curve functions>
+
+  <subsubsection|<verbatim|1101100000...: >Jets for secp256k1>
+
+  In this section we define <math|Scalar\<assign\><2><rsup|256>>,
+  <math|<2><rsup|129>\<assign\><2>\<times\><2><rsup|128>>,
+  <math|FE\<assign\><2><rsup|256>>, <math|GE\<assign\>FE\<times\>FE>, and
+  <math|GEJ\<assign\>GE\<times\>FE>, <math|Point\<assign\><2>\<times\>FE>.
+
+  (Note: To convert GE to GEJ pair with <samp|one>).
+
+  <with|color|red|TODO: Verify that all <em|equivalent> FE and Scalar inputs
+  yield <em|equal> outputs.>
+
+  \;
+
+  <paragraph|<samp|secp256k1-point-verify>>
+
+  (Note: Support only recommened up to <math|2<rsup|n>\<leq\><with|color|red|TODO
+  8?>>.)
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-point-verify'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>\<cdummy\><rep|n+1|>
+  </math>
+
+  <math|<text|<samp|secp256k1-point-verify>><rsub|2<rsup|n>>:<around*|(|<around*|(|Scalar\<times\>Point|)><rsup|2<rsup|n>>\<times\>Scalar|)>\<times\>Point\<vdash\><1>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  <paragraph|<samp|secp256k1-decompress>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-decompress'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>\<cdummy\><rep|n+1|>
+  </math>
+
+  <math|<text|<samp|secp256k1-decompress>>:Point\<vdash\><maybe><around*|(|GE|)>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  <paragraph|<samp|secp256k1-linear-verify>>
+
+  (Note: Support only recommened up to <math|2<rsup|n>\<leq\><with|color|red|TODO
+  8?>>.)
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-linear-verify'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>\<cdummy\><rep|n+1|>
+  </math>
+
+  <math|<text|<samp|secp256k1-linear-verify>><rsub|2<rsup|n>>:<around*|(|<around*|(|Scalar\<times\>GE|)><rsup|2<rsup|n>>\<times\>Scalar|)>\<times\>GE\<vdash\><1>>
+  for <math|0\<leq\>n>
+
+  \;
+
+  <paragraph|<samp|secp256k1-linear-combination>>
+
+  (Note: Support only recommened up to <math|2<rsup|n>\<leq\><with|color|red|TODO
+  8?>>.)
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-linear-combination'>><rsub|2<rsup|n>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>\<cdummy\><rep|n+1|>
+  </math>
+
+  <math|<text|<samp|secp256k1-linear-combination>><rsub|2<rsup|n>>:<around*|(|Scalar\<times\>GEJ|)><rsup|2<rsup|n>>\<times\>Scalar\<vdash\>GEJ>
+  for <math|0\<leq\>n>
+
+  \;
+
+  <paragraph|<samp|secp256k1-scale>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-scale'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-scale>>:Scalar\<times\>GEJ\<vdash\>GEJ>
+
+  \;
+
+  <paragraph|<samp|secp256k1-generate>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-generate'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-generate>>:Scalar\<vdash\>GEJ>
+
+  \;
+
+  <paragraph|<samp|secp256k1-gej-infinity>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-gej-infinity'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-gej-infinity>>:<1>\<vdash\>GEJ>
+
+  \;
+
+  <paragraph|<samp|secp256k1-gej-normalize>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-gej-normalize'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-gej-normalize>>:GEJ\<vdash\>GE>
+
+  \;
+
+  Returns <math|<around*|(|0,0|)>> when passed infinity.
+
+  \;
+
+  <paragraph|<samp|secp256k1-gej-negate>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-gej-negate'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-gej-negate>>:GEJ\<vdash\>GEJ>
+
+  \;
+
+  <paragraph|<samp|secp256k1-ge-negate>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-ge-negate'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-ge-negate>>:GE\<vdash\>GE>
+
+  \;
+
+  <paragraph|<samp|secp256k1-gej-double>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-gej-double'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-gej-double>>:GEJ\<vdash\>GEJ>
+
+  \;
+
+  <paragraph|<samp|secp256k1-gej-add>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-gej-add'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-gej-add>>:GEJ\<times\>GEJ\<vdash\>GEJ>
+
+  \;
+
+  <paragraph|<samp|secp256k1-gej-ge-add-ex>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-gej-ge-add-ex'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-gej-ge-add-ex>>:GEJ\<times\>GE\<vdash\>FE\<times\>GEJ>
+
+  \;
+
+  <paragraph|<samp|secp256k1-gej-ge-add>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-gej-ge-add'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-gej-ge-add>>:GEJ\<times\>GE\<vdash\>GEJ>
+
+  \;
+
+  <paragraph|<samp|secp256k1-gej-is-infinity>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-gej-is-infinity'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-gej-is-infinity>>:GEJ\<vdash\><2>>
+
+  \;
+
+  <paragraph|<samp|secp256k1-gej-equiv> <with|color|red|Does not exist in
+  libsecp256k1>>
+
+  <with|color|red|Warning: this can be implemented by comparing coordinates
+  (by cross multiplication) or by adding points and testing for infinity.
+  \ However these two implementations yeilds different results for off curve
+  points.>
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-gej-equiv'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-gej-equiv>>:GEJ\<times\>GEJ\<vdash\><2>>
+
+  \;
+
+  <paragraph|<samp|secp256k1-gej-ge-equiv> <with|color|red|Does not exist in
+  libsecp256k1>>
+
+  <with|color|red|Warning: this can be implemented by comparing coordinates
+  (by cross multiplication) or by adding points and testing for infinity.
+  \ However these two implementations yeilds different results for off curve
+  points.>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-gej-ge-equiv'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-gej-ge-equiv>>:GEJ\<times\>GE\<vdash\><2>>
+
+  \;
+
+  <paragraph|<samp|secp256k1-gej-x-equiv>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-gej-x-equiv'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-gej-x-equiv>>:GEJ\<times\>FE\<vdash\><2>>
+
+  \;
+
+  <paragraph|<samp|secp256k1-gej-y-is-odd>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-gej-y-is-odd'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-gej-y-is-odd>>:GEJ\<vdash\><2>>
+
+  \;
+
+  <paragraph|<samp|secp256k1-gej-is-on-curve>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-gej-is-on-curve'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-gej-is-on-curve>>:GEJ\<vdash\><2>>
+
+  \;
+
+  <paragraph|<samp|secp256k1-ge-is-on-curve>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-ge-is-on-curve'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-ge-is-on-curve>>:GEJ\<vdash\><2>>
+
+  \;
+
+  <paragraph|<samp|secp256k1-scalar-normalize>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-scalar-normalize'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-scalar-normalize>>:Scalar\<vdash\>Scalar>
+
+  \;
+
+  <paragraph|<samp|secp256k1-scalar-negate>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-scalar-negate'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|'secp256k1-scalar-negate'>>:Scalar\<vdash\>Scalar>
+
+  \;
+
+  <paragraph|<samp|secp256k1-scalar-add>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-scalar-add'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-scalar-add>>:Scalar\<times\>Scalar\<vdash\>Scalar>
+
+  \;
+
+  <paragraph|<samp|secp256k1-scalar-square>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-scalar-square'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-scalar-square>>:Scalar\<vdash\>Scalar>
+
+  \;
+
+  <paragraph|<samp|secp256k1-scalar-multiply>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-scalar-multiply'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-scalar-multiply>>:Scalar\<times\>Scalar\<vdash\>Scalar>
+
+  \;
+
+  <paragraph|<samp|secp256k1-scalar-multiply-lambda>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-scalar-multiply-lambda'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-scalar-multiply-lambda>>:Scalar\<vdash\>Scalar>
+
+  \;
+
+  <paragraph|<samp|secp256k1-scalar-invert>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-scalar-invert'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-scalar-invert>>:Scalar\<vdash\>Scalar>
+
+  \;
+
+  <paragraph|<samp|secp256k1-scalar-is-zero>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-scalar-is-zero'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-scalar-is-zero>>:Scalar\<vdash\><2>>
+
+  \;
+
+  <paragraph|<samp|secp256k1-ge-scale-lambda>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-ge-scale-lambda'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-ge-scale-lambda>>:GE\<vdash\>GE>
+
+  \;
+
+  <paragraph|<samp|secp256k1-gej-scale-lambda> <with|color|red|Consider
+  removing>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-gej-scale-lambda'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-gej-scale-lambda>>:GEJ\<vdash\>GEJ>
+
+  \;
+
+  <paragraph|<samp|secp256k1-scalar-split-lambda>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-scalar-split-lambda'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-scalar-split-lambda>>:Scalar\<vdash\><2><rsup|129>\<times\><2><rsup|129>>
+
+  \;
+
+  <\with|color|red>
+    TODO Properties:
+
+    <math|\<lambda\>\<cdot\><around*|\<lceil\>|\<pi\><rsub|1><around*|(|<around*|\<llbracket\>|<text|<samp|'secp256k1-scalar-split'>>|\<rrbracket\>><around*|(|x|)>|)>|\<rceil\>><rsub|2<rsup|128>>+<around*|\<lceil\>|\<pi\><rsub|2><around*|(|<around*|\<llbracket\>|<text|<samp|'secp256k1-scalar-split'>>|\<rrbracket\>><around*|(|x|)>|)>|\<rceil\>><rsub|2<rsup|128>>\<equiv\><rsub|Scalar><around*|\<lceil\>|x|\<rceil\>><rsub|2<rsup|256>>>
+  </with>
+
+  \;
+
+  <paragraph|<samp|secp256k1-short-scalar>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-short-scalar'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-short-scalar>>:<2><rsup|129>\<vdash\>Scalar><paragraph|<samp|secp256k1-fe-normalize>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-fe-normalize'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-fe-normalize>>:FE\<vdash\>FE>
+
+  \;
+
+  <paragraph|<samp|secp256k1-fe-negate>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-fe-negate'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-fe-negate>>:FE\<vdash\>FE>
+
+  \;
+
+  <paragraph|<samp|secp256k1-fe-add>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-fe-negate'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-fe-negate>>:FE\<times\>FE\<vdash\>FE>
+
+  \;
+
+  <paragraph|<samp|secp256k1-fe-square>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-fe-square'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-fe-square>>:FE\<vdash\>FE>
+
+  \;
+
+  <paragraph|<samp|secp256k1-fe-multiply>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-fe-multiply'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-fe-multiply>>:FE\<times\>FE\<vdash\>FE>
+
+  \;
+
+  <paragraph|<samp|secp256k1-fe-multiply-beta>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-fe-multiply-beta'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-fe-multiply-beta>>:FE\<vdash\>FE>
+
+  \;
+
+  <paragraph|<samp|secp256k1-fe-invert>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-fe-invert'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-fe-invert>>:FE\<vdash\>FE>
+
+  \;
+
+  <paragraph|<samp|secp256k1-fe-square-root>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-fe-square-root'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-fe-square-root>>:FE\<vdash\><maybe><around*|(|FE|)>>
+
+  \;
+
+  <paragraph|<samp|secp256k1-fe-is-zero>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-fe-is-zero'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-fe-is-zero>>:FE\<vdash\><2>>
+
+  \;
+
+  <paragraph|<samp|secp256k1-fe-is-odd>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-fe-is-odd'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-fe-is-odd>>:FE\<vdash\><2>>
+
+  \;
+
+  <paragraph|<samp|secp256k1-fe-is-quad>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-fe-is-quad'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-fe-is-quad>>:FE\<vdash\><2>>
+
+  <subsection|<verbatim|110110001...: >Jets for digital signatures>
+
+  <subsubsection|<verbatim|1101100010...: >Jets for secp256k1 based digital
+  signatures>
+
+  In this section we define <math|Pubkey\<assign\><2><rsup|256>>,
+  <math|Signature\<assign\><2><rsup|512>>.
+
+  \;
+
+  <paragraph|<samp|bip0340-schnorr-verify>>
+
+  (Note: this jet can fail.)
+
+  <\math>
+    <rep|<text|<samp|'bip0340-schnorr-verify'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|bip0340-schnorr-verify>>:<around*|(|Pubkey\<times\><2><rsup|256>|)>\<times\>Signature\<vdash\><1>>
+
+  \;
+
+  <paragraph|<samp|bip0340-challenge-iv>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'bip0340-challenge-iv'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|bip0340-challenge-iv>>:<1>\<vdash\><2><rsup|256>>
+
+  \;
+
+  <paragraph|<samp|bip0340-challenge-midstate>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'bip0340-challenge-midstate'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <\math>
+    <text|<samp|bip0340-challenge-midstate>>:FE\<times\>Pubkey\<vdash\><2><rsup|256>
+  </math>
+
+  \;
+
+  <paragraph|<samp|secp256k1-signature-unpack>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-signtaure-unpack'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-signature-unpack>>:Signature\<vdash\><maybe><around*|(|FE\<times\>Scalar|)>>
+
+  \;
+
+  <paragraph|<samp|secp256k1-pubkey-unpack>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-pubkey-unpack'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-pubkey-unpack>>:Pubkey\<vdash\><maybe><around*|(|GE|)>>
+
+  \;
+
+  <paragraph|<samp|secp256k1-pubkey-unpack-neg>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'secp256k1-pubkey-unpack-neg'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|secp256k1-pubkey-unpack-neg>>:Pubkey\<vdash\><maybe><around*|(|GE|)>>
+
+  \;
+
+  <paragraph|<samp|secp256k1-ecdsa>>
+
+  \;
+
+  <subsection|<verbatim|110110010...: >Jets for Simplicity>
+
+  Tagged hash IVs for basic simplicity combinators, signature hashes, etc.
+  The CMR of various expressions for constants.
+
+  \;
+
+  These would be use for Simplicity covenants.
+
+  <subsubsection|<verbatim|11011000100...: >Jets for tagged hash IVs>
+
+  <paragraph|<samp|iden-commitment-tag>>
+
+  <paragraph|<samp|comp-commitment-tag>>
+
+  <paragraph|<samp|unit-commitment-tag>>
+
+  <paragraph|<samp|injl-commitment-tag>>
+
+  <paragraph|<samp|injr-commitment-tag>>
+
+  <paragraph|<samp|case-commitment-tag>>
+
+  <paragraph|<samp|pair-commitment-tag>>
+
+  <paragraph|<samp|take-commitment-tag>>
+
+  <paragraph|<samp|drop-commitment-tag>>
+
+  <paragraph|<samp|witness-commitment-tag>>
+
+  <paragraph|<samp|disconnect-commitment-tag>>
+
+  <paragraph|<samp|fail-commitment-tag>>
+
+  <paragraph|<samp|signtaure-tag>>
+
+  \;
+
+  <\math>
+    <rep|<text|<samp|'signature-tag'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>\<cdummy\><rep|<value|paragraph-nr>|>
+  </math>
+
+  <math|<text|<samp|signature-tag>>:<1>\<vdash\><2><rsup|256>>
+
+  \;
+
+  <paragraph|<samp|sighash-tag>>
+
+  <subsection|<verbatim|110110011...: >Jets for Bitcoin (without primitives)>
+
+  This section is not recommended for non-Bitcoin(-like) applications.
+
+  \;
+
+  In this section we define <math|Height\<assign\><2><rsup|32>>,
+  <math|Time\<assign\><2><rsup|32>>, <math|Distance\<assign\><2><rsup|16>>,
+  and <math|Duration = <2><rsup|32>>.
+
+  <subsubsection|<samp|parse-lock>>
+
+  (Note: <math|<around*|\<llbracket\>|<text|<samp|'parse-lock'>>|\<rrbracket\>><around*|\<lfloor\>|0|\<rfloor\>><rsub|32>\<assign\><injl|<around*|(|0|)>>>)
+
+  <math|<rep|<text|<samp|'parse-lock'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|parse-lock>> :<2><rsup|32>\<vdash\>Height+Time>
+
+  <subsubsection|<samp|parse-sequence>>
+
+  \;
+
+  <math|<rep|<text|<samp|'parse-sequence'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|parse-sequence>> :<2><rsup|32>\<vdash\><maybe><around*|(|Distance+Duration|)>>
+
+  <subsection|<verbatim|1101101000...: >Jets for Elements (without
+  primitives)>
+
+  This section is not recommended for non-Elements applications.
+
+  <subsubsection|<samp|generate-entropy>>
+
+  \;
+
+  <math|<rep|<text|<samp|'generate-entropy'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|generate-entropy>> :Outpoint\<times\><2><rsup|256>\<vdash\><2><rsup|256>>
+
+  <subsubsection|<samp|calculate-asset>>
+
+  \;
+
+  <math|<rep|<text|<samp|'calculate-asset'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|calculate-asset>> :<2><rsup|256>\<vdash\>ExplicitAsset>
+
+  <subsubsection|<samp|calculate-token>>
+
+  \;
+
+  <math|<rep|<text|<samp|'calculate-token'>>|>\<assign\><verbatim|<around*|[|110|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|calculate-token>> :<2>\<times\><2><rsup|256>\<vdash\>ExplicitAsset>
+
+  <section|<verbatim|111...: >Bitcoin Jets>
+
+  <subsection|Transaction>
+
+  <\itemize>
+    <item><math|<text|<samp|total-fee>>\<of\><1>\<vdash\>Value>
+  </itemize>
+
+  <subsection|Signature Hash Modes>
+
+  <\itemize>
+    <item><math|<text|<samp|sighash-all>>\<of\><1>\<vdash\><2><rsup|256>>
+
+    <item><math|<text|<samp|sighash-single>>\<of\><1>\<vdash\><2><rsup|256>>
+    (anyone can pay)
+
+    <item><math|<text|<samp|sighash-outputs>>\<of\>Index\<times\><2><rsup|32>\<vdash\><2><rsup|256>>
+    (anyone can pay)
+  </itemize>
+
+  <subsection|Time Locks>
+
+  In this section we define <math|Height\<assign\><2><rsup|32>>,
+  <math|Time\<assign\><2><rsup|32>>, <math|Distance\<assign\><2><rsup|16>>,
+  and <math|Duration = <2><rsup|32>>.
+
+  <subsubsection|<samp|total-height-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'total-height-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|<samp|total-height-lock>>>
+  :<1>\<vdash\><maybe><around*|(|Height|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|x|)>> when <samp|is-final> returns
+  <math|<math-tt|1><rsub|<2>>> and <math|<around*|\<llbracket\>|<text|<samp|parse-lock>>|\<rrbracket\>>\<circ\><around*|\<llbracket\>|<text|<samp|lockTime>>|\<rrbracket\>>>
+  returns <math|<injl|<around*|(|x|)>>>.
+
+  <subsubsection|<samp|total-time-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'total-time-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|total-time-lock>'>>
+  :<1>\<vdash\><maybe><around*|(|Time|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|x|)>> when <samp|is-final> returns
+  <math|<math-tt|1><rsub|<2>>> and <math|<around*|\<llbracket\>|<text|<samp|parse-lock>>|\<rrbracket\>>\<circ\><around*|\<llbracket\>|<text|<samp|lockTime>>|\<rrbracket\>>>
+  returns <math|<injr|<around*|(|x|)>>>.
+
+  <subsubsection|<samp|total-distance-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'total-distance-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|total-distance-lock>'>>
+  :<1>\<vdash\><maybe><around*|(|Distance|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|x|)>> where <math|x> is the largest
+  among the <math|\<eta\><rsup|S><around*|(|\<eta\><rsup|S><around*|(|x|)>|)>>
+  returned by <samp|input-distance-lock> on any inputs, if any such values
+  are returned.
+
+  <subsubsection|<samp|total-duration-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'total-duration-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|total-duration-lock>'>>
+  :<1>\<vdash\><maybe><around*|(|Duration|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|x|)>> where <math|x> is the largest
+  among the <math|\<eta\><rsup|S><around*|(|\<eta\><rsup|S><around*|(|x|)>|)>>
+  returned by <samp|input-duration-lock> on any inputs, if any such values
+  are returned.
+
+  <subsubsection|<samp|is-final>>
+
+  \;
+
+  <math|<rep|<text|<samp|'is-final'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|is-final>'>> :<1>\<vdash\><2>>
+
+  \;
+
+  Returns <math|<math-tt|1><rsub|<2>>> when <samp|input-is-final> returns
+  <math|\<eta\><rsup|S><around*|(|<math-tt|1><rsub|<2>>|)>> for all inputs.
+
+  <subsubsection|<samp|current-height-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'current-height-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|current-height-lock>'>>
+  :<1>\<vdash\><maybe><around*|(|Height|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|x|)>> when <samp|current-is-final>
+  returns <math|<math-tt|1><rsub|<2>>> and
+  <math|<around*|\<llbracket\>|<text|<samp|parse-lock>>|\<rrbracket\>>\<circ\><around*|\<llbracket\>|<text|<samp|lockTime>>|\<rrbracket\>>>
+  returns <math|<injl|<around*|(|x|)>>>.
+
+  <subsubsection|<samp|current-time-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'current-time-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|current-time-lock>'>>
+  :<1>\<vdash\><maybe><around*|(|Time|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|x|)>> when <samp|current-is-final>
+  returns <math|<math-tt|1><rsub|<2>>> and
+  <math|<around*|\<llbracket\>|<text|<samp|parse-lock>>|\<rrbracket\>>\<circ\><around*|\<llbracket\>|<text|<samp|lockTime>>|\<rrbracket\>>>
+  returns <math|<injr|<around*|(|x|)>>>.
+
+  <subsubsection|<samp|current-distance-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'current-distance-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|current-distance-lock>'>>
+  :<1>\<vdash\><maybe><around*|(|Distance|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|x|)>> when
+  <math|<around*|\<llbracket\>|<text|<samp|parse-sequence>>|\<rrbracket\>>\<circ\><around*|\<llbracket\>|<text|<samp|currentSequence>>|\<rrbracket\>>>
+  returns <math|<injl|<around*|(|x|)>>>.
+
+  <subsubsection|<samp|current-duration-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'current-duration-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|current-duration-lock>'>>
+  :<1>\<vdash\><maybe><around*|(|Duration|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|\<eta\><rsup|S><around*|(|x|)>|)>>
+  when <math|<around*|\<llbracket\>|<text|<samp|parse-sequence>>|\<rrbracket\>>\<circ\><around*|\<llbracket\>|<text|<samp|currentSequence>>|\<rrbracket\>>>
+  returns <math|<injr|<around*|(|x|)>>>.
+
+  <subsubsection|<samp|current-is-Final>>
+
+  \;
+
+  <math|<rep|<text|<samp|'current-is-final'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|current-is-final>'>> :<1>\<vdash\><2>>
+
+  \;
+
+  Returns <math-tt|1><rsub|<2>> when <math|<around*|\<llbracket\>|<text|<samp|<math|currentSequence>>>|\<rrbracket\>>>
+  returns <math|<around*|\<lfloor\>|2<rsup|32>-1|\<rfloor\>>>.
+
+  <subsubsection|<samp|input-height-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'input-height-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|input-height-lock>'>>
+  :Index\<vdash\><maybe><around*|(|<maybe><around*|(|Height|)>|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|\<eta\><rsup|S><around*|(|x|)>|)>>
+  when <samp|input-is-final> returns <math|\<eta\><rsup|S><around*|(|<math-tt|1><rsub|<2>>|)>>
+  and <math|<around*|\<llbracket\>|<text|<samp|parse-lock>>|\<rrbracket\>>\<circ\><around*|\<llbracket\>|<text|<samp|lockTime>>|\<rrbracket\>>>
+  returns <math|<injl|<around*|(|x|)>>>.
+
+  Returns <math|\<emptyset\><rsup|<maybe>>> when the input index is out of
+  range.
+
+  <subsubsection|<samp|input-time-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'input-time-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|input-time-lock>'>>
+  :Index\<vdash\><maybe><around*|(|<maybe><around*|(|Time|)>|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|\<eta\><rsup|S><around*|(|x|)>|)>>
+  when <samp|input-is-final> returns <math|\<eta\><rsup|S><around*|(|<math-tt|1><rsub|<2>>|)>>
+  and <math|<around*|\<llbracket\>|<text|<samp|parse-lock>>|\<rrbracket\>>\<circ\><around*|\<llbracket\>|<text|<samp|lockTime>>|\<rrbracket\>>>
+  returns <math|<injr|<around*|(|x|)>>>.
+
+  Returns <math|\<emptyset\><rsup|<maybe>>> when the input index is out of
+  range.
+
+  <subsubsection|<samp|input-distance-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'input-distance-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|input-distance-lock>'>>
+  :Index\<vdash\><maybe><around*|(|<maybe><around*|(|Distance|)>|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|\<eta\><rsup|S><around*|(|x|)>|)>>
+  when <math|<maybe><around*|\<llbracket\>|<text|<samp|parse-sequence>>|\<rrbracket\>>\<circ\><around*|\<llbracket\>|<text|<samp|inputSequence>>|\<rrbracket\>>>
+  returns <math|\<eta\><rsup|S><around*|(|<injl|<around*|(|x|)>>|)>>.
+
+  Returns <math|\<emptyset\><rsup|<maybe>>> when the input index is out of
+  range.
+
+  <subsubsection|<samp|input-duration-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'input-duration-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|input-duration-lock>'>>
+  :Index\<vdash\><maybe><around*|(|<maybe><around*|(|Duration|)>|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|\<eta\><rsup|S><around*|(|x|)>|)>>
+  when <math|<maybe><around*|\<llbracket\>|<text|<samp|parse-sequence>>|\<rrbracket\>>\<circ\><around*|\<llbracket\>|<text|<samp|inputSequence>>|\<rrbracket\>>>
+  returns <math|\<eta\><rsup|S><around*|(|<injr|<around*|(|x|)>>|)>>.
+
+  Returns <math|\<emptyset\><rsup|<maybe>>> when the input index is out of
+  range.
+
+  <subsubsection|<samp|input-is-final>>
+
+  \;
+
+  <math|<rep|<text|<samp|'input-is-final'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|input-is-final>'>>
+  :Index\<vdash\><maybe><around*|(|<2>|)>>
+
+  \;
+
+  Returns \<eta\><rsup|S><around*|(|<math-tt|1><rsub|<2>>|)> when
+  <math|<around*|\<llbracket\>|<text|<samp|<math|inputSequence>>>|\<rrbracket\>>>
+  returns \<eta\><rsup|S><around*|(|<math|<around*|\<lfloor\>|2<rsup|32>-1|\<rfloor\>>>|)>.
+
+  Returns <math|\<emptyset\><rsup|<maybe>>> when the input index is out of
+  range.
+
+  <em|><section|<verbatim|111...: >Elements Jets>
+
+  <subsection|Transaction>
+
+  <\itemize>
+    <item><math|<text|<samp|'<samp|outputIsFee>'>>
+    :Index\<vdash\><maybe><around*|(|<2>|)>>
+  </itemize>
+
+  <\itemize>
+    <item><math|<samp|sigHashAll>\<of\><1>\<vdash\><2><rsup|256>>
+
+    <item><math|<samp|sigHashSingle>\<of\><1>\<vdash\><2><rsup|256>> (anyone
+    can pay)
+
+    <item><math|<samp|sigHashOutputs>\<of\>Index\<times\><2><rsup|32>\<vdash\><2><rsup|256>>
+    (anyone can pay)
+  </itemize>
+
+  <subsection|Time Locks>
+
+  In this section we define <math|Height\<assign\><2><rsup|32>>,
+  <math|Time\<assign\><2><rsup|32>>, <math|Distance\<assign\><2><rsup|16>>,
+  and <math|Duration = <2><rsup|32>>.
+
+  <subsubsection|<samp|total-height-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'total-height-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|total-height-lock>'>>
+  :<1>\<vdash\><maybe><around*|(|Height|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|x|)>> when <samp|is-final> returns
+  <math|<math-tt|1><rsub|<2>>> and <math|<around*|\<llbracket\>|<text|<samp|parse-lock>>|\<rrbracket\>>\<circ\><around*|\<llbracket\>|<text|<samp|lockTime>>|\<rrbracket\>>>
+  returns <math|<injl|<around*|(|x|)>>>.
+
+  <subsubsection|<samp|total-time-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'total-time-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|total-time-lock>'>>
+  :<1>\<vdash\><maybe><around*|(|Time|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|x|)>> when <samp|is-final> returns
+  <math|<math-tt|1><rsub|<2>>> and <math|<around*|\<llbracket\>|<text|<samp|parse-lock>>|\<rrbracket\>>\<circ\><around*|\<llbracket\>|<text|<samp|lockTime>>|\<rrbracket\>>>
+  returns <math|<injr|<around*|(|x|)>>>.
+
+  <subsubsection|<samp|total-distance-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'total-distance-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|total-distance-lock>'>>
+  :<1>\<vdash\><maybe><around*|(|Distance|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|x|)>> where <math|x> is the largest
+  among the <math|\<eta\><rsup|S><around*|(|\<eta\><rsup|S><around*|(|x|)>|)>>
+  returned by <samp|input-distance-lock> on any inputs, if any such values
+  are returned.
+
+  <subsubsection|<samp|total-duration-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'total-duration-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|total-duration-lock>'>>
+  :<1>\<vdash\><maybe><around*|(|Duration|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|x|)>> where <math|x> is the largest
+  among the <math|\<eta\><rsup|S><around*|(|\<eta\><rsup|S><around*|(|x|)>|)>>
+  returned by <samp|input-duration-lock> on any inputs, if any such values
+  are returned.
+
+  <subsubsection|<samp|is-final>>
+
+  \;
+
+  <math|<rep|<text|<samp|'is-final'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|is-final>'>> :<1>\<vdash\><2>>
+
+  \;
+
+  Returns <math|<math-tt|1><rsub|<2>>> when <samp|input-is-final> returns
+  <math|\<eta\><rsup|S><around*|(|<math-tt|1><rsub|<2>>|)>> for all inputs.
+
+  <subsubsection|<samp|current-height-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'current-height-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|current-height-lock>'>>
+  :<1>\<vdash\><maybe><around*|(|Height|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|x|)>> when <samp|current-is-final>
+  returns <math|<math-tt|1><rsub|<2>>> and
+  <math|<around*|\<llbracket\>|<text|<samp|parse-lock>>|\<rrbracket\>>\<circ\><around*|\<llbracket\>|<text|<samp|lockTime>>|\<rrbracket\>>>
+  returns <math|<injl|<around*|(|x|)>>>.
+
+  <subsubsection|<samp|current-time-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'current-time-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|current-time-lock>'>>
+  :<1>\<vdash\><maybe><around*|(|Time|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|x|)>> when <samp|current-is-final>
+  returns <math|<math-tt|1><rsub|<2>>> and
+  <math|<around*|\<llbracket\>|<text|<samp|parse-lock>>|\<rrbracket\>>\<circ\><around*|\<llbracket\>|<text|<samp|lockTime>>|\<rrbracket\>>>
+  returns <math|<injr|<around*|(|x|)>>>.
+
+  <subsubsection|<samp|current-distance-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'current-distance-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|current-distance-lock>'>>
+  :<1>\<vdash\><maybe><around*|(|Distance|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|x|)>> when
+  <math|<around*|\<llbracket\>|<text|<samp|parse-sequence>>|\<rrbracket\>>\<circ\><around*|\<llbracket\>|<text|<samp|currentSequence>>|\<rrbracket\>>>
+  returns <math|<injl|<around*|(|x|)>>>.
+
+  <subsubsection|<samp|current-duration-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'current-duration-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|current-duration-lock>'>>
+  :<1>\<vdash\><maybe><around*|(|Duration|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|\<eta\><rsup|S><around*|(|x|)>|)>>
+  when <math|<around*|\<llbracket\>|<text|<samp|parse-sequence>>|\<rrbracket\>>\<circ\><around*|\<llbracket\>|<text|<samp|currentSequence>>|\<rrbracket\>>>
+  returns <math|<injr|<around*|(|x|)>>>.
+
+  <subsubsection|<samp|current-is-Final>>
+
+  \;
+
+  <math|<rep|<text|<samp|'current-is-final'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|current-is-final>'>> :<1>\<vdash\><2>>
+
+  \;
+
+  Returns <math-tt|1><rsub|<2>> when <math|<around*|\<llbracket\>|<text|<samp|<math|currentSequence>>>|\<rrbracket\>>>
+  returns <math|<around*|\<lfloor\>|2<rsup|32>-1|\<rfloor\>>>.
+
+  <subsubsection|<samp|input-height-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'input-height-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|input-height-lock>'>>
+  :Index\<vdash\><maybe><around*|(|<maybe><around*|(|Height|)>|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|\<eta\><rsup|S><around*|(|x|)>|)>>
+  when <samp|input-is-final> returns <math|\<eta\><rsup|S><around*|(|<math-tt|1><rsub|<2>>|)>>
+  and <math|<around*|\<llbracket\>|<text|<samp|parse-lock>>|\<rrbracket\>>\<circ\><around*|\<llbracket\>|<text|<samp|lockTime>>|\<rrbracket\>>>
+  returns <math|<injl|<around*|(|x|)>>>.
+
+  Returns <math|\<emptyset\><rsup|<maybe>>> when the input index is out of
+  range.
+
+  <subsubsection|<samp|input-time-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'input-time-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|input-time-lock>'>>
+  :Index\<vdash\><maybe><around*|(|<maybe><around*|(|Time|)>|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|\<eta\><rsup|S><around*|(|x|)>|)>>
+  when <samp|input-is-final> returns <math|\<eta\><rsup|S><around*|(|<math-tt|1><rsub|<2>>|)>>
+  and <math|<around*|\<llbracket\>|<text|<samp|parse-lock>>|\<rrbracket\>>\<circ\><around*|\<llbracket\>|<text|<samp|lockTime>>|\<rrbracket\>>>
+  returns <math|<injr|<around*|(|x|)>>>.
+
+  Returns <math|\<emptyset\><rsup|<maybe>>> when the input index is out of
+  range.
+
+  <subsubsection|<samp|input-distance-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'input-distance-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|input-distance-lock>'>>
+  :Index\<vdash\><maybe><around*|(|<maybe><around*|(|Distance|)>|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|\<eta\><rsup|S><around*|(|x|)>|)>>
+  when <math|<maybe><around*|\<llbracket\>|<text|<samp|parse-sequence>>|\<rrbracket\>>\<circ\><around*|\<llbracket\>|<text|<samp|inputSequence>>|\<rrbracket\>>>
+  returns <math|\<eta\><rsup|S><around*|(|<injl|<around*|(|x|)>>|)>>.
+
+  Returns <math|\<emptyset\><rsup|<maybe>>> when the input index is out of
+  range.
+
+  <subsubsection|<samp|input-duration-lock>>
+
+  \;
+
+  <math|<rep|<text|<samp|'input-duration-lock'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|input-duration-lock>'>>
+  :Index\<vdash\><maybe><around*|(|<maybe><around*|(|Duration|)>|)>>
+
+  \;
+
+  Returns <math|\<eta\><rsup|S><around*|(|\<eta\><rsup|S><around*|(|x|)>|)>>
+  when <math|<maybe><around*|\<llbracket\>|<text|<samp|parse-sequence>>|\<rrbracket\>>\<circ\><around*|\<llbracket\>|<text|<samp|inputSequence>>|\<rrbracket\>>>
+  returns <math|\<eta\><rsup|S><around*|(|<injr|<around*|(|x|)>>|)>>.
+
+  Returns <math|\<emptyset\><rsup|<maybe>>> when the input index is out of
+  range.
+
+  <subsubsection|<samp|input-is-final>>
+
+  \;
+
+  <math|<rep|<text|<samp|'input-is-final'>>|>\<assign\><verbatim|<around*|[|111|]>><rsub|<2>>\<cdummy\><rep|<value|subsection-nr>|>\<cdummy\><rep|<value|subsubsection-nr>|>>
+
+  <math|<text|<samp|'<samp|input-is-final>'>>
+  :Index\<vdash\><maybe><around*|(|<2>|)>>
+
+  \;
+
+  Returns \<eta\><rsup|S><around*|(|<math-tt|1><rsub|<2>>|)> when
+  <math|<around*|\<llbracket\>|<text|<samp|<math|inputSequence>>>|\<rrbracket\>>>
+  returns \<eta\><rsup|S><around*|(|<math|<around*|\<lfloor\>|2<rsup|32>-1|\<rfloor\>>>|)>.
+
+  Returns <math|\<emptyset\><rsup|<maybe>>> when the input index is out of
+  range.
+
+  <subsection|Issuance>
 
   Notes: use <samp|IssuanceContractHash> and <samp|IssuanceEntropy> to decide
   which issuance kind, if any, is being invoked.
 
-  <with|color|red|We also want jets for computing AssetIDs and TokenIDs from
-  entropy and probably also from contractHash.><appendix|Alternative
-  Serialization of Simplicity DAGs><label|app:AltSerialization>
+  <\itemize>
+    <item><math|<samp|currentIssuance>\<of\><value|1>\<vdash\><maybe><around*|(|<2>|)>><with|color|red|Either
+    a new issuance or reissuance or neither>
+
+    <item><math|<samp|currentIssuanceAsset>\<of\><value|1>\<vdash\><maybe><around*|(|ExplicitAsset|)>>
+
+    <item><math|<samp|currentIssuanceToken>\<of\><value|1>\<vdash\><maybe><around*|(|ExplicitAsset|)>>
+
+    <item><math|<samp|inputIssuance>\<of\>Index\<vdash\><maybe><around*|(|<maybe><around*|(|<2>|)>|)>>
+
+    <item><math|<samp|inputIssuanceAsset>\<of\>Index\<vdash\><maybe><around*|(|<maybe><around*|(|ExplicitAsset|)>|)>>
+
+    <item><math|<samp|inputIssuanceToken>\<of\>Index\<vdash\><maybe><around*|(|<maybe><around*|(|ExplicitAsset|)>|)>>
+
+    \;
+  </itemize>
+
+  <appendix|Alternative Serialization of Simplicity
+  DAGs><label|app:AltSerialization>
 
   <with|color|red|DEPRICATED>
 
@@ -7766,13 +11474,13 @@
       <slink|https://en.wikipedia.org/w/index.php?title=F-algebraoldid=814231684>,
       2017.<newblock>
 
-      <bibitem*|17><label|bib-bip-schnorr>P.<nbsp>Wuille.<newblock>
-      Bip-schnorr.<newblock> 2018.<newblock>
-      <slink|Https://github.com/sipa/bips/blob/bip-schnorr/bip-schnorr.mediawiki>.<newblock>
-
-      <bibitem*|18><label|bib-libsecp256k1>P.<nbsp>Wuille.<newblock>
+      <bibitem*|17><label|bib-libsecp256k1>P.<nbsp>Wuille.<newblock>
       Libsecp256k1.<newblock> <slink|https://github.com/bitcoin-core/secp256k1/tree/1e6f1f5ad5e7f1e3ef79313ec02023902bf8175c>,
       May 2018.<newblock>
+
+      <bibitem*|18><label|bib-bip-0340>P.<nbsp>Wuille, J.<nbsp>Nick<localize|
+      and >T.<nbsp>Ruffing.<newblock> Bip-0340.<newblock> 2020.<newblock>
+      <slink|Https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki>.<newblock>
     </bib-list>
   </bibliography>
 </body>
@@ -7788,258 +11496,454 @@
 
 <\references>
   <\collection>
-    <associate|LC218|<tuple|6.2.2|?>>
-    <associate|LC219|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
-    <associate|LC267|<tuple|6.1|?>>
-    <associate|LC313|<tuple|6.5|?>>
-    <associate|LC42|<tuple|6.5|?>>
-    <associate|LC98|<tuple|6.2.2|?>>
-    <associate|SS:Coq:MerkleRoots|<tuple|8.5|71>>
-    <associate|Serialization|<tuple|2.8|?>>
-    <associate|app:AltSerialization|<tuple|B|95>>
-    <associate|app:ElementsTransactions|<tuple|A|87>>
-    <associate|auto-1|<tuple|1|7>>
-    <associate|auto-10|<tuple|2.2|13>>
-    <associate|auto-100|<tuple|7.1.1|62>>
-    <associate|auto-101|<tuple|7.1.2|63>>
-    <associate|auto-102|<tuple|7.1.2.1|65>>
-    <associate|auto-103|<tuple|7.1.2.2|65>>
-    <associate|auto-104|<tuple|7.2|65>>
-    <associate|auto-105|<tuple|7.2.1|65>>
-    <associate|auto-106|<tuple|7.2.2|65>>
-    <associate|auto-107|<tuple|8|66>>
-    <associate|auto-108|<tuple|8.1|66>>
-    <associate|auto-109|<tuple|8.2|67>>
-    <associate|auto-11|<tuple|2.2.1|13>>
-    <associate|auto-110|<tuple|8.2.1|67>>
-    <associate|auto-111|<tuple|8.2.2|67>>
-    <associate|auto-112|<tuple|8.2.2.1|67>>
-    <associate|auto-113|<tuple|8.2.2.2|67>>
-    <associate|auto-114|<tuple|8.2.2.3|68>>
-    <associate|auto-115|<tuple|8.2.3|68>>
-    <associate|auto-116|<tuple|8.3|68>>
-    <associate|auto-117|<tuple|8.3.1|69>>
-    <associate|auto-118|<tuple|8.3.2|69>>
-    <associate|auto-119|<tuple|8.3.3|69>>
-    <associate|auto-12|<tuple|2.2.2|13>>
-    <associate|auto-120|<tuple|8.4|70>>
-    <associate|auto-121|<tuple|8.1|70>>
-    <associate|auto-122|<tuple|8.4.1|70>>
-    <associate|auto-123|<tuple|8.4.2|71>>
-    <associate|auto-124|<tuple|8.4.3|71>>
-    <associate|auto-125|<tuple|8.4.4|71>>
-    <associate|auto-126|<tuple|8.4.4.1|72>>
-    <associate|auto-127|<tuple|8.4.5|72>>
-    <associate|auto-128|<tuple|8.4.6|73>>
-    <associate|auto-129|<tuple|8.5|73>>
-    <associate|auto-13|<tuple|2.3|15>>
-    <associate|auto-130|<tuple|8.6|75>>
-    <associate|auto-131|<tuple|8.6.1|75>>
-    <associate|auto-132|<tuple|8.6.1.1|75>>
-    <associate|auto-133|<tuple|8.6.2|76>>
-    <associate|auto-134|<tuple|8.6.3|77>>
-    <associate|auto-135|<tuple|9|77>>
-    <associate|auto-136|<tuple|9.1|77>>
-    <associate|auto-137|<tuple|9.1.1|77>>
-    <associate|auto-138|<tuple|9.1.2|77>>
-    <associate|auto-139|<tuple|9.1.3|77>>
-    <associate|auto-14|<tuple|2.3.1|15>>
-    <associate|auto-140|<tuple|9.1.4|78>>
-    <associate|auto-141|<tuple|9.1.5|78>>
-    <associate|auto-142|<tuple|9.1.5.1|78>>
-    <associate|auto-143|<tuple|9.1.5.2|78>>
-    <associate|auto-144|<tuple|9.1.5.3|79>>
-    <associate|auto-145|<tuple|9.1.5.4|79>>
-    <associate|auto-146|<tuple|9.1.6|79>>
-    <associate|auto-147|<tuple|9.1.6.1|80>>
-    <associate|auto-148|<tuple|9.1.6.2|80>>
-    <associate|auto-149|<tuple|9.1.6.3|80>>
-    <associate|auto-15|<tuple|2.3.2|16>>
-    <associate|auto-150|<tuple|9.1.7|80>>
-    <associate|auto-151|<tuple|9.1.7.1|81>>
-    <associate|auto-152|<tuple|9.1.7.2|81>>
-    <associate|auto-153|<tuple|9.2|81>>
-    <associate|auto-154|<tuple|9.2.1|82>>
-    <associate|auto-155|<tuple|9.2.2|83>>
-    <associate|auto-156|<tuple|9.2.3|83>>
-    <associate|auto-157|<tuple|9.2.4|84>>
-    <associate|auto-158|<tuple|9.2.5|84>>
-    <associate|auto-159|<tuple|9.2.6|84>>
-    <associate|auto-16|<tuple|2.3.3|16>>
-    <associate|auto-160|<tuple|9.2.6.1|85>>
-    <associate|auto-161|<tuple|9.2.6.2|87>>
-    <associate|auto-162|<tuple|9.3|89>>
-    <associate|auto-163|<tuple|9.4|92>>
-    <associate|auto-164|<tuple|9.4.1|93>>
-    <associate|auto-165|<tuple|9.4.2|93>>
-    <associate|auto-166|<tuple|9.5|94>>
-    <associate|auto-167|<tuple|10|95>>
-    <associate|auto-168|<tuple|A|97>>
-    <associate|auto-169|<tuple|A.1|?>>
-    <associate|auto-17|<tuple|2.3.4|16>>
-    <associate|auto-170|<tuple|A.1.1|?>>
-    <associate|auto-171|<tuple|A.1.2|?>>
-    <associate|auto-172|<tuple|A.1.3|?>>
-    <associate|auto-173|<tuple|A.2|?>>
-    <associate|auto-174|<tuple|B|?>>
-    <associate|auto-175|<tuple|B|?>>
-    <associate|auto-18|<tuple|2.3.4.1|17>>
-    <associate|auto-19|<tuple|2.4|17>>
-    <associate|auto-2|<tuple|1.1|7>>
-    <associate|auto-20|<tuple|2.4.1|18>>
-    <associate|auto-21|<tuple|2.4.2|18>>
-    <associate|auto-22|<tuple|3|19>>
-    <associate|auto-23|<tuple|3.1|19>>
-    <associate|auto-24|<tuple|3.1.1|19>>
-    <associate|auto-25|<tuple|3.1.2|19>>
-    <associate|auto-26|<tuple|3.1.3|19>>
-    <associate|auto-27|<tuple|3.2|20>>
-    <associate|auto-28|<tuple|3.2.1|20>>
-    <associate|auto-29|<tuple|3.2.2|20>>
-    <associate|auto-3|<tuple|1.2|8>>
-    <associate|auto-30|<tuple|3.2.3|20>>
-    <associate|auto-31|<tuple|3.2.4|20>>
-    <associate|auto-32|<tuple|3.2.5|21>>
-    <associate|auto-33|<tuple|3.2.6|21>>
-    <associate|auto-34|<tuple|3.2.7|21>>
-    <associate|auto-35|<tuple|3.2.8|21>>
-    <associate|auto-36|<tuple|3.2.9|21>>
-    <associate|auto-37|<tuple|3.2.10|21>>
-    <associate|auto-38|<tuple|3.2.11|22>>
-    <associate|auto-39|<tuple|3.3|22>>
-    <associate|auto-4|<tuple|1.2.1|8>>
-    <associate|auto-40|<tuple|3.3.1|22>>
-    <associate|auto-41|<tuple|3.3.2|23>>
-    <associate|auto-42|<tuple|3.3.3|23>>
-    <associate|auto-43|<tuple|3.3.4|24>>
-    <associate|auto-44|<tuple|3.3.5|26>>
-    <associate|auto-45|<tuple|3.3.6|26>>
-    <associate|auto-46|<tuple|3.3.7|27>>
-    <associate|auto-47|<tuple|3.3.7.1|27>>
-    <associate|auto-48|<tuple|3.3.7.2|28>>
-    <associate|auto-49|<tuple|3.3.7.3|30>>
-    <associate|auto-5|<tuple|1.2.2|8>>
-    <associate|auto-50|<tuple|3.4|30>>
-    <associate|auto-51|<tuple|3.5|31>>
-    <associate|auto-52|<tuple|3.5.1|31>>
-    <associate|auto-53|<tuple|3.5.2|31>>
-    <associate|auto-54|<tuple|3.1|32>>
-    <associate|auto-55|<tuple|3.5.2.1|32>>
-    <associate|auto-56|<tuple|3.5.2.2|32>>
-    <associate|auto-57|<tuple|3.5.2.3|33>>
-    <associate|auto-58|<tuple|3.5.2.4|33>>
-    <associate|auto-59|<tuple|3.5.2.5|33>>
-    <associate|auto-6|<tuple|1.2.3|9>>
-    <associate|auto-60|<tuple|3.5.2.6|34>>
-    <associate|auto-61|<tuple|3.5.3|34>>
-    <associate|auto-62|<tuple|3.5.3.1|35>>
-    <associate|auto-63|<tuple|3.6|36>>
-    <associate|auto-64|<tuple|3.6.1|36>>
-    <associate|auto-65|<tuple|3.6.1.1|36>>
-    <associate|auto-66|<tuple|3.6.1.2|39>>
-    <associate|auto-67|<tuple|3.6.2|39>>
-    <associate|auto-68|<tuple|3.7|39>>
-    <associate|auto-69|<tuple|4|41>>
-    <associate|auto-7|<tuple|2|11>>
-    <associate|auto-70|<tuple|4.1|41>>
-    <associate|auto-71|<tuple|4.2|42>>
-    <associate|auto-72|<tuple|4.2.1|42>>
-    <associate|auto-73|<tuple|4.2.2|42>>
-    <associate|auto-74|<tuple|4.2.3|42>>
-    <associate|auto-75|<tuple|4.3|42>>
-    <associate|auto-76|<tuple|4.3.1|43>>
-    <associate|auto-77|<tuple|4.3.2|43>>
-    <associate|auto-78|<tuple|4.3.2.1|44>>
-    <associate|auto-79|<tuple|4.3.2.2|44>>
-    <associate|auto-8|<tuple|2.1|11>>
-    <associate|auto-80|<tuple|4.4|45>>
-    <associate|auto-81|<tuple|4.4.1|45>>
-    <associate|auto-82|<tuple|4.4.1.1|47>>
-    <associate|auto-83|<tuple|4.4.1.2|48>>
-    <associate|auto-84|<tuple|4.5|48>>
-    <associate|auto-85|<tuple|4.5.1|48>>
-    <associate|auto-86|<tuple|4.6|49>>
-    <associate|auto-87|<tuple|4.7|49>>
-    <associate|auto-88|<tuple|4.7.1|49>>
-    <associate|auto-89|<tuple|5|51>>
-    <associate|auto-9|<tuple|2.1.1|13>>
-    <associate|auto-90|<tuple|6|53>>
-    <associate|auto-91|<tuple|6.1|54>>
-    <associate|auto-92|<tuple|6.1.1|56>>
-    <associate|auto-93|<tuple|6.1.1.1|57>>
-    <associate|auto-94|<tuple|6.2|57>>
-    <associate|auto-95|<tuple|6.2.1|59>>
-    <associate|auto-96|<tuple|6.3|61>>
-    <associate|auto-97|<tuple|6.3.1|61>>
-    <associate|auto-98|<tuple|7|62>>
-    <associate|auto-99|<tuple|7.1|62>>
-    <associate|bib-Appel:2015|<tuple|1|97>>
-    <associate|bib-Carette:2009|<tuple|3|97>>
-    <associate|bib-Coq:manual|<tuple|5|97>>
-    <associate|bib-King1993|<tuple|8|97>>
-    <associate|bib-Mahboubi:2013|<tuple|9|97>>
-    <associate|bib-Mairson:1989|<tuple|10|97>>
-    <associate|bib-bip-schnorr|<tuple|17|97>>
-    <associate|bib-bitcoin|<tuple|11|97>>
-    <associate|bib-f-algebra|<tuple|16|97>>
-    <associate|bib-garillot:2009|<tuple|6|97>>
-    <associate|bib-gentzen|<tuple|7|97>>
-    <associate|bib-libsecp256k1|<tuple|18|97>>
-    <associate|bib-oconnor2014|<tuple|14|97>>
-    <associate|bib-satoshiScript|<tuple|12|97>>
-    <associate|bib-script|<tuple|2|97>>
-    <associate|bib-sec2|<tuple|4|97>>
-    <associate|bib-sha|<tuple|13|97>>
-    <associate|bib-unification|<tuple|15|97>>
-    <associate|chapter:preliminaries|<tuple|2|11>>
-    <associate|cite_ref-Martelli.Montanari.1976_16-1|<tuple|6.1.1|?>>
-    <associate|fig:inheritance|<tuple|8.1|68>>
-    <associate|footnote-1|<tuple|1|?>>
-    <associate|footnote-2.1|<tuple|2.1|16>>
-    <associate|footnote-2.2|<tuple|2.2|23>>
-    <associate|footnote-3.1|<tuple|3.1|27>>
-    <associate|footnote-3.2|<tuple|3.2|32>>
-    <associate|footnr-2.1|<tuple|2.1|16>>
-    <associate|footnr-2.2|<tuple|2.2|23>>
-    <associate|footnr-3.1|<tuple|3.1|27>>
-    <associate|footnr-3.2|<tuple|3.2|32>>
-    <associate|full-adder-LHS|<tuple|3.3|26>>
-    <associate|full-adder-RHS|<tuple|3.2|25>>
-    <associate|full-adder-spec|<tuple|3.1|25>>
-    <associate|ss:AssertMerkleRoot|<tuple|4.3.2|43>>
-    <associate|ss:BTDenotationalSemantics|<tuple|4.4.1.1|47>>
-    <associate|ss:BTMerkleRoots|<tuple|4.4.1.2|48>>
-    <associate|ss:BitcoinPrimitives|<tuple|9.3|83>>
-    <associate|ss:BitcoinTransactions|<tuple|4.4.1|45>>
-    <associate|ss:CheckSigHash-Haskell|<tuple|9.1.6.3|?>>
-    <associate|ss:DAGs|<tuple|7.1|57>>
-    <associate|ss:DenotationalSemanticsOfFullSimplicity|<tuple|9.2.3|80>>
-    <associate|ss:Deserialization|<tuple|6.2|?>>
-    <associate|ss:ELDenotationalSemantics|<tuple|A.1|89>>
-    <associate|ss:FreeMonadicDeserialization|<tuple|9.2.6.1|82>>
+    <associate|SS:Coq:MerkleRoots|<tuple|8.5|?>>
+    <associate|app:AltSerialization|<tuple|C|?>>
+    <associate|app:ElementsTransactions|<tuple|A|?>>
+    <associate|auto-1|<tuple|1|?>>
+    <associate|auto-10|<tuple|2.2|?>>
+    <associate|auto-100|<tuple|7.1|?>>
+    <associate|auto-101|<tuple|7.1.1|?>>
+    <associate|auto-102|<tuple|7.1.2|?>>
+    <associate|auto-103|<tuple|7.1.2.1|?>>
+    <associate|auto-104|<tuple|7.1.2.2|?>>
+    <associate|auto-105|<tuple|7.2|?>>
+    <associate|auto-106|<tuple|7.2.1|?>>
+    <associate|auto-107|<tuple|7.2.2|?>>
+    <associate|auto-108|<tuple|7.2.3|?>>
+    <associate|auto-109|<tuple|8|?>>
+    <associate|auto-11|<tuple|2.2.1|?>>
+    <associate|auto-110|<tuple|8.1|?>>
+    <associate|auto-111|<tuple|8.2|?>>
+    <associate|auto-112|<tuple|8.2.1|?>>
+    <associate|auto-113|<tuple|8.2.2|?>>
+    <associate|auto-114|<tuple|8.2.2.1|?>>
+    <associate|auto-115|<tuple|8.2.2.2|?>>
+    <associate|auto-116|<tuple|8.2.2.3|?>>
+    <associate|auto-117|<tuple|8.2.3|?>>
+    <associate|auto-118|<tuple|8.3|?>>
+    <associate|auto-119|<tuple|8.3.1|?>>
+    <associate|auto-12|<tuple|2.2.2|?>>
+    <associate|auto-120|<tuple|8.3.2|?>>
+    <associate|auto-121|<tuple|8.3.3|?>>
+    <associate|auto-122|<tuple|8.4|?>>
+    <associate|auto-123|<tuple|8.1|?>>
+    <associate|auto-124|<tuple|8.4.1|?>>
+    <associate|auto-125|<tuple|8.4.2|?>>
+    <associate|auto-126|<tuple|8.4.3|?>>
+    <associate|auto-127|<tuple|8.4.4|?>>
+    <associate|auto-128|<tuple|8.4.4.1|?>>
+    <associate|auto-129|<tuple|8.4.5|?>>
+    <associate|auto-13|<tuple|2.3|?>>
+    <associate|auto-130|<tuple|8.4.6|?>>
+    <associate|auto-131|<tuple|8.5|?>>
+    <associate|auto-132|<tuple|8.6|?>>
+    <associate|auto-133|<tuple|8.6.1|?>>
+    <associate|auto-134|<tuple|8.6.1.1|?>>
+    <associate|auto-135|<tuple|8.6.2|?>>
+    <associate|auto-136|<tuple|8.6.3|?>>
+    <associate|auto-137|<tuple|9|?>>
+    <associate|auto-138|<tuple|9.1|?>>
+    <associate|auto-139|<tuple|9.1.1|?>>
+    <associate|auto-14|<tuple|2.3.1|?>>
+    <associate|auto-140|<tuple|9.1.2|?>>
+    <associate|auto-141|<tuple|9.1.3|?>>
+    <associate|auto-142|<tuple|9.1.4|?>>
+    <associate|auto-143|<tuple|9.1.5|?>>
+    <associate|auto-144|<tuple|9.1.5.1|?>>
+    <associate|auto-145|<tuple|9.1.5.2|?>>
+    <associate|auto-146|<tuple|9.1.5.3|?>>
+    <associate|auto-147|<tuple|9.1.5.4|?>>
+    <associate|auto-148|<tuple|9.1.5.5|?>>
+    <associate|auto-149|<tuple|9.1.6|?>>
+    <associate|auto-15|<tuple|2.3.2|?>>
+    <associate|auto-150|<tuple|9.1.6.1|?>>
+    <associate|auto-151|<tuple|9.1.6.2|?>>
+    <associate|auto-152|<tuple|9.1.6.3|?>>
+    <associate|auto-153|<tuple|9.1.7|?>>
+    <associate|auto-154|<tuple|9.1.7.1|?>>
+    <associate|auto-155|<tuple|9.1.7.2|?>>
+    <associate|auto-156|<tuple|9.1.7.3|?>>
+    <associate|auto-157|<tuple|9.2|?>>
+    <associate|auto-158|<tuple|9.2.1|?>>
+    <associate|auto-159|<tuple|9.2.2|?>>
+    <associate|auto-16|<tuple|2.3.3|?>>
+    <associate|auto-160|<tuple|9.2.3|?>>
+    <associate|auto-161|<tuple|9.2.4|?>>
+    <associate|auto-162|<tuple|9.2.5|?>>
+    <associate|auto-163|<tuple|9.2.6|?>>
+    <associate|auto-164|<tuple|9.2.6.1|?>>
+    <associate|auto-165|<tuple|9.2.6.2|?>>
+    <associate|auto-166|<tuple|9.2.7|?>>
+    <associate|auto-167|<tuple|9.3|?>>
+    <associate|auto-168|<tuple|9.4|?>>
+    <associate|auto-169|<tuple|9.4.1|?>>
+    <associate|auto-17|<tuple|2.3.4|?>>
+    <associate|auto-170|<tuple|9.4.2|?>>
+    <associate|auto-171|<tuple|9.5|?>>
+    <associate|auto-172|<tuple|10|?>>
+    <associate|auto-173|<tuple|A|?>>
+    <associate|auto-174|<tuple|A.1|?>>
+    <associate|auto-175|<tuple|A.1.1|?>>
+    <associate|auto-176|<tuple|A.1.2|?>>
+    <associate|auto-177|<tuple|A.1.3|?>>
+    <associate|auto-178|<tuple|B|?>>
+    <associate|auto-179|<tuple|B.1|?>>
+    <associate|auto-18|<tuple|2.3.4.1|?>>
+    <associate|auto-180|<tuple|B.1.1|?>>
+    <associate|auto-181|<tuple|B.1.1.1|?>>
+    <associate|auto-182|<tuple|B.1.1.2|?>>
+    <associate|auto-183|<tuple|B.1.1.3|?>>
+    <associate|auto-184|<tuple|B.1.1.4|?>>
+    <associate|auto-185|<tuple|B.1.1.5|?>>
+    <associate|auto-186|<tuple|B.1.1.6|?>>
+    <associate|auto-187|<tuple|B.1.1.7|?>>
+    <associate|auto-188|<tuple|B.1.1.8|?>>
+    <associate|auto-189|<tuple|B.1.1.9|?>>
+    <associate|auto-19|<tuple|2.4|?>>
+    <associate|auto-190|<tuple|B.1.1.10|?>>
+    <associate|auto-191|<tuple|B.1.1.11|?>>
+    <associate|auto-192|<tuple|B.1.1.12|?>>
+    <associate|auto-193|<tuple|B.1.1.13|?>>
+    <associate|auto-194|<tuple|B.1.1.14|?>>
+    <associate|auto-195|<tuple|B.1.1.15|?>>
+    <associate|auto-196|<tuple|B.1.1.16|?>>
+    <associate|auto-197|<tuple|B.1.1.17|?>>
+    <associate|auto-198|<tuple|B.1.1.18|?>>
+    <associate|auto-199|<tuple|B.1.1.19|?>>
+    <associate|auto-2|<tuple|1.1|?>>
+    <associate|auto-20|<tuple|2.4.1|?>>
+    <associate|auto-200|<tuple|B.1.1.20|?>>
+    <associate|auto-201|<tuple|B.1.1.21|?>>
+    <associate|auto-202|<tuple|B.1.1.22|?>>
+    <associate|auto-203|<tuple|B.1.1.23|?>>
+    <associate|auto-204|<tuple|B.1.1.24|?>>
+    <associate|auto-205|<tuple|B.1.1.25|?>>
+    <associate|auto-206|<tuple|B.1.1.26|?>>
+    <associate|auto-207|<tuple|B.1.1.27|?>>
+    <associate|auto-208|<tuple|B.1.1.28|?>>
+    <associate|auto-209|<tuple|B.1.1.29|?>>
+    <associate|auto-21|<tuple|2.4.2|?>>
+    <associate|auto-210|<tuple|B.1.2|?>>
+    <associate|auto-211|<tuple|B.1.2.1|?>>
+    <associate|auto-212|<tuple|B.1.2.2|?>>
+    <associate|auto-213|<tuple|B.1.2.3|?>>
+    <associate|auto-214|<tuple|B.1.2.4|?>>
+    <associate|auto-215|<tuple|B.1.2.5|?>>
+    <associate|auto-216|<tuple|B.1.2.6|?>>
+    <associate|auto-217|<tuple|B.1.2.7|?>>
+    <associate|auto-218|<tuple|B.1.2.8|?>>
+    <associate|auto-219|<tuple|B.1.2.9|?>>
+    <associate|auto-22|<tuple|3|?>>
+    <associate|auto-220|<tuple|B.1.2.10|?>>
+    <associate|auto-221|<tuple|B.1.2.11|?>>
+    <associate|auto-222|<tuple|B.1.2.12|?>>
+    <associate|auto-223|<tuple|B.1.2.13|?>>
+    <associate|auto-224|<tuple|B.1.2.14|?>>
+    <associate|auto-225|<tuple|B.1.2.15|?>>
+    <associate|auto-226|<tuple|B.1.2.16|?>>
+    <associate|auto-227|<tuple|B.1.2.17|?>>
+    <associate|auto-228|<tuple|B.1.2.18|?>>
+    <associate|auto-229|<tuple|B.1.2.19|?>>
+    <associate|auto-23|<tuple|3.1|?>>
+    <associate|auto-230|<tuple|B.1.2.20|?>>
+    <associate|auto-231|<tuple|B.1.2.21|?>>
+    <associate|auto-232|<tuple|B.1.2.22|?>>
+    <associate|auto-233|<tuple|B.1.2.23|?>>
+    <associate|auto-234|<tuple|B.1.2.24|?>>
+    <associate|auto-235|<tuple|B.1.2.25|?>>
+    <associate|auto-236|<tuple|B.1.2.26|?>>
+    <associate|auto-237|<tuple|B.1.2.27|?>>
+    <associate|auto-238|<tuple|B.1.2.28|?>>
+    <associate|auto-239|<tuple|B.1.2.29|?>>
+    <associate|auto-24|<tuple|3.1.1|?>>
+    <associate|auto-240|<tuple|B.1.2.30|?>>
+    <associate|auto-241|<tuple|B.1.2.31|?>>
+    <associate|auto-242|<tuple|B.1.2.32|?>>
+    <associate|auto-243|<tuple|B.1.2.33|?>>
+    <associate|auto-244|<tuple|B.1.2.34|?>>
+    <associate|auto-245|<tuple|B.1.2.35|?>>
+    <associate|auto-246|<tuple|B.1.2.36|?>>
+    <associate|auto-247|<tuple|B.1.2.37|?>>
+    <associate|auto-248|<tuple|B.1.2.38|?>>
+    <associate|auto-249|<tuple|B.1.2.39|?>>
+    <associate|auto-25|<tuple|3.1.2|?>>
+    <associate|auto-250|<tuple|B.1.2.40|?>>
+    <associate|auto-251|<tuple|B.1.2.41|?>>
+    <associate|auto-252|<tuple|B.1.2.42|?>>
+    <associate|auto-253|<tuple|B.1.2.43|?>>
+    <associate|auto-254|<tuple|B.1.3|?>>
+    <associate|auto-255|<tuple|B.1.3.1|?>>
+    <associate|auto-256|<tuple|B.1.3.1.1|?>>
+    <associate|auto-257|<tuple|B.1.3.1.2|?>>
+    <associate|auto-258|<tuple|B.1.3.2|?>>
+    <associate|auto-259|<tuple|B.1.3.2.1|?>>
+    <associate|auto-26|<tuple|3.1.3|?>>
+    <associate|auto-260|<tuple|B.1.3.2.2|?>>
+    <associate|auto-261|<tuple|B.1.3.2.3|?>>
+    <associate|auto-262|<tuple|B.1.3.2.4|?>>
+    <associate|auto-263|<tuple|B.1.3.2.5|?>>
+    <associate|auto-264|<tuple|B.1.3.2.6|?>>
+    <associate|auto-265|<tuple|B.1.3.3|?>>
+    <associate|auto-266|<tuple|B.1.3.4|?>>
+    <associate|auto-267|<tuple|B.1.4|?>>
+    <associate|auto-268|<tuple|B.1.4.1|?>>
+    <associate|auto-269|<tuple|B.1.4.1.1|?>>
+    <associate|auto-27|<tuple|3.2|?>>
+    <associate|auto-270|<tuple|B.1.4.1.2|?>>
+    <associate|auto-271|<tuple|B.1.4.1.3|?>>
+    <associate|auto-272|<tuple|B.1.4.1.4|?>>
+    <associate|auto-273|<tuple|B.1.4.1.5|?>>
+    <associate|auto-274|<tuple|B.1.4.1.6|?>>
+    <associate|auto-275|<tuple|B.1.4.1.7|?>>
+    <associate|auto-276|<tuple|B.1.4.1.8|?>>
+    <associate|auto-277|<tuple|B.1.4.1.9|?>>
+    <associate|auto-278|<tuple|B.1.4.1.10|?>>
+    <associate|auto-279|<tuple|B.1.4.1.11|?>>
+    <associate|auto-28|<tuple|3.2.1|?>>
+    <associate|auto-280|<tuple|B.1.4.1.12|?>>
+    <associate|auto-281|<tuple|B.1.4.1.13|?>>
+    <associate|auto-282|<tuple|B.1.4.1.14|?>>
+    <associate|auto-283|<tuple|B.1.4.1.15|?>>
+    <associate|auto-284|<tuple|B.1.4.1.16|?>>
+    <associate|auto-285|<tuple|B.1.4.1.17|?>>
+    <associate|auto-286|<tuple|B.1.4.1.18|?>>
+    <associate|auto-287|<tuple|B.1.4.1.19|?>>
+    <associate|auto-288|<tuple|B.1.4.1.20|?>>
+    <associate|auto-289|<tuple|B.1.4.1.21|?>>
+    <associate|auto-29|<tuple|3.2.2|?>>
+    <associate|auto-290|<tuple|B.1.4.1.22|?>>
+    <associate|auto-291|<tuple|B.1.4.1.23|?>>
+    <associate|auto-292|<tuple|B.1.4.1.24|?>>
+    <associate|auto-293|<tuple|B.1.4.1.25|?>>
+    <associate|auto-294|<tuple|B.1.4.1.26|?>>
+    <associate|auto-295|<tuple|B.1.4.1.27|?>>
+    <associate|auto-296|<tuple|B.1.4.1.28|?>>
+    <associate|auto-297|<tuple|B.1.4.1.29|?>>
+    <associate|auto-298|<tuple|B.1.4.1.30|?>>
+    <associate|auto-299|<tuple|B.1.4.1.31|?>>
+    <associate|auto-3|<tuple|1.2|?>>
+    <associate|auto-30|<tuple|3.2.3|?>>
+    <associate|auto-300|<tuple|B.1.4.1.32|?>>
+    <associate|auto-301|<tuple|B.1.4.1.33|?>>
+    <associate|auto-302|<tuple|B.1.4.1.34|?>>
+    <associate|auto-303|<tuple|B.1.4.1.35|?>>
+    <associate|auto-304|<tuple|B.1.4.1.36|?>>
+    <associate|auto-305|<tuple|B.1.4.1.37|?>>
+    <associate|auto-306|<tuple|B.1.4.1.38|?>>
+    <associate|auto-307|<tuple|B.1.4.1.39|?>>
+    <associate|auto-308|<tuple|B.1.4.1.40|?>>
+    <associate|auto-309|<tuple|B.1.4.1.41|?>>
+    <associate|auto-31|<tuple|3.2.4|?>>
+    <associate|auto-310|<tuple|B.1.4.1.42|?>>
+    <associate|auto-311|<tuple|B.1.4.1.43|?>>
+    <associate|auto-312|<tuple|B.1.4.1.44|?>>
+    <associate|auto-313|<tuple|B.1.5|?>>
+    <associate|auto-314|<tuple|B.1.5.1|?>>
+    <associate|auto-315|<tuple|B.1.5.1.1|?>>
+    <associate|auto-316|<tuple|B.1.5.1.2|?>>
+    <associate|auto-317|<tuple|B.1.5.1.3|?>>
+    <associate|auto-318|<tuple|B.1.5.1.4|?>>
+    <associate|auto-319|<tuple|B.1.5.1.5|?>>
+    <associate|auto-32|<tuple|3.2.5|?>>
+    <associate|auto-320|<tuple|B.1.5.1.6|?>>
+    <associate|auto-321|<tuple|B.1.5.1.7|?>>
+    <associate|auto-322|<tuple|B.1.6|?>>
+    <associate|auto-323|<tuple|B.1.6.1|?>>
+    <associate|auto-324|<tuple|B.1.6.1.1|?>>
+    <associate|auto-325|<tuple|B.1.6.1.2|?>>
+    <associate|auto-326|<tuple|B.1.6.1.3|?>>
+    <associate|auto-327|<tuple|B.1.6.1.4|?>>
+    <associate|auto-328|<tuple|B.1.6.1.5|?>>
+    <associate|auto-329|<tuple|B.1.6.1.6|?>>
+    <associate|auto-33|<tuple|3.2.6|?>>
+    <associate|auto-330|<tuple|B.1.6.1.7|?>>
+    <associate|auto-331|<tuple|B.1.6.1.8|?>>
+    <associate|auto-332|<tuple|B.1.6.1.9|?>>
+    <associate|auto-333|<tuple|B.1.6.1.10|?>>
+    <associate|auto-334|<tuple|B.1.6.1.11|?>>
+    <associate|auto-335|<tuple|B.1.6.1.12|?>>
+    <associate|auto-336|<tuple|B.1.6.1.13|?>>
+    <associate|auto-337|<tuple|B.1.6.1.14|?>>
+    <associate|auto-338|<tuple|B.1.7|?>>
+    <associate|auto-339|<tuple|B.1.7.1|?>>
+    <associate|auto-34|<tuple|3.2.7|?>>
+    <associate|auto-340|<tuple|B.1.7.2|?>>
+    <associate|auto-341|<tuple|B.1.8|?>>
+    <associate|auto-342|<tuple|B.1.8.1|?>>
+    <associate|auto-343|<tuple|B.1.8.2|?>>
+    <associate|auto-344|<tuple|B.1.8.3|?>>
+    <associate|auto-345|<tuple|B.2|?>>
+    <associate|auto-346|<tuple|B.2.1|?>>
+    <associate|auto-347|<tuple|B.2.2|?>>
+    <associate|auto-348|<tuple|B.2.3|?>>
+    <associate|auto-349|<tuple|B.2.3.1|?>>
+    <associate|auto-35|<tuple|3.2.8|?>>
+    <associate|auto-350|<tuple|B.2.3.2|?>>
+    <associate|auto-351|<tuple|B.2.3.3|?>>
+    <associate|auto-352|<tuple|B.2.3.4|?>>
+    <associate|auto-353|<tuple|B.2.3.5|?>>
+    <associate|auto-354|<tuple|B.2.3.6|?>>
+    <associate|auto-355|<tuple|B.2.3.7|?>>
+    <associate|auto-356|<tuple|B.2.3.8|?>>
+    <associate|auto-357|<tuple|B.2.3.9|?>>
+    <associate|auto-358|<tuple|B.2.3.10|?>>
+    <associate|auto-359|<tuple|B.2.3.11|?>>
+    <associate|auto-36|<tuple|3.2.9|?>>
+    <associate|auto-360|<tuple|B.2.3.12|?>>
+    <associate|auto-361|<tuple|B.2.3.13|?>>
+    <associate|auto-362|<tuple|B.2.3.14|?>>
+    <associate|auto-363|<tuple|B.2.3.15|?>>
+    <associate|auto-364|<tuple|B.3|?>>
+    <associate|auto-365|<tuple|B.3.1|?>>
+    <associate|auto-366|<tuple|B.3.2|?>>
+    <associate|auto-367|<tuple|B.3.2.1|?>>
+    <associate|auto-368|<tuple|B.3.2.2|?>>
+    <associate|auto-369|<tuple|B.3.2.3|?>>
+    <associate|auto-37|<tuple|3.2.10|?>>
+    <associate|auto-370|<tuple|B.3.2.4|?>>
+    <associate|auto-371|<tuple|B.3.2.5|?>>
+    <associate|auto-372|<tuple|B.3.2.6|?>>
+    <associate|auto-373|<tuple|B.3.2.7|?>>
+    <associate|auto-374|<tuple|B.3.2.8|?>>
+    <associate|auto-375|<tuple|B.3.2.9|?>>
+    <associate|auto-376|<tuple|B.3.2.10|?>>
+    <associate|auto-377|<tuple|B.3.2.11|?>>
+    <associate|auto-378|<tuple|B.3.2.12|?>>
+    <associate|auto-379|<tuple|B.3.2.13|?>>
+    <associate|auto-38|<tuple|3.2.11|?>>
+    <associate|auto-380|<tuple|B.3.2.14|?>>
+    <associate|auto-381|<tuple|B.3.2.15|?>>
+    <associate|auto-382|<tuple|B.3.3|?>>
+    <associate|auto-383|<tuple|C|?>>
+    <associate|auto-384|<tuple|C|?>>
+    <associate|auto-39|<tuple|3.3|?>>
+    <associate|auto-4|<tuple|1.2.1|?>>
+    <associate|auto-40|<tuple|3.3.1|?>>
+    <associate|auto-41|<tuple|3.3.2|?>>
+    <associate|auto-42|<tuple|3.3.3|?>>
+    <associate|auto-43|<tuple|3.3.4|?>>
+    <associate|auto-44|<tuple|3.3.5|?>>
+    <associate|auto-45|<tuple|3.3.6|?>>
+    <associate|auto-46|<tuple|3.3.6.1|?>>
+    <associate|auto-47|<tuple|3.3.7|?>>
+    <associate|auto-48|<tuple|3.3.7.1|?>>
+    <associate|auto-49|<tuple|3.3.7.2|?>>
+    <associate|auto-5|<tuple|1.2.2|?>>
+    <associate|auto-50|<tuple|3.3.7.3|?>>
+    <associate|auto-51|<tuple|3.4|?>>
+    <associate|auto-52|<tuple|3.5|?>>
+    <associate|auto-53|<tuple|3.5.1|?>>
+    <associate|auto-54|<tuple|3.5.2|?>>
+    <associate|auto-55|<tuple|3.1|?>>
+    <associate|auto-56|<tuple|3.5.2.1|?>>
+    <associate|auto-57|<tuple|3.5.2.2|?>>
+    <associate|auto-58|<tuple|3.5.2.3|?>>
+    <associate|auto-59|<tuple|3.5.2.4|?>>
+    <associate|auto-6|<tuple|1.2.3|?>>
+    <associate|auto-60|<tuple|3.5.2.5|?>>
+    <associate|auto-61|<tuple|3.5.2.6|?>>
+    <associate|auto-62|<tuple|3.5.3|?>>
+    <associate|auto-63|<tuple|3.5.3.1|?>>
+    <associate|auto-64|<tuple|3.6|?>>
+    <associate|auto-65|<tuple|3.6.1|?>>
+    <associate|auto-66|<tuple|3.6.1.1|?>>
+    <associate|auto-67|<tuple|3.6.1.2|?>>
+    <associate|auto-68|<tuple|3.6.2|?>>
+    <associate|auto-69|<tuple|3.7|?>>
+    <associate|auto-7|<tuple|2|?>>
+    <associate|auto-70|<tuple|3.8|?>>
+    <associate|auto-71|<tuple|4|?>>
+    <associate|auto-72|<tuple|4.1|?>>
+    <associate|auto-73|<tuple|4.2|?>>
+    <associate|auto-74|<tuple|4.2.1|?>>
+    <associate|auto-75|<tuple|4.2.2|?>>
+    <associate|auto-76|<tuple|4.3|?>>
+    <associate|auto-77|<tuple|4.3.1|?>>
+    <associate|auto-78|<tuple|4.3.2|?>>
+    <associate|auto-79|<tuple|4.3.2.1|?>>
+    <associate|auto-8|<tuple|2.1|?>>
+    <associate|auto-80|<tuple|4.3.2.2|?>>
+    <associate|auto-81|<tuple|4.4|?>>
+    <associate|auto-82|<tuple|4.4.1|?>>
+    <associate|auto-83|<tuple|4.4.1.1|?>>
+    <associate|auto-84|<tuple|4.4.1.2|?>>
+    <associate|auto-85|<tuple|4.5|?>>
+    <associate|auto-86|<tuple|4.5.1|?>>
+    <associate|auto-87|<tuple|4.6|?>>
+    <associate|auto-88|<tuple|4.7|?>>
+    <associate|auto-89|<tuple|4.7.1|?>>
+    <associate|auto-9|<tuple|2.1.1|?>>
+    <associate|auto-90|<tuple|5|?>>
+    <associate|auto-91|<tuple|6|?>>
+    <associate|auto-92|<tuple|6.1|?>>
+    <associate|auto-93|<tuple|6.1.1|?>>
+    <associate|auto-94|<tuple|6.1.1.1|?>>
+    <associate|auto-95|<tuple|6.2|?>>
+    <associate|auto-96|<tuple|6.2.1|?>>
+    <associate|auto-97|<tuple|6.3|?>>
+    <associate|auto-98|<tuple|6.3.1|?>>
+    <associate|auto-99|<tuple|7|?>>
+    <associate|bib-Appel:2015|<tuple|1|?>>
+    <associate|bib-Carette:2009|<tuple|3|?>>
+    <associate|bib-Coq:manual|<tuple|5|?>>
+    <associate|bib-King1993|<tuple|8|?>>
+    <associate|bib-Mahboubi:2013|<tuple|9|?>>
+    <associate|bib-Mairson:1989|<tuple|10|?>>
+    <associate|bib-bip-0340|<tuple|18|?>>
+    <associate|bib-bitcoin|<tuple|11|?>>
+    <associate|bib-f-algebra|<tuple|16|?>>
+    <associate|bib-garillot:2009|<tuple|6|?>>
+    <associate|bib-gentzen|<tuple|7|?>>
+    <associate|bib-libsecp256k1|<tuple|17|?>>
+    <associate|bib-oconnor2014|<tuple|14|?>>
+    <associate|bib-satoshiScript|<tuple|12|?>>
+    <associate|bib-script|<tuple|2|?>>
+    <associate|bib-sec2|<tuple|4|?>>
+    <associate|bib-sha|<tuple|13|?>>
+    <associate|bib-unification|<tuple|15|?>>
+    <associate|chapter:preliminaries|<tuple|2|?>>
+    <associate|fig:inheritance|<tuple|8.1|?>>
+    <associate|footnote-2.1|<tuple|2.1|?>>
+    <associate|footnote-3.1|<tuple|3.1|?>>
+    <associate|footnote-3.2|<tuple|3.2|?>>
+    <associate|footnr-2.1|<tuple|2.1|?>>
+    <associate|footnr-3.1|<tuple|3.1|?>>
+    <associate|footnr-3.2|<tuple|3.2|?>>
+    <associate|full-adder-LHS|<tuple|3.3|?>>
+    <associate|full-adder-RHS|<tuple|3.2|?>>
+    <associate|full-adder-spec|<tuple|3.1|?>>
+    <associate|ss:AssertMerkleRoot|<tuple|4.3.2|?>>
+    <associate|ss:BTDenotationalSemantics|<tuple|4.4.1.1|?>>
+    <associate|ss:BTMerkleRoots|<tuple|4.4.1.2|?>>
+    <associate|ss:BitcoinPrimitives|<tuple|9.3|?>>
+    <associate|ss:BitcoinTransactions|<tuple|4.4.1|?>>
+    <associate|ss:DAGs|<tuple|7.1|?>>
+    <associate|ss:DenotationalSemanticsOfFullSimplicity|<tuple|9.2.4|?>>
+    <associate|ss:ELDenotationalSemantics|<tuple|A.1|?>>
+    <associate|ss:FreeMonadicDeserialization|<tuple|9.2.6.1|?>>
     <associate|ss:Haskell-CheckSigHash|<tuple|9.1.6.3|?>>
-    <associate|ss:Haskell-DAG|<tuple|9.2.6.2|83>>
-    <associate|ss:Haskell-Serialization|<tuple|9.2.6|81>>
-    <associate|ss:ListFunctors|<tuple|2.2.2|13>>
-    <associate|ss:MonadZero|<tuple|2.3.4|16>>
-    <associate|ss:RepresentingValuesAsCellArrays|<tuple|3.5.1|31>>
-    <associate|ss:Serialization|<tuple|7.2|62>>
+    <associate|ss:Haskell-DAG|<tuple|9.2.6.2|?>>
+    <associate|ss:Haskell-Serialization|<tuple|9.2.6|?>>
+    <associate|ss:IMR|<tuple|7.2.3|?>>
+    <associate|ss:ListFunctors|<tuple|2.2.2|?>>
+    <associate|ss:MonadZero|<tuple|2.3.4|?>>
+    <associate|ss:RepresentingValuesAsCellArrays|<tuple|3.5.1|?>>
+    <associate|ss:Serialization|<tuple|7.2|?>>
     <associate|ss:UniversalSignatureHashModes|<tuple|6.3|?>>
-    <associate|ss:bitOps|<tuple|3.3.1|22>>
+    <associate|ss:bitOps|<tuple|3.3.1|?>>
     <associate|ss:checkSigHashAll|<tuple|4.5.1|?>>
-    <associate|ss:cmr|<tuple|3.7|39>>
-    <associate|ss:coqArith|<tuple|8.3.2|67>>
-    <associate|ss:coqInitial|<tuple|8.2.1|65>>
-    <associate|ss:haskellLoop|<tuple|9.1.5.4|78>>
-    <associate|ss:inflate|<tuple|7.1.2.2|62>>
-    <associate|ss:monadicSemantics|<tuple|4.1|41>>
-    <associate|ss:optionMonad|<tuple|2.3.4.1|17>>
-    <associate|ss:pruning|<tuple|4.3.2.1|44>>
-    <associate|ss:salted|<tuple|4.3.2.2|44>>
-    <associate|ss:typeInference|<tuple|7.1.1|59>>
-    <associate|ss:unboundedLoop|<tuple|6.2|54>>
-    <associate|thm:CSCT|<tuple|3.3|30>>
-    <associate|v:checkSigHashAll|<tuple|8.6.6|?>>
+    <associate|ss:cmr|<tuple|3.7|?>>
+    <associate|ss:coqArith|<tuple|8.3.2|?>>
+    <associate|ss:coqInitial|<tuple|8.2.1|?>>
+    <associate|ss:haskellLoop|<tuple|9.1.5.5|?>>
+    <associate|ss:inflate|<tuple|7.1.2.2|?>>
+    <associate|ss:monadicSemantics|<tuple|4.1|?>>
+    <associate|ss:optionMonad|<tuple|2.3.4.1|?>>
+    <associate|ss:pruning|<tuple|4.3.2.1|?>>
+    <associate|ss:salted|<tuple|4.3.2.2|?>>
+    <associate|ss:typeInference|<tuple|7.1.1|?>>
+    <associate|ss:unboundedLoop|<tuple|6.2|?>>
+    <associate|thm:CSCT|<tuple|3.3|?>>
   </collection>
 </references>
 
@@ -8064,7 +11968,7 @@
 
       libsecp256k1
 
-      bip-schnorr
+      bip-0340
 
       unification
 
@@ -8082,15 +11986,15 @@
 
       libsecp256k1
 
-      bip-schnorr
+      bip-0340
 
       oconnor2014
     </associate>
     <\associate|figure>
-      <tuple|normal|Example state of the Bit Machine.|<pageref|auto-54>>
+      <tuple|normal|Example state of the Bit Machine.|<pageref|auto-55>>
 
       <tuple|normal|The inheritance hierarchy of algebras for Simplicity's
-      partial extensions in Coq.|<pageref|auto-121>>
+      partial extensions in Coq.|<pageref|auto-123>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Introduction>
@@ -8265,506 +12169,1352 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-45>>
 
+      <with|par-left|<quote|2tab>|3.3.6.1<space|2spc>Tagged Hashes
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-46>>
+
       <with|par-left|<quote|1tab>|3.3.7<space|2spc>Elliptic Curve Operations
       on secp256k1 <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-46>>
+      <no-break><pageref|auto-47>>
 
       <with|par-left|<quote|2tab>|3.3.7.1<space|2spc>libsecp256k1
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-47>>
+      <no-break><pageref|auto-48>>
 
       <with|par-left|<quote|2tab>|3.3.7.2<space|2spc>libsecp256k1 in
       Simplicity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-48>>
+      <no-break><pageref|auto-49>>
 
       <with|par-left|<quote|2tab>|3.3.7.3<space|2spc>Schnorr Signature
       Validation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-49>>
+      <no-break><pageref|auto-50>>
 
       3.4<space|2spc>Completeness Theorem
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-50>
+      <no-break><pageref|auto-51>
 
       3.5<space|2spc>Operational Semantics
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-51>
+      <no-break><pageref|auto-52>
 
       <with|par-left|<quote|1tab>|3.5.1<space|2spc>Representing Values as
       Cell Arrays <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-52>>
+      <no-break><pageref|auto-53>>
 
       <with|par-left|<quote|1tab>|3.5.2<space|2spc>Bit Machine
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-53>>
+      <no-break><pageref|auto-54>>
 
       <with|par-left|<quote|2tab>|3.5.2.1<space|2spc>Frame Instructions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-55>>
+      <no-break><pageref|auto-56>>
 
       <with|par-left|<quote|2tab>|3.5.2.2<space|2spc>Active Write Frame
       Instructions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-56>>
+      <no-break><pageref|auto-57>>
 
       <with|par-left|<quote|2tab>|3.5.2.3<space|2spc>Active Read Frame
       Instructions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-57>>
+      <no-break><pageref|auto-58>>
 
       <with|par-left|<quote|2tab>|3.5.2.4<space|2spc>Abort Instruction
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-58>>
+      <no-break><pageref|auto-59>>
 
       <with|par-left|<quote|2tab>|3.5.2.5<space|2spc>Bit Machine Programs
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-59>>
+      <no-break><pageref|auto-60>>
 
       <with|par-left|<quote|2tab>|3.5.2.6<space|2spc>Crashing the Bit Machine
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-60>>
+      <no-break><pageref|auto-61>>
 
       <with|par-left|<quote|1tab>|3.5.3<space|2spc>Executing Simplicity
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-61>>
+      <no-break><pageref|auto-62>>
 
       <with|par-left|<quote|2tab>|3.5.3.1<space|2spc>Tail Composition
       Optimisation (TCO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-62>>
+      <no-break><pageref|auto-63>>
 
       3.6<space|2spc>Static Analysis <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-63>
+      <no-break><pageref|auto-64>
 
       <with|par-left|<quote|1tab>|3.6.1<space|2spc>Space Resources
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-64>>
+      <no-break><pageref|auto-65>>
 
       <with|par-left|<quote|2tab>|3.6.1.1<space|2spc>Maximum Cell Count Bound
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-65>>
+      <no-break><pageref|auto-66>>
 
       <with|par-left|<quote|2tab>|3.6.1.2<space|2spc>Maximum Frame Count
       Bound <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-66>>
+      <no-break><pageref|auto-67>>
 
       <with|par-left|<quote|1tab>|3.6.2<space|2spc>Time Resources
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-67>>
+      <no-break><pageref|auto-68>>
 
       3.7<space|2spc>Commitment Merkle Root
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-68>
+      <no-break><pageref|auto-69>
+
+      3.8<space|2spc>Type Merkle Root <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-70>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Simplicity
       Extensions> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-69><vspace|0.5fn>
+      <no-break><pageref|auto-71><vspace|0.5fn>
 
       4.1<space|2spc>Monadic Semantics <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-70>
+      <no-break><pageref|auto-72>
 
       4.2<space|2spc>Witness <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-71>
+      <no-break><pageref|auto-73>
 
       <with|par-left|<quote|1tab>|4.2.1<space|2spc>Elided Computation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-72>>
-
-      <with|par-left|<quote|1tab>|4.2.2<space|2spc>Witness Merkle Root
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-73>>
-
-      <with|par-left|<quote|1tab>|4.2.3<space|2spc>Type Inference with
-      Witness <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-74>>
+
+      <with|par-left|<quote|1tab>|4.2.2<space|2spc>Type Inference with
+      Witness <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-75>>
 
       4.3<space|2spc>Assertions and Failure
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-75>
+      <no-break><pageref|auto-76>
 
       <with|par-left|<quote|1tab>|4.3.1<space|2spc>Denotational Semantics
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-76>>
+      <no-break><pageref|auto-77>>
 
       <with|par-left|<quote|1tab>|4.3.2<space|2spc>Merkle Roots
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-77>>
+      <no-break><pageref|auto-78>>
 
       <with|par-left|<quote|2tab>|4.3.2.1<space|2spc>Pruning Unused
       <with|font-family|<quote|ss>|case> Branches
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-78>>
+      <no-break><pageref|auto-79>>
 
       <with|par-left|<quote|2tab>|4.3.2.2<space|2spc>Salted Expressions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-79>>
+      <no-break><pageref|auto-80>>
 
       4.4<space|2spc>Blockchain Primitives
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-80>
+      <no-break><pageref|auto-81>
 
       <with|par-left|<quote|1tab>|4.4.1<space|2spc>Bitcoin Transactions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-81>>
+      <no-break><pageref|auto-82>>
 
       <with|par-left|<quote|2tab>|4.4.1.1<space|2spc>Denotational Semantics
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-82>>
+      <no-break><pageref|auto-83>>
 
       <with|par-left|<quote|2tab>|4.4.1.2<space|2spc>Merkle Roots
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-83>>
+      <no-break><pageref|auto-84>>
 
       4.5<space|2spc>Simplicity Programs <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-84>
+      <no-break><pageref|auto-85>
 
       <with|par-left|<quote|1tab>|4.5.1<space|2spc>Example:
       <rigid|<with|mode|<quote|text>|<with|font-family|<quote|ss>|font-shape|<quote|right>|checkSigHashAll>>>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-85>>
+      <no-break><pageref|auto-86>>
 
       4.6<space|2spc>Schnorr Signature Aggregation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-86>
+      <no-break><pageref|auto-87>
 
       4.7<space|2spc>Malleability <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-87>
+      <no-break><pageref|auto-88>
 
       <with|par-left|<quote|1tab>|4.7.1<space|2spc>Transaction Weight
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-88>>
+      <no-break><pageref|auto-89>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Jets>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-89><vspace|0.5fn>
+      <no-break><pageref|auto-90><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Delegation>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-90><vspace|0.5fn>
+      <no-break><pageref|auto-91><vspace|0.5fn>
 
       6.1<space|2spc>Implementing <with|font-family|<quote|ss>|disconnect> on
       the Bit Machine <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-91>
+      <no-break><pageref|auto-92>
 
       <with|par-left|<quote|1tab>|6.1.1<space|2spc>Static Analysis of
       <with|font-family|<quote|ss>|disconnect>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-92>>
+      <no-break><pageref|auto-93>>
 
       <with|par-left|<quote|2tab>|6.1.1.1<space|2spc>Space Resources
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-93>>
+      <no-break><pageref|auto-94>>
 
       6.2<space|2spc>Unbounded Loops <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-94>
+      <no-break><pageref|auto-95>
 
       <with|par-left|<quote|1tab>|6.2.1<space|2spc>Adding a
       <with|font-family|<quote|ss>|loop> primitive to Simplicity?
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-95>>
+      <no-break><pageref|auto-96>>
 
       6.3<space|2spc>Universal Signature Hash Modes
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-96>
+      <no-break><pageref|auto-97>
 
       <with|par-left|<quote|1tab>|6.3.1<space|2spc>Side-Effects and
       Delegation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-97>>
+      <no-break><pageref|auto-98>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>Type
       Inference and Serialization> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-98><vspace|0.5fn>
+      <no-break><pageref|auto-99><vspace|0.5fn>
 
       7.1<space|2spc>Explicit Simplicity DAGs
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-99>
+      <no-break><pageref|auto-100>
 
       <with|par-left|<quote|1tab>|7.1.1<space|2spc>Type Inference
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-100>>
+      <no-break><pageref|auto-101>>
 
       <with|par-left|<quote|1tab>|7.1.2<space|2spc>Reconstructing Simplicity
       Expressions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-101>>
+      <no-break><pageref|auto-102>>
 
       <with|par-left|<quote|2tab>|7.1.2.1<space|2spc>syncase
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-102>>
+      <no-break><pageref|auto-103>>
 
       <with|par-left|<quote|2tab>|7.1.2.2<space|2spc>inflate
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-103>>
+      <no-break><pageref|auto-104>>
 
       7.2<space|2spc>Serialization <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-104>
+      <no-break><pageref|auto-105>
 
       <with|par-left|<quote|1tab>|7.2.1<space|2spc>Serialization of Bit
       Strings and Positive Numbers <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-105>>
+      <no-break><pageref|auto-106>>
 
       <with|par-left|<quote|1tab>|7.2.2<space|2spc>Serialization of
       Simplicity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-106>>
+      <no-break><pageref|auto-107>>
+
+      <with|par-left|<quote|1tab>|7.2.3<space|2spc>Identity Merkle Root
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-108>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|8<space|2spc>Coq
       Library Guide> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-107><vspace|0.5fn>
+      <no-break><pageref|auto-109><vspace|0.5fn>
 
       8.1<space|2spc>Simplicity Types <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-108>
+      <no-break><pageref|auto-110>
 
       8.2<space|2spc>Simplicity Terms <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-109>
+      <no-break><pageref|auto-111>
 
       <with|par-left|<quote|1tab>|8.2.1<space|2spc>The ``Initial''
       Representation of Terms <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-110>>
+      <no-break><pageref|auto-112>>
 
       <with|par-left|<quote|1tab>|8.2.2<space|2spc>The ``Final''
       Representation of Terms <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-111>>
+      <no-break><pageref|auto-113>>
 
       <with|par-left|<quote|2tab>|8.2.2.1<space|2spc>Simplicity Algebras
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-112>>
+      <no-break><pageref|auto-114>>
 
       <with|par-left|<quote|2tab>|8.2.2.2<space|2spc>The ``Final''
       Representation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-113>>
+      <no-break><pageref|auto-115>>
 
       <with|par-left|<quote|2tab>|8.2.2.3<space|2spc>Constructing ``Final''
       Terms <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-114>>
+      <no-break><pageref|auto-116>>
 
       <with|par-left|<quote|1tab>|8.2.3<space|2spc>Why two representations of
       Terms? <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-115>>
+      <no-break><pageref|auto-117>>
 
       8.3<space|2spc>Example Simplicity Expressions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-116>
+      <no-break><pageref|auto-118>
 
       <with|par-left|<quote|1tab>|8.3.1<space|2spc>Bits
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-117>>
+      <no-break><pageref|auto-119>>
 
       <with|par-left|<quote|1tab>|8.3.2<space|2spc>Arithmetic
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-118>>
+      <no-break><pageref|auto-120>>
 
       <with|par-left|<quote|1tab>|8.3.3<space|2spc>SHA256
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-119>>
+      <no-break><pageref|auto-121>>
 
       8.4<space|2spc>The Hierarchy of Simplicity Language Extensions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-120>
+      <no-break><pageref|auto-122>
 
       <with|par-left|<quote|1tab>|8.4.1<space|2spc>Witness
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-122>>
+      <no-break><pageref|auto-124>>
 
       <with|par-left|<quote|1tab>|8.4.2<space|2spc>Assertion
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-123>>
+      <no-break><pageref|auto-125>>
 
       <with|par-left|<quote|1tab>|8.4.3<space|2spc>Delegation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-124>>
+      <no-break><pageref|auto-126>>
 
       <with|par-left|<quote|1tab>|8.4.4<space|2spc>Primitives
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-125>>
+      <no-break><pageref|auto-127>>
 
       <with|par-left|<quote|2tab>|8.4.4.1<space|2spc>Bitcoin
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-126>>
+      <no-break><pageref|auto-128>>
 
       <with|par-left|<quote|1tab>|8.4.5<space|2spc>Jets
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-127>>
+      <no-break><pageref|auto-129>>
 
       <with|par-left|<quote|1tab>|8.4.6<space|2spc>Full Simplicity
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-128>>
+      <no-break><pageref|auto-130>>
 
       8.5<space|2spc>Merkle Roots <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-129>
+      <no-break><pageref|auto-131>
 
       8.6<space|2spc>The Bit Machine <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-130>
+      <no-break><pageref|auto-132>
 
       <with|par-left|<quote|1tab>|8.6.1<space|2spc>Bit Machine Code
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-131>>
+      <no-break><pageref|auto-133>>
 
       <with|par-left|<quote|2tab>|8.6.1.1<space|2spc>Bit Machine Programs
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-132>>
+      <no-break><pageref|auto-134>>
 
       <with|par-left|<quote|1tab>|8.6.2<space|2spc>Translating Simplicity to
       the Bit Machine <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-133>>
+      <no-break><pageref|auto-135>>
 
       <with|par-left|<quote|1tab>|8.6.3<space|2spc>Static Analysis
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-134>>
+      <no-break><pageref|auto-136>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|9<space|2spc>Haskell
       Library Guide> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-135><vspace|0.5fn>
+      <no-break><pageref|auto-137><vspace|0.5fn>
 
       9.1<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|Simplicity-Core>
       library <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-136>
+      <no-break><pageref|auto-138>
 
       <with|par-left|<quote|1tab>|9.1.1<space|2spc>Simplicity Types
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-137>>
+      <no-break><pageref|auto-139>>
 
       <with|par-left|<quote|1tab>|9.1.2<space|2spc>Simplicity Terms
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-138>>
+      <no-break><pageref|auto-140>>
 
       <with|par-left|<quote|1tab>|9.1.3<space|2spc>Merkle Roots
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-139>>
+      <no-break><pageref|auto-141>>
 
       <with|par-left|<quote|1tab>|9.1.4<space|2spc>Tensors
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-140>>
+      <no-break><pageref|auto-142>>
 
       <with|par-left|<quote|1tab>|9.1.5<space|2spc>Example Simplicity
       Expressions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-141>>
-
-      <with|par-left|<quote|2tab>|9.1.5.1<space|2spc>Bits
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-142>>
-
-      <with|par-left|<quote|2tab>|9.1.5.2<space|2spc>Multi-bit Words
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-143>>
 
-      <with|par-left|<quote|2tab>|9.1.5.3<space|2spc>Generic
+      <with|par-left|<quote|2tab>|9.1.5.1<space|2spc>Generic
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-144>>
 
-      <with|par-left|<quote|2tab>|9.1.5.4<space|2spc>Loop
+      <with|par-left|<quote|2tab>|9.1.5.2<space|2spc>Bits
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-145>>
 
-      <with|par-left|<quote|1tab>|9.1.6<space|2spc>Libraries of Simplicity
-      Expressions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|9.1.5.3<space|2spc>Multi-bit Words
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-146>>
 
-      <with|par-left|<quote|2tab>|9.1.6.1<space|2spc>SHA-256
+      <with|par-left|<quote|2tab>|9.1.5.4<space|2spc>Arithmetic
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-147>>
 
-      <with|par-left|<quote|2tab>|9.1.6.2<space|2spc>LibSecp256k1
+      <with|par-left|<quote|2tab>|9.1.5.5<space|2spc>Loop
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-148>>
 
-      <with|par-left|<quote|1tab>|9.1.7<space|2spc>The Bit Machine
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|9.1.6<space|2spc>Libraries of Simplicity
+      Expressions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-149>>
 
-      <with|par-left|<quote|2tab>|9.1.7.1<space|2spc>Translating Simplicity
-      to the Bit Machine <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|9.1.6.1<space|2spc>SHA-256
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-150>>
 
-      <with|par-left|<quote|2tab>|9.1.7.2<space|2spc>Static Analysis
+      <with|par-left|<quote|2tab>|9.1.6.2<space|2spc>LibSecp256k1
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-151>>
 
-      9.2<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|Simplicity-Indef>
-      library <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-152>
+      <with|par-left|<quote|2tab>|9.1.6.3<space|2spc>CheckSigHash
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-152>>
 
-      <with|par-left|<quote|1tab>|9.2.1<space|2spc>Primitive Signature
+      <with|par-left|<quote|1tab>|9.1.7<space|2spc>The Bit Machine
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-153>>
 
-      <with|par-left|<quote|1tab>|9.2.2<space|2spc>Primitive Terms
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|9.1.7.1<space|2spc>Translating Simplicity
+      to the Bit Machine <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-154>>
 
-      <with|par-left|<quote|1tab>|9.2.3<space|2spc>Denotational Semantics of
-      Full Simplicity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|9.1.7.2<space|2spc>Static Analysis
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-155>>
 
-      <with|par-left|<quote|1tab>|9.2.4<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|JetType>
-      class <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|9.1.7.3<space|2spc>Fast Evaluation with FFI
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-156>>
 
-      <with|par-left|<quote|1tab>|9.2.5<space|2spc>Type Inference
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-157>>
+      9.2<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|Simplicity-Indef>
+      library <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-157>
 
-      <with|par-left|<quote|1tab>|9.2.6<space|2spc>Serialization
+      <with|par-left|<quote|1tab>|9.2.1<space|2spc>Primitive Signature
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-158>>
 
-      <with|par-left|<quote|2tab>|9.2.6.1<space|2spc>Free Monadic
-      Deserializaiton <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|9.2.2<space|2spc>Primitive Terms
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-159>>
 
-      <with|par-left|<quote|2tab>|9.2.6.2<space|2spc>Serialization of
-      Simplicity DAGs <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|9.2.3<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|JetType>
+      class <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-160>>
 
-      9.3<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|Simplicity-Bitcoin>
-      Libary <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-161>
+      <with|par-left|<quote|1tab>|9.2.4<space|2spc>Denotational Semantics of
+      Full Simplicity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-161>>
 
-      9.4<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|Simplicity>
-      Library <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-162>
+      <with|par-left|<quote|1tab>|9.2.5<space|2spc>Type Inference
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-162>>
 
-      <with|par-left|<quote|1tab>|9.4.1<space|2spc>CheckSigHashAll
+      <with|par-left|<quote|1tab>|9.2.6<space|2spc>Serialization
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-163>>
 
-      <with|par-left|<quote|1tab>|9.4.2<space|2spc>Known Discounted Jets
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|9.2.6.1<space|2spc>Free Monadic
+      Deserializaiton <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-164>>
 
-      9.5<space|2spc>Simplicity <with|font-family|<quote|tt>|language|<quote|verbatim>|testsuite>
+      <with|par-left|<quote|2tab>|9.2.6.2<space|2spc>Serialization of
+      Simplicity DAGs <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-165>>
+
+      <with|par-left|<quote|1tab>|9.2.7<space|2spc>Jet Substitution
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-165>
+      <no-break><pageref|auto-166>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|10<space|2spc>C
-      Library Guide> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-166><vspace|0.5fn>
+      9.3<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|Simplicity-Bitcoin>
+      Libary <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-167>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Appendix
-      A<space|2spc>Elements Application> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-167><vspace|0.5fn>
-
-      A.1<space|2spc>Denotational Semantics
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      9.4<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|Simplicity>
+      Library <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-168>
 
-      <with|par-left|<quote|1tab>|A.1.1<space|2spc>Null Data
+      <with|par-left|<quote|1tab>|9.4.1<space|2spc>CheckSigHashAll
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-169>>
 
-      <with|par-left|<quote|1tab>|A.1.2<space|2spc>Merkle Roots
+      <with|par-left|<quote|1tab>|9.4.2<space|2spc>Known Discounted Jets
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-170>>
 
-      <with|par-left|<quote|1tab>|A.1.3<space|2spc>Serialization
+      9.5<space|2spc>Simplicity <with|font-family|<quote|tt>|language|<quote|verbatim>|testsuite>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-171>>
+      <no-break><pageref|auto-171>
 
-      A.2<space|2spc>Jets <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-172>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|10<space|2spc>C
+      Library Guide> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-172><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Appendix
-      B<space|2spc>Alternative Serialization of Simplicity DAGs>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      A<space|2spc>Elements Application> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-173><vspace|0.5fn>
+
+      A.1<space|2spc>Denotational Semantics
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-174>
+
+      <with|par-left|<quote|1tab>|A.1.1<space|2spc>Null Data
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-175>>
+
+      <with|par-left|<quote|1tab>|A.1.2<space|2spc>Merkle Roots
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-176>>
+
+      <with|par-left|<quote|1tab>|A.1.3<space|2spc>Serialization
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-177>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Appendix
+      B<space|2spc>Catelogue of Jets> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-178><vspace|0.5fn>
+
+      B.1<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|110...:
+      >Core Jets <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-179>
+
+      <with|par-left|<quote|1tab>|B.1.1<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|1100...:
+      >Jets for multi-bit logic <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-180>>
+
+      <with|par-left|<quote|2tab>|B.1.1.1<space|2spc><with|font-family|<quote|ss>|low>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-181>>
+
+      <with|par-left|<quote|2tab>|B.1.1.2<space|2spc><with|font-family|<quote|ss>|high>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-182>>
+
+      <with|par-left|<quote|2tab>|B.1.1.3<space|2spc><with|font-family|<quote|ss>|complement>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-183>>
+
+      <with|par-left|<quote|2tab>|B.1.1.4<space|2spc><with|font-family|<quote|ss>|and>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-184>>
+
+      <with|par-left|<quote|2tab>|B.1.1.5<space|2spc><with|font-family|<quote|ss>|or>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-185>>
+
+      <with|par-left|<quote|2tab>|B.1.1.6<space|2spc><with|font-family|<quote|ss>|xor>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-186>>
+
+      <with|par-left|<quote|2tab>|B.1.1.7<space|2spc><with|font-family|<quote|ss>|maj>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-187>>
+
+      <with|par-left|<quote|2tab>|B.1.1.8<space|2spc><with|font-family|<quote|ss>|xor3>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-188>>
+
+      <with|par-left|<quote|2tab>|B.1.1.9<space|2spc><with|font-family|<quote|ss>|ch>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-189>>
+
+      <with|par-left|<quote|2tab>|B.1.1.10<space|2spc><with|font-family|<quote|ss>|some>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-190>>
+
+      <with|par-left|<quote|2tab>|B.1.1.11<space|2spc><with|font-family|<quote|ss>|all>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-191>>
+
+      <with|par-left|<quote|2tab>|B.1.1.12<space|2spc><with|font-family|<quote|ss>|eq>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-192>>
+
+      <with|par-left|<quote|2tab>|B.1.1.13<space|2spc><with|font-family|<quote|ss>|full-left-shift>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-193>>
+
+      <with|par-left|<quote|2tab>|B.1.1.14<space|2spc><with|font-family|<quote|ss>|full-right-shift>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-194>>
+
+      <with|par-left|<quote|2tab>|B.1.1.15<space|2spc><with|font-family|<quote|ss>|leftmost>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-195>>
+
+      <with|par-left|<quote|2tab>|B.1.1.16<space|2spc><with|font-family|<quote|ss>|rightmost>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-196>>
+
+      <with|par-left|<quote|2tab>|B.1.1.17<space|2spc><with|font-family|<quote|ss>|left-pad-low>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-197>>
+
+      <with|par-left|<quote|2tab>|B.1.1.18<space|2spc><with|font-family|<quote|ss>|left-pad-high>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-198>>
+
+      <with|par-left|<quote|2tab>|B.1.1.19<space|2spc><with|font-family|<quote|ss>|left-extend>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-199>>
+
+      <with|par-left|<quote|2tab>|B.1.1.20<space|2spc><with|font-family|<quote|ss>|right-pad-low>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-200>>
+
+      <with|par-left|<quote|2tab>|B.1.1.21<space|2spc><with|font-family|<quote|ss>|right-pad-high>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-201>>
+
+      <with|par-left|<quote|2tab>|B.1.1.22<space|2spc><with|font-family|<quote|ss>|right-extend>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-202>>
+
+      <with|par-left|<quote|2tab>|B.1.1.23<space|2spc><with|font-family|<quote|ss>|right-shift-with>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-203>>
+
+      <with|par-left|<quote|2tab>|B.1.1.24<space|2spc><with|font-family|<quote|ss>|right-shift>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-204>>
+
+      <with|par-left|<quote|2tab>|B.1.1.25<space|2spc><with|font-family|<quote|ss>|right-rotate>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-205>>
+
+      <with|par-left|<quote|2tab>|B.1.1.26<space|2spc><with|font-family|<quote|ss>|transpose>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-206>>
+
+      <with|par-left|<quote|2tab>|B.1.1.27<space|2spc><with|font-family|<quote|ss>|find-first-high>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-207>>
+
+      <with|par-left|<quote|2tab>|B.1.1.28<space|2spc><with|font-family|<quote|ss>|find-last-high>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-208>>
+
+      <with|par-left|<quote|2tab>|B.1.1.29<space|2spc><with|font-family|<quote|ss>|bit>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-209>>
+
+      <with|par-left|<quote|1tab>|B.1.2<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|110100...:
+      >Jets for arithmetic <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-210>>
+
+      <with|par-left|<quote|2tab>|B.1.2.1<space|2spc><with|font-family|<quote|ss>|one>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-211>>
+
+      <with|par-left|<quote|2tab>|B.1.2.2<space|2spc><with|font-family|<quote|ss>|full-add>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-212>>
+
+      <with|par-left|<quote|2tab>|B.1.2.3<space|2spc><with|font-family|<quote|ss>|add>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-213>>
+
+      <with|par-left|<quote|2tab>|B.1.2.4<space|2spc><with|font-family|<quote|ss>|full-increment>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-214>>
+
+      <with|par-left|<quote|2tab>|B.1.2.5<space|2spc><with|font-family|<quote|ss>|increment>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-215>>
+
+      <with|par-left|<quote|2tab>|B.1.2.6<space|2spc><with|font-family|<quote|ss>|popcount>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-216>>
+
+      <with|par-left|<quote|2tab>|B.1.2.7<space|2spc><with|font-family|<quote|ss>|full-subtract>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-217>>
+
+      <with|par-left|<quote|2tab>|B.1.2.8<space|2spc><with|font-family|<quote|ss>|subtract>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-218>>
+
+      <with|par-left|<quote|2tab>|B.1.2.9<space|2spc><with|font-family|<quote|ss>|negate>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-219>>
+
+      <with|par-left|<quote|2tab>|B.1.2.10<space|2spc><with|font-family|<quote|ss>|full-decrement>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-220>>
+
+      <with|par-left|<quote|2tab>|B.1.2.11<space|2spc><with|font-family|<quote|ss>|decrement>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-221>>
+
+      <with|par-left|<quote|2tab>|B.1.2.12<space|2spc><with|font-family|<quote|ss>|full-multiply>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-222>>
+
+      <with|par-left|<quote|2tab>|B.1.2.13<space|2spc><with|font-family|<quote|ss>|multiply>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-223>>
+
+      <with|par-left|<quote|2tab>|B.1.2.14<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|><with|font-family|<quote|ss>|is-zero>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-224>>
+
+      <with|par-left|<quote|2tab>|B.1.2.15<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|><with|font-family|<quote|ss>|is-one>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-225>>
+
+      <with|par-left|<quote|2tab>|B.1.2.16<space|2spc><with|font-family|<quote|ss>|le>
+      (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-226>>
+
+      <with|par-left|<quote|2tab>|B.1.2.17<space|2spc><with|font-family|<quote|ss>|lt>
+      (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-227>>
+
+      <with|par-left|<quote|2tab>|B.1.2.18<space|2spc><with|font-family|<quote|ss>|min>
+      (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-228>>
+
+      <with|par-left|<quote|2tab>|B.1.2.19<space|2spc><with|font-family|<quote|ss>|max>
+      (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-229>>
+
+      <with|par-left|<quote|2tab>|B.1.2.20<space|2spc><with|font-family|<quote|ss>|median>
+      (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-230>>
+
+      <with|par-left|<quote|2tab>|B.1.2.21<space|2spc><with|font-family|<quote|ss>|div2n1n>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-231>>
+
+      <with|par-left|<quote|2tab>|B.1.2.22<space|2spc><with|font-family|<quote|ss>|div-mod>
+      (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-232>>
+
+      <with|par-left|<quote|2tab>|B.1.2.23<space|2spc><with|font-family|<quote|ss>|divide>
+      (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-233>>
+
+      <with|par-left|<quote|2tab>|B.1.2.24<space|2spc><with|font-family|<quote|ss>|modulo>
+      (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-234>>
+
+      <with|par-left|<quote|2tab>|B.1.2.25<space|2spc><with|font-family|<quote|ss>|divides>
+      (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-235>>
+
+      <with|par-left|<quote|2tab>|B.1.2.26<space|2spc><with|font-family|<quote|ss>|eea>
+      (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-236>>
+
+      <with|par-left|<quote|2tab>|B.1.2.27<space|2spc><with|font-family|<quote|ss>|bezout>
+      (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-237>>
+
+      <with|par-left|<quote|2tab>|B.1.2.28<space|2spc><with|font-family|<quote|ss>|gcd>
+      (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-238>>
+
+      <with|par-left|<quote|2tab>|B.1.2.29<space|2spc><with|font-family|<quote|ss>|cofactors>
+      (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-239>>
+
+      <with|par-left|<quote|2tab>|B.1.2.30<space|2spc><with|font-family|<quote|ss>|lcm>
+      (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-240>>
+
+      <with|par-left|<quote|2tab>|B.1.2.31<space|2spc><with|font-family|<quote|ss>|jacobi>
+      (unsigned) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-241>>
+
+      <with|par-left|<quote|2tab>|B.1.2.32<space|2spc><with|font-family|<quote|ss>|absolute-value>
+      (signed input/unsigned output) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-242>>
+
+      <with|par-left|<quote|2tab>|B.1.2.33<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|><with|font-family|<quote|ss>|sign>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-243>>
+
+      <with|par-left|<quote|2tab>|B.1.2.34<space|2spc><with|font-family|<quote|ss>|signed-le>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-244>>
+
+      <with|par-left|<quote|2tab>|B.1.2.35<space|2spc><with|font-family|<quote|ss>|signed-lt>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-245>>
+
+      <with|par-left|<quote|2tab>|B.1.2.36<space|2spc><with|font-family|<quote|ss>|signed-min>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-246>>
+
+      <with|par-left|<quote|2tab>|B.1.2.37<space|2spc><with|font-family|<quote|ss>|signed-max>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-247>>
+
+      <with|par-left|<quote|2tab>|B.1.2.38<space|2spc><with|font-family|<quote|ss>|signed-median>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-248>>
+
+      <with|par-left|<quote|2tab>|B.1.2.39<space|2spc><with|font-family|<quote|ss>|signed-right-shift>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-249>>
+
+      <with|par-left|<quote|2tab>|B.1.2.40<space|2spc><with|font-family|<quote|ss>|signed-divmod>
+      (unsigned denominator) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-250>>
+
+      <with|par-left|<quote|2tab>|B.1.2.41<space|2spc><with|font-family|<quote|ss>|signed-div>
+      (unsigned denominator) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-251>>
+
+      <with|par-left|<quote|2tab>|B.1.2.42<space|2spc><with|font-family|<quote|ss>|signed-signed-divmod>
+      (signed denominator) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-252>>
+
+      <with|par-left|<quote|2tab>|B.1.2.43<space|2spc><with|font-family|<quote|ss>|signed-signed-div>
+      (signed denominator) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-253>>
+
+      <with|par-left|<quote|1tab>|B.1.3<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|110101...:
+      >Jets for hash functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-254>>
+
+      <with|par-left|<quote|2tab>|B.1.3.1<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|1101010...:
+      >Jets for SHA-2 <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-255>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|sha-256-block>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-256><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|sha-256-iv>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-257><vspace|0.15fn>>
+
+      <with|par-left|<quote|2tab>|B.1.3.2<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|110101100...:
+      >Jets for SHA-3 <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-258>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|sha3-zero>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-259><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|sha3-absorb>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-260><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|sha3-xor>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-261><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|sha3-permute>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-262><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|sha3-squeeze-256>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-263><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|sha3-squeeze-512>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-264><vspace|0.15fn>>
+
+      <with|par-left|<quote|2tab>|B.1.3.3<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|110101101...:
+      >Jets for RIPEMD <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-265>>
+
+      <with|par-left|<quote|2tab>|B.1.3.4<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|110101110000...:
+      >Jets for SHA-1 (RESERVED) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-266>>
+
+      <with|par-left|<quote|1tab>|B.1.4<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|110110000...:
+      >Jets for elliptic curve functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-267>>
+
+      <with|par-left|<quote|2tab>|B.1.4.1<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|1101100000...:
+      >Jets for secp256k1 <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-268>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-point-verify>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-269><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-decompress>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-270><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-linear-verify>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-271><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-linear-combination>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-272><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-scale>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-273><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-generate>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-274><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-gej-infinity>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-275><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-gej-normalize>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-276><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-gej-negate>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-277><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-ge-negate>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-278><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-gej-double>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-279><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-gej-add>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-280><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-gej-ge-add-ex>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-281><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-gej-ge-add>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-282><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-gej-is-infinity>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-283><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-gej-equiv>
+      <with|color|<quote|red>|Does not exist in libsecp256k1>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-284><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-gej-ge-equiv>
+      <with|color|<quote|red>|Does not exist in libsecp256k1>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-285><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-gej-x-equiv>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-286><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-gej-y-is-odd>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-287><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-gej-is-on-curve>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-288><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-ge-is-on-curve>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-289><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-scalar-normalize>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-290><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-scalar-negate>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-291><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-scalar-add>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-292><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-scalar-square>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-293><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-scalar-multiply>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-294><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-scalar-multiply-lambda>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-295><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-scalar-invert>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-296><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-scalar-is-zero>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-297><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-ge-scale-lambda>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-298><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-gej-scale-lambda>
+      <with|color|<quote|red>|Consider removing>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-299><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-scalar-split-lambda>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-300><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-short-scalar>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-301><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-fe-normalize>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-302><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-fe-negate>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-303><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-fe-add>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-304><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-fe-square>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-305><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-fe-multiply>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-306><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-fe-multiply-beta>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-307><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-fe-invert>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-308><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-fe-square-root>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-309><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-fe-is-zero>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-310><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-fe-is-odd>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-311><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-fe-is-quad>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-312><vspace|0.15fn>>
+
+      <with|par-left|<quote|1tab>|B.1.5<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|110110001...:
+      >Jets for digital signatures <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-313>>
+
+      <with|par-left|<quote|2tab>|B.1.5.1<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|1101100010...:
+      >Jets for secp256k1 based digital signatures
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-314>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|bip0340-schnorr-verify>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-315><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|bip0340-challenge-iv>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-316><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|bip0340-challenge-midstate>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-317><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-signature-unpack>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-318><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-pubkey-unpack>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-319><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-pubkey-unpack-neg>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-320><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|secp256k1-ecdsa>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-321><vspace|0.15fn>>
+
+      <with|par-left|<quote|1tab>|B.1.6<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|110110010...:
+      >Jets for Simplicity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-322>>
+
+      <with|par-left|<quote|2tab>|B.1.6.1<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|11011000100...:
+      >Jets for tagged hash IVs <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-323>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|iden-commitment-tag>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-324><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|comp-commitment-tag>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-325><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|unit-commitment-tag>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-326><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|injl-commitment-tag>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-327><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|injr-commitment-tag>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-328><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|case-commitment-tag>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-329><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|pair-commitment-tag>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-330><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|take-commitment-tag>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-331><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|drop-commitment-tag>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-332><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|witness-commitment-tag>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-333><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|disconnect-commitment-tag>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-334><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|fail-commitment-tag>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-335><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|signtaure-tag>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-336><vspace|0.15fn>>
+
+      <with|par-left|<quote|4tab>|<with|font-family|<quote|ss>|sighash-tag>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-337><vspace|0.15fn>>
+
+      <with|par-left|<quote|1tab>|B.1.7<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|110110011...:
+      >Jets for Bitcoin (without primitives)
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-338>>
+
+      <with|par-left|<quote|2tab>|B.1.7.1<space|2spc><with|font-family|<quote|ss>|parse-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-339>>
+
+      <with|par-left|<quote|2tab>|B.1.7.2<space|2spc><with|font-family|<quote|ss>|parse-sequence>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-340>>
+
+      <with|par-left|<quote|1tab>|B.1.8<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|1101101000...:
+      >Jets for Elements (without primitives)
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-341>>
+
+      <with|par-left|<quote|2tab>|B.1.8.1<space|2spc><with|font-family|<quote|ss>|generate-entropy>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-342>>
+
+      <with|par-left|<quote|2tab>|B.1.8.2<space|2spc><with|font-family|<quote|ss>|calculate-asset>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-343>>
+
+      <with|par-left|<quote|2tab>|B.1.8.3<space|2spc><with|font-family|<quote|ss>|calculate-token>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-344>>
+
+      B.2<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|111...:
+      >Bitcoin Jets <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-345>
+
+      <with|par-left|<quote|1tab>|B.2.1<space|2spc>Transaction
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-346>>
+
+      <with|par-left|<quote|1tab>|B.2.2<space|2spc>Signature Hash Modes
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-347>>
+
+      <with|par-left|<quote|1tab>|B.2.3<space|2spc>Time Locks
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-348>>
+
+      <with|par-left|<quote|2tab>|B.2.3.1<space|2spc><with|font-family|<quote|ss>|total-height-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-349>>
+
+      <with|par-left|<quote|2tab>|B.2.3.2<space|2spc><with|font-family|<quote|ss>|total-time-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-350>>
+
+      <with|par-left|<quote|2tab>|B.2.3.3<space|2spc><with|font-family|<quote|ss>|total-distance-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-351>>
+
+      <with|par-left|<quote|2tab>|B.2.3.4<space|2spc><with|font-family|<quote|ss>|total-duration-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-352>>
+
+      <with|par-left|<quote|2tab>|B.2.3.5<space|2spc><with|font-family|<quote|ss>|is-final>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-353>>
+
+      <with|par-left|<quote|2tab>|B.2.3.6<space|2spc><with|font-family|<quote|ss>|current-height-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-354>>
+
+      <with|par-left|<quote|2tab>|B.2.3.7<space|2spc><with|font-family|<quote|ss>|current-time-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-355>>
+
+      <with|par-left|<quote|2tab>|B.2.3.8<space|2spc><with|font-family|<quote|ss>|current-distance-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-356>>
+
+      <with|par-left|<quote|2tab>|B.2.3.9<space|2spc><with|font-family|<quote|ss>|current-duration-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-357>>
+
+      <with|par-left|<quote|2tab>|B.2.3.10<space|2spc><with|font-family|<quote|ss>|current-is-Final>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-358>>
+
+      <with|par-left|<quote|2tab>|B.2.3.11<space|2spc><with|font-family|<quote|ss>|input-height-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-359>>
+
+      <with|par-left|<quote|2tab>|B.2.3.12<space|2spc><with|font-family|<quote|ss>|input-time-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-360>>
+
+      <with|par-left|<quote|2tab>|B.2.3.13<space|2spc><with|font-family|<quote|ss>|input-distance-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-361>>
+
+      <with|par-left|<quote|2tab>|B.2.3.14<space|2spc><with|font-family|<quote|ss>|input-duration-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-362>>
+
+      <with|par-left|<quote|2tab>|B.2.3.15<space|2spc><with|font-family|<quote|ss>|input-is-final>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-363>>
+
+      B.3<space|2spc><with|font-family|<quote|tt>|language|<quote|verbatim>|111...:
+      >Elements Jets <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-364>
+
+      <with|par-left|<quote|1tab>|B.3.1<space|2spc>Transaction
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-365>>
+
+      <with|par-left|<quote|1tab>|B.3.2<space|2spc>Time Locks
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-366>>
+
+      <with|par-left|<quote|2tab>|B.3.2.1<space|2spc><with|font-family|<quote|ss>|total-height-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-367>>
+
+      <with|par-left|<quote|2tab>|B.3.2.2<space|2spc><with|font-family|<quote|ss>|total-time-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-368>>
+
+      <with|par-left|<quote|2tab>|B.3.2.3<space|2spc><with|font-family|<quote|ss>|total-distance-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-369>>
+
+      <with|par-left|<quote|2tab>|B.3.2.4<space|2spc><with|font-family|<quote|ss>|total-duration-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-370>>
+
+      <with|par-left|<quote|2tab>|B.3.2.5<space|2spc><with|font-family|<quote|ss>|is-final>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-371>>
+
+      <with|par-left|<quote|2tab>|B.3.2.6<space|2spc><with|font-family|<quote|ss>|current-height-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-372>>
+
+      <with|par-left|<quote|2tab>|B.3.2.7<space|2spc><with|font-family|<quote|ss>|current-time-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-373>>
+
+      <with|par-left|<quote|2tab>|B.3.2.8<space|2spc><with|font-family|<quote|ss>|current-distance-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-374>>
+
+      <with|par-left|<quote|2tab>|B.3.2.9<space|2spc><with|font-family|<quote|ss>|current-duration-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-375>>
+
+      <with|par-left|<quote|2tab>|B.3.2.10<space|2spc><with|font-family|<quote|ss>|current-is-Final>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-376>>
+
+      <with|par-left|<quote|2tab>|B.3.2.11<space|2spc><with|font-family|<quote|ss>|input-height-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-377>>
+
+      <with|par-left|<quote|2tab>|B.3.2.12<space|2spc><with|font-family|<quote|ss>|input-time-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-378>>
+
+      <with|par-left|<quote|2tab>|B.3.2.13<space|2spc><with|font-family|<quote|ss>|input-distance-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-379>>
+
+      <with|par-left|<quote|2tab>|B.3.2.14<space|2spc><with|font-family|<quote|ss>|input-duration-lock>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-380>>
+
+      <with|par-left|<quote|2tab>|B.3.2.15<space|2spc><with|font-family|<quote|ss>|input-is-final>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-381>>
+
+      <with|par-left|<quote|1tab>|B.3.3<space|2spc>Issuance
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-382>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Appendix
+      C<space|2spc>Alternative Serialization of Simplicity DAGs>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-383><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Bibliography>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-174><vspace|0.5fn>
+      <no-break><pageref|auto-384><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

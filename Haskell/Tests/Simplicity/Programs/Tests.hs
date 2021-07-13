@@ -1,101 +1,383 @@
 -- This module tests the Simplicity programs on arbitrary inputs.
 module Simplicity.Programs.Tests (tests) where
 
-import Prelude hiding (sqrt)
-import Control.Arrow ((***))
+import Prelude hiding (sqrt, all)
+import Control.Arrow ((***), right)
 import Data.Bits ((.|.))
 import qualified Data.Bits as W
 import Data.ByteString (pack)
 import Data.ByteString.Short (toShort)
 import qualified Data.List as L
-import qualified Data.Word as W
 import Lens.Family2 ((^..), allOf, zipWithOf)
-import Lens.Family2.Stock (both_)
+import Lens.Family2.Stock (backwards, both_)
 
+import Simplicity.Bip0340
 import Simplicity.Digest
-import Simplicity.LibSecp256k1.Spec ((.*.))
-import qualified Simplicity.LibSecp256k1.Spec as LibSecp
+import Simplicity.LibSecp256k1.Spec ((.+.), (.*.), (.^.))
+import qualified Simplicity.LibSecp256k1.Spec as Spec
+import qualified Simplicity.Programs.Arith as Arith
 import Simplicity.Programs.Bit
 import Simplicity.Programs.LibSecp256k1.Lib
 import Simplicity.Programs.Sha256.Lib
 import Simplicity.Programs.Word
 import Simplicity.Term.Core
-import qualified Simplicity.Ty.Word as Ty
+import Simplicity.TestEval
+import Simplicity.Ty.Arbitrary
+import Simplicity.Ty.Word as Ty
+import qualified Simplicity.Word as W
 
 import Test.Tasty (TestTree, testGroup)
-import Test.Tasty.QuickCheck (Gen, Property, arbitrary, choose, elements, forAll, testProperty)
+import Test.Tasty.HUnit ((@=?), Assertion, testCase)
+import Test.Tasty.QuickCheck (Arbitrary(..), Gen, Property
+                             , arbitraryBoundedIntegral, choose, elements, forAll, resize, sized, testProperty
+                             , withMaxSuccess
+                             )
 
 -- This collects the tests for the various Simplicity programs.
 tests :: TestTree
 tests = testGroup "Programs"
-      [ testGroup "Arith"
-        [ testProperty "fullAdder word8" prop_fullAdder8
-        , testProperty "adder word8" prop_adder8
-        , testProperty "fullSubtractor word8" prop_fullSubtractor8
-        , testProperty "subtractor word8" prop_subtractor8
-        , testProperty "fullMultiplier word8" prop_fullMultiplier8
-        , testProperty "multiplier word8" prop_multiplier8
-        , testProperty "bitwiseNot word8" prop_bitwiseNot8
-        , testProperty "shift word8" prop_shift8
-        , testProperty "rotate word8" prop_rotate8
+      [ testGroup "Word"
+        [ testCase "low word8" assert_low8
+        , testCase "high word8" assert_high8
+        , testProperty "compelment word8" prop_complement8
+        , testProperty "and word8" prop_and8
+        , testProperty "or word8" prop_or8
+        , testProperty "xor word8" prop_xor8
+        , testProperty "xor3 word8" prop_xor3_8
+        , testProperty "maj word8" prop_maj8
+        , testProperty "ch word8" prop_ch8
+        , testProperty "some word4" prop_some4
+        , testProperty "all word4" prop_all4
+        , testProperty "shift_const_by false word8" prop_shift_const_by_false8
+        , testProperty "rotate_const word8" prop_rotate_const8
+        , testProperty "transpose zv2 zv8" prop_transpose_2x8
+        , testProperty "transpose zv8 zv8" prop_transpose_8x8
+        ]
+      , testGroup "Arith"
+        [ testCase "zero word8" assert_zero8
+        , testCase "one word8" assert_one8
+        , testProperty "full_add word8" prop_full_add8
+        , testProperty "add word8" prop_fe_add8
+        , testProperty "full_increment word8" prop_full_increment8
+        , testProperty "increment word8" prop_increment8
+        , testProperty "full_subtract word8" prop_full_subtract8
+        , testProperty "subtract word8" prop_subtract8
+        , testProperty "negate word8" prop_negateate8
+        , testProperty "full_decrement word8" prop_full_decrement8
+        , testProperty "decrement word8" prop_decrement8
+        , testProperty "fullMultiply word8" prop_full_multiply8
+        , testProperty "multiply word8" prop_fe_multiplytiply8
+        , testProperty "is_zero word4" prop_is_zero4
+        , testProperty "is_one word4" prop_is_one4
+        , testProperty "lt word8" prop_lt8
+        , testProperty "le word8" prop_le8
+        , testProperty "min word8" prop_min8
+        , testProperty "max word8" prop_max8
+        , testProperty "median word8" prop_median8
+        , testProperty "lsb word8" prop_lsb8
+        , testProperty "msb word8" prop_msb8
+        , testProperty "div_mod word8" prop_div_mod8
+        , testProperty "divide word8" prop_divide8
+        , testProperty "modulo word8" prop_modulo8
+        , testProperty "divides word8" prop_divides8
+        , testProperty "bezout word8" prop_bezout8
+        , testProperty "cofactors word8" prop_cofactors8
+        , testProperty "gcd word8" prop_gcd8
+        , testProperty "lcm word8" prop_lcm8
+        , testProperty "absolute_value word4" prop_absolute_value4
+        , testProperty "sign word4" prop_sign4
         ]
       , testProperty "sha256" prop_sha256
+      , testGroup "ellipticCurve"
+        [ testProperty "fe_normalize" prop_fe_normalize
+        , testProperty "fe_add" prop_fe_add
+        , testProperty "fe_multiply" prop_fe_multiply
+        , testProperty "fe_square" prop_fe_square
+        , testProperty "fe_negate" prop_fe_negate
+        , testProperty "fe_invert" (withMaxSuccess 10 prop_fe_invert)
+        , testProperty "fe_square_root" (withMaxSuccess 10 prop_fe_square_root)
+        , testProperty "gej_rescale" prop_gej_rescale
+        , testProperty "gej_rescale_inf" prop_gej_rescale_inf
+        , testProperty "gej_double" prop_gej_double
+        , testProperty "gej_double_inf" prop_gej_double_inf
+        , testProperty "gej_add_ex" prop_gej_add_ex
+        , testProperty "gej_add_ex_double" prop_gej_add_ex_double
+        , testProperty "gej_add_ex_opp" prop_gej_add_ex_opp
+        , testProperty "gej_add_ex_infl" prop_gej_add_ex_infl
+        , testProperty "gej_add_ex_infr" prop_gej_add_ex_infr
+        , testProperty "gej_add" prop_gej_add
+        , testProperty "gej_add_double" prop_gej_add_double
+        , testProperty "gej_add_opp" prop_gej_add_opp
+        , testProperty "gej_add_infl" prop_gej_add_infl
+        , testProperty "gej_add_infr" prop_gej_add_infr
+        , testProperty "gej_ge_add_ex" prop_gej_ge_add_ex
+        , testProperty "gej_ge_add_ex_double" prop_gej_ge_add_ex_double
+        , testProperty "gej_ge_add_ex_opp" prop_gej_ge_add_ex_opp
+        , testProperty "gej_ge_add_ex_inf" prop_gej_ge_add_ex_inf
+        , testProperty "gej_x_equiv" prop_gej_x_equiv
+        , testProperty "gej_x_equiv_inf" prop_gej_x_equiv_inf
+        , testProperty "gej_x_equiv_true" prop_gej_x_equiv_true
+        , testProperty "gej_x_equiv_inf_zero" prop_gej_x_equiv_inf_zero
+        , testProperty "gej_is_on_curve" prop_gej_is_on_curve
+        , testProperty "gej_is_on_curve_half" prop_gej_is_on_curve_half
+        , testProperty "gej_is_on_curve_inf" prop_gej_is_on_curve_inf
+        , testProperty "gej_is_on_curve_inf_half" prop_gej_is_on_curve_inf_half
+        , testProperty "ge_is_on_curve" prop_ge_is_on_curve
+        , testProperty "ge_is_on_curve_half" prop_ge_is_on_curve_half
+        , testProperty "scalar_normalize" prop_scalar_normalize
+        , testProperty "scalar_add" prop_scalar_add
+        , testProperty "scalar_square" prop_scalar_square
+        , testProperty "scalar_multiply" prop_scalar_multiply
+        , testProperty "scalar_negate" prop_scalar_negate
+        , testProperty "scalar_invert" prop_scalar_invert
+        , testProperty "scalar_split_lambda" prop_scalar_split_lambda
+        , testProperty "wnaf5" prop_wnaf5
+        , testProperty "wnaf15" prop_wnaf15
+        , testProperty "decompress" (withMaxSuccess 10 prop_decompress)
+        ]
+      , testGroup "bip0340"
+        [ testProperty "pubkey_unpack" prop_pubkey_unpack
+        , testProperty "pubkey_unpack_neg" prop_pubkey_unpack_neg
+        , testProperty "signature_unpack" prop_signature_unpack
+        ]
       ]
 
--- The specification for full adder on Word8
-prop_fullAdder8 :: Word8 -> Word8 -> Bit -> Bool
-prop_fullAdder8 x y z = (if fromBit carry then 2^8 else 0) + fromWord8 result8 == fromWord8 x + fromWord8 y + if fromBit z then 1 else 0
+assert_low8 :: Assertion
+assert_low8 = 0 @=? fromWord8 (low word8 ())
+
+assert_high8 :: Assertion
+assert_high8 = 0xff @=? fromWord8 (high word8 ())
+
+prop_complement8 :: Word8 -> Bool
+prop_complement8 x = W.complement (fromInteger . fromWord8 $ x) == (fromInteger . fromWord8 $ complement word8 x :: W.Word8)
+
+prop_and8 :: Word8 -> Word8 -> Bool
+prop_and8 x y = (fromInteger $ fromWord8 x) W..&. (fromInteger $ fromWord8 y)
+             == (fromInteger . fromWord8 $ bitwise_and word8 (x, y) :: W.Word8)
+
+prop_or8 :: Word8 -> Word8 -> Bool
+prop_or8 x y = (fromInteger $ fromWord8 x) W..|. (fromInteger $ fromWord8 y)
+            == (fromInteger . fromWord8 $ bitwise_or word8 (x, y) :: W.Word8)
+
+prop_xor8 :: Word8 -> Word8 -> Bool
+prop_xor8 x y = (fromInteger $ fromWord8 x) `W.xor` (fromInteger $ fromWord8 y)
+             == (fromInteger . fromWord8 $ bitwise_xor word8 (x, y) :: W.Word8)
+
+prop_xor3_8 :: Word8 -> Word8 -> Word8 -> Bool
+prop_xor3_8 x y z = (fromInteger $ fromWord8 x) `W.xor` (fromInteger $ fromWord8 y) `W.xor` (fromInteger $ fromWord8 z)
+                 == (fromInteger . fromWord8 $ bitwise_xor3 word8 (x, (y, z)) :: W.Word8)
+
+prop_maj8 :: Word8 -> Word8 -> Word8 -> Bool
+prop_maj8 x y z = zipWith3 maj (x^..bits8) (y^..bits8) (z^..bits8)
+               == (fromBit <$> bitwise_maj word8 (x, (y, z))^..bits8)
  where
-  (carry, result8) = fullAdder word8 ((x, y), z)
+  maj a b c = 2 <= fromWord1 a + fromWord1 b + fromWord1 c
+  bits8 x = (both_.both_.both_) x
 
--- The specification for adder on Word8
-prop_adder8 :: Word8 -> Word8 -> Bool
-prop_adder8 x y = (if fromBit carry then 2^8 else 0) + fromWord8 result8 == fromWord8 x + fromWord8 y
+prop_ch8 :: Word8 -> Word8 -> Word8 -> Bool
+prop_ch8 x y z = zipWith3 ch (x^..bits8) (y^..bits8) (z^..bits8)
+              == (fromBit <$> bitwise_ch word8 (x, (y, z))^..bits8)
  where
-  (carry, result8) = adder word8 (x, y)
+  ch a b c = if fromBit a then fromBit b else fromBit c
+  bits8 x = (both_.both_.both_) x
 
--- The specification for full subtractor on Word8
-prop_fullSubtractor8 :: Word8 -> Word8 -> Bit -> Bool
-prop_fullSubtractor8 x y z =  fromWord8 result8 == (if fromBit borrow then 2^8 else 0) + fromWord8 x - fromWord8 y - if fromBit z then 1 else 0
- where
-  (borrow, result8) = fullSubtractor word8 ((x, y), z)
+prop_some4 :: Word4 -> Bool
+prop_some4 x = (0 /= fromWord4 x)
+            == fromBit (some word4 x)
 
--- The specification for subtractor on Word8
-prop_subtractor8 :: Word8 -> Word8 -> Bool
-prop_subtractor8 x y =  fromWord8 result8 == (if fromBit borrow then 2^8 else 0) + fromWord8 x - fromWord8 y
- where
-  (borrow, result8) = subtractor word8 (x, y)
+prop_all4 :: Word4 -> Bool
+prop_all4 x = (0xf == fromWord4 x)
+           == fromBit (all word4 x)
 
--- The specification for full multiplier on Word8
-prop_fullMultiplier8 :: Word8 -> Word8 -> Word8 -> Word8 -> Bool
-prop_fullMultiplier8 w x y z = fromWord16 (fullMultiplier word8 ((x, y), (w, z))) == fromWord8 x * fromWord8 y + fromWord8 w + fromWord8 z
-
--- The specification for multiplier on Word8
-prop_multiplier8 :: Word8 -> Word8 -> Bool
-prop_multiplier8 x y = fromWord16 (multiplier word8 (x, y)) == fromWord8 x * fromWord8 y
-
--- The specification for bitwiseNot on Word8
-prop_bitwiseNot8 :: Word8 -> Bool
-prop_bitwiseNot8 x = conv (bitwiseNot word8 x) == W.complement (conv x)
+prop_shift_const_by_false8 :: Word8 -> Property
+prop_shift_const_by_false8 x = forAll (choose (-8,16)) $ \c ->
+                               W.shift (conv x) c == conv (shift_const_by false word8 c x)
  where
   conv :: Word8 -> W.Word8
   conv = fromInteger . fromWord8
 
--- The specification for shifts on Word8
-prop_shift8 :: Word8 -> Property
-prop_shift8 x = forAll small (\z -> convert (shift word8 z x) == W.shift (convert x) (-z))
+prop_rotate_const8 :: Word8 -> Property
+prop_rotate_const8 x = forAll (choose (-8,16)) $ \c ->
+                       W.rotate (conv x) c == conv (rotate_const word8 c x)
  where
-  convert :: Word8 -> W.Word8
-  convert = fromInteger . fromWord8
-  small = elements [-16..16]
+  conv :: Word8 -> W.Word8
+  conv = fromInteger . fromWord8
 
--- The specification for rotates on Word8
-prop_rotate8 :: Word8 -> Property
-prop_rotate8 x = forAll small (\z -> convert (rotate word8 z x) == W.rotate (convert x) (-z))
+prop_transpose_2x8 :: Word16 -> Bool
+prop_transpose_2x8 x = L.transpose (map (^..both_) (x^..both_.both_.both_))
+                    == map (^..both_.both_.both_) (transpose zv2 zv8 x^..both_)
  where
-  convert :: Word8 -> W.Word8
-  convert = fromInteger . fromWord8
-  small = elements [-16..16]
+  zv2 = DoubleZV SingleZV
+  zv8 = DoubleZV . DoubleZV . DoubleZV $ SingleZV
+
+prop_transpose_8x8 :: Word64 -> Bool
+prop_transpose_8x8 x = L.transpose (map (^..both_.both_.both_) (x^..both_.both_.both_))
+                    == map (^..both_.both_.both_) (transpose zv8 zv8' x^..both_.both_.both_)
+ where
+  zv8 = DoubleZV . DoubleZV . DoubleZV $ SingleZV
+  zv8' = DoubleZV . DoubleZV . DoubleZV $ SingleZV -- monomorhpism restriction
+
+assert_zero8 :: Assertion
+assert_zero8 = 0 @=? fromWord8 (Arith.zero word8 ())
+
+assert_one8 :: Assertion
+assert_one8 = 0x1 @=? fromWord8 (Arith.one word8 ())
+
+-- The specification for full adder on Word8
+prop_full_add8 :: Bit -> Word8 -> Word8 -> Bool
+prop_full_add8 z x y = (if fromBit carry then 2^8 else 0) + fromWord8 result8 == fromWord8 x + fromWord8 y + if fromBit z then 1 else 0
+ where
+  (carry, result8) = Arith.full_add word8 (z, (x, y))
+
+-- The specification for adder on Word8
+prop_fe_add8 :: Word8 -> Word8 -> Bool
+prop_fe_add8 x y = (if fromBit carry then 2^8 else 0) + fromWord8 result8 == fromWord8 x + fromWord8 y
+ where
+  (carry, result8) = Arith.add word8 (x, y)
+
+prop_full_increment8 :: Bit -> Word8 -> Bool
+prop_full_increment8 z x = (if fromBit carry then 2^8 else 0) + fromWord8 result8 == fromWord8 x + if fromBit z then 1 else 0
+ where
+  (carry, result8) = Arith.full_increment word8 (z, x)
+
+prop_increment8 :: Word8 -> Bool
+prop_increment8 x = (if fromBit carry then 2^8 else 0) + fromWord8 result8 == fromWord8 x + 1
+ where
+  (carry, result8) = Arith.increment word8 x
+
+-- The specification for full subtractor on Word8
+prop_full_subtract8 :: Bit -> Word8 -> Word8 -> Bool
+prop_full_subtract8 z x y = fromWord8 result8 == (if fromBit borrow then 2^8 else 0) + fromWord8 x - fromWord8 y - if fromBit z then 1 else 0
+ where
+  (borrow, result8) = Arith.full_subtract word8 (z, (x, y))
+
+-- The specification for subtractor on Word8
+prop_subtract8 :: Word8 -> Word8 -> Bool
+prop_subtract8 x y = fromWord8 result8 == (if fromBit borrow then 2^8 else 0) + fromWord8 x - fromWord8 y
+ where
+  (borrow, result8) = Arith.subtract word8 (x, y)
+
+prop_negateate8 :: Word8 -> Word8 -> Bool
+prop_negateate8 x y = fromWord8 result8 == (if fromBit borrow then 2^8 else 0) - fromWord8 x
+ where
+  (borrow, result8) = Arith.negate word8 x
+
+prop_full_decrement8 :: Bit -> Word8 -> Bool
+prop_full_decrement8 z x = fromWord8 result8 == (if fromBit borrow then 2^8 else 0) + fromWord8 x - if fromBit z then 1 else 0
+ where
+  (borrow, result8) = Arith.full_decrement word8 (z, x)
+
+prop_decrement8 :: Word8 -> Bool
+prop_decrement8 x = fromWord8 result8 == (if fromBit borrow then 2^8 else 0) + fromWord8 x - 1
+ where
+  (borrow, result8) = Arith.decrement word8 x
+
+-- The specification for full multiplier on Word8
+prop_full_multiply8 :: Word8 -> Word8 -> Word8 -> Word8 -> Bool
+prop_full_multiply8 w x y z = fromWord16 (Arith.full_multiply word8 ((x, y), (w, z))) == fromWord8 x * fromWord8 y + fromWord8 w + fromWord8 z
+
+-- The specification for multiplier on Word8
+prop_fe_multiplytiply8 :: Word8 -> Word8 -> Bool
+prop_fe_multiplytiply8 x y = fromWord16 (Arith.multiply word8 (x, y)) == fromWord8 x * fromWord8 y
+
+prop_is_zero4 :: Word4 -> Bool
+prop_is_zero4 x = (0 == fromWord4 x) == fromBit (Arith.is_zero word4 x)
+
+prop_is_one4 :: Word4 -> Bool
+prop_is_one4 x = (1 == fromWord4 x) == fromBit (Arith.is_one word4 x)
+
+prop_lt8 :: Word8 -> Word8 -> Bool
+prop_lt8 x y = (fromWord8 x < fromWord8 y) == fromBit (Arith.lt word8 (x,y))
+
+prop_le8 :: Word8 -> Word8 -> Bool
+prop_le8 x y = (fromWord8 x <= fromWord8 y) == fromBit (Arith.le word8 (x,y))
+
+prop_min8 :: Word8 -> Word8 -> Bool
+prop_min8 x y = (fromWord8 x `min` fromWord8 y) == fromWord8 (Arith.min word8 (x,y))
+
+prop_max8 :: Word8 -> Word8 -> Bool
+prop_max8 x y = (fromWord8 x `max` fromWord8 y) == fromWord8 (Arith.max word8 (x,y))
+
+prop_median8 :: Word8 -> Word8 -> Word8 -> Bool
+prop_median8 x y z = median (fromWord8 x) (fromWord8 y) (fromWord8 z) == fromWord8 (Arith.median word8 (x,(y,z)))
+ where
+  median a b c = head . tail . L.sort $ [a,b,c]
+
+prop_lsb8 :: Word8 -> Bool
+prop_lsb8 x = W.testBit (fromWord8 x) 0 == fromBit (Arith.lsb word8 x)
+
+prop_msb8 :: Word8 -> Bool
+prop_msb8 x = W.testBit (fromWord8 x) 7 == fromBit (Arith.msb word8 x)
+
+prop_div_mod8 :: Word8 -> Word8 -> Bool
+prop_div_mod8 x y = div_mod_spec (fromWord8 x) (fromWord8 y) == (fromWord8 a, fromWord8 b)
+ where
+  div_mod_spec x 0 = (0, x)
+  div_mod_spec x y = divMod x y
+  (a, b) = Arith.div_mod word8 (x, y)
+
+prop_divide8 :: Word8 -> Word8 -> Bool
+prop_divide8 x y = div_spec (fromWord8 x) (fromWord8 y) == fromWord8 (Arith.divide word8 (x, y))
+ where
+  div_spec x 0 = 0
+  div_spec x y = div x y
+
+prop_modulo8 :: Word8 -> Word8 -> Bool
+prop_modulo8 x y = mod_spec (fromWord8 x) (fromWord8 y) == fromWord8 (Arith.modulo word8 (x, y))
+ where
+  mod_spec x 0 = x
+  mod_spec x y = mod x y
+
+prop_divides8 :: Word8 -> Word8 -> Bool
+prop_divides8 x y = divides_spec (fromWord8 x) (fromWord8 y) == fromBit (Arith.divides word8 (x, y))
+ where
+  divides_spec 0 y = y == 0
+  divides_spec x y = y `mod` x == 0
+
+prop_bezout8 :: Word8 -> Word8 -> Bool
+prop_bezout8 x y = a * x' + b * y' == d
+                && if x' == y' then (a == 1 && b == 0)
+                   else if y' == 0 then (a == 1 && b == 0)
+                   else if x' == 0 then (a == 0 && b == 1)
+                   else (if d == y' then a == 0 else abs a * 2 * d <= y')
+                     && (if d == x' then b == 0 else abs b * 2 * d <= x')
+ where
+  x' = fromWord8 x
+  y' = fromWord8 y
+  d = x' `gcd` y'
+  (a, b) = either f g $ Arith.bezout word8 (x, y)
+  f (a, b) = (fromWord8 a, - fromWord8 b)
+  g (a, b) = (- fromWord8 a, fromWord8 b)
+
+prop_cofactors8 :: Word8 -> Word8 -> Bool
+prop_cofactors8 x y = fromWord8 x == d * fromWord8 a
+                   && fromWord8 y == d * fromWord8 b
+ where
+  d = fromWord8 x `gcd` fromWord8 y
+  (a, b) = Arith.cofactors word8 (x, y)
+
+prop_gcd8 :: Word8 -> Word8 -> Bool
+prop_gcd8 x y = (fromWord8 x `gcd` fromWord8 y) == fromWord8 (Arith.gcd word8 (x,y))
+
+prop_lcm8 :: Word8 -> Word8 -> Bool
+prop_lcm8 x y = (fromWord8 x `lcm` fromWord8 y) == fromWord16 (Arith.lcm word8 (x,y))
+
+prop_absolute_value4 :: Word4 -> Bool
+prop_absolute_value4 x = abs (fromInt4 x) == fromWord4 (Arith.absolute_value word4 x)
+ where
+  fromInt4 x = if 2^3 <= w4 then w4 - 2^4 else w4
+   where
+    w4 = fromWord4 x
+
+prop_sign4 :: Word4 -> Bool
+prop_sign4 x = signum (fromInt4 x) == fromInt2 (Arith.sign word4 x)
+ where
+  fromInt4 x = if 2^3 <= w4 then w4 - 2^4 else w4
+   where
+    w4 = fromWord4 x
+  fromInt2 x = if 2^1 <= w2 then w2 - 2^2 else w2
+   where
+    w2 = fromWord2 x
 
 -- The specification for SHA-256's block compression function.
 prop_sha256 :: [W.Word8] -> Bool
@@ -109,305 +391,282 @@ prop_sha256 x0 = integerHash256 (bsHash (pack x)) == fromWord256 ((iv &&& iden >
     go (w:ws) n = go ws (W.shiftL n 8 .|. toInteger w)
   paddedInteger = W.shiftL (mkInteger (x ++ [0x80])) (8*(64 - (len + 1))) .|. toInteger len*8
 
-fromFE :: FE -> LibSecp.FE
-fromFE (a0,(a1,(a2,(a3,(a4,(a5,(a6,(a7,(a8,a9))))))))) =
-  LibSecp.FE (conv a0)
-             (conv a1)
-             (conv a2)
-             (conv a3)
-             (conv a4)
-             (conv a5)
-             (conv a6)
-             (conv a7)
-             (conv a8)
-             (conv a9)
+prop_fe_normalize :: FieldElement -> Bool
+prop_fe_normalize a = fe_normalize (feAsTy a) == toFE (feAsSpec a)
+
+fe_unary_prop f g = \a -> fastF (feAsTy a) == Just (toFE (g (feAsSpec a)))
  where
-  conv = fromInteger . fromWord32
+  fastF = testCoreEval f
 
-toFE :: LibSecp.FE -> FE
-toFE (LibSecp.FE a0 a1 a2 a3 a4 a5 a6 a7 a8 a9) =
-   (conv a0
-  ,(conv a1
-  ,(conv a2
-  ,(conv a3
-  ,(conv a4
-  ,(conv a5
-  ,(conv a6
-  ,(conv a7
-  ,(conv a8
-  , conv a9)))))))))
+fe_binary_prop f g = \a b -> fastF (feAsTy a, feAsTy b) == Just (toFE (g (feAsSpec a) (feAsSpec b)))
  where
-  conv = toWord32 . toInteger
+  fastF = testCoreEval f
 
-eq_fe = zipWithOf (allOf LibSecp.fe) (==)
+prop_fe_add :: FieldElement -> FieldElement -> Bool
+prop_fe_add = fe_binary_prop fe_add Spec.fe_add
 
-prop_normalizeWeak :: FE -> Bool
-prop_normalizeWeak a = fromFE (normalizeWeak a) `eq_fe` LibSecp.normalizeWeak (fromFE a)
+prop_fe_multiply :: FieldElement -> FieldElement -> Bool
+prop_fe_multiply = fe_binary_prop fe_multiply Spec.fe_multiply
 
-prop_normalize :: FE -> Bool
-prop_normalize a = fromFE (normalize a) `eq_fe` LibSecp.normalize (fromFE a)
-over_low x y = toFE $ LibSecp.FE (0x3FFFFFF-x) (0x3FFFFFF-y) 0x3FFFFFF 0x3FFFFFF 0x3FFFFFF 0x3FFFFFF 0x3FFFFFF 0x3FFFFFF 0x3FFFFFF 0x03FFFFF
-over_high x y = toFE $ LibSecp.FE (0x3FFFFFF-x) (0x3FFFFFF-y) 0x3FFFFFF 0x3FFFFFF 0x3FFFFFF 0x3FFFFFF 0x3FFFFFF 0x3FFFFFF 0x3FFFFFF 0x07FFFFF
-prop_normalize_over_low x y = prop_normalize (over_low x y)
-prop_normalize_over_high x y = prop_normalize (over_high x y)
+prop_fe_square :: FieldElement -> Bool
+prop_fe_square = fe_unary_prop fe_square Spec.fe_square
 
-prop_fePack :: FE -> Bool
-prop_fePack a = toBS (fePack a) == LibSecp.fePack (fromFE a)
+prop_fe_negate :: FieldElement -> Bool
+prop_fe_negate = fe_unary_prop fe_negate Spec.fe_negate
+
+prop_fe_invert :: FieldElement -> Bool
+prop_fe_invert = fe_unary_prop fe_invert Spec.fe_invert
+
+prop_fe_square_root :: FieldElement -> Bool
+prop_fe_square_root = \a -> fastSqrt (feAsTy a) == Just ((fmap toFE . maybeToTy) (Spec.fe_square_root (feAsSpec a)))
  where
-  toBS x = toShort . pack . map conv $ x^..(both_.both_.both_.both_.both_)
-  conv = fromInteger . fromWord8
-prop_fePack_over_low x y = prop_fePack (over_low x y)
-prop_fePack_over_high x y = prop_fePack (over_high x y)
+  fastSqrt = testCoreEval fe_square_root
 
-prop_feUnpack :: Word256 -> Bool
-prop_feUnpack w = fromFE (feUnpack w) `eq_fe` LibSecp.feUnpack (fromInteger (fromWord256 w))
-
-prop_add :: FE -> FE -> Bool
-prop_add a b = fromFE (add (a, b)) `eq_fe` LibSecp.add (fromFE a) (fromFE b)
-
-prop_mul :: FE -> FE -> Bool
-prop_mul a b = fromFE (mul (a, b)) `eq_fe` LibSecp.mul (fromFE a) (fromFE b)
-
-prop_sqr :: FE -> Bool
-prop_sqr a = fromFE (sqr a) `eq_fe` LibSecp.sqr (fromFE a)
-
-prop_mulInt :: FE -> Property
-prop_mulInt a = forAll (choose (0, 32)) (\m -> fromFE (mulInt m a) `eq_fe` LibSecp.mulInt (fromInteger m) (fromFE a))
-
-prop_neg :: FE -> Property
-prop_neg a = forAll (choose (0, 32)) (\m -> fromFE (neg m a) `eq_fe` LibSecp.neg (fromInteger m) (fromFE a))
-
-prop_inv :: FE -> Bool
-prop_inv a = fromFE (inv a) `eq_fe` LibSecp.inv (fromFE a)
-
-prop_sqrt :: FE -> Bool
-prop_sqrt a = conv (sqrt a) `eq_mfe` LibSecp.sqrt (fromFE a)
+prop_gej_rescale :: GroupElementJacobian -> FieldElement -> Bool
+prop_gej_rescale = \a c -> fast_gej_rescale (gejAsTy a, feAsTy c) == Just (toGEJ (Spec.gej_rescale (gejAsSpec a) (feAsSpec c)))
  where
-  conv = either (const Nothing) (Just . fromFE)
-  eq_mfe (Just x) (Just y) = x `eq_fe` y
-  eq_mfe Nothing Nothing = True
-  eq_mfe _ _ = False
+  fast_gej_rescale = testCoreEval gej_rescale
 
-fromGE :: GE -> LibSecp.GE
-fromGE (x, y) = LibSecp.GE (fromFE x) (fromFE y)
+prop_gej_rescale_inf :: FieldElement -> Property
+prop_gej_rescale_inf c = forAll gen_inf $ flip prop_gej_rescale c
 
-toGE :: LibSecp.GE -> GE
-toGE (LibSecp.GE x y) = (toFE x, toFE y)
-
-fromGEJ :: GEJ -> LibSecp.GEJ
-fromGEJ ((x, y), z) = LibSecp.GEJ (fromFE x) (fromFE y) (fromFE z)
-
-toGEJ :: LibSecp.GEJ -> GEJ
-toGEJ (LibSecp.GEJ x y z) = ((toFE x, toFE y), toFE z)
-
-eq_gej = zipWithOf (allOf LibSecp.gej) eq_fe
-
-gen_inf :: Gen GEJ
-gen_inf = (\xy -> (xy, feZero ())) <$> arbitrary
-
-prop_double_inf :: Property
-prop_double_inf = forAll gen_inf $ prop_double
-
-prop_double :: GEJ -> Bool
-prop_double a = fromGEJ (double a) `eq_gej` LibSecp.double (fromGEJ a)
-
-prop_offsetPoint :: GEJ -> GE -> Bool
-prop_offsetPoint a b = fromFE rz `eq_fe` rz' && fromGEJ c `eq_gej` c'
+prop_gej_double :: GroupElementJacobian -> Bool
+prop_gej_double = \a -> fast_gej_double (gejAsTy a) == Just (toGEJ (Spec.gej_double (gejAsSpec a)))
  where
-  (rz,c) = offsetPoint (a, b)
-  (rz',c') = LibSecp.offsetPoint (fromGEJ a) (fromGE b)
+  fast_gej_double = testCoreEval gej_double
 
-prop_offsetPoint_double z b = prop_offsetPoint a b
+prop_gej_double_inf :: Property
+prop_gej_double_inf = forAll gen_inf $ prop_gej_double
+
+prop_gej_add_ex :: GroupElementJacobian -> GroupElementJacobian -> Bool
+prop_gej_add_ex = \a b ->
+  let rzc = fast_gej_add_ex (gejAsTy a, gejAsTy b)
+      (rz', c') = Spec.gej_add_ex (gejAsSpec a) (gejAsSpec b)
+  in (fst <$> rzc) == Just (toFE rz') && (snd <$> rzc) == Just (toGEJ c')
  where
-  z' = fromFE z
-  z'2 = LibSecp.sqr z'
-  z'3 = z' .*. z'2
-  LibSecp.GE b'x b'y = fromGE b
-  a = ((toFE (b'x .*. z'2), toFE (b'y .*. z'3)), z)
+  fast_gej_add_ex = testCoreEval gej_add_ex
 
-prop_offsetPoint_opp z b = prop_offsetPoint a b
+prop_gej_add_ex_double :: FieldElement -> GroupElementJacobian -> Bool
+prop_gej_add_ex_double z b@(GroupElementJacobian bx by bz) = prop_gej_add_ex a b
  where
-  z' = fromFE z
-  z'2 = LibSecp.sqr z'
-  z'3 = z' .*. z'2
-  LibSecp.GE b'x b'y = fromGE b
-  a = ((toFE (b'x .*. z'2), toFE (LibSecp.neg 1 (b'y .*. z'3))), z)
+  z' = feAsSpec z
+  bx' = feAsSpec bx
+  by' = feAsSpec by
+  bz' = feAsSpec bz
+  a = GroupElementJacobian (FieldElement . Spec.fe_pack $ bx' .*. z' .^. 2)
+                           (FieldElement . Spec.fe_pack $ by' .*. z' .^. 3)
+                           (FieldElement . Spec.fe_pack $ bz' .*. z')
 
-prop_offsetPoint_inf b = forAll gen_inf $ \a -> prop_offsetPoint a b
-
-prop_offsetPointZinv :: GEJ -> GE -> FE -> Bool
-prop_offsetPointZinv a b zinv = fromGEJ (offsetPointZinv (a,(b,zinv))) `eq_gej` LibSecp.offsetPointZinv (fromGEJ a) (fromGE b) (fromFE zinv)
-
-prop_offsetPointZinv_double z b bz = prop_offsetPointZinv a b bz
+prop_gej_add_ex_opp :: FieldElement -> GroupElementJacobian -> Bool
+prop_gej_add_ex_opp z b@(GroupElementJacobian bx by bz) = prop_gej_add_ex a b
  where
-  b'z = fromFE bz
-  z' = fromFE z
-  z'2 = LibSecp.sqr z'
-  z'3 = z' .*. z'2
-  LibSecp.GE b'x b'y = fromGE b
-  a = ((toFE (b'x .*. z'2), toFE (b'y .*. z'3)), toFE (LibSecp.inv b'z .*. z'))
+  z' = feAsSpec z
+  bx' = feAsSpec bx
+  by' = feAsSpec by
+  bz' = feAsSpec bz
+  a = GroupElementJacobian (FieldElement . Spec.fe_pack $ bx' .*. z' .^. 2)
+                           (FieldElement . Spec.fe_pack . Spec.fe_negate $ by' .*. z' .^. 3)
+                           (FieldElement . Spec.fe_pack $ bz' .*. z')
 
-prop_offsetPointZinv_opp z b bz = prop_offsetPointZinv a b bz
+prop_gej_add_ex_infl b = forAll gen_inf $ \a -> prop_gej_add_ex a b
+prop_gej_add_ex_infr a = forAll gen_inf $ \b -> prop_gej_add_ex a b
+
+prop_gej_add :: GroupElementJacobian -> GroupElementJacobian -> Bool
+prop_gej_add = \a b -> fast_gej_add (gejAsTy a, gejAsTy b) == Just (toGEJ (gejAsSpec a <> gejAsSpec b))
  where
-  b'z = fromFE bz
-  z' = fromFE z
-  z'2 = LibSecp.sqr z'
-  z'3 = z' .*. z'2
-  LibSecp.GE b'x b'y = fromGE b
-  a = ((toFE (b'x .*. z'2), toFE (LibSecp.neg 1 (b'y .*. z'3))), toFE (LibSecp.inv b'z .*. z'))
+  fast_gej_add = testCoreEval gej_add
 
-prop_offsetPointZinv_inf :: GE -> FE -> Property
-prop_offsetPointZinv_inf b zinv = forAll gen_inf $ \a -> prop_offsetPointZinv a b zinv
-
-fromScalar :: Ty.Word256 -> LibSecp.Scalar
-fromScalar = LibSecp.Scalar . fromInteger . fromWord256
-
-prop_wnaf5 :: Ty.Word256 -> Bool
-prop_wnaf5 n = L.and $ zipWith (==) lhs (fmap (fmap unsign) (LibSecp.wnaf 5 (fromScalar n) ++ repeat Nothing))
+prop_gej_add_double :: FieldElement -> GroupElementJacobian -> Bool
+prop_gej_add_double z b@(GroupElementJacobian bx by bz) = prop_gej_add a b
  where
-  lhs = either (const Nothing) (Just . fromInteger . fromWord4) <$> wnaf5 n^..both_.both_.both_.both_.both_.both_.both_.both_
+  z' = feAsSpec z
+  bx' = feAsSpec bx
+  by' = feAsSpec by
+  bz' = feAsSpec bz
+  a = GroupElementJacobian (FieldElement . Spec.fe_pack $ bx' .*. z' .^. 2)
+                           (FieldElement . Spec.fe_pack $ by' .*. z' .^. 3)
+                           (FieldElement . Spec.fe_pack $ bz' .*. z')
+
+prop_gej_add_opp :: FieldElement -> GroupElementJacobian -> Bool
+prop_gej_add_opp z b@(GroupElementJacobian bx by bz) = prop_gej_add a b
+ where
+  z' = feAsSpec z
+  bx' = feAsSpec bx
+  by' = feAsSpec by
+  bz' = feAsSpec bz
+  a = GroupElementJacobian (FieldElement . Spec.fe_pack $ bx' .*. z' .^. 2)
+                           (FieldElement . Spec.fe_pack . Spec.fe_negate $ by' .*. z' .^. 3)
+                           (FieldElement . Spec.fe_pack $ bz' .*. z')
+
+prop_gej_add_infl b = forAll gen_inf $ \a -> prop_gej_add a b
+prop_gej_add_infr a = forAll gen_inf $ \b -> prop_gej_add a b
+
+prop_gej_ge_add_ex :: GroupElementJacobian -> GroupElement -> Bool
+prop_gej_ge_add_ex = \a b ->
+  let rzc = fast_gej_ge_add_ex (gejAsTy a, geAsTy b)
+      (rz', c') = Spec.gej_ge_add_ex (gejAsSpec a) (geAsSpec b)
+  in (fst <$> rzc) == Just (toFE rz') && (snd <$> rzc) == Just (toGEJ c')
+ where
+  fast_gej_ge_add_ex = testCoreEval gej_ge_add_ex
+
+prop_gej_ge_add_ex_double :: FieldElement -> GroupElement -> Bool
+prop_gej_ge_add_ex_double z b@(GroupElement bx by) = prop_gej_ge_add_ex a b
+ where
+  z' = feAsSpec z
+  bx' = feAsSpec bx
+  by' = feAsSpec by
+  a = GroupElementJacobian (FieldElement . Spec.fe_pack $ bx' .*. z' .^. 2)
+                           (FieldElement . Spec.fe_pack $ by' .*. z' .^. 3)
+                           z
+
+prop_gej_ge_add_ex_opp :: FieldElement -> GroupElement -> Bool
+prop_gej_ge_add_ex_opp z b@(GroupElement bx by) = prop_gej_ge_add_ex a b
+ where
+  z' = feAsSpec z
+  bx' = feAsSpec bx
+  by' = feAsSpec by
+  a = GroupElementJacobian (FieldElement . Spec.fe_pack $ bx' .*. z' .^. 2)
+                           (FieldElement . Spec.fe_pack . Spec.fe_negate $ by' .*. z' .^. 3)
+                           z
+
+prop_gej_ge_add_ex_inf b = forAll gen_inf $ \a -> prop_gej_ge_add_ex a b
+
+prop_gej_x_equiv :: FieldElement -> GroupElementJacobian -> Bool -- gej_x_equiv will essentially always be false on random inputs.
+prop_gej_x_equiv = \x0 a -> fast_gej_x_equiv (feAsTy x0, gejAsTy a) == Just (toBit (Spec.gej_x_equiv (feAsSpec x0) (gejAsSpec a) ))
+ where
+  fast_gej_x_equiv = testCoreEval gej_x_equiv
+
+prop_gej_x_equiv_inf x0 = forAll gen_inf $ prop_gej_x_equiv x0
+prop_gej_x_equiv_true y z x0 = prop_gej_x_equiv x0 a
+  where
+   z' = feAsSpec z
+   x0' = feAsSpec x0
+   a = GroupElementJacobian (FieldElement . Spec.fe_pack $ x0' .*. z' .^. 2) y z
+
+prop_gej_x_equiv_inf_zero = prop_gej_x_equiv_inf (FieldElement 0)
+
+prop_ge_is_on_curve :: GroupElement -> Bool
+prop_ge_is_on_curve = \a -> fast_ge_is_on_curve (geAsTy a) == Just (toBit (Spec.ge_is_on_curve (geAsSpec a)))
+ where
+  fast_ge_is_on_curve = testCoreEval ge_is_on_curve
+
+prop_ge_is_on_curve_half = forAll gen_half_curve prop_ge_is_on_curve
+
+prop_gej_is_on_curve :: GroupElementJacobian -> Bool
+prop_gej_is_on_curve = \a -> fast_gej_is_on_curve (gejAsTy a) == Just (toBit (Spec.gej_is_on_curve (gejAsSpec a)))
+ where
+  fast_gej_is_on_curve = testCoreEval gej_is_on_curve
+
+prop_gej_is_on_curve_inf = forAll gen_inf prop_gej_is_on_curve
+prop_gej_is_on_curve_inf_half = forAll gen_half_curve_inf prop_gej_is_on_curve
+prop_gej_is_on_curve_half = forAll gen_half_curve_jacobian prop_gej_is_on_curve
+
+scalar_unary_prop f g = \a -> fastF (scalarAsTy a) == Just (toScalar (g (scalarAsSpec a)))
+ where
+  fastF = testCoreEval f
+
+scalar_binary_prop f g = \a b -> fastF (scalarAsTy a, scalarAsTy b) == Just (toScalar (g (scalarAsSpec a) (scalarAsSpec b)))
+ where
+  fastF = testCoreEval f
+
+prop_scalar_normalize :: ScalarElement -> Bool
+prop_scalar_normalize a@(ScalarElement w) = scalar_normalize (scalarAsTy a) == toScalar (Spec.scalar (toInteger w))
+
+prop_scalar_add :: ScalarElement -> ScalarElement -> Bool
+prop_scalar_add = scalar_binary_prop scalar_add Spec.scalar_add
+
+prop_scalar_square :: ScalarElement -> Bool
+prop_scalar_square = scalar_unary_prop scalar_square Spec.scalar_square
+
+prop_scalar_multiply :: ScalarElement -> ScalarElement -> Bool
+prop_scalar_multiply = scalar_binary_prop scalar_multiply Spec.scalar_multiply
+
+prop_scalar_negate :: ScalarElement -> Bool
+prop_scalar_negate = scalar_unary_prop scalar_negate Spec.scalar_negate
+
+prop_scalar_invert :: ScalarElement -> Bool
+prop_scalar_invert = scalar_unary_prop scalar_invert Spec.scalar_invert
+
+prop_scalar_split_lambda :: ScalarElement -> Bool
+prop_scalar_split_lambda = \a -> ((interp *** interp) <$> fast_scalar_split_lambda (scalarAsTy a))
+                            == Just (Spec.scalar_split_lambda (scalarAsSpec a))
+ where
+  interp (b,x) = fromWord128 x - if fromBit b then 2^128 else 0
+  fast_scalar_split_lambda = testCoreEval scalar_split_lambda
+
+prop_wnaf5 :: WnafElement -> Bool
+prop_wnaf5 n = L.and $ zipWith (==) lhs (fmap (maybeToTy . fmap (unsign . toInteger)) (Spec.wnaf 5 (wnafAsSpec n) ++ repeat Nothing))
+ where
+  lhs = fmap fromWord4 <$> wnaf5 (wnafAsTy n)^..(backwards traverseWnaf)
   unsign x | x < 0 = 2^4 + x
            | otherwise = x
-prop_wnaf5_hi :: Ty.Word128 -> Bool
-prop_wnaf5_hi n10 = prop_wnaf5 (toWord128 (-1), n10)
 
-prop_wnaf16 :: Ty.Word256 -> Bool
-prop_wnaf16 n = L.and $ zipWith (==) lhs (fmap (fmap unsign) (LibSecp.wnaf 16 (fromScalar n) ++ repeat Nothing))
+prop_wnaf15 :: WnafElement -> Bool
+prop_wnaf15 n = L.and $ zipWith (==) lhs (fmap (maybeToTy . fmap (unsign . toInteger)) (Spec.wnaf 15 (wnafAsSpec n) ++ repeat Nothing))
  where
-  lhs = either (const Nothing) (Just . fromInteger . fromWord16) <$> wnaf16 n^..both_.both_.both_.both_.both_.both_.both_.both_
+  lhs = fmap (fromWord16) <$> wnaf15 (wnafAsTy n)^..(backwards traverseWnaf)
   unsign x | x < 0 = 2^16 + 2*x+1
            | otherwise = 2*x+1
-prop_wnaf16_hi :: Ty.Word128 -> Bool
-prop_wnaf16_hi n10 = prop_wnaf16 (toWord128 (-1), n10)
 
-prop_ecMult :: GEJ -> Word256 -> Word256 -> Bool
-prop_ecMult a na ng = fromGEJ (ecMult ((a, na), ng)) `eq_gej` LibSecp.ecMult (fromGEJ a) (fromScalar na) (fromScalar ng)
-
-prop_ecMult0 :: GEJ -> Word256 -> Bool
-prop_ecMult0 a ng = prop_ecMult a na ng
+prop_linear_combination_1 :: ScalarElement -> GroupElementJacobian -> ScalarElement -> Bool
+prop_linear_combination_1 = \na a ng -> fast_linear_combination_1 ((scalarAsTy na, gejAsTy a), scalarAsTy ng)
+             == Just (toGEJ (Spec.linear_combination_1 (scalarAsSpec na) (gejAsSpec a) (scalarAsSpec ng)))
  where
-  na = toWord256 0
+  fast_linear_combination_1 = testCoreEval linear_combination_1
 
-prop_pkPoint :: XOnlyPubKey -> Bool
-prop_pkPoint pk = conv (pkPoint pk) `eq_mgej` LibSecp.pkPoint pk'
+prop_linear_combination_1_0 :: GroupElementJacobian -> ScalarElement -> Bool
+prop_linear_combination_1_0 a ng = prop_linear_combination_1 na a ng
  where
-  pk' = LibSecp.XOnlyPubKey (fromInteger (fromWord256 pk))
-  conv = either (const Nothing) (Just . fromGEJ)
-  eq_mgej (Just x) (Just y) = x `eq_gej` y
-  eq_mgej Nothing Nothing = True
-  eq_mgej _ _ = False
+  na = ScalarElement 0
 
-prop_sigUnpack :: Sig -> Bool
-prop_sigUnpack sig@(r, s) = conv (sigUnpack sig) `eq_mfeW256` LibSecp.sigUnpack sig'
+prop_linear_combination_1_inf :: ScalarElement -> ScalarElement -> Property
+prop_linear_combination_1_inf na ng = forAll gen_inf $ \a -> prop_linear_combination_1 na a ng
+
+prop_linear_check_1 :: ScalarElement -> GroupElement -> ScalarElement -> GroupElement -> Bool
+prop_linear_check_1 = \na a ng r -> fast_linear_check_1 (((scalarAsTy na, geAsTy a), scalarAsTy ng), geAsTy r)
+             == Just (toBit (Spec.linear_check [(scalarAsSpec na, geAsSpec a)] (scalarAsSpec ng) (geAsSpec r)))
  where
-  sig' = LibSecp.Sig (fromInteger (fromWord256 r)) (fromInteger (fromWord256 s))
-  conv = either (const Nothing) (Just . (fromFE *** fromScalar))
-  eq_mfeW256 (Just (a0, a1)) (Just (b0, b1)) = (a0 `eq_fe` b0) && a1 == b1
-  eq_mfeW256 Nothing Nothing = True
-  eq_mfeW256 _ _ = False
+  fast_linear_check_1 = testCoreEval linear_check_1
 
-prop_scalarUnrepr :: Word256 -> Bool
-prop_scalarUnrepr w = fromScalar (scalarUnrepr w) == LibSecp.scalarUnrepr (fromWord256 w)
-prop_scalarUnrepr_hi w = prop_scalarUnrepr (toWord128 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF, w)
-
-schnorr0 :: Bool
-schnorr0 = fromBit $ schnorrVerify ((pk,m),sig)
+prop_decompress :: PointElement -> Bool
+prop_decompress = \a -> fast_decompress (pointAsTy a)
+             == Just ((fmap toGE . maybeToTy) (Spec.decompress (pointAsSpec a)))
  where
-  pk = toWord256 0x79BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798
-  m = toWord256 0
-  sig = toWord512 0x528F745793E8472C0329742A463F59E58F3A3F1A4AC09C28F6F8514D4D0322A258BD08398F82CF67B812AB2C7717CE566F877C2F8795C846146978E8F04782AE
+  fast_decompress = testCoreEval decompress
 
-schnorr1 :: Bool
-schnorr1 = fromBit $ schnorrVerify ((pk,m),sig)
+prop_point_check_1 :: ScalarElement -> PointElement -> ScalarElement -> PointElement -> Bool
+prop_point_check_1 = \na a ng r -> fast_point_check_1 (((scalarAsTy na, pointAsTy a), scalarAsTy ng), pointAsTy r)
+             == Just (toBit (Spec.point_check [(scalarAsSpec na, pointAsSpec a)] (scalarAsSpec ng) (pointAsSpec r)))
  where
-  pk = toWord256 0xDFF1D77F2A671C5F36183726DB2341BE58FEAE1DA2DECED843240F7B502BA659
-  m = toWord256 0x243F6A8885A308D313198A2E03707344A4093822299F31D0082EFA98EC4E6C89
-  sig = toWord512 0x667C2F778E0616E611BD0C14B8A600C5884551701A949EF0EBFD72D452D64E844160BCFC3F466ECB8FACD19ADE57D8699D74E7207D78C6AEDC3799B52A8E0598
+  fast_point_check_1 = testCoreEval point_check_1
 
-schnorr2 :: Bool
-schnorr2 = fromBit $ schnorrVerify ((pk,m),sig)
+prop_pubkey_unpack :: FieldElement -> Bool
+prop_pubkey_unpack a@(FieldElement w) = fast_pubkey_unpack (feAsTy a)
+                                     == Just ((fmap toPoint . maybeToTy) (Spec.pubkey_unpack (Spec.PubKey w)))
  where
-  pk = toWord256 0xDD308AFEC5777E13121FA72B9CC1B7CC0139715309B086C960E18FD969774EB8
-  m = toWord256 0x5E2D58D8B3BCDF1ABADEC7829054F90DDA9805AAB56C77333024B9D0A508B75C
-  sig = toWord512 0x2D941B38E32624BF0AC7669C0971B990994AF6F9B18426BF4F4E7EC10E6CDF386CF646C6DDAFCFA7F1993EEB2E4D66416AEAD1DDAE2F22D63CAD901412D116C6
+  fast_pubkey_unpack = testCoreEval pubkey_unpack
 
-schnorr3 :: Bool
-schnorr3 = fromBit $ schnorrVerify ((pk,m),sig)
+prop_pubkey_unpack_neg :: FieldElement -> Bool
+prop_pubkey_unpack_neg a@(FieldElement w) = fast_pubkey_unpack_neg (feAsTy a)
+                                         == Just ((fmap toPoint . maybeToTy) (Spec.pubkey_unpack_neg (Spec.PubKey w)))
  where
-  pk = toWord256 0x25D1DFF95105F5253C4022F628A996AD3A0D95FBF21D468A1B33F8C160D8F517
-  m = toWord256 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-  sig = toWord512 0x8BD2C11604B0A87A443FCC2E5D90E5328F934161B18864FB48CE10CB59B45FB9B5B2A0F129BD88F5BDC05D5C21E5C57176B913002335784F9777A24BD317CD36
+  fast_pubkey_unpack_neg = testCoreEval pubkey_unpack_neg
 
-schnorr4 :: Bool
-schnorr4 = fromBit $ schnorrVerify ((pk,m),sig)
+prop_signature_unpack :: FieldElement -> ScalarElement -> Bool
+prop_signature_unpack r@(FieldElement wr) s@(ScalarElement ws) =
+  fast_signature_unpack (feAsTy r, scalarAsTy s) ==
+  Just ((fmap (toFE *** toScalar) . maybeToTy) (Spec.signature_unpack (Spec.Sig wr ws)))
  where
-  pk = toWord256 0xD69C3509BB99E412E68B0FE8544E72837DFA30746D8BE2AA65975F29D22DC7B9
-  m = toWord256 0x4DF3C3F68FCC83B27E9D42C90431A72499F17875C81A599B566C9889B9696703
-  sig = toWord512 0x00000000000000000000003B78CE563F89A0ED9414F5AA28AD0D96D6795F9C63EE374AC7FAE927D334CCB190F6FB8FD27A2DDC639CCEE46D43F113A4035A2C7F
+  fast_signature_unpack = testCoreEval signature_unpack
 
-schnorr5 :: Bool
-schnorr5 = fromBit $ schnorrVerify ((pk,m),sig)
+fast_bip0340_check = fromJust . testCoreEval bip0340_check
  where
-  pk = toWord256 0xEEFDEA4CDB677750A420FEE807EACF21EB9898AE79B9768766E4FAA04A2D4A34
-  m = toWord256 0x243F6A8885A308D313198A2E03707344A4093822299F31D0082EFA98EC4E6C89
-  sig = toWord512 0x667C2F778E0616E611BD0C14B8A600C5884551701A949EF0EBFD72D452D64E844160BCFC3F466ECB8FACD19ADE57D8699D74E7207D78C6AEDC3799B52A8E0598
+  fromJust (Just a) = fromBit a
+  fromJust Nothing = False
 
-schnorr6 :: Bool
-schnorr6 = fromBit $ schnorrVerify ((pk,m),sig)
+group_bip0340_check = testGroup "bip0340_check" (zipWith case_bip0340_check_vector [0..] bip0340Vectors)
  where
-  pk = toWord256 0xDFF1D77F2A671C5F36183726DB2341BE58FEAE1DA2DECED843240F7B502BA659
-  m = toWord256 0x243F6A8885A308D313198A2E03707344A4093822299F31D0082EFA98EC4E6C89
-  sig = toWord512 0xF9308A019258C31049344F85F89D5229B531C845836F99B08601F113BCE036F9935554D1AA5F0374E5CDAACB3925035C7C169B27C4426DF0A6B19AF3BAEAB138
-
-schnorr7 :: Bool
-schnorr7 = fromBit $ schnorrVerify ((pk,m),sig)
- where
-  pk = toWord256 0xDFF1D77F2A671C5F36183726DB2341BE58FEAE1DA2DECED843240F7B502BA659
-  m = toWord256 0x243F6A8885A308D313198A2E03707344A4093822299F31D0082EFA98EC4E6C89
-  sig = toWord512 0x10AC49A6A2EBF604189C5F40FC75AF2D42D77DE9A2782709B1EB4EAF1CFE9108D7003B703A3499D5E29529D39BA040A44955127140F81A8A89A96F992AC0FE79
-
-schnorr8 :: Bool
-schnorr8 = fromBit $ schnorrVerify ((pk,m),sig)
- where
-  pk = toWord256 0xDFF1D77F2A671C5F36183726DB2341BE58FEAE1DA2DECED843240F7B502BA659
-  m = toWord256 0x243F6A8885A308D313198A2E03707344A4093822299F31D0082EFA98EC4E6C89
-  sig = toWord512 0x667C2F778E0616E611BD0C14B8A600C5884551701A949EF0EBFD72D452D64E84BE9F4303C0B9913470532E6521A827951D39F5C631CFD98CE39AC4D7A5A83BA9
-
-schnorr9 :: Bool
-schnorr9 = fromBit $ schnorrVerify ((pk,m),sig)
- where
-  pk = toWord256 0xDFF1D77F2A671C5F36183726DB2341BE58FEAE1DA2DECED843240F7B502BA659
-  m = toWord256 0x243F6A8885A308D313198A2E03707344A4093822299F31D0082EFA98EC4E6C89
-  sig = toWord512 0x000000000000000000000000000000000000000000000000000000000000000099D2F0EBC2996808208633CD9926BF7EC3DAB73DAAD36E85B3040A698E6D1CE0
-
-schnorr10 :: Bool
-schnorr10 = fromBit $ schnorrVerify ((pk,m),sig)
- where
-  pk = toWord256 0xDFF1D77F2A671C5F36183726DB2341BE58FEAE1DA2DECED843240F7B502BA659
-  m = toWord256 0x243F6A8885A308D313198A2E03707344A4093822299F31D0082EFA98EC4E6C89
-  sig = toWord512 0x000000000000000000000000000000000000000000000000000000000000000124E81D89F01304695CE943F7D5EBD00EF726A0864B4FF33895B4E86BEADC5456
-
-schnorr11 :: Bool
-schnorr11 = fromBit $ schnorrVerify ((pk,m),sig)
- where
-  pk = toWord256 0xDFF1D77F2A671C5F36183726DB2341BE58FEAE1DA2DECED843240F7B502BA659
-  m = toWord256 0x243F6A8885A308D313198A2E03707344A4093822299F31D0082EFA98EC4E6C89
-  sig = toWord512 0x000000000000000000000000000000000000000000000000000000000000000124E81D89F01304695CE943F7D5EBD00EF726A0864B4FF33895B4E86BEADC5456
-
-schnorr12 :: Bool
-schnorr12 = fromBit $ schnorrVerify ((pk,m),sig)
- where
-  pk = toWord256 0xDFF1D77F2A671C5F36183726DB2341BE58FEAE1DA2DECED843240F7B502BA659
-  m = toWord256 0x243F6A8885A308D313198A2E03707344A4093822299F31D0082EFA98EC4E6C89
-  sig = toWord512 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F4160BCFC3F466ECB8FACD19ADE57D8699D74E7207D78C6AEDC3799B52A8E0598
-
-schnorr13 :: Bool
-schnorr13 = fromBit $ schnorrVerify ((pk,m),sig)
- where
-  pk = toWord256 0xDFF1D77F2A671C5F36183726DB2341BE58FEAE1DA2DECED843240F7B502BA659
-  m = toWord256 0x243F6A8885A308D313198A2E03707344A4093822299F31D0082EFA98EC4E6C89
-  sig = toWord512 0x667C2F778E0616E611BD0C14B8A600C5884551701A949EF0EBFD72D452D64E84FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141
-
-schnorr_tests :: Bool
-schnorr_tests = Prelude.and [schnorr0, schnorr1, schnorr2, schnorr3, schnorr4]
-             && Prelude.not (Prelude.or [schnorr5, schnorr6, schnorr7, schnorr8, schnorr9, schnorr10, schnorr11, schnorr12, schnorr13])
+  assert_bip0340_check_vector tv = bip0340TestResult tv @=? fast_bip0340_check (bip0340TestAsTy tv)
+  case_bip0340_check_vector n tv = testCase name (assert_bip0340_check_vector tv)
+   where
+    name = "bip0340_vector_" ++ show n

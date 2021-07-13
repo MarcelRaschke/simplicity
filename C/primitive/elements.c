@@ -125,7 +125,7 @@ static void sha256_issuance(sha256_context* ctx, const assetIssuance* issuance) 
  *               NULL != scriptPubKey;
  */
 static void hashScriptPubKey(sha256_midstate* result, const rawScript* scriptPubKey) {
-  sha256_context ctx = sha256_init(result);
+  sha256_context ctx = sha256_init(result->s);
   sha256_uchars(&ctx, scriptPubKey->code, scriptPubKey->len);
   sha256_finalize(&ctx);
 }
@@ -302,7 +302,7 @@ static void parseNullData(parsedNullData* result, opcode** allocation, size_t* a
       }
       if (scriptPubKey->len - i < skip) { result->op = NULL; return; }
       {
-        sha256_context ctx = sha256_init(&(*allocation)[result->len].dataHash);
+        sha256_context ctx = sha256_init((*allocation)[result->len].dataHash.s);
         sha256_uchars(&ctx, &scriptPubKey->code[i], skip);
         sha256_finalize(&ctx);
       }
@@ -396,7 +396,7 @@ extern transaction* elements_simplicity_mallocTransaction(const rawTransaction* 
                      };
 
   {
-    sha256_context ctx = sha256_init(&tx->inputsHash);
+    sha256_context ctx = sha256_init(tx->inputsHash.s);
     for (uint_fast32_t i = 0; i < tx->numInputs; ++i) {
       copyInput(&input[i], &rawTx->input[i]);
       sha256_outpoint(&ctx, &input[i].prevOutpoint);
@@ -407,7 +407,7 @@ extern transaction* elements_simplicity_mallocTransaction(const rawTransaction* 
   }
 
   {
-    sha256_context ctx = sha256_init(&tx->outputsHash);
+    sha256_context ctx = sha256_init(tx->outputsHash.s);
     for (uint_fast32_t i = 0; i < tx->numOutputs; ++i) {
       copyOutput(&output[i], &ops, &opsLen, &rawTx->output[i]);
       sha256_confAsset(&ctx, &output[i].asset);
@@ -425,21 +425,24 @@ extern transaction* elements_simplicity_mallocTransaction(const rawTransaction* 
  * If the file isn't a proper encoding of a Simplicity program, '*success' is set to false.
  * If EOF isn't encountered at the end of decoding, '*success' is set to false.
  * If 'cmr != NULL' and the commitment Merkle root of the decoded expression doesn't match 'cmr' then '*success' is set to false.
- * If 'wmr != NULL' and the witness Merkle root of the decoded expression doesn't match 'wmr' then '*success' is set to false.
+ * If 'amr != NULL' and the annotated Merkle root of the decoded expression doesn't match 'amr' then '*success' is set to false.
  * Otherwise evaluation proceeds and '*success' is set to the result of evaluation.
+ * If 'imr != NULL' and '*success' is set to true, then the identity Merkle root of the decoded expression is written to 'imr'.
+ * Otherwise if 'imr != NULL' then 'imr' may or may not be written to.
  *
  * If at any time there is a transient error, such as malloc failing or an I/O error reading from 'file'
  * then 'false' is returned, and 'success' and 'file' may be modified.
  * Otherwise, 'true' is returned.
  *
  * Precondition: NULL != success;
+ *               NULL != imr implies unsigned char imr[32]
  *               NULL != tx;
  *               NULL != cmr implies unsigned char cmr[32]
- *               NULL != wmr implies unsigned char wmr[32]
+ *               NULL != amr implies unsigned char amr[32]
  *               NULL != file;
  */
-extern bool elements_simplicity_execSimplicity(bool* success, const transaction* tx, uint_fast32_t ix,
-                                               const unsigned char* cmr, const unsigned char* wmr, FILE* file) {
+extern bool elements_simplicity_execSimplicity(bool* success, unsigned char* imr, const transaction* tx, uint_fast32_t ix,
+                                               const unsigned char* cmr, const unsigned char* amr, FILE* file) {
   if (!success || !tx || !file) return false;
 
   bool result;
@@ -448,10 +451,10 @@ extern bool elements_simplicity_execSimplicity(bool* success, const transaction*
   void* witnessAlloc = NULL;
   bitstring witness;
   int32_t len;
-  sha256_midstate cmr_hash, wmr_hash;
+  sha256_midstate cmr_hash, amr_hash;
 
   if (cmr) sha256_toMidstate(cmr_hash.s, cmr);
-  if (wmr) sha256_toMidstate(wmr_hash.s, wmr);
+  if (amr) sha256_toMidstate(amr_hash.s, amr);
 
   {
     bitstream stream = initializeBitstream(file);
@@ -477,26 +480,34 @@ extern bool elements_simplicity_execSimplicity(bool* success, const transaction*
     *success = !cmr || 0 == memcmp(cmr_hash.s, dag[len-1].cmr.s, sizeof(uint32_t[8]));
     if (*success) {
       type* type_dag;
-      size_t sourceIx, targetIx;
-      result = mallocTypeInference(&type_dag, &sourceIx, &targetIx, dag, (size_t)len, &census);
-      *success = result && type_dag && 0 == sourceIx && 0 == targetIx && fillWitnessData(dag, type_dag, (size_t)len, witness);
+      result = mallocTypeInference(&type_dag, dag, (size_t)len, &census);
+      *success = result && type_dag && 0 == dag[len-1].sourceType && 0 == dag[len-1].targetType
+              && fillWitnessData(dag, type_dag, (size_t)len, witness);
       if (*success) {
-        if (wmr) {
-          analyses *analysis = (size_t)len <= SIZE_MAX / sizeof(analyses)
-                             ? malloc((size_t)len * sizeof(analyses))
-                             : NULL;
-          if (analysis) {
-            computeWitnessMerkleRoot(analysis, dag, type_dag, (size_t)len);
-            *success = 0 == memcmp(wmr_hash.s, analysis[len-1].witnessMerkleRoot.s, sizeof(uint32_t[8]));
-          } else {
-            /* malloc failed which counts as a transient error. */
-            *success = result = false;
-          }
-          free(analysis);
+        sha256_midstate* imr_buf = (size_t)len <= SIZE_MAX / sizeof(sha256_midstate)
+                                 ? malloc((size_t)len * sizeof(sha256_midstate))
+                                 : NULL;
+        bool noDupsCheck;
+        result = imr_buf && verifyNoDuplicateIdentityRoots(&noDupsCheck, imr_buf, dag, type_dag, (size_t)len);
+        *success = result && noDupsCheck;
+        if (*success && imr) sha256_fromMidstate(imr, imr_buf[len-1].s);
+        free(imr_buf);
+      }
+      if (*success && amr) {
+        analyses *analysis = (size_t)len <= SIZE_MAX / sizeof(analyses)
+                           ? malloc((size_t)len * sizeof(analyses))
+                           : NULL;
+        if (analysis) {
+          computeAnnotatedMerkleRoot(analysis, dag, type_dag, (size_t)len);
+          *success = 0 == memcmp(amr_hash.s, analysis[len-1].annotatedMerkleRoot.s, sizeof(uint32_t[8]));
+        } else {
+          /* malloc failed which counts as a transient error. */
+          *success = result = false;
         }
-        if (*success) {
-          result = evalTCOProgram(success, dag, type_dag, (size_t)len, &(txEnv){.tx = tx, .scriptCMR = cmr_hash.s, .ix = ix});
-        }
+        free(analysis);
+      }
+      if (*success) {
+        result = evalTCOProgram(success, dag, type_dag, (size_t)len, &(txEnv){.tx = tx, .scriptCMR = cmr_hash.s, .ix = ix});
       }
       free(type_dag);
     }
